@@ -1,0 +1,13 @@
+PODS:
+  - CrashlyticsFramework (2.2.10)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - CrashlyticsFramework
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  CrashlyticsFramework: 2f7c515a2d74c8636bf47e761621f2f68193747e
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.36.4
