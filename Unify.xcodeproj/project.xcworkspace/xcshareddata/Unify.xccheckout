@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3077CFE7-FAF8-4CC0-ACA6-ECF41C5E97DB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Unify</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</key>
+		<string>https://github.com/acerockstar/unify-client-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Unify.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/acerockstar/unify-client-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>unify-client-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

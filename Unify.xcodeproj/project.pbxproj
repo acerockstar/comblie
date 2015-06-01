@@ -15,6 +15,7 @@
 		77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */; };
 		77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */; };
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
+		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
 		91B7264504443AEC6114486D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
+		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */,
 				77DF41051B1CF15E006084E4 /* cloud */,
 				77DF40E01B1CE7DF006084E4 /* shared */,
+				D12A8ACA1B1CFF0400320E1F /* Utilities */,
 				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 			);
 			path = Unify;
@@ -325,6 +328,14 @@
 			path = cloud;
 			sourceTree = "<group>";
 		};
+		D12A8ACA1B1CFF0400320E1F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
 			);
@@ -591,7 +603,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -605,7 +616,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -690,9 +700,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-SVProgressHUD\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"QuartzCore\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AdHoc;
 		};
