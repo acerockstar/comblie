@@ -10,12 +10,16 @@
 		31E55EEDB54AA4E93C1C1A9B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B7264504443AEC6114486D /* libPods.a */; };
 		77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */; };
 		77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C11B1CD9B4006084E4 /* Images.xcassets */; };
-		77DF40C51B1CD9B4006084E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */; };
 		77DF40D11B1CD9B4006084E4 /* UnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */; };
 		77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */; };
 		77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */; };
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
 		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
+		D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */; };
+		D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */; };
+		D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */; };
+		D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */; };
+		D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +38,6 @@
 		77DF40B91B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77DF40C11B1CD9B4006084E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		77DF40C41B1CD9B4006084E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77DF40CA1B1CD9B4006084E4 /* UnifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF40CF1B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyTests.swift; sourceTree = "<group>"; };
@@ -45,6 +48,11 @@
 		91B7264504443AEC6114486D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Unify/MessagesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesTableViewCell.swift; path = Unify/MessagesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesTableViewCell.xib; path = Unify/MessagesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageViewController.swift; path = Unify/NewMessageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OldMessageViewController.swift; path = Unify/OldMessageViewController.swift; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +118,6 @@
 			children = (
 				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 				77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */,
-				77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */,
 				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
 				77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */,
 				77DF41051B1CF15E006084E4 /* cloud */,
@@ -260,6 +267,8 @@
 		77DF40EC1B1CEBFD006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */,
+				D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -267,6 +276,9 @@
 		77DF40ED1B1CEBFD006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */,
+				D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */,
+				D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -421,8 +433,8 @@
 			files = (
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
 				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
-				77DF40C51B1CD9B4006084E4 /* LaunchScreen.xib in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
+				D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +485,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
+				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
+				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
 			);
@@ -496,17 +512,6 @@
 			targetProxy = 77DF40CB1B1CD9B4006084E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77DF40C41B1CD9B4006084E4 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		77DF40D21B1CD9B4006084E4 /* Debug */ = {
@@ -597,6 +602,7 @@
 			baseConfigurationReference = 3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -611,6 +617,7 @@
 			baseConfigurationReference = D21C955EBF8C304714409D74 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -696,6 +703,7 @@
 			baseConfigurationReference = B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
