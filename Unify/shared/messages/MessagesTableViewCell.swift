@@ -18,6 +18,8 @@ class MessagesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
+        
         socialMediaIcon.layer.cornerRadius = socialMediaIcon.bounds.size.width/2
         socialMediaIcon.clipsToBounds = true
         socialMediaIcon.image = UIImage(named: "FacebookIcon")
@@ -28,7 +30,8 @@ class MessagesTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
 }
-

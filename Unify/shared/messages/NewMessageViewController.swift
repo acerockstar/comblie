@@ -70,5 +70,14 @@ class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         self.bottomConstraint.constant = 0
         self.view.layoutIfNeeded()
     }
+    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        self.view.endEditing(true)
+//        return false
+//    }
+//    
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        self.view.endEditing(true)
+//    }
 
 }

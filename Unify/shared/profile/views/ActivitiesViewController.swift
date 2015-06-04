@@ -1,27 +1,24 @@
 //
-//  MessagesViewController.swift
+//  ActivitiesViewController.swift
 //  Unify
 //
-//  Created by Annie Cheng on 6/2/15.
+//  Created by Annie Cheng on 6/3/15.
 //  Copyright (c) 2015 Unify. All rights reserved.
 //
 
 import UIKit
 
-class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class ActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet var tableView: UITableView!
     
-    @IBAction func unwindToMessagesVC(sender: UIStoryboardSegue) {
-        
-    }
+    var activities: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] // TODO: Replace dummy data
     
-    var messages: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 44.0
         self.tableView.separatorColor = UIColor.clearColor()
-        self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
+        self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         self.tableView.addSubview(self.refreshControl)
     }
     
@@ -33,13 +30,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshMessages:", forControlEvents: UIControlEvents.ValueChanged)
-
+        refreshControl.addTarget(self, action: "refreshActivities:", forControlEvents: UIControlEvents.ValueChanged)
+        
         return refreshControl
     }()
     
-    func refreshMessages(refreshControl: UIRefreshControl) {
-        messages.append(1) // TODO: Fetch info from API
+    func refreshActivities(refreshControl: UIRefreshControl) {
+        activities.append(1) // TODO: Fetch info from API
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -47,11 +44,11 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table View Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if messages.count == 0 {
+        if activities.count == 0 {
             var label = UILabel(frame: CGRectMake(0,0,200, 50))
             label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
             label.textAlignment = NSTextAlignment.Center
-            label.text = "You have no messages"
+            label.text = "You have no activities"
             label.sizeToFit()
             self.tableView.backgroundView = label
         } else {
@@ -62,33 +59,26 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return activities.count
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("activityCell") as! ActivityTableViewCell
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(75)
+        // TODO: make cells dynamic
+        return CGFloat(44)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.lightGrayColor()
-        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
-        let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
-        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     // Swipe left to delete mechanism
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        messages.removeAtIndex(indexPath.row)
+        activities.removeAtIndex(indexPath.row)
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
-
 }

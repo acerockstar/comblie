@@ -1,5 +1,5 @@
 //
-//  NewMessageViewController.swift
+//  OldMessageViewController.swift
 //  Unify
 //
 //  Created by Annie Cheng on 6/2/15.
@@ -8,18 +8,22 @@
 
 import UIKit
 
-class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     let imagePicker = UIImagePickerController()
-
+    
     @IBOutlet weak var addContactField: UITextField!
     @IBOutlet weak var typeMessageField: UITextField!
     @IBOutlet weak var uploadButton: UIBarButtonItem!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     @IBAction func addContact(sender: AnyObject) {
-        typeMessageField.enabled = true
-        uploadButton.enabled = true
     }
+    
+    @IBAction func popToPrevious(sender: UIBarButtonItem) {
+        self.navigationController!.popViewControllerAnimated(true)
+    }
+    
     @IBAction func uploadItem(sender: UIBarButtonItem) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
@@ -28,9 +32,9 @@ class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            Determines selected image
-//            imageView.contentMode = .ScaleAspectFit
-//            imageView.image = pickedImage
+            //            Determines selected image
+            //            imageView.contentMode = .ScaleAspectFit
+            //            imageView.image = pickedImage
         }
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -38,21 +42,20 @@ class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.hidden = true
         addContactField.delegate = self
         typeMessageField.delegate = self
         imagePicker.delegate = self
-        typeMessageField.enabled = false
-        uploadButton.enabled = false
-        addContactField.becomeFirstResponder()
+        //addContactField.becomeFirstResponder()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardShown:"), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardHidden:"), name:UIKeyboardWillHideNotification, object: nil)
     }
-   
+    
     override func viewWillAppear(animated: Bool) {
         typeMessageField.frame = CGRectMake(0, 0, self.view.frame.size.width - self.uploadButton.width - 55, self.typeMessageField.frame.size.height)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -70,5 +73,13 @@ class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         self.bottomConstraint.constant = 0
         self.view.layoutIfNeeded()
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
 }

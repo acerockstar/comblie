@@ -115,22 +115,12 @@
                             </mask>
                         </variation>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p46-Yo-TZY">
-                        <rect key="frame" x="0.0" y="73" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="7rZ-Kd-fmX"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2UJ-la-Z5P" secondAttribute="trailing" id="4gg-zZ-Q05"/>
                     <constraint firstAttribute="bottom" secondItem="2UJ-la-Z5P" secondAttribute="bottom" id="4xr-cJ-8CA"/>
-                    <constraint firstAttribute="bottom" secondItem="p46-Yo-TZY" secondAttribute="bottom" id="IUy-bK-9a7"/>
                     <constraint firstItem="2UJ-la-Z5P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RAB-ZQ-I6D"/>
-                    <constraint firstAttribute="trailing" secondItem="p46-Yo-TZY" secondAttribute="trailing" id="ZYG-LT-7Vf"/>
                     <constraint firstItem="2UJ-la-Z5P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bZd-Et-dk1"/>
-                    <constraint firstItem="p46-Yo-TZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="d7s-a3-VVd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

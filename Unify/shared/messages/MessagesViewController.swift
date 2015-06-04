@@ -20,7 +20,6 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
     }
@@ -54,8 +53,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
             label.text = "You have no messages"
             label.sizeToFit()
             self.tableView.backgroundView = label
+            self.tableView.separatorStyle = .None
         } else {
             self.tableView.backgroundView = nil
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         }
         
         return 1

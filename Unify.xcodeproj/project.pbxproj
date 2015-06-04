@@ -20,6 +20,29 @@
 		D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */; };
 		D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */; };
 		D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */; };
+		D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */; };
+		D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */; };
+		D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */; };
+		D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */; };
+		D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */; };
+		D17CE48F1B1EF38F00ED9E93 /* CombinedProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */; };
+		D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */; };
+		D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */; };
+		D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */; };
+		D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */; };
+		D17CE4A11B1F01FB00ED9E93 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */; };
+		D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */; };
+		D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */; };
+		D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */; };
+		D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */; };
+		D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */; };
+		D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */; };
+		D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */; };
+		D17CE4BF1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */; };
+		D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */; };
+		D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */; };
+		D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */; };
+		D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +76,29 @@
 		D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesTableViewCell.xib; path = Unify/MessagesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageViewController.swift; path = Unify/NewMessageViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OldMessageViewController.swift; path = Unify/OldMessageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CombinedProfileView.swift; path = Unify/CombinedProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterProfileView.swift; path = Unify/TwitterProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VineProfileView.swift; path = Unify/VineProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TumblrProfileView.swift; path = Unify/TumblrProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstagramProfileView.swift; path = Unify/InstagramProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CombinedProfileView.xib; path = Unify/CombinedProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterProfileView.xib; path = Unify/TwitterProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VineProfileView.xib; path = Unify/VineProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TumblrProfileView.xib; path = Unify/TumblrProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramProfileView.xib; path = Unify/shared/profile/views/InstagramProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Unify/shared/profile/views/PageContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilesViewController.swift; path = Unify/shared/profile/views/ProfilesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitiesViewController.swift; path = Unify/shared/profile/views/ActivitiesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterTweetTableViewCell.swift; path = Unify/shared/profile/views/TwitterTweetTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterTweetTableViewCell.xib; path = Unify/shared/profile/views/TwitterTweetTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterActivityTableViewCell.swift; path = Unify/shared/profile/views/TwitterActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterActivityTableViewCell.xib; path = Unify/shared/profile/views/TwitterActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoVideoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnlargedItemViewController.swift; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +271,8 @@
 		77DF40E61B1CEBE6006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */,
+				D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -232,6 +280,7 @@
 		77DF40E71B1CEBE6006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -253,6 +302,8 @@
 		77DF40EA1B1CEBF2006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */,
+				D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -293,6 +344,8 @@
 		77DF40EF1B1CEC0D006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4BA1B203F2700ED9E93 /* Swift files */,
+				D17CE4BB1B203F2D00ED9E93 /* Xibs */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -300,6 +353,8 @@
 		77DF40F01B1CEC0D006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */,
+				D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -307,6 +362,8 @@
 		77DF40F11B1CEC0D006084E4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE49A1B1EF44D00ED9E93 /* Swift files */,
+				D17CE49B1B1EF47100ED9E93 /* Xibs */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -346,6 +403,50 @@
 				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D17CE49A1B1EF44D00ED9E93 /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */,
+				D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */,
+				D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */,
+				D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */,
+				D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */,
+			);
+			name = "Swift files";
+			sourceTree = "<group>";
+		};
+		D17CE49B1B1EF47100ED9E93 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */,
+				D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */,
+				D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */,
+				D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */,
+				D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		D17CE4BA1B203F2700ED9E93 /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */,
+				D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */,
+				D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */,
+			);
+			name = "Swift files";
+			sourceTree = "<group>";
+		};
+		D17CE4BB1B203F2D00ED9E93 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */,
+				D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */,
+				D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */,
+			);
+			name = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,9 +532,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CE4BF1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib in Resources */,
+				D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */,
+				D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */,
+				D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */,
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
+				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
+				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
+				D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */,
+				D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */,
+				D17CE48F1B1EF38F00ED9E93 /* CombinedProfileView.xib in Resources */,
 				D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,11 +596,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
+				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
+				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
+				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
+				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
+				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
+				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
+				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
+				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
+				D17CE4A11B1F01FB00ED9E93 /* PageContentViewController.swift in Sources */,
+				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
+				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
+				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
+				D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

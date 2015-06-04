@@ -48,4 +48,16 @@ extension UIColor {
         // Hex: #dd4b39, RGB: 221, 75, 57
         return UIColor(red: CGFloat(221.0/255.0), green: CGFloat(75.0/255.0), blue: CGFloat(57.0/255.0), alpha: 1.0)
     }
+    
+    class func customLightGrayColor() -> UIColor {
+        // Hex: #dee0e1, RGB: 222, 224, 225
+        return UIColor(red: CGFloat(222.0/255.0), green: CGFloat(224.0/255.0), blue: CGFloat(225.0/255.0), alpha: 1.0)
+    }
+    
+    class func selectedFeedCell() -> UIColor {
+        return UIColor(red: CGFloat(85.0/255.0), green: CGFloat(177.0/255.0), blue: CGFloat(226.0/255.0), alpha: 1.0)
+    }
+    
+    
+    
 }

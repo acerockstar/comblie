@@ -42,7 +42,6 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.hidden = true
         addContactField.delegate = self
         typeMessageField.delegate = self
         imagePicker.delegate = self
