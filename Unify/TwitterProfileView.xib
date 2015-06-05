@@ -4,29 +4,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterProfileView" customModule="Unify" customModuleProvider="target">
-            <connections>
-                <outlet property="customView" destination="iN0-l3-epB" id="Hxd-C8-Nw9"/>
-                <outlet property="descriptionLabel" destination="uE3-tV-jew" id="fwu-TM-SYH"/>
-                <outlet property="nameLabel" destination="Rsz-KH-h2a" id="RMZ-a3-krg"/>
-                <outlet property="numFollowersLabel" destination="llp-qG-0ZV" id="JUQ-OK-GHP"/>
-                <outlet property="numFollowingLabel" destination="e46-7v-ZeK" id="Mvo-oy-KY2"/>
-                <outlet property="numTweetsLabel" destination="IJa-Fk-uSH" id="Z7m-rD-w0p"/>
-                <outlet property="profilePicture" destination="IaI-h9-TG2" id="scz-ge-mnt"/>
-                <outlet property="usernameLabel" destination="vdh-xB-FLb" id="Sv6-Mb-HrK"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterProfileView" customModule="Unify" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-ex-HI9" customClass="TwitterProfileView" customModule="Unify" customModuleProvider="target">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-ex-HI9">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="IaI-h9-TG2">
-                            <rect key="frame" x="130" y="8" width="60" height="60"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jaden Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-KH-h2a">
                             <rect key="frame" x="124" y="71" width="70" height="15"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
@@ -89,12 +75,16 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="IaI-h9-TG2">
+                            <rect key="frame" x="130" y="8" width="60" height="60"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="426" y="398"/>
         </view>
     </objects>
     <resources>

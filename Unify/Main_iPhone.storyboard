@@ -402,17 +402,10 @@
                     <view key="view" contentMode="scaleToFill" id="mCU-3J-WnF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="J5D-b3-oaK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profiles" id="vGG-Yp-8Gu"/>
                     <connections>
-                        <outlet property="tableView" destination="J5D-b3-oaK" id="QyB-Bc-HHz"/>
                         <segue destination="ubK-Hb-Lfj" kind="push" identifier="PushToPageVC" id="sjs-WZ-oob"/>
                     </connections>
                 </viewController>
@@ -425,9 +418,6 @@
             <objects>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ubK-Hb-Lfj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="S1J-Eh-bmg"/>
-                    <connections>
-                        <segue destination="qnD-BM-cBt" kind="push" identifier="GoToPageContents" id="50g-Yc-bzo"/>
-                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-mH-PVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,25 +435,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7k-VN-kkN">
-                                <rect key="frame" x="123" y="266" width="74" height="35"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JHO-XZ-ATv">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qnD-BM-cBt" id="1j1-Aj-ydn"/>
+                                    <outlet property="delegate" destination="qnD-BM-cBt" id="tOg-41-ypb"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JHO-XZ-ATv" secondAttribute="trailing" id="QNK-CU-A1B"/>
+                            <constraint firstItem="Sbg-aB-7O4" firstAttribute="top" secondItem="JHO-XZ-ATv" secondAttribute="bottom" id="fDl-R1-5VW"/>
+                            <constraint firstItem="JHO-XZ-ATv" firstAttribute="top" secondItem="btN-sT-ioF" secondAttribute="top" constant="65" id="uhE-ry-4Lf"/>
+                            <constraint firstItem="JHO-XZ-ATv" firstAttribute="leading" secondItem="btN-sT-ioF" secondAttribute="leading" id="wHP-wn-Cd9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EOs-fS-JaJ">
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="label" destination="n7k-VN-kkN" id="DPA-tf-UL6"/>
+                        <outlet property="tableView" destination="JHO-XZ-ATv" id="b1E-NX-EaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6x1-0D-3Ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="-517"/>
+            <point key="canvasLocation" x="1607" y="-517"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TLE-Ud-zK5">

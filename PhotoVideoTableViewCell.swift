@@ -18,6 +18,8 @@ class PhotoVideoTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var divider: UIView!
     
+    var liked = false
+    
     @IBAction func repostImageClicked(sender: UIButton) {
         println("repostImage clicked")
     }

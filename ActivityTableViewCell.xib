@@ -95,7 +95,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityImage" destination="xPF-uM-I6Y" id="O8H-ZK-BVh"/>
-                <outlet property="descriptionLabel" destination="S0g-pK-67o" id="06e-OM-9bo"/>
+                <outlet property="descriptionLabel" destination="S0g-pK-67o" id="Of0-6U-c1I"/>
                 <outlet property="timeLabel" destination="tfP-wb-Wch" id="PtL-4a-MZG"/>
                 <outlet property="userImage" destination="Hia-2g-EXE" id="GIF-fb-oVN"/>
             </connections>

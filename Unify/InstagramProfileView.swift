@@ -10,7 +10,7 @@ import UIKit
 
 class InstagramProfileView: UIView {
 
-    @IBOutlet var customView: UIView!
+    @IBOutlet var view: UIView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -19,16 +19,21 @@ class InstagramProfileView: UIView {
     @IBOutlet weak var numFollowingLabel: UILabel!
     @IBOutlet weak var numPostsLabel: UILabel!
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
-//        profilePicture.clipsToBounds = true
-//    }
-//    
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        NSBundle.mainBundle().loadNibNamed("InstagramProfileView", owner: self, options: nil)
-//        self.addSubview(self.customView)
-//    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
+        profilePicture.clipsToBounds = true
+        self.setup()
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setup()
+    }
+    
+    private func setup() {
+        NSBundle.mainBundle().loadNibNamed("InstagramProfileView", owner: self, options: nil)
+        self.addSubview(view)
+    }
 
 }

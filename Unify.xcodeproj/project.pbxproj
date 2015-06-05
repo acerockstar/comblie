@@ -43,6 +43,9 @@
 		D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */; };
 		D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */; };
 		D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */; };
+		D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */; };
+		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
+		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnlargedItemViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
+				D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -433,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */,
+				D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */,
 				D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */,
 				D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */,
 			);
@@ -443,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */,
+				D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */,
 				D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */,
 				D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */,
 			);
@@ -537,6 +546,7 @@
 				D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */,
 				D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */,
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
+				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
@@ -597,6 +607,7 @@
 			files = (
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
 				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
+				D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
@@ -611,6 +622,7 @@
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
 				D17CE4A11B1F01FB00ED9E93 /* PageContentViewController.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
+				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
 				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,

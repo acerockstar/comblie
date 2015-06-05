@@ -10,20 +10,24 @@ import UIKit
 
 class CombinedProfileView: UIView {
 
-    @IBOutlet var customView: UIView!
+    @IBOutlet var view: UIView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
+        profilePicture.clipsToBounds = true
+        self.setup()
+    }
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
-//        profilePicture.clipsToBounds = true
-//    }
-//    
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        NSBundle.mainBundle().loadNibNamed("CombinedProfileView", owner: self, options: nil)
-//        self.addSubview(self.customView)
-//    }
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setup()
+    }
     
+    private func setup() {
+        NSBundle.mainBundle().loadNibNamed("CombinedProfileView", owner: self, options: nil)
+        self.addSubview(view)
+    }
 }

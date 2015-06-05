@@ -10,7 +10,6 @@ import UIKit
 
 class TwitterTweetTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var userImage: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
