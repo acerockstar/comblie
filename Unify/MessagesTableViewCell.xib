@@ -116,7 +116,7 @@
                         </variation>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p46-Yo-TZY">
-                        <rect key="frame" x="0.0" y="73" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="73.5" width="320" height="1"/>
                         <color key="backgroundColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="7rZ-Kd-fmX"/>

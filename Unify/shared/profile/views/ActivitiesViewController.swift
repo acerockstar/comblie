@@ -16,7 +16,7 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.estimatedRowHeight = 44.0
+        self.tableView.estimatedRowHeight = 46.0
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         self.tableView.addSubview(self.refreshControl)
@@ -69,11 +69,16 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // TODO: make cells dynamic
-        return CGFloat(44)
+        return CGFloat(46)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.backgroundColor = UIColor.clearColor()
     }
     
     // Swipe left to delete mechanism
