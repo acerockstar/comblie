@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31E55EEDB54AA4E93C1C1A9B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B7264504443AEC6114486D /* libPods.a */; };
+		6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFD9CB582B129FC0FCFBEDD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */; };
 		77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C11B1CD9B4006084E4 /* Images.xcassets */; };
 		77DF40D11B1CD9B4006084E4 /* UnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */; };
@@ -46,6 +46,7 @@
 		D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */; };
 		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
 		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
+		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BFD9CB582B129FC0FCFBEDD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		77DF40B51B1CD9B4006084E4 /* Unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF40B91B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +73,6 @@
 		77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unify-Bridging-Header.h"; sourceTree = "<group>"; };
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
-		91B7264504443AEC6114486D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Unify/MessagesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -105,6 +106,7 @@
 		D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E55EEDB54AA4E93C1C1A9B /* libPods.a in Frameworks */,
+				6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +142,7 @@
 		1615BB4CCEF396B4845C765B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				91B7264504443AEC6114486D /* libPods.a */,
+				2BFD9CB582B129FC0FCFBEDD /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +175,7 @@
 				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
 				77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */,
 				77DF41051B1CF15E006084E4 /* cloud */,
+				D17CE4D41B21C76600ED9E93 /* Models */,
 				77DF40E01B1CE7DF006084E4 /* shared */,
 				D12A8ACA1B1CFF0400320E1F /* Utilities */,
 				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
@@ -458,6 +461,15 @@
 			name = Xibs;
 			sourceTree = "<group>";
 		};
+		D17CE4D41B21C76600ED9E93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4D51B21C78B00ED9E93 /* User.swift */,
+			);
+			name = Models;
+			path = cloud;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +482,7 @@
 				77DF40B21B1CD9B4006084E4 /* Frameworks */,
 				77DF40B31B1CD9B4006084E4 /* Resources */,
 				AA8AF828DA512F8C122B8B34 /* Copy Pods Resources */,
+				D5612879C5977E0A8977DFBE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -583,6 +596,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D5612879C5977E0A8977DFBE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F4B976094F47A58CB4C2C8DF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -625,6 +653,7 @@
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
+				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,
 				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
 				D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
