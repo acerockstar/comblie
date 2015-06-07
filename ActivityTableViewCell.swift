@@ -11,6 +11,7 @@ import UIKit
 class ActivityTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIButton!
+    @IBOutlet weak var socialMediaIcon: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBAction func userImage(sender: UIButton) {
@@ -21,6 +22,7 @@ class ActivityTableViewCell: UITableViewCell {
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
+        socialMediaIcon.image = UIImage(named: "VineIcon")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

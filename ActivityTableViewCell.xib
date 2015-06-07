@@ -48,6 +48,13 @@
                                 <color key="textColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8f-o4-SZc">
+                                <rect key="frame" x="36" y="38" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="YOp-xN-afH"/>
+                                    <constraint firstAttribute="width" constant="12" id="bHF-VL-Iea"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,9 +73,11 @@
                             <constraint firstItem="S0g-pK-67o" firstAttribute="leading" secondItem="Hia-2g-EXE" secondAttribute="trailing" constant="8" id="aJ7-UT-X9W"/>
                             <constraint firstItem="tfP-wb-Wch" firstAttribute="top" secondItem="S0g-pK-67o" secondAttribute="bottom" id="cW6-d1-BLN"/>
                             <constraint firstItem="tfP-wb-Wch" firstAttribute="top" secondItem="S0g-pK-67o" secondAttribute="top" id="dKt-48-MXD"/>
+                            <constraint firstItem="d8f-o4-SZc" firstAttribute="bottom" secondItem="Hia-2g-EXE" secondAttribute="bottom" id="hsH-NI-Etj"/>
                             <constraint firstItem="Hia-2g-EXE" firstAttribute="leading" secondItem="ecN-fy-aIu" secondAttribute="leading" constant="8" id="ko4-yO-Mzv"/>
                             <constraint firstAttribute="centerY" secondItem="Hia-2g-EXE" secondAttribute="centerY" id="m28-df-Sfp"/>
                             <constraint firstAttribute="centerY" secondItem="S0g-pK-67o" secondAttribute="centerY" id="uH2-lO-dqb"/>
+                            <constraint firstItem="d8f-o4-SZc" firstAttribute="trailing" secondItem="Hia-2g-EXE" secondAttribute="trailing" id="y8x-VQ-1rW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -105,6 +114,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="S0g-pK-67o" id="Of0-6U-c1I"/>
+                <outlet property="socialMediaIcon" destination="d8f-o4-SZc" id="5ST-Mv-5bV"/>
                 <outlet property="timeLabel" destination="tfP-wb-Wch" id="bjO-wZ-seh"/>
                 <outlet property="userImage" destination="Hia-2g-EXE" id="GIF-fb-oVN"/>
             </connections>
