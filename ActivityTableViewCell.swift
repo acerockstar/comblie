@@ -11,21 +11,16 @@ import UIKit
 class ActivityTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIButton!
-    @IBOutlet weak var activityImage: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBAction func userImage(sender: UIButton) {
         println("userImage clicked")
-    }
-    @IBAction func activityImageClicked(sender: UIButton) {
-        println("activityImage clicked")
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        activityImage.setImage(UIImage(named: "Photo"), forState: .Normal)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

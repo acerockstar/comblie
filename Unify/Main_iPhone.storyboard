@@ -34,7 +34,13 @@
                             <constraint firstAttribute="trailing" secondItem="hba-SG-7oU" secondAttribute="trailing" id="zrg-GA-Pjj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Activity" id="vHA-ay-gkT"/>
+                    <navigationItem key="navigationItem" title="Activity" id="vHA-ay-gkT">
+                        <barButtonItem key="rightBarButtonItem" image="PostIcon" id="gi5-Qt-NvH">
+                            <connections>
+                                <action selector="postButtonClicked:" destination="tzY-0N-bl4" id="Kwq-Rm-gb9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hba-SG-7oU" id="xsU-Ml-41e"/>
                     </connections>

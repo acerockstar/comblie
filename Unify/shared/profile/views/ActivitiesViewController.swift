@@ -12,6 +12,10 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet var tableView: UITableView!
     
+    @IBAction func postButtonClicked(sender: UIBarButtonItem) {
+        println("post button clicked")
+    }
+    
     var activities: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] // TODO: Replace dummy data
     
     override func viewDidLoad() {
@@ -69,7 +73,7 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // TODO: make cells dynamic
-        return CGFloat(46)
+        return CGFloat(60)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
