@@ -79,9 +79,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Newsfeed" id="fA9-XH-X0d">
-                        <barButtonItem key="rightBarButtonItem" image="PostIcon" id="VBF-v9-URn"/>
+                        <barButtonItem key="rightBarButtonItem" image="PostIcon" id="VBF-v9-URn">
+                            <connections>
+                                <action selector="postStatusButtonClicked:" destination="4XJ-bP-E5w" id="zow-2J-9h9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="postStatusButton" destination="VBF-v9-URn" id="0QF-YS-EHy"/>
                         <outlet property="tableView" destination="ApZ-nu-FvI" id="Zr5-z1-Vyu"/>
                     </connections>
                 </viewController>
@@ -126,6 +131,24 @@
                 <exit id="WKj-0b-wOc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1214" y="722"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c7l-5q-bxC">
+            <objects>
+                <viewController id="EPn-BP-qhP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vVV-zw-j7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="YBn-oe-LwE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RmQ-uD-R0x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRB-kO-c8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="722"/>
         </scene>
         <!--Messages-->
         <scene sceneID="ZtW-ul-F99">

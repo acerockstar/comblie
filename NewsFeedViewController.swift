@@ -9,18 +9,31 @@
 import UIKit
 
 class NewsFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var postStatusViewController : PostStatusViewController!
+    var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
 
     @IBOutlet var tableView: UITableView!
-    @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {
+    @IBOutlet weak var postStatusButton: UIBarButtonItem!
+    @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
+        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
+        self.postStatusViewController.showInView(self.view, withImage: nil, withMessage: nil, animated: true)
+    }
+    @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
+
+    // Initializers
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
-    var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.hidesBarsOnSwipe = true
         self.tableView.estimatedRowHeight = 55.0
-        //self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
@@ -106,6 +119,16 @@ class NewsFeedViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         items.removeAtIndex(indexPath.row)
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+    
+    // Rounded corners for popup window
+    func setRoundedBorder(radius : CGFloat, withBorderWidth borderWidth: CGFloat, withColor color : UIColor, forButton button : UIButton)
+    {
+        let layer : CALayer = button.layer
+        layer.masksToBounds = true
+        layer.cornerRadius = radius
+        layer.borderWidth = borderWidth
+        layer.borderColor = color.CGColor
     }
 
 }

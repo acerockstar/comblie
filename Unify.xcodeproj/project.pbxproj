@@ -47,6 +47,8 @@
 		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
 		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
 		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
+		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
+		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +317,7 @@
 			children = (
 				D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */,
 				D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */,
+				D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 		77DF40EB1B1CEBF2006084E4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -559,6 +565,7 @@
 				D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */,
 				D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */,
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
+				D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */,
 				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
@@ -645,6 +652,7 @@
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
 				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
+				D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */,
 				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
