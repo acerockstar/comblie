@@ -12,6 +12,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var pageViewController: UIPageViewController!
+    var postStatusViewController : PostStatusViewController!
     var pageLabels: NSArray!
     var messages: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
 
@@ -28,6 +29,11 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDataSource {
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
+    }
+    
+    @IBAction func postStatus(sender: UIBarButtonItem) {
+        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
+        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

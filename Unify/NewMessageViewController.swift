@@ -57,7 +57,7 @@ class NewMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         super.didReceiveMemoryWarning()
     }
     
-    // MARK - Keyboard Functionality
+    // MARK: - Keyboard Functionality
     
     func keyboardShown(sender: NSNotification) {
         var keyboardFrame: CGRect = (sender.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()

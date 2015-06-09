@@ -13,9 +13,11 @@ class ActivitiesViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet var tableView: UITableView!
     
     @IBAction func postButtonClicked(sender: UIBarButtonItem) {
-        println("post button clicked")
+        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
+        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
     }
     
+    var postStatusViewController : PostStatusViewController!
     var activities: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] // TODO: Replace dummy data
     
     override func viewDidLoad() {

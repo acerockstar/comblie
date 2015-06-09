@@ -17,7 +17,7 @@ class NewsFeedViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
     @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
         self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
-        self.postStatusViewController.showInView(self.view, withImage: nil, withMessage: nil, animated: true)
+        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
     }
     @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
 

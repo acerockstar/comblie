@@ -433,7 +433,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profiles" id="vGG-Yp-8Gu"/>
+                    <navigationItem key="navigationItem" title="Profiles" id="vGG-Yp-8Gu">
+                        <barButtonItem key="rightBarButtonItem" image="PostIcon" id="8k3-KM-80C">
+                            <connections>
+                                <action selector="postStatus:" destination="Jqh-iI-Afv" id="fMX-TQ-obs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ubK-Hb-Lfj" kind="push" identifier="PushToPageVC" id="sjs-WZ-oob"/>
                     </connections>
