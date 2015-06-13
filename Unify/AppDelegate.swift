@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         var pageController = UIPageControl.appearance()
-        pageController.pageIndicatorTintColor = UIColor.whiteColor()
-        pageController.currentPageIndicatorTintColor = UIColor.lightGrayColor()
-        pageController.backgroundColor = UIColor.blackColor()
+        pageController.pageIndicatorTintColor = UIColor.clearColor()
+        pageController.currentPageIndicatorTintColor = UIColor.clearColor()
+        pageController.backgroundColor = UIColor.clearColor()
         
         return true
     }

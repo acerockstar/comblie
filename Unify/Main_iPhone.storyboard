@@ -132,24 +132,6 @@
             </objects>
             <point key="canvasLocation" x="1214" y="722"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="c7l-5q-bxC">
-            <objects>
-                <viewController id="EPn-BP-qhP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vVV-zw-j7Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="YBn-oe-LwE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RmQ-uD-R0x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IRB-kO-c8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1598" y="722"/>
-        </scene>
         <!--Messages-->
         <scene sceneID="ZtW-ul-F99">
             <objects>
@@ -420,7 +402,7 @@
             </objects>
             <point key="canvasLocation" x="833" y="1974"/>
         </scene>
-        <!--Profiles-->
+        <!--Combined-->
         <scene sceneID="yuK-Ci-sXx">
             <objects>
                 <viewController id="Jqh-iI-Afv" customClass="ProfilesViewController" customModule="Unify" customModuleProvider="target" sceneMemberID="viewController">
@@ -433,7 +415,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profiles" id="vGG-Yp-8Gu">
+                    <navigationItem key="navigationItem" title="Combined" id="vGG-Yp-8Gu">
                         <barButtonItem key="rightBarButtonItem" image="PostIcon" id="8k3-KM-80C">
                             <connections>
                                 <action selector="postStatus:" destination="Jqh-iI-Afv" id="fMX-TQ-obs"/>
@@ -441,6 +423,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="postStatusButton" destination="8k3-KM-80C" id="cPG-BZ-e3U"/>
                         <segue destination="ubK-Hb-Lfj" kind="push" identifier="PushToPageVC" id="sjs-WZ-oob"/>
                     </connections>
                 </viewController>
@@ -451,10 +434,10 @@
         <!--Page View Controller-->
         <scene sceneID="UTl-XD-Jad">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-mH-PVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ubK-Hb-Lfj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="S1J-Eh-bmg"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-mH-PVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1240" y="-517"/>
         </scene>

@@ -11,16 +11,13 @@ import UIKit
 class PageContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var pageIndex: Int!
+    var pageIndex: Int = 0
     var labelText: String!
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        self.navigationController?.navigationBar.barTintColor = UIColor.darkGrayColor()
-        self.title = labelText
-        println(self.title)
+        
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.addSubview(self.refreshControl)

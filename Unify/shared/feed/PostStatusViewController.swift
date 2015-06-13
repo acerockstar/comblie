@@ -38,8 +38,6 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
         self.textView.text = "What are you thinking?"
         self.textView.textColor = UIColor.lightGrayColor()
         self.textView.delegate = self
-        self.textView.becomeFirstResponder()
-        self.textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
         self.navBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 14)!]
         self.cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 12)!], forState: UIControlState.Normal)
         self.postButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 12)!], forState: UIControlState.Normal)
