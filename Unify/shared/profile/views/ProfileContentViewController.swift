@@ -11,12 +11,21 @@ import UIKit
 class ProfileContentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var refreshControl: UIRefreshControl!
+    var customRefresh: CustomRefreshControl!
     var pageIndex: Int = 0
     var labelText: String!
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Custom Refresh
+        self.refreshControl = UIRefreshControl()
+        customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
+        refreshControl?.addTarget(self, action: "refreshProfiles", forControlEvents: .ValueChanged)
+        refreshProfiles()
         
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
@@ -27,19 +36,17 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Refresh Control
+    // MARK: - Custom Refresh
     
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshFeed:", forControlEvents: UIControlEvents.ValueChanged)
-        return refreshControl
-        }()
-    
-    func refreshFeed(refreshControl: UIRefreshControl) {
-        items.append(1) // TODO: Fetch info from API
+    func refreshProfiles() {
         self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        var delayInSeconds = 3.0
+        var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+            self.refreshControl!.endRefreshing()
+        }
     }
+
     
     // MARK: - Table View Methods
     
@@ -89,6 +96,10 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        customRefresh.scrollViewDidScroll(scrollView)
     }
 
 }

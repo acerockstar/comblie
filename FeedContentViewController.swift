@@ -10,6 +10,8 @@ import UIKit
 
 class FeedContentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var refreshControl: UIRefreshControl!
+    var customRefresh: CustomRefreshControl!
     var postStatusViewController : PostStatusViewController!
     var pageIndex: Int = 0
     var labelText: String!
@@ -28,6 +30,13 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Custom Refresh
+        self.refreshControl = UIRefreshControl()
+        customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
+        refreshControl?.addTarget(self, action: "refreshFeed", forControlEvents: .ValueChanged)
+        refreshFeed()
+        
         self.tableView.estimatedRowHeight = 55.0
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
@@ -40,19 +49,15 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Refresh Control
+    // MARK: - Custom Refresh
     
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshActivities:", forControlEvents: UIControlEvents.ValueChanged)
-        
-        return refreshControl
-        }()
-    
-    func refreshActivities(refreshControl: UIRefreshControl) {
-        items.append(1) // TODO: Fetch info from API
+    func refreshFeed() {
         self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        var delayInSeconds = 3.0
+        var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+            self.refreshControl!.endRefreshing()
+        }
     }
     
     // MARK: - Table View Methods
@@ -110,20 +115,14 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        customRefresh.scrollViewDidScroll(scrollView)
+    }
+    
     // TODO: Make swipe right to delete only on combined newsfeed
 //    // Swipe left to delete mechanism
 //    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        items.removeAtIndex(indexPath.row)
 //        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
 //    }
-    
-    // Rounded corners for popup window
-    func setRoundedBorder(radius : CGFloat, withBorderWidth borderWidth: CGFloat, withColor color : UIColor, forButton button : UIButton)
-    {
-        let layer : CALayer = button.layer
-        layer.masksToBounds = true
-        layer.cornerRadius = radius
-        layer.borderWidth = borderWidth
-        layer.borderColor = color.CGColor
-    }
 }

@@ -49,6 +49,7 @@
 		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
 		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
 		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
+		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
 		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			children = (
 				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
 				D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */,
+				D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
 				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,
+				D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */,
 				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
 				D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,

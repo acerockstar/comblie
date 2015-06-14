@@ -12,6 +12,9 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet var tableView: UITableView!
     
+    var refreshControl: UIRefreshControl!
+    var customRefresh: CustomRefreshControl!
+    
     @IBAction func unwindToMessagesVC(sender: UIStoryboardSegue) {
         
     }
@@ -20,6 +23,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Custom Refresh
+        self.refreshControl = UIRefreshControl()
+        customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
+        refreshControl?.addTarget(self, action: "refreshMessages", forControlEvents: .ValueChanged)
+        refreshMessages()
+        
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
@@ -29,19 +39,15 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Refresh Control
+    // MARK: - Custom Refresh
     
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshMessages:", forControlEvents: UIControlEvents.ValueChanged)
-
-        return refreshControl
-    }()
-    
-    func refreshMessages(refreshControl: UIRefreshControl) {
-        messages.append(1) // TODO: Fetch info from API
+    func refreshMessages() {
         self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        var delayInSeconds = 3.0
+        var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
+        dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
+            self.refreshControl!.endRefreshing()
+        }
     }
     
     // MARK: - Table View Methods
@@ -83,6 +89,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
         self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        customRefresh.scrollViewDidScroll(scrollView)
     }
     
     // Swipe left to delete mechanism
