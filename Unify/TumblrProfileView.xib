@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TumblrProfileView" customModule="Unify" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TumblrProfileView" customModule="Unify" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -34,6 +34,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameLabel" destination="q93-pV-16U" id="Hjq-Qj-qbb"/>
+                <outlet property="profilePicture" destination="LMx-Pk-Usw" id="m92-IN-uY2"/>
+                <outlet property="usernameLabel" destination="qGC-Mr-Cpb" id="9rY-zY-cwg"/>
+                <outlet property="view" destination="TAe-rk-0j9" id="Dlx-EF-erA"/>
+            </connections>
         </view>
     </objects>
     <resources>

@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstagramProfileView" customModule="Unify" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InstagramProfileView" customModule="Unify" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -84,6 +84,16 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="d1r-9v-jKA" id="huC-CT-XvZ"/>
+                <outlet property="nameLabel" destination="JNL-fF-y7R" id="dMr-cF-Tg0"/>
+                <outlet property="numFollowersLabel" destination="omY-LI-XBB" id="bcK-GJ-Abr"/>
+                <outlet property="numFollowingLabel" destination="pWw-Vb-Zcw" id="eOF-6I-66h"/>
+                <outlet property="numPostsLabel" destination="Kte-aQ-z6N" id="2YG-Ds-TGq"/>
+                <outlet property="profilePicture" destination="QBI-i3-n5f" id="L8m-nB-vIP"/>
+                <outlet property="usernameLabel" destination="5wR-Pu-RE3" id="Kn8-Ez-nBa"/>
+                <outlet property="view" destination="Iz4-Cm-K8D" id="n0N-Vl-cda"/>
+            </connections>
         </view>
     </objects>
     <resources>

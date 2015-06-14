@@ -13,21 +13,16 @@ class CombinedProfileView: UIView {
     @IBOutlet var view: UIView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    override func didMoveToSuperview() {
         profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
         profilePicture.clipsToBounds = true
-        self.setup()
+        profilePicture.layer.borderWidth = 3
+        profilePicture.layer.borderColor = UIColor.pictureBorderColor().CGColor
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setup()
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "CombinedProfileView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! UIView
     }
     
-    private func setup() {
-        NSBundle.mainBundle().loadNibNamed("CombinedProfileView", owner: self, options: nil)
-        self.addSubview(view)
-    }
 }

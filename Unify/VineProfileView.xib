@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VineProfileView" customModule="Unify" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VineProfileView" customModule="Unify" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -78,6 +78,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="tgC-5m-ICn" id="YbS-Tf-8DI"/>
+                <outlet property="nameLabel" destination="Arg-Me-W7d" id="NY8-LQ-FK2"/>
+                <outlet property="numFollowersLabel" destination="4tH-K0-Lbf" id="gL6-GH-Mn8"/>
+                <outlet property="numLoopsLabel" destination="sWt-QX-PrJ" id="Ts3-l1-ofw"/>
+                <outlet property="numPostsLabel" destination="dGE-p8-jgn" id="br3-DN-8VA"/>
+                <outlet property="profilePicture" destination="hqU-an-xXL" id="d4E-Ld-kOm"/>
+                <outlet property="view" destination="RCo-UK-Y72" id="c6o-hC-dGo"/>
+            </connections>
             <point key="canvasLocation" x="263" y="194"/>
         </view>
     </objects>

@@ -15,21 +15,15 @@ class TumblrProfileView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func didMoveToSuperview() {
         profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
         profilePicture.clipsToBounds = true
-        self.setup()
+        profilePicture.layer.borderWidth = 3
+        profilePicture.layer.borderColor = UIColor.pictureBorderColor().CGColor
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setup()
-    }
-    
-    private func setup() {
-        NSBundle.mainBundle().loadNibNamed("TumblrProfileView", owner: self, options: nil)
-        self.addSubview(view)
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "TumblrProfileView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! UIView
     }
 
 }
