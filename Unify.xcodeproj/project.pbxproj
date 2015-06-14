@@ -30,7 +30,7 @@
 		D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */; };
 		D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */; };
 		D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */; };
-		D17CE4A11B1F01FB00ED9E93 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */; };
+		D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */; };
 		D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */; };
 		D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */; };
 		D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */; };
@@ -47,6 +47,8 @@
 		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
 		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
 		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
+		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
+		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 /* End PBXBuildFile section */
@@ -92,7 +94,7 @@
 		D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VineProfileView.xib; path = Unify/VineProfileView.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TumblrProfileView.xib; path = Unify/TumblrProfileView.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramProfileView.xib; path = Unify/shared/profile/views/InstagramProfileView.xib; sourceTree = SOURCE_ROOT; };
-		D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Unify/shared/profile/views/PageContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContentViewController.swift; path = Unify/shared/profile/views/ProfileContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilesViewController.swift; path = Unify/shared/profile/views/ProfilesViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitiesViewController.swift; path = Unify/shared/profile/views/ActivitiesViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterTweetTableViewCell.swift; path = Unify/shared/profile/views/TwitterTweetTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -109,6 +111,8 @@
 		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */,
+				D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */,
+				D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */,
 				D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */,
 				D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */,
 			);
@@ -368,7 +374,7 @@
 		77DF40F01B1CEC0D006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D17CE4A01B1F01FB00ED9E93 /* PageContentViewController.swift */,
+				D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */,
 				D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */,
 			);
 			path = viewControllers;
@@ -647,6 +653,7 @@
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
@@ -656,7 +663,8 @@
 				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
-				D17CE4A11B1F01FB00ED9E93 /* PageContentViewController.swift in Sources */,
+				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
+				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,

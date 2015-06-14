@@ -8,127 +8,140 @@
 
 import UIKit
 
-class NewsFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
+    var pageViewController: UIPageViewController!
     var postStatusViewController : PostStatusViewController!
-    var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
-
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var postStatusButton: UIBarButtonItem!
-    @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
-        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
-        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
-    }
-    @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
-
-    // Initializers
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+    var navBarView =  UIView()
+    var pageControl: UIPageControl!
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
+    // TODO: Store as dictionary
+    var pageLabels: NSArray = ["Newsfeed", "Instagram", "Tumblr", "Twitter", "Vine"]
+    var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
+    
+    @IBOutlet weak var postStatusButton: UIBarButtonItem!
+
+    @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.hidesBarsOnSwipe = true
-        self.tableView.estimatedRowHeight = 55.0
-        self.tableView.separatorColor = UIColor.clearColor()
-        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
-        self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
-        self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
-        self.tableView.addSubview(self.refreshControl)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: - Refresh Control
-    
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshActivities:", forControlEvents: UIControlEvents.ValueChanged)
         
-        return refreshControl
-        }()
-    
-    func refreshActivities(refreshControl: UIRefreshControl) {
-        items.append(1) // TODO: Fetch info from API
-        self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        self.navigationController?.navigationBar.addSubview(self.navBarView)
+        
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfilePageViewController") as! UIPageViewController
+        self.pageViewController.delegate = self
+        self.pageViewController.dataSource = self
+        let pageContentVC = self.viewControllerAtIndex(0)
+        
+        self.pageViewController.setViewControllers([pageContentVC!], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.addChildViewController(self.pageViewController)
+        self.view.addSubview(self.pageViewController.view)
+        self.pageViewController.didMoveToParentViewController(self)
+        
+        self.pageControl = UIPageControl()
+        self.pageControl.frame = CGRect(x: 0, y: 35, width: 0, height: 0)
+        self.pageControl.backgroundColor = UIColor.whiteColor()
+        self.pageControl.numberOfPages = self.pageLabels.count
+        self.pageControl.currentPage = 0
+        self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        self.navBarView.addSubview(pageControl)
     }
     
-    // MARK: - Table View Methods
+    @IBAction func postStatus(sender: UIBarButtonItem) {
+        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
+        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
+    }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if items.count == 0 {
-            var label = UILabel(frame: CGRectMake(0,0,200, 50))
-            label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
-            label.textAlignment = NSTextAlignment.Center
-            label.text = "You have no activities"
-            label.sizeToFit()
-            self.tableView.backgroundView = label
-        } else {
-            self.tableView.backgroundView = nil
+    // MARK: - Custom Paging Nav Bar
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.navBarView.frame = CGRect(x: self.view.bounds.width/4, y: 0, width: self.view.bounds.width/2, height: 44)
+    }
+    
+    func viewControllerAtIndex(index: Int) -> UIViewController? {
+        
+        if (self.pageLabels.count == 0 || index >= self.pageLabels.count) {
+            return FeedContentViewController()
         }
         
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row % 3 == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
-            return cell
-        } else if indexPath.row % 3 == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("twitterActivityCell") as! TwitterActivityTableViewCell
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("photoVideoCell") as! PhotoVideoTableViewCell
-            cell.backgroundView = UIImageView(image: UIImage(named: "Photo"))
-            return cell
-        }
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        // TODO: make cells dynamic
-        if indexPath.row % 3 == 2 {
-            return CGFloat(300)
-        } else {
-            return CGFloat(55)
-        }
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        var pageContentVC: FeedContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FeedContentViewController") as! FeedContentViewController
         
-        // TODO: enable on images/videos only (replace manual placeholder)
-        if indexPath.row % 3 == 2 {
-            let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
-            let newVC = storyboard.instantiateViewControllerWithIdentifier("enlargedItemVC") as! EnlargedItemViewController
-            self.presentViewController(newVC, animated: true, completion: nil)
+        pageContentVC.labelText = self.pageLabels[index] as! String
+        pageContentVC.pageIndex = index
+        
+        return pageContentVC
+    }
+    
+    // MARK: - PageViewController Data Source
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        var index = (viewController as! FeedContentViewController).pageIndex
+        
+        if (index == 0 || index == NSNotFound) {
+            return nil
         }
+        
+        index--
+        
+        return self.viewControllerAtIndex(index)
     }
     
-    // Swipe left to delete mechanism
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        items.removeAtIndex(indexPath.row)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
+        var index = (viewController as! FeedContentViewController).pageIndex
+        
+        if (index == NSNotFound) {
+            return nil
+        }
+        
+        index++
+        
+        if (index == self.pageLabels.count) {
+            return nil
+        }
+        
+        return self.viewControllerAtIndex(index)
     }
     
-    // Rounded corners for popup window
-    func setRoundedBorder(radius : CGFloat, withBorderWidth borderWidth: CGFloat, withColor color : UIColor, forButton button : UIButton)
-    {
-        let layer : CALayer = button.layer
-        layer.masksToBounds = true
-        layer.cornerRadius = radius
-        layer.borderWidth = borderWidth
-        layer.borderColor = color.CGColor
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return self.pageLabels.count
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
+        
+        if completed {
+            
+            var currentVC = self.pageViewController.viewControllers.last as! FeedContentViewController
+            self.pageControl.currentPage = currentVC.pageIndex
+            if currentVC.pageIndex == 0 {
+                self.navigationItem.title = "Newsfeed"
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+                self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+                self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+                self.navigationController?.navigationBar.barTintColor = nil
+                UIApplication.sharedApplication().statusBarStyle = .Default
+                postStatusButton.tintColor = nil
+            } else {
+                self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+                self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
+                self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
+                self.navigationController?.navigationBar.barTintColor = self.colors[currentVC.pageIndex] as? UIColor
+                UIApplication.sharedApplication().statusBarStyle = .LightContent
+                postStatusButton.tintColor = UIColor.whiteColor()
+
+            }
+            
+        }
     }
 
 }

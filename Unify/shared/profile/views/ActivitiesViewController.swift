@@ -8,88 +8,137 @@
 
 import UIKit
 
-class ActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
 
-    @IBOutlet var tableView: UITableView!
+    var pageViewController: UIPageViewController!
+    var postStatusViewController : PostStatusViewController!
+    var navBarView =  UIView()
+    var pageControl: UIPageControl!
     
-    @IBAction func postButtonClicked(sender: UIBarButtonItem) {
+    // TODO: Store as dictionary
+    var pageLabels: NSArray = ["Activity", "Instagram", "Tumblr", "Twitter", "Vine"]
+    var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
+    
+    @IBOutlet weak var postStatusButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.addSubview(self.navBarView)
+        
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ActivityPageViewController") as! UIPageViewController
+        self.pageViewController.delegate = self
+        self.pageViewController.dataSource = self
+        let pageContentVC = self.viewControllerAtIndex(0)
+        
+        self.pageViewController.setViewControllers([pageContentVC!], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.addChildViewController(self.pageViewController)
+        self.view.addSubview(self.pageViewController.view)
+        self.pageViewController.didMoveToParentViewController(self)
+        
+        self.pageControl = UIPageControl()
+        self.pageControl.frame = CGRect(x: 0, y: 35, width: 0, height: 0)
+        self.pageControl.backgroundColor = UIColor.whiteColor()
+        self.pageControl.numberOfPages = self.pageLabels.count
+        self.pageControl.currentPage = 0
+        self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        self.navBarView.addSubview(pageControl)
+    }
+    
+    @IBAction func postStatus(sender: UIBarButtonItem) {
         self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
         self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
     }
     
-    var postStatusViewController : PostStatusViewController!
-    var activities: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] // TODO: Replace dummy data
+    // MARK: - Custom Paging Nav Bar
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.estimatedRowHeight = 46.0
-        self.tableView.separatorColor = UIColor.clearColor()
-        self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
-        self.tableView.addSubview(self.refreshControl)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: - Refresh Control
-    
-    lazy var refreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refreshActivities:", forControlEvents: UIControlEvents.ValueChanged)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        return refreshControl
-    }()
-    
-    func refreshActivities(refreshControl: UIRefreshControl) {
-        activities.append(1) // TODO: Fetch info from API
-        self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        self.navBarView.frame = CGRect(x: self.view.bounds.width/4, y: 0, width: self.view.bounds.width/2, height: 44)
     }
     
-    // MARK: - Table View Methods
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if activities.count == 0 {
-            var label = UILabel(frame: CGRectMake(0,0,200, 50))
-            label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
-            label.textAlignment = NSTextAlignment.Center
-            label.text = "You have no activities"
-            label.sizeToFit()
-            self.tableView.backgroundView = label
-        } else {
-            self.tableView.backgroundView = nil
+    func viewControllerAtIndex(index: Int) -> UIViewController? {
+        
+        if (self.pageLabels.count == 0 || index >= self.pageLabels.count) {
+            return ActivityContentViewController()
         }
         
-        return 1
+        var pageContentVC: ActivityContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ActivityContentViewController") as! ActivityContentViewController
+        
+        pageContentVC.labelText = self.pageLabels[index] as! String
+        pageContentVC.pageIndex = index
+        
+        return pageContentVC
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activities.count
+    // MARK: - PageViewController Data Source
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        var index = (viewController as! ActivityContentViewController).pageIndex
+        
+        if (index == 0 || index == NSNotFound) {
+            return nil
+        }
+        
+        index--
+        
+        return self.viewControllerAtIndex(index)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("activityCell") as! ActivityTableViewCell
-        return cell
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
+        var index = (viewController as! ActivityContentViewController).pageIndex
+        
+        if (index == NSNotFound) {
+            return nil
+        }
+        
+        index++
+        
+        if (index == self.pageLabels.count) {
+            return nil
+        }
+        
+        return self.viewControllerAtIndex(index)
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        // TODO: make cells dynamic
-        return CGFloat(60)
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return self.pageLabels.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        selectedCell.backgroundColor = UIColor.clearColor()
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
+        
+        if completed {
+            
+            var currentVC = self.pageViewController.viewControllers.last as! ActivityContentViewController
+            self.pageControl.currentPage = currentVC.pageIndex
+            if currentVC.pageIndex == 0 {
+                self.navigationItem.title = "Activity"
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+                self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+                self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+                self.navigationController?.navigationBar.barTintColor = nil
+                UIApplication.sharedApplication().statusBarStyle = .Default
+                postStatusButton.tintColor = nil
+            } else {
+                self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+                self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
+                self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
+                self.navigationController?.navigationBar.barTintColor = self.colors[currentVC.pageIndex] as? UIColor
+                UIApplication.sharedApplication().statusBarStyle = .LightContent
+                postStatusButton.tintColor = UIColor.whiteColor()
+            }
+            
+        }
     }
     
-    // Swipe left to delete mechanism
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        activities.removeAtIndex(indexPath.row)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-    }
 }

@@ -26,7 +26,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfilePageViewController") as! UIPageViewController
         self.pageViewController.delegate = self
         self.pageViewController.dataSource = self
         let pageContentVC = self.viewControllerAtIndex(0)
@@ -63,10 +63,10 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
     func viewControllerAtIndex(index: Int) -> UIViewController? {
 
         if (self.pageLabels.count == 0 || index >= self.pageLabels.count) {
-            return PageContentViewController()
+            return ProfileContentViewController()
         }
         
-        var pageContentVC: PageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentViewController") as! PageContentViewController
+        var pageContentVC: ProfileContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileContentViewController") as! ProfileContentViewController
         
         pageContentVC.labelText = self.pageLabels[index] as! String
         pageContentVC.pageIndex = index
@@ -78,7 +78,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        var index = (viewController as! PageContentViewController).pageIndex
+        var index = (viewController as! ProfileContentViewController).pageIndex
         
         if (index == 0 || index == NSNotFound) {
             return nil
@@ -91,7 +91,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        var index = (viewController as! PageContentViewController).pageIndex
+        var index = (viewController as! ProfileContentViewController).pageIndex
 
         if (index == NSNotFound) {
             return nil
@@ -118,10 +118,10 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         
         if completed {
             
-            var currentVC = self.pageViewController.viewControllers.last as! PageContentViewController
+            var currentVC = self.pageViewController.viewControllers.last as! ProfileContentViewController
             self.pageControl.currentPage = currentVC.pageIndex
-            self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
             if currentVC.pageIndex == 0 {
+                self.navigationItem.title = "Profile"
                 self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
                 self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
                 self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
@@ -129,6 +129,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
                 UIApplication.sharedApplication().statusBarStyle = .Default
                 postStatusButton.tintColor = nil
             } else {
+                self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
                 self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
                 self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
                 self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
