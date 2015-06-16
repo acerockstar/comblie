@@ -52,8 +52,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
-//        var view = CombinedProfileView.instanceFromNib()
-//        return view
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
