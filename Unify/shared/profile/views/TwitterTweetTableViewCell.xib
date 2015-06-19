@@ -40,13 +40,6 @@
                                 <color key="textColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3di-JF-zVM">
-                                <rect key="frame" x="0.0" y="53.5" width="320" height="1"/>
-                                <color key="backgroundColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="sbW-RZ-Czk"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-VX-Xi3">
                                 <rect key="frame" x="8" y="8" width="40" height="40"/>
                                 <constraints>
@@ -67,13 +60,11 @@
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="centerY" secondItem="toD-Ui-Vhy" secondAttribute="centerY" id="Edg-kh-uKM"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bMz-yE-0IX" secondAttribute="bottom" constant="34" id="Ew1-Dj-zfj"/>
                             <constraint firstItem="2rk-VX-Xi3" firstAttribute="leading" secondItem="dPb-oL-QrV" secondAttribute="leading" constant="8" id="HLa-KM-C8Q"/>
-                            <constraint firstAttribute="trailing" secondItem="3di-JF-zVM" secondAttribute="trailing" id="IYp-Jz-O62"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="toD-Ui-Vhy" secondAttribute="trailing" constant="116" id="NY4-rU-VEA"/>
                             <constraint firstItem="tKt-ef-y9I" firstAttribute="leading" secondItem="BRA-Wu-RmJ" secondAttribute="leading" id="QDJ-Rt-bXc"/>
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dPb-oL-QrV" secondAttribute="leading" constant="296" id="Vdh-4h-o00"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2rk-VX-Xi3" secondAttribute="trailing" constant="272" id="XRO-cS-WdJ"/>
                             <constraint firstItem="tKt-ef-y9I" firstAttribute="leading" secondItem="2rk-VX-Xi3" secondAttribute="trailing" constant="5" id="YX6-cG-6sR"/>
-                            <constraint firstItem="3di-JF-zVM" firstAttribute="leading" secondItem="dPb-oL-QrV" secondAttribute="leading" id="Z9M-0c-SFk"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="toD-Ui-Vhy" secondAttribute="trailing" constant="116" id="b0t-Oq-5KC"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="top" secondItem="tKt-ef-y9I" secondAttribute="bottom" id="g6v-Dc-me8"/>
                             <constraint firstItem="2rk-VX-Xi3" firstAttribute="top" secondItem="dPb-oL-QrV" secondAttribute="top" constant="8" id="kms-9O-fmI"/>
@@ -81,7 +72,6 @@
                             <constraint firstAttribute="trailing" secondItem="bMz-yE-0IX" secondAttribute="trailing" constant="8" id="t74-Pp-mAQ"/>
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="top" secondItem="dPb-oL-QrV" secondAttribute="top" constant="12" id="u5a-vm-frA"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="trailing" constant="-70" id="uq5-iJ-lSg"/>
-                            <constraint firstAttribute="bottom" secondItem="3di-JF-zVM" secondAttribute="bottom" id="vyq-nF-Xag"/>
                             <constraint firstItem="toD-Ui-Vhy" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="trailing" constant="3" id="yqX-Lb-BP0"/>
                         </constraints>
                         <variation key="default">

@@ -30,7 +30,6 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         refreshControl?.addTarget(self, action: "refreshMessages", forControlEvents: .ValueChanged)
         refreshMessages()
         
-        self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
     }
@@ -42,6 +41,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Custom Refresh
     
     func refreshMessages() {
+        messages.append(1)
         self.tableView.reloadData()
         var delayInSeconds = 3.0
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
@@ -60,8 +60,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
             label.text = "You have no messages"
             label.sizeToFit()
             self.tableView.backgroundView = label
+            self.tableView.separatorColor = UIColor.clearColor()
         } else {
             self.tableView.backgroundView = nil
+            self.tableView.separatorColor = nil
         }
         
         return 1
@@ -78,7 +80,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(75)
+        return CGFloat(65)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -89,6 +91,12 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
         self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

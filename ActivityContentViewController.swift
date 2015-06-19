@@ -28,7 +28,6 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         refreshActivities()
         
         self.tableView.estimatedRowHeight = 46.0
-        self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         self.tableView.addSubview(self.refreshControl)
     }
@@ -40,6 +39,7 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     // MARK: - Custom Refresh
     
     func refreshActivities() {
+        activities.append(1)
         self.tableView.reloadData()
         var delayInSeconds = 3.0
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
@@ -58,8 +58,10 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
             label.text = "You have no activities"
             label.sizeToFit()
             self.tableView.backgroundView = label
+            self.tableView.separatorColor = UIColor.clearColor()
         } else {
             self.tableView.backgroundView = nil
+            self.tableView.separatorColor = nil
         }
         
         return 1
@@ -74,9 +76,14 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        // TODO: make cells dynamic
-        return CGFloat(60)
+        return CGFloat(55)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

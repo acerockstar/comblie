@@ -38,7 +38,6 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         refreshFeed()
         
         self.tableView.estimatedRowHeight = 55.0
-        self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
@@ -67,11 +66,13 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
             var label = UILabel(frame: CGRectMake(0,0,200, 50))
             label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
             label.textAlignment = NSTextAlignment.Center
-            label.text = "You have no activities"
+            label.text = "You have no feed"
             label.sizeToFit()
             self.tableView.backgroundView = label
+            self.tableView.separatorColor = UIColor.clearColor()
         } else {
             self.tableView.backgroundView = nil
+            self.tableView.separatorColor = nil
         }
         
         return 1
@@ -93,6 +94,12 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
             cell.backgroundView = UIImageView(image: UIImage(named: "Photo"))
             return cell
         }
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

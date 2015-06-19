@@ -27,7 +27,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         refreshControl?.addTarget(self, action: "refreshProfiles", forControlEvents: .ValueChanged)
         refreshProfiles()
         
-        self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.addSubview(self.refreshControl)
     }
@@ -39,6 +38,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     // MARK: - Custom Refresh
     
     func refreshProfiles() {
+        items.append(1)
         self.tableView.reloadData()
         var delayInSeconds = 3.0
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
@@ -73,8 +73,10 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
             label.text = "You have no feed"
             label.sizeToFit()
             self.tableView.backgroundView = label
+            self.tableView.separatorColor = UIColor.clearColor()
         } else {
             self.tableView.backgroundView = nil
+            self.tableView.separatorColor = nil
         }
         
         return 1
@@ -88,6 +90,12 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.layoutMargins = UIEdgeInsetsZero
+        tableView.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

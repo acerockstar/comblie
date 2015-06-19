@@ -31,25 +31,15 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVR-db-wDQ">
-                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="vWQ-ph-blx"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TVR-db-wDQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2IO-Ms-C8x"/>
                     <constraint firstItem="jGu-tE-jlU" firstAttribute="leading" secondItem="pKL-D4-np7" secondAttribute="trailing" constant="8" id="9Zq-1s-VUy"/>
                     <constraint firstAttribute="centerY" secondItem="pKL-D4-np7" secondAttribute="centerY" id="QaM-tb-C1o"/>
                     <constraint firstItem="AEU-0l-GWZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dPW-Za-0s9"/>
                     <constraint firstItem="AEU-0l-GWZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fBU-GZ-8Ci"/>
                     <constraint firstItem="pKL-D4-np7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ieS-JV-Duk"/>
                     <constraint firstAttribute="bottom" secondItem="AEU-0l-GWZ" secondAttribute="bottom" id="k9R-g2-Nco"/>
-                    <constraint firstAttribute="bottom" secondItem="TVR-db-wDQ" secondAttribute="bottom" id="nqW-F5-dgw"/>
                     <constraint firstAttribute="centerY" secondItem="jGu-tE-jlU" secondAttribute="centerY" id="pY6-Sw-QRp"/>
-                    <constraint firstAttribute="trailing" secondItem="TVR-db-wDQ" secondAttribute="trailing" id="s25-iz-QcC"/>
                     <constraint firstAttribute="trailing" secondItem="AEU-0l-GWZ" secondAttribute="trailing" id="wvr-qg-IH0"/>
                 </constraints>
             </tableViewCellContentView>

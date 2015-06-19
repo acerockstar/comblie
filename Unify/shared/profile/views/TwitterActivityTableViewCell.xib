@@ -28,13 +28,6 @@
                                 <color key="textColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7t-ih-0wc">
-                                <rect key="frame" x="0.0" y="53.5" width="320" height="1"/>
-                                <color key="backgroundColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="MzK-mD-Sg4"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith shared Justin Beiber's tweet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oeh-LI-0kN">
                                 <rect key="frame" x="53" y="9" width="211.5" height="13.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
@@ -60,11 +53,8 @@
                             <constraint firstItem="mST-7c-y6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tuK-7v-g4W" secondAttribute="leading" constant="296" id="7aT-0P-T5N"/>
                             <constraint firstItem="Oeh-LI-0kN" firstAttribute="leading" secondItem="h5X-mr-zS3" secondAttribute="leading" id="7tB-dT-bae"/>
                             <constraint firstAttribute="trailing" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="5" id="8jA-Ke-FUr"/>
-                            <constraint firstAttribute="bottom" secondItem="t7t-ih-0wc" secondAttribute="bottom" id="Car-sZ-Wxh"/>
                             <constraint firstItem="Oeh-LI-0kN" firstAttribute="leading" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="5" id="GvO-zY-IAa"/>
                             <constraint firstItem="mST-7c-y6I" firstAttribute="top" secondItem="tuK-7v-g4W" secondAttribute="top" constant="12" id="I7j-Wr-YIm"/>
-                            <constraint firstAttribute="trailing" secondItem="t7t-ih-0wc" secondAttribute="trailing" id="Mnt-Y3-sVc"/>
-                            <constraint firstItem="t7t-ih-0wc" firstAttribute="leading" secondItem="tuK-7v-g4W" secondAttribute="leading" id="RHm-OW-I1x"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="272" id="bRS-K3-Rqd"/>
                             <constraint firstAttribute="trailing" secondItem="mST-7c-y6I" secondAttribute="trailing" constant="8" id="cZb-XJ-wBB"/>
                             <constraint firstItem="h5X-mr-zS3" firstAttribute="top" secondItem="Oeh-LI-0kN" secondAttribute="bottom" id="hbY-Ne-v7y"/>

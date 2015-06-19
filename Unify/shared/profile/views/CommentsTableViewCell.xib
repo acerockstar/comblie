@@ -57,20 +57,10 @@
                             <constraint firstItem="dst-UK-eN7" firstAttribute="top" secondItem="apY-mr-zZ8" secondAttribute="bottom" id="yK8-hV-N0p"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAn-Bz-xUF">
-                        <rect key="frame" x="0.0" y="58" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="mkO-Gs-Iyb"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="EiN-au-akY" secondAttribute="trailing" id="7Lz-E0-yW6"/>
-                    <constraint firstAttribute="trailing" secondItem="KAn-Bz-xUF" secondAttribute="trailing" id="BVe-53-7bZ"/>
                     <constraint firstItem="EiN-au-akY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DhV-AH-NlA"/>
-                    <constraint firstAttribute="bottom" secondItem="KAn-Bz-xUF" secondAttribute="bottom" id="IS6-D5-Zej"/>
-                    <constraint firstItem="KAn-Bz-xUF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ixn-mJ-q9D"/>
                     <constraint firstAttribute="bottom" secondItem="EiN-au-akY" secondAttribute="bottom" id="XcC-VN-Kpa"/>
                     <constraint firstItem="EiN-au-akY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pLL-ql-dk9"/>
                 </constraints>

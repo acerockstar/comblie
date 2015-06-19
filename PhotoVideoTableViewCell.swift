@@ -17,6 +17,7 @@ class PhotoVideoTableViewCell: UITableViewCell {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var gradientView: UIView!
     
     var liked = false
     
@@ -38,6 +39,12 @@ class PhotoVideoTableViewCell: UITableViewCell {
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
         repostImage.setImage(UIImage(named: "ReplyIcon"), forState: .Normal)
         heartImage.setImage(UIImage(named: "FilledHeartIcon"), forState: .Normal)
+        
+        var gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = gradientView.bounds
+        gradient.colors = [UIColor.clearColor(), UIColor.blackColor()]
+        gradientView.layer.insertSublayer(gradient, atIndex: 0)
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

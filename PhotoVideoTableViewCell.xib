@@ -13,16 +13,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMZ-fd-GBa">
-                        <rect key="frame" x="0.0" y="298.5" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.87058823529999996" green="0.87843137250000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="jms-Qf-c3q"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNP-Bo-kZY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuF-cG-guW">
+                                <rect key="frame" x="0.0" y="224" width="320" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="50i-By-vBV"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wr5-at-9ed">
                                 <rect key="frame" x="8" y="275" width="304" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,16 +95,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xuF-cG-guW" secondAttribute="trailing" id="258-yc-1oH"/>
+                            <constraint firstItem="xuF-cG-guW" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="-47" id="2cj-5l-nnu"/>
                             <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="top" secondItem="dNP-Bo-kZY" secondAttribute="top" constant="8" id="2fS-XL-nyZ"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="36w-2x-KHI"/>
                             <constraint firstItem="0VH-w2-ZDh" firstAttribute="top" secondItem="wr5-at-9ed" secondAttribute="bottom" constant="5" id="5rh-36-aVZ"/>
                             <constraint firstAttribute="trailing" secondItem="Fmz-wM-RYQ" secondAttribute="trailing" constant="8" id="5wH-4S-NAu"/>
+                            <constraint firstAttribute="bottom" secondItem="xuF-cG-guW" secondAttribute="bottom" id="7np-IV-QEH"/>
                             <constraint firstItem="87o-Ib-MYO" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="8pP-Yn-Eck"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="87o-Ib-MYO" secondAttribute="leading" id="98u-Eo-UQi"/>
                             <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="D9E-Cu-ALh"/>
                             <constraint firstAttribute="bottom" secondItem="0VH-w2-ZDh" secondAttribute="bottom" constant="8" id="FKU-Od-BFH"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="5" id="HBi-og-4zI"/>
+                            <constraint firstItem="xuF-cG-guW" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" id="JBg-8J-dwL"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="0VH-w2-ZDh" secondAttribute="leading" id="QAV-GP-lgR"/>
+                            <constraint firstItem="xuF-cG-guW" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="-47" id="TVk-Ye-5En"/>
                             <constraint firstItem="mOW-i1-4QF" firstAttribute="leading" secondItem="87o-Ib-MYO" secondAttribute="trailing" constant="5" id="Ugo-3h-2rN"/>
                             <constraint firstAttribute="trailing" secondItem="mOW-i1-4QF" secondAttribute="trailing" constant="8" id="Zo7-y0-tYm"/>
                             <constraint firstAttribute="trailing" secondItem="wr5-at-9ed" secondAttribute="trailing" constant="8" id="cn0-gb-Adl"/>
@@ -113,12 +118,15 @@
                             <constraint firstItem="Fmz-wM-RYQ" firstAttribute="centerY" secondItem="0VH-w2-ZDh" secondAttribute="centerY" id="k9t-UR-Hw7"/>
                             <constraint firstItem="dI1-f1-XjJ" firstAttribute="leading" secondItem="Ddc-HB-Q0Y" secondAttribute="trailing" constant="8" id="sJB-pY-0TJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2cj-5l-nnu"/>
+                                <exclude reference="TVk-Ye-5En"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="NMZ-fd-GBa" secondAttribute="bottom" id="FAc-vZ-Asu"/>
-                    <constraint firstItem="NMZ-fd-GBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PMq-QB-e6B"/>
-                    <constraint firstAttribute="trailing" secondItem="NMZ-fd-GBa" secondAttribute="trailing" id="SzW-od-DI2"/>
                     <constraint firstItem="dNP-Bo-kZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UiU-64-9IV"/>
                     <constraint firstAttribute="trailing" secondItem="dNP-Bo-kZY" secondAttribute="trailing" id="blu-61-qd5"/>
                     <constraint firstAttribute="bottom" secondItem="dNP-Bo-kZY" secondAttribute="bottom" id="nuE-oP-J9i"/>
@@ -129,6 +137,7 @@
                 <outlet property="activityLabel" destination="0VH-w2-ZDh" id="hJZ-G9-z9Y"/>
                 <outlet property="descriptionLabel" destination="mOW-i1-4QF" id="VCZ-Vz-H8Q"/>
                 <outlet property="divider" destination="wr5-at-9ed" id="bxj-FL-DyL"/>
+                <outlet property="gradientView" destination="xuF-cG-guW" id="ALd-7o-PnI"/>
                 <outlet property="heartImage" destination="dI1-f1-XjJ" id="gck-VD-RXz"/>
                 <outlet property="repostImage" destination="Ddc-HB-Q0Y" id="lcb-cd-pbI"/>
                 <outlet property="timeLabel" destination="Fmz-wM-RYQ" id="J1C-KP-vTZ"/>
