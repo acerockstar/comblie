@@ -80,7 +80,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postStatus(sender: UIBarButtonItem) {
-        // Post status
+        // TODO: Send POST request to server and create new tableview cell and prepend to tableview
         self.removeAnimate()
     }
 

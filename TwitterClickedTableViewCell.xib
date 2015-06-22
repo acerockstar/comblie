@@ -2,17 +2,179 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TwitterClickedTableViewCell" customModule="Unify" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="TwitterClickedTableViewCell" customModule="Unify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OB-KC-Ddq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-nz-zeE">
+                                <rect key="frame" x="70" y="8" width="75.5" height="15.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How can mirrors be real if our eyes aren't real? Just a random thought..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT3-CY-tmW">
+                                <rect key="frame" x="70" y="23" width="225" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNY-iz-h42">
+                                <rect key="frame" x="294" y="10" width="15.5" height="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4N-Wv-7Mk">
+                                <rect key="frame" x="10" y="5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IdR-yb-knE"/>
+                                    <constraint firstAttribute="width" secondItem="G4N-Wv-7Mk" secondAttribute="height" multiplier="1:1" id="T4s-p3-paN"/>
+                                    <constraint firstAttribute="height" constant="40" id="sqo-3d-443"/>
+                                    <constraint firstAttribute="width" constant="40" id="w1q-Pb-ybG"/>
+                                </constraints>
+                                <state key="normal" image="Persona">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sqo-3d-443"/>
+                                        <exclude reference="w1q-Pb-ybG"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jadenofficial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-hU-yfp">
+                                <rect key="frame" x="148" y="9" width="74" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKW-p0-pKz">
+                                <rect key="frame" x="70" y="55" width="17" height="15"/>
+                                <state key="normal" image="ReplyIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIV-IH-x4V">
+                                <rect key="frame" x="138" y="55" width="17" height="15"/>
+                                <state key="normal" image="RepostIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6I-I6-buf">
+                                <rect key="frame" x="199" y="55" width="15" height="15"/>
+                                <state key="normal" image="StarIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12.1k" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-pr-Te5">
+                                <rect key="frame" x="92" y="56" width="30" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="938" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-8M-0tQ">
+                                <rect key="frame" x="163" y="55" width="21" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="19.2k" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGR-Vd-bhH">
+                                <rect key="frame" x="222" y="56" width="30" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cT3-CY-tmW" firstAttribute="top" secondItem="pAh-nz-zeE" secondAttribute="bottom" id="0iV-18-q2O"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="leading" secondItem="G4N-Wv-7Mk" secondAttribute="trailing" constant="10" id="7R7-Dq-2rn"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="centerY" secondItem="GN3-hU-yfp" secondAttribute="centerY" id="7vY-Aw-nzt"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="leading" secondItem="cT3-CY-tmW" secondAttribute="leading" id="Bfj-yz-zO5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G4N-Wv-7Mk" secondAttribute="trailing" constant="272" id="DMj-Tq-TR3"/>
+                            <constraint firstAttribute="trailing" secondItem="cT3-CY-tmW" secondAttribute="trailing" constant="25" id="Dt9-JA-b81"/>
+                            <constraint firstItem="GN3-hU-yfp" firstAttribute="leading" secondItem="pAh-nz-zeE" secondAttribute="trailing" constant="3" id="HNO-W1-gGR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GN3-hU-yfp" secondAttribute="trailing" constant="116" id="I26-pd-YVo"/>
+                            <constraint firstItem="G4N-Wv-7Mk" firstAttribute="leading" secondItem="2OB-KC-Ddq" secondAttribute="leading" constant="10" id="IwJ-V0-oaZ"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uNY-iz-h42" secondAttribute="bottom" constant="34" id="J60-br-enn"/>
+                            <constraint firstItem="G4N-Wv-7Mk" firstAttribute="top" secondItem="2OB-KC-Ddq" secondAttribute="top" constant="5" id="J6w-4K-nr6"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="centerY" secondItem="pAh-nz-zeE" secondAttribute="centerY" id="Le4-yx-jjY"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="leading" secondItem="G4N-Wv-7Mk" secondAttribute="trailing" constant="5" id="Mpo-Va-oOR"/>
+                            <constraint firstItem="cT3-CY-tmW" firstAttribute="leading" secondItem="pAh-nz-zeE" secondAttribute="leading" id="Nh2-gv-ehr"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cT3-CY-tmW" secondAttribute="trailing" constant="26" id="NtE-2S-zOm"/>
+                            <constraint firstAttribute="centerY" secondItem="G4N-Wv-7Mk" secondAttribute="centerY" id="VKk-F8-aCZ"/>
+                            <constraint firstItem="cT3-CY-tmW" firstAttribute="leading" secondItem="pAh-nz-zeE" secondAttribute="trailing" constant="-70" id="YXF-zV-pwk"/>
+                            <constraint firstItem="cT3-CY-tmW" firstAttribute="top" secondItem="pAh-nz-zeE" secondAttribute="bottom" id="aLW-vy-Crh"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="bottom" secondItem="GN3-hU-yfp" secondAttribute="bottom" id="aaa-oQ-YKM"/>
+                            <constraint firstItem="G4N-Wv-7Mk" firstAttribute="top" secondItem="2OB-KC-Ddq" secondAttribute="top" constant="8" id="bOj-pd-Tvh"/>
+                            <constraint firstItem="GN3-hU-yfp" firstAttribute="leading" secondItem="pAh-nz-zeE" secondAttribute="trailing" constant="3" id="hpZ-Ii-1BR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GN3-hU-yfp" secondAttribute="trailing" constant="116" id="i0Q-tb-Z7Y"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2OB-KC-Ddq" secondAttribute="leading" constant="296" id="iW5-D3-KeS"/>
+                            <constraint firstAttribute="trailing" secondItem="uNY-iz-h42" secondAttribute="trailing" constant="10" id="jWB-Oc-Ubf"/>
+                            <constraint firstItem="G4N-Wv-7Mk" firstAttribute="leading" secondItem="2OB-KC-Ddq" secondAttribute="leading" constant="8" id="kFz-Oe-Vyj"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GN3-hU-yfp" secondAttribute="trailing" constant="10" id="nag-Et-JYv"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cT3-CY-tmW" secondAttribute="bottom" constant="8" id="s3V-dy-qKC"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="top" secondItem="2OB-KC-Ddq" secondAttribute="top" constant="12" id="sM5-SF-mnC"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="centerY" secondItem="GN3-hU-yfp" secondAttribute="centerY" id="tKo-Up-eOH"/>
+                            <constraint firstItem="uNY-iz-h42" firstAttribute="centerY" secondItem="pAh-nz-zeE" secondAttribute="centerY" id="v0s-h8-D8r"/>
+                            <constraint firstItem="pAh-nz-zeE" firstAttribute="top" secondItem="2OB-KC-Ddq" secondAttribute="top" constant="8" id="vzs-yL-oJE"/>
+                            <constraint firstAttribute="trailing" secondItem="uNY-iz-h42" secondAttribute="trailing" constant="8" id="xcQ-VQ-b2e"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VKk-F8-aCZ"/>
+                                <exclude reference="kFz-Oe-Vyj"/>
+                                <exclude reference="DMj-Tq-TR3"/>
+                                <exclude reference="bOj-pd-Tvh"/>
+                                <exclude reference="Bfj-yz-zO5"/>
+                                <exclude reference="aaa-oQ-YKM"/>
+                                <exclude reference="Mpo-Va-oOR"/>
+                                <exclude reference="NtE-2S-zOm"/>
+                                <exclude reference="0iV-18-q2O"/>
+                                <exclude reference="YXF-zV-pwk"/>
+                                <exclude reference="I26-pd-YVo"/>
+                                <exclude reference="i0Q-tb-Z7Y"/>
+                                <exclude reference="hpZ-Ii-1BR"/>
+                                <exclude reference="7vY-Aw-nzt"/>
+                                <exclude reference="J60-br-enn"/>
+                                <exclude reference="iW5-D3-KeS"/>
+                                <exclude reference="Le4-yx-jjY"/>
+                                <exclude reference="xcQ-VQ-b2e"/>
+                                <exclude reference="sM5-SF-mnC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2OB-KC-Ddq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1is-Be-iei"/>
+                    <constraint firstAttribute="trailing" secondItem="2OB-KC-Ddq" secondAttribute="trailing" id="KIC-vE-mPq"/>
+                    <constraint firstAttribute="bottom" secondItem="2OB-KC-Ddq" secondAttribute="bottom" id="u7d-Tq-VIN"/>
+                    <constraint firstItem="2OB-KC-Ddq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uti-96-EEn"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="pAh-nz-zeE" id="mbF-xX-ZRg"/>
+                <outlet property="replyIcon" destination="CKW-p0-pKz" id="QQo-ai-B71"/>
+                <outlet property="replyLabel" destination="Uxu-pr-Te5" id="ubu-Cg-EU2"/>
+                <outlet property="repostIcon" destination="aIV-IH-x4V" id="oTW-71-B2K"/>
+                <outlet property="retweetLabel" destination="K9c-8M-0tQ" id="XhS-df-M7i"/>
+                <outlet property="starIcon" destination="Y6I-I6-buf" id="A46-ag-wKX"/>
+                <outlet property="starLabel" destination="nGR-Vd-bhH" id="m0Q-Di-ogJ"/>
+                <outlet property="timeLabel" destination="uNY-iz-h42" id="hmZ-RD-iTa"/>
+                <outlet property="tweetLabel" destination="cT3-CY-tmW" id="TKE-Su-JSy"/>
+                <outlet property="userImage" destination="G4N-Wv-7Mk" id="HKt-dV-nas"/>
+                <outlet property="usernameLabel" destination="GN3-hU-yfp" id="YZY-F8-nVL"/>
+            </connections>
+            <point key="canvasLocation" x="393" y="276.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Persona" width="600" height="600"/>
+        <image name="ReplyIcon" width="21" height="18"/>
+        <image name="RepostIcon" width="24" height="12"/>
+        <image name="StarIcon" width="25" height="24"/>
+    </resources>
 </document>

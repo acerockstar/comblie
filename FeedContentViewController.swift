@@ -16,6 +16,8 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     var pageIndex: Int = 0
     var labelText: String!
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
+    var cellTapped:Bool = true
+    var currentRow = -1
     
     @IBOutlet var tableView: UITableView!
     
@@ -40,7 +42,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
+        self.tableView.registerNib(UINib(nibName: "TwitterClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterClickedCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
         self.tableView.addSubview(self.refreshControl)
@@ -86,7 +88,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row % 3 == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("twitterClickedCell") as! TwitterClickedTableViewCell
             return cell
         } else if indexPath.row % 3 == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterActivityCell") as! TwitterActivityTableViewCell
@@ -106,15 +108,25 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // TODO: make cells dynamic
-        if indexPath.row % 3 == 2 {
-            return CGFloat(300)
-        } else {
+        if indexPath.row % 3 == 0 {
+            if indexPath.row == currentRow {
+                return CGFloat(75)
+            } else {
+                return CGFloat(60)
+            }
+        } else if indexPath.row % 3 == 1 {
             return CGFloat(60)
+        } else {
+            return CGFloat(300)
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        currentRow = indexPath.row
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
         
         // TODO: enable on images/videos only (replace manual placeholder)
         if indexPath.row % 3 == 2 {
