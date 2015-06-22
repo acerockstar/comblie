@@ -16,9 +16,6 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-Pv-ypu">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-i3-n5f">
-                            <rect key="frame" x="130" y="8" width="60" height="60"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jennifer Lourvera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNL-fF-y7R">
                             <rect key="frame" x="112" y="71" width="97" height="15"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
@@ -81,6 +78,15 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gn-4m-hrp">
+                            <rect key="frame" x="125" y="3" width="70" height="70"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-i3-n5f">
+                                    <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
@@ -94,6 +100,7 @@
                 <outlet property="numFollowersLabel" destination="omY-LI-XBB" id="bcK-GJ-Abr"/>
                 <outlet property="numFollowingLabel" destination="pWw-Vb-Zcw" id="eOF-6I-66h"/>
                 <outlet property="numPostsLabel" destination="Kte-aQ-z6N" id="2YG-Ds-TGq"/>
+                <outlet property="profilePicBorder" destination="9Gn-4m-hrp" id="jMx-Sx-6xU"/>
                 <outlet property="profilePicture" destination="QBI-i3-n5f" id="L8m-nB-vIP"/>
                 <outlet property="usernameLabel" destination="5wR-Pu-RE3" id="Kn8-Ez-nBa"/>
                 <outlet property="view" destination="Iz4-Cm-K8D" id="n0N-Vl-cda"/>

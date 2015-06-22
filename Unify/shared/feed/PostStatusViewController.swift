@@ -142,20 +142,6 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     // MARK: - UITextView Delegate Methods
     
-//    func textViewDidBeginEditing(textView: UITextView) {
-//        if textView.textColor == UIColor.lightGrayColor() {
-//            textView.text = nil
-//            textView.textColor = UIColor.blackColor()
-//        }
-//    }
-//    
-//    func textViewDidEndEditing(textView: UITextView) {
-//        if textView.text.isEmpty {
-//            textView.text = "What are you thinking?"
-//            textView.textColor = UIColor.lightGrayColor()
-//        }
-//    }
-    
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let currentText : NSString = textView.text
         let updatedText = currentText.stringByReplacingCharactersInRange(range, withString:text)
@@ -166,7 +152,6 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         }
         
         if count(updatedText) == 0 {
-            println("count 0")
             self.postButton.enabled = false
             textView.text = "What are you thinking?"
             textView.textColor = UIColor.lightGrayColor()
@@ -183,9 +168,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     func textViewDidChangeSelection(textView: UITextView) {
         if self.view.window != nil {
-            println("in selection")
             if textView.textColor == UIColor.lightGrayColor() {
-                println("gray color")
                 textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
             }
         }

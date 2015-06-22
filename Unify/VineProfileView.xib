@@ -16,9 +16,6 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4l7-XW-2lp">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-an-xXL">
-                            <rect key="frame" x="130" y="8" width="60" height="60"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cameron Dallas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arg-Me-W7d">
                             <rect key="frame" x="117" y="71" width="88" height="15"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
@@ -75,6 +72,15 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-QU-Twk">
+                            <rect key="frame" x="126" y="3" width="70" height="70"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-an-xXL">
+                                    <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
@@ -88,6 +94,7 @@
                 <outlet property="numFollowersLabel" destination="4tH-K0-Lbf" id="gL6-GH-Mn8"/>
                 <outlet property="numLoopsLabel" destination="sWt-QX-PrJ" id="Ts3-l1-ofw"/>
                 <outlet property="numPostsLabel" destination="dGE-p8-jgn" id="br3-DN-8VA"/>
+                <outlet property="profilePicBorder" destination="5kJ-QU-Twk" id="gat-Uq-cy5"/>
                 <outlet property="profilePicture" destination="hqU-an-xXL" id="d4E-Ld-kOm"/>
                 <outlet property="view" destination="RCo-UK-Y72" id="c6o-hC-dGo"/>
             </connections>

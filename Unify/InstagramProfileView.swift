@@ -11,6 +11,7 @@ import UIKit
 class InstagramProfileView: UIView {
 
     @IBOutlet var view: UIView!
+    @IBOutlet weak var profilePicBorder: UIView!
     @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,8 +24,8 @@ class InstagramProfileView: UIView {
     override func didMoveToSuperview() {
         profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2
         profilePicture.clipsToBounds = true
-        profilePicture.layer.borderWidth = 3
-        profilePicture.layer.borderColor = UIColor.pictureBorderColor().CGColor
+        profilePicBorder.layer.cornerRadius = profilePicBorder.bounds.size.width/2
+        profilePicBorder.clipsToBounds = true
         coverPhoto.alpha = 0.5
     }
     

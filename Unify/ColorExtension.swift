@@ -70,7 +70,7 @@ extension UIColor {
     }
     
     class func pictureBorderColor() -> UIColor {
-        return UIColor(red: CGFloat(0.9), green: CGFloat(0.9), blue: CGFloat(0.9), alpha: 1.0)
+        return UIColor(red: CGFloat(0.5), green: CGFloat(0.5), blue: CGFloat(0.5), alpha: 0.5)
     }
 
 }
