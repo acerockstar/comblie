@@ -44,6 +44,10 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
         Util.setUpPageControl(self.pageControl, navBarView: self.navBarView, numPages: self.pageLabels.count)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        changeNavBar()
+    }
+    
     @IBAction func postStatus(sender: UIBarButtonItem) {
         self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
         self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
@@ -114,27 +118,29 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
         
         if completed {
-            
-            var currentVC = self.pageViewController.viewControllers.last as! ActivityContentViewController
-            self.pageControl.currentPage = currentVC.pageIndex
-            if currentVC.pageIndex == 0 {
-                self.navigationItem.title = "Activity"
-                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
-                self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
-                self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-                self.navigationController?.navigationBar.barTintColor = nil
-                UIApplication.sharedApplication().statusBarStyle = .Default
-                postStatusButton.tintColor = nil
-            } else {
-                self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
-                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-                self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
-                self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
-                self.navigationController?.navigationBar.barTintColor = self.colors[currentVC.pageIndex] as? UIColor
-                UIApplication.sharedApplication().statusBarStyle = .LightContent
-                postStatusButton.tintColor = UIColor.whiteColor()
-            }
-            
+            changeNavBar()
+        }
+    }
+    
+    func changeNavBar() {
+        var currentVC = self.pageViewController.viewControllers.last as! ActivityContentViewController
+        self.pageControl.currentPage = currentVC.pageIndex
+        if currentVC.pageIndex == 0 {
+            self.navigationItem.title = "Profile"
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+            self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+            self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+            self.navigationController?.navigationBar.barTintColor = nil
+            UIApplication.sharedApplication().statusBarStyle = .Default
+            postStatusButton.tintColor = nil
+        } else {
+            self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+            self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
+            self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
+            self.navigationController?.navigationBar.barTintColor = self.colors[currentVC.pageIndex] as? UIColor
+            UIApplication.sharedApplication().statusBarStyle = .LightContent
+            postStatusButton.tintColor = UIColor.whiteColor()
         }
     }
     

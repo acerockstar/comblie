@@ -19,4 +19,5 @@ class Util {
         pageControl.numberOfPages = numPages
         navBarView.addSubview(pageControl)
     }
+
 }

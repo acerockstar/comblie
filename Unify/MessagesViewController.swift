@@ -34,6 +34,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.addSubview(self.refreshControl)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
