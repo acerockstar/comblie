@@ -13,6 +13,9 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iz4-Cm-K8D">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="jWx-Pv-ypu">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-i3-n5f">
                             <rect key="frame" x="130" y="8" width="60" height="60"/>
                         </imageView>
@@ -85,6 +88,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="coverPhoto" destination="jWx-Pv-ypu" id="5mO-ug-hxP"/>
                 <outlet property="descriptionLabel" destination="d1r-9v-jKA" id="huC-CT-XvZ"/>
                 <outlet property="nameLabel" destination="JNL-fF-y7R" id="dMr-cF-Tg0"/>
                 <outlet property="numFollowersLabel" destination="omY-LI-XBB" id="bcK-GJ-Abr"/>
@@ -97,6 +101,7 @@
         </view>
     </objects>
     <resources>
+        <image name="CoverPhoto" width="1920" height="1200"/>
         <image name="Persona" width="600" height="600"/>
     </resources>
 </document>

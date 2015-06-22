@@ -10,25 +10,41 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5N-Ni-anM">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5N-Ni-anM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="David Beckham" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-FS-iM4">
-                            <rect key="frame" x="111" y="75" width="99" height="17"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="MJl-gk-AXz">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="Klh-ZJ-EHP">
                             <rect key="frame" x="130" y="8" width="60" height="60"/>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="David Beckham" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcU-FS-iM4">
+                            <rect key="frame" x="109" y="75" width="102" height="17"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="MJl-gk-AXz" firstAttribute="top" secondItem="M5N-Ni-anM" secondAttribute="top" id="Lvf-0W-mq0"/>
+                        <constraint firstAttribute="trailing" secondItem="MJl-gk-AXz" secondAttribute="trailing" id="OxF-10-jWf"/>
+                        <constraint firstItem="MJl-gk-AXz" firstAttribute="leading" secondItem="M5N-Ni-anM" secondAttribute="leading" id="j7m-o5-Vbs"/>
+                        <constraint firstAttribute="bottom" secondItem="MJl-gk-AXz" secondAttribute="bottom" id="zI3-UB-LtO"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="M5N-Ni-anM" secondAttribute="bottom" id="3wf-XT-FmQ"/>
+                <constraint firstItem="M5N-Ni-anM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9bo-K8-dyM"/>
+                <constraint firstAttribute="trailing" secondItem="M5N-Ni-anM" secondAttribute="trailing" id="LkF-Hh-m9i"/>
+                <constraint firstItem="M5N-Ni-anM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OPB-n4-Wy5"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="coverPhoto" destination="MJl-gk-AXz" id="PCg-gy-BBC"/>
                 <outlet property="nameLabel" destination="zcU-FS-iM4" id="J4k-0a-4JY"/>
                 <outlet property="profilePicture" destination="Klh-ZJ-EHP" id="Bvl-RS-7Py"/>
                 <outlet property="view" destination="M5N-Ni-anM" id="6cc-le-907"/>
@@ -36,6 +52,7 @@
         </view>
     </objects>
     <resources>
+        <image name="CoverPhoto" width="1920" height="1200"/>
         <image name="Persona" width="600" height="600"/>
     </resources>
 </document>

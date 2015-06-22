@@ -128,7 +128,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
         var currentVC = self.pageViewController.viewControllers.last as! FeedContentViewController
         self.pageControl.currentPage = currentVC.pageIndex
         if currentVC.pageIndex == 0 {
-            self.navigationItem.title = "Profile"
+            self.navigationItem.title = "Newsfeed"
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
             self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
             self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()

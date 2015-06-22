@@ -11,6 +11,7 @@ import UIKit
 class TwitterProfileView: UIView {
     
     @IBOutlet var view: UIView!
+    @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -24,6 +25,7 @@ class TwitterProfileView: UIView {
         profilePicture.clipsToBounds = true
         profilePicture.layer.borderWidth = 3
         profilePicture.layer.borderColor = UIColor.pictureBorderColor().CGColor
+        coverPhoto.alpha = 0.5
     }
     
     class func instanceFromNib() -> UIView {
