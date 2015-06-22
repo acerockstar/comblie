@@ -18,11 +18,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="318" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXm-D8-gsH">
-                    <rect key="frame" x="23" y="36" width="275" height="350"/>
+                    <rect key="frame" x="21.5" y="36" width="275" height="250"/>
                     <subviews>
                         <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-ms-Awh">
                             <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -47,13 +47,16 @@
                             </items>
                         </navigationBar>
                         <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vp-aw-7jV">
-                            <rect key="frame" x="0.0" y="328" width="275" height="22"/>
+                            <rect key="frame" x="0.0" y="228" width="275" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="22" id="gqC-XH-4Ya"/>
                             </constraints>
                             <items>
                                 <barButtonItem title="Item" systemItem="camera" id="ugi-0z-CeI">
                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="cameraButtonClicked:" destination="-1" id="DZP-bp-Sqe"/>
+                                    </connections>
                                 </barButtonItem>
                             </items>
                         </toolbar>
@@ -90,7 +93,7 @@
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-MP-2Lq">
-                            <rect key="frame" x="56" y="60" width="219" height="268"/>
+                            <rect key="frame" x="56" y="60" width="219" height="168"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -99,7 +102,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="5vp-aw-7jV" firstAttribute="top" secondItem="pmD-MP-2Lq" secondAttribute="bottom" id="5U1-cy-Vdr"/>
-                        <constraint firstAttribute="height" constant="350" id="63X-xP-xnP"/>
+                        <constraint firstAttribute="height" constant="250" id="63X-xP-xnP"/>
                         <constraint firstItem="E8O-ET-N02" firstAttribute="leading" secondItem="wXm-D8-gsH" secondAttribute="leading" id="6Nf-et-IKx"/>
                         <constraint firstAttribute="trailing" secondItem="E8O-ET-N02" secondAttribute="trailing" id="BfW-Zk-xi0"/>
                         <constraint firstAttribute="bottom" secondItem="5vp-aw-7jV" secondAttribute="bottom" id="CBq-kL-rYB"/>
@@ -136,6 +139,7 @@
                     <exclude reference="vGL-KW-pPl"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="359" y="353"/>
         </view>
     </objects>
     <resources>

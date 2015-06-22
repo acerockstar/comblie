@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class PostStatusViewController: UIViewController, UITextViewDelegate {
+class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var userImage: UIImageView!
@@ -18,6 +18,8 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var tabBar: UIToolbar!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var postButton: UIBarButtonItem!
+    
+    var imagePicker = UIImagePickerController()
     
     // Initializers
     required init(coder aDecoder: NSCoder) {
@@ -35,9 +37,11 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
         self.popUpView.layer.masksToBounds = true
         self.userImage.layer.cornerRadius = 5
         self.userImage.layer.masksToBounds = true
+        self.textView.delegate = self
         self.textView.text = "What are you thinking?"
         self.textView.textColor = UIColor.lightGrayColor()
-        self.textView.delegate = self
+        self.textView.becomeFirstResponder()
+        self.textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
         self.navBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 14)!]
         self.cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 12)!], forState: UIControlState.Normal)
         self.postButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 12)!], forState: UIControlState.Normal)
@@ -83,12 +87,74 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
         // TODO: Send POST request to server and create new tableview cell and prepend to tableview
         self.removeAnimate()
     }
+    
+    @IBAction func cameraButtonClicked(sender: UIBarButtonItem) {
+        let cameraMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let showPhotoLibraryAction = UIAlertAction(title: "Photo Library", style: .Default) { action -> Void in
+            self.openPhotoLibrary()
+        }
+        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .Default) { action -> Void in
+            self.openImagePicker()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { action -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        cameraMenu.addAction(showPhotoLibraryAction)
+        cameraMenu.addAction(takePhotoAction)
+        cameraMenu.addAction(cancelAction)
+        
+        self.presentViewController(cameraMenu, animated: true, completion: nil)
+        
+    }
+    
+    func openPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func openImagePicker() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+        })
+        
+        // TODO: Post photo in box
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     // MARK: - UITextView Delegate Methods
+    
+//    func textViewDidBeginEditing(textView: UITextView) {
+//        if textView.textColor == UIColor.lightGrayColor() {
+//            textView.text = nil
+//            textView.textColor = UIColor.blackColor()
+//        }
+//    }
+//    
+//    func textViewDidEndEditing(textView: UITextView) {
+//        if textView.text.isEmpty {
+//            textView.text = "What are you thinking?"
+//            textView.textColor = UIColor.lightGrayColor()
+//        }
+//    }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         let currentText : NSString = textView.text
@@ -100,6 +166,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
         }
         
         if count(updatedText) == 0 {
+            println("count 0")
             self.postButton.enabled = false
             textView.text = "What are you thinking?"
             textView.textColor = UIColor.lightGrayColor()
@@ -116,7 +183,9 @@ class PostStatusViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidChangeSelection(textView: UITextView) {
         if self.view.window != nil {
+            println("in selection")
             if textView.textColor == UIColor.lightGrayColor() {
+                println("gray color")
                 textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
             }
         }

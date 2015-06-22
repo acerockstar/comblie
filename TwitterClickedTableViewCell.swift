@@ -35,31 +35,22 @@ class TwitterClickedTableViewCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if (selected) {
-            self.contentView.backgroundColor = UIColor.selectedFeedCell()
-            nameLabel.textColor = UIColor.whiteColor()
-            usernameLabel.textColor = UIColor.whiteColor()
-            tweetLabel.textColor = UIColor.whiteColor()
-            timeLabel.textColor = UIColor.whiteColor()
-            replyLabel.textColor = UIColor.whiteColor()
-            retweetLabel.textColor = UIColor.whiteColor()
-            starLabel.textColor = UIColor.whiteColor()
-            replyIcon.enabled = true
-            repostIcon.enabled = true
-            starIcon.enabled = true
-        } else {
-            self.contentView.backgroundColor = UIColor.clearColor()
-            nameLabel.textColor = UIColor.blackColor()
-            usernameLabel.textColor = UIColor.darkGrayColor()
-            tweetLabel.textColor = UIColor.blackColor()
-            timeLabel.textColor = UIColor.customLightGrayColor()
-            replyLabel.textColor = UIColor.clearColor()
-            retweetLabel.textColor = UIColor.clearColor()
-            starLabel.textColor = UIColor.clearColor()
-            replyIcon.enabled = false
-            repostIcon.enabled = false
-            starIcon.enabled = false
-        }
+        
+        self.contentView.backgroundColor = selected ? UIColor.selectedFeedCell() : UIColor.clearColor()
+        nameLabel.textColor = selected ? UIColor.whiteColor() : UIColor.blackColor()
+        usernameLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.darkGrayColor()
+        tweetLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.blackColor()
+        timeLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.customLightGrayColor()
+        replyLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        retweetLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        starLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        replyIcon.tintColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        repostIcon.tintColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        starIcon.tintColor = selected ?  UIColor.whiteColor() : UIColor.clearColor()
+        replyIcon.enabled = selected
+        repostIcon.enabled = selected
+        starIcon.enabled = selected
+        
     }
     
 }

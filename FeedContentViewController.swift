@@ -143,7 +143,12 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     // TODO: Make swipe right to delete only on combined newsfeed
 //    // Swipe left to delete mechanism
 //    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//
 //        items.removeAtIndex(indexPath.row)
 //        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
 //    }
+    
+    func swipeRightToDelete() {
+        
+    }
 }
