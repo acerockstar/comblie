@@ -27,6 +27,8 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         refreshControl?.addTarget(self, action: "refreshProfiles", forControlEvents: .ValueChanged)
         refreshProfiles()
         
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.addSubview(self.refreshControl)
     }
@@ -99,7 +101,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(55)
+        return CGFloat(60)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

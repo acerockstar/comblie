@@ -37,7 +37,9 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         refreshControl?.addTarget(self, action: "refreshFeed", forControlEvents: .ValueChanged)
         refreshFeed()
         
-        self.tableView.estimatedRowHeight = 55.0
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
@@ -107,7 +109,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         if indexPath.row % 3 == 2 {
             return CGFloat(300)
         } else {
-            return CGFloat(55)
+            return CGFloat(60)
         }
     }
     

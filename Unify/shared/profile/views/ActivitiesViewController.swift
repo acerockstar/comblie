@@ -37,14 +37,11 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
         
+        let navBar = self.navigationController?.navigationBar
+        navBar!.setTitleVerticalPositionAdjustment(-navBar!.frame.size.height * 0.1, forBarMetrics: .Default)
         self.pageControl = UIPageControl()
-        self.pageControl.frame = CGRect(x: 0, y: 35, width: 0, height: 0)
-        self.pageControl.backgroundColor = UIColor.whiteColor()
-        self.pageControl.numberOfPages = self.pageLabels.count
-        self.pageControl.currentPage = 0
-        self.pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
-        self.pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-        self.navBarView.addSubview(pageControl)
+        self.pageControl.frame = CGRect(x: 0, y: navBar!.frame.size.height * 0.75, width: 0, height: 0)
+        Util.setUpPageControl(self.pageControl, navBarView: self.navBarView, numPages: self.pageLabels.count)
     }
     
     @IBAction func postStatus(sender: UIBarButtonItem) {
