@@ -7,14 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31E55EEDB54AA4E93C1C1A9B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B7264504443AEC6114486D /* libPods.a */; };
+		6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFD9CB582B129FC0FCFBEDD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */; };
 		77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C11B1CD9B4006084E4 /* Images.xcassets */; };
-		77DF40C51B1CD9B4006084E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */; };
 		77DF40D11B1CD9B4006084E4 /* UnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */; };
 		77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */; };
 		77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */; };
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
+		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
+		D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */; };
+		D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */; };
+		D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */; };
+		D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */; };
+		D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */; };
+		D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */; };
+		D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */; };
+		D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */; };
+		D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */; };
+		D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */; };
+		D17CE48F1B1EF38F00ED9E93 /* CombinedProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */; };
+		D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */; };
+		D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */; };
+		D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */; };
+		D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */; };
+		D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */; };
+		D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */; };
+		D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */; };
+		D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */; };
+		D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */; };
+		D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */; };
+		D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */; };
+		D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */; };
+		D17CE4BF1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */; };
+		D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */; };
+		D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */; };
+		D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */; };
+		D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */; };
+		D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */; };
+		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
+		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
+		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
+		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
+		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
+		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
+		D1B9E0381B30030D00F59444 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0361B30030D00F59444 /* CommentsTableViewCell.swift */; };
+		D1B9E0391B30030D00F59444 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B9E0371B30030D00F59444 /* CommentsTableViewCell.xib */; };
+		D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E03A1B30061C00F59444 /* CommentsViewController.swift */; };
+		D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E03C1B30066E00F59444 /* NumLikesTableViewCell.swift */; };
+		D1B9E03F1B30066E00F59444 /* NumLikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B9E03D1B30066E00F59444 /* NumLikesTableViewCell.xib */; };
+		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
+		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
+		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BFD9CB582B129FC0FCFBEDD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		77DF40B51B1CD9B4006084E4 /* Unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF40B91B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77DF40C11B1CD9B4006084E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		77DF40C41B1CD9B4006084E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77DF40CA1B1CD9B4006084E4 /* UnifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF40CF1B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyTests.swift; sourceTree = "<group>"; };
@@ -41,8 +84,51 @@
 		77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unify-Bridging-Header.h"; sourceTree = "<group>"; };
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
-		91B7264504443AEC6114486D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
+		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Unify/MessagesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesTableViewCell.swift; path = Unify/MessagesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesTableViewCell.xib; path = Unify/MessagesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageViewController.swift; path = Unify/NewMessageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OldMessageViewController.swift; path = Unify/OldMessageViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CombinedProfileView.swift; path = Unify/CombinedProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterProfileView.swift; path = Unify/TwitterProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VineProfileView.swift; path = Unify/VineProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TumblrProfileView.swift; path = Unify/TumblrProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstagramProfileView.swift; path = Unify/InstagramProfileView.swift; sourceTree = SOURCE_ROOT; };
+		D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CombinedProfileView.xib; path = Unify/CombinedProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterProfileView.xib; path = Unify/TwitterProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VineProfileView.xib; path = Unify/VineProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TumblrProfileView.xib; path = Unify/TumblrProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramProfileView.xib; path = Unify/shared/profile/views/InstagramProfileView.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContentViewController.swift; path = Unify/shared/profile/views/ProfileContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilesViewController.swift; path = Unify/shared/profile/views/ProfilesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitiesViewController.swift; path = Unify/shared/profile/views/ActivitiesViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterTweetTableViewCell.swift; path = Unify/shared/profile/views/TwitterTweetTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterTweetTableViewCell.xib; path = Unify/shared/profile/views/TwitterTweetTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterActivityTableViewCell.swift; path = Unify/shared/profile/views/TwitterActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterActivityTableViewCell.xib; path = Unify/shared/profile/views/TwitterActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoVideoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnlargedItemViewController.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
+		D1B9E0361B30030D00F59444 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsTableViewCell.swift; path = Unify/shared/profile/views/CommentsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E0371B30030D00F59444 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentsTableViewCell.xib; path = Unify/shared/profile/views/CommentsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D1B9E03A1B30061C00F59444 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = Unify/shared/profile/views/CommentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E03C1B30066E00F59444 /* NumLikesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumLikesTableViewCell.swift; path = Unify/shared/profile/views/NumLikesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1B9E03D1B30066E00F59444 /* NumLikesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumLikesTableViewCell.xib; path = Unify/shared/profile/views/NumLikesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
+		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E55EEDB54AA4E93C1C1A9B /* libPods.a in Frameworks */,
+				6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +164,7 @@
 		1615BB4CCEF396B4845C765B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				91B7264504443AEC6114486D /* libPods.a */,
+				2BFD9CB582B129FC0FCFBEDD /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,11 +194,12 @@
 			children = (
 				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 				77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */,
-				77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */,
 				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
 				77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */,
 				77DF41051B1CF15E006084E4 /* cloud */,
+				D17CE4D41B21C76600ED9E93 /* Models */,
 				77DF40E01B1CE7DF006084E4 /* shared */,
+				D12A8ACA1B1CFF0400320E1F /* Utilities */,
 				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 			);
 			path = Unify;
@@ -215,6 +302,8 @@
 		77DF40E61B1CEBE6006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4C41B20568C00ED9E93 /* ActivityTableViewCell.swift */,
+				D17CE4C51B20568C00ED9E93 /* ActivityTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -222,6 +311,8 @@
 		77DF40E71B1CEBE6006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */,
+				D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -236,6 +327,8 @@
 		77DF40E91B1CEBF2006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D1B9E0401B30067B00F59444 /* Swift Files */,
+				D1B9E0411B30068200F59444 /* Xibs */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -243,6 +336,11 @@
 		77DF40EA1B1CEBF2006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4C21B20535D00ED9E93 /* NewsFeedViewController.swift */,
+				D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */,
+				D17CE4C81B205BEF00ED9E93 /* EnlargedItemViewController.swift */,
+				D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */,
+				D1B9E03A1B30061C00F59444 /* CommentsViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -250,6 +348,7 @@
 		77DF40EB1B1CEBF2006084E4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -257,6 +356,8 @@
 		77DF40EC1B1CEBFD006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */,
+				D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -264,6 +365,9 @@
 		77DF40ED1B1CEBFD006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */,
+				D17CE45C1B1E9E2A00ED9E93 /* NewMessageViewController.swift */,
+				D17CE45E1B1EC4FE00ED9E93 /* OldMessageViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -278,6 +382,8 @@
 		77DF40EF1B1CEC0D006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4BA1B203F2700ED9E93 /* Swift files */,
+				D17CE4BB1B203F2D00ED9E93 /* Xibs */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -285,6 +391,8 @@
 		77DF40F01B1CEC0D006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */,
+				D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -292,6 +400,8 @@
 		77DF40F11B1CEC0D006084E4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D17CE49A1B1EF44D00ED9E93 /* Swift files */,
+				D17CE49B1B1EF47100ED9E93 /* Xibs */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -325,6 +435,90 @@
 			path = cloud;
 			sourceTree = "<group>";
 		};
+		D12A8ACA1B1CFF0400320E1F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
+				D17CE4CA1B214ADA00ED9E93 /* UIViewExtension.swift */,
+				D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */,
+				D1E08BF21B377FC800E40C41 /* Util.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D17CE49A1B1EF44D00ED9E93 /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4841B1EF33B00ED9E93 /* CombinedProfileView.swift */,
+				D17CE4861B1EF34700ED9E93 /* TwitterProfileView.swift */,
+				D17CE4881B1EF35200ED9E93 /* VineProfileView.swift */,
+				D17CE48A1B1EF35E00ED9E93 /* TumblrProfileView.swift */,
+				D17CE48C1B1EF36B00ED9E93 /* InstagramProfileView.swift */,
+			);
+			name = "Swift files";
+			sourceTree = "<group>";
+		};
+		D17CE49B1B1EF47100ED9E93 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE48E1B1EF38F00ED9E93 /* CombinedProfileView.xib */,
+				D17CE4901B1EF3A400ED9E93 /* TwitterProfileView.xib */,
+				D17CE4921B1EF3B500ED9E93 /* VineProfileView.xib */,
+				D17CE4961B1EF41600ED9E93 /* TumblrProfileView.xib */,
+				D17CE4981B1EF43300ED9E93 /* InstagramProfileView.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		D17CE4BA1B203F2700ED9E93 /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */,
+				D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */,
+				D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */,
+				D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */,
+			);
+			name = "Swift files";
+			sourceTree = "<group>";
+		};
+		D17CE4BB1B203F2D00ED9E93 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */,
+				D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */,
+				D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */,
+				D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		D17CE4D41B21C76600ED9E93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D17CE4D51B21C78B00ED9E93 /* User.swift */,
+			);
+			name = Models;
+			path = cloud;
+			sourceTree = "<group>";
+		};
+		D1B9E0401B30067B00F59444 /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1B9E0361B30030D00F59444 /* CommentsTableViewCell.swift */,
+				D1B9E03C1B30066E00F59444 /* NumLikesTableViewCell.swift */,
+			);
+			name = "Swift Files";
+			sourceTree = "<group>";
+		};
+		D1B9E0411B30068200F59444 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D1B9E0371B30030D00F59444 /* CommentsTableViewCell.xib */,
+				D1B9E03D1B30066E00F59444 /* NumLikesTableViewCell.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +531,7 @@
 				77DF40B21B1CD9B4006084E4 /* Frameworks */,
 				77DF40B31B1CD9B4006084E4 /* Resources */,
 				AA8AF828DA512F8C122B8B34 /* Copy Pods Resources */,
+				D5612879C5977E0A8977DFBE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,10 +603,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CE4BF1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib in Resources */,
+				D1B9E03F1B30066E00F59444 /* NumLikesTableViewCell.xib in Resources */,
+				D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */,
+				D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */,
+				D1B9E0391B30030D00F59444 /* CommentsTableViewCell.xib in Resources */,
+				D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */,
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
+				D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */,
+				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
+				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
-				77DF40C51B1CD9B4006084E4 /* LaunchScreen.xib in Resources */,
+				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
+				D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */,
+				D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */,
+				D17CE48F1B1EF38F00ED9E93 /* CombinedProfileView.xib in Resources */,
+				D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +648,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D5612879C5977E0A8977DFBE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F4B976094F47A58CB4C2C8DF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,7 +685,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
+				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
+				D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */,
+				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
+				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
+				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
+				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
+				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
+				D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */,
+				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
+				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
+				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
+				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
+				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
+				D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */,
+				D1B9E0381B30030D00F59444 /* CommentsTableViewCell.swift in Sources */,
+				D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */,
+				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
+				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
+				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
+				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
+				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
+				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
+				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
+				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
+				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,
+				D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */,
+				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
+				D17CE4891B1EF35200ED9E93 /* VineProfileView.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,17 +737,6 @@
 			targetProxy = 77DF40CB1B1CD9B4006084E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		77DF40C31B1CD9B4006084E4 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77DF40C41B1CD9B4006084E4 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		77DF40D21B1CD9B4006084E4 /* Debug */ = {
@@ -585,13 +827,13 @@
 			baseConfigurationReference = 3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -600,12 +842,12 @@
 			baseConfigurationReference = D21C955EBF8C304714409D74 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -686,13 +928,22 @@
 			baseConfigurationReference = B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-SVProgressHUD\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"QuartzCore\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AdHoc;
 		};
