@@ -8,12 +8,13 @@
 
 import UIKit
 
-class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource,WebServiceDelegate {
     
     var pageViewController: UIPageViewController!
     var postStatusViewController : PostStatusViewController!
     var navBarView =  UIView()
     var pageControl: UIPageControl!
+    var api: WebService = WebService()
     
     // TODO: Store as dictionary
     var pageLabels: NSArray = ["Newsfeed", "Instagram", "Tumblr", "Twitter", "Vine"]
@@ -44,8 +45,22 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
         self.pageControl = UIPageControl()
         self.pageControl.frame = CGRect(x: 0, y: navBar!.frame.size.height * 0.75, width: 0, height: 0)
         Util.setUpPageControl(self.pageControl, navBarView: self.navBarView, numPages: self.pageLabels.count)
+
+        VineUserInfo()
     }
-    
+    func VineUserInfo(){
+        api.delegate=self
+        //api.Vine_get_user_info()
+        api.Vine_Avtar()
+    }
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        println("paraDict===\(paraDict)")
+    }
+
+
     override func viewDidAppear(animated: Bool) {
         changeNavBar()
     }

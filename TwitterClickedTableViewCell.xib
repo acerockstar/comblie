@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7703" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-nz-zeE">
-                                <rect key="frame" x="70" y="8" width="75.5" height="15.5"/>
+                                <rect key="frame" x="70" y="8" width="76" height="16"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How can mirrors be real if our eyes aren't real? Just a random thought..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT3-CY-tmW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How can mirrors be real if our eyes aren't real? Just a random thought..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT3-CY-tmW">
                                 <rect key="frame" x="70" y="23" width="225" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNY-iz-h42">
-                                <rect key="frame" x="294" y="10" width="15.5" height="13"/>
+                                <rect key="frame" x="294" y="10" width="16" height="13"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,7 +50,7 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jadenofficial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-hU-yfp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@jadenofficial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-hU-yfp">
                                 <rect key="frame" x="148" y="9" width="74" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="highlightedColor"/>
@@ -125,25 +125,25 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="VKk-F8-aCZ"/>
-                                <exclude reference="kFz-Oe-Vyj"/>
                                 <exclude reference="DMj-Tq-TR3"/>
+                                <exclude reference="VKk-F8-aCZ"/>
                                 <exclude reference="bOj-pd-Tvh"/>
+                                <exclude reference="kFz-Oe-Vyj"/>
                                 <exclude reference="Bfj-yz-zO5"/>
-                                <exclude reference="aaa-oQ-YKM"/>
                                 <exclude reference="Mpo-Va-oOR"/>
-                                <exclude reference="NtE-2S-zOm"/>
+                                <exclude reference="aaa-oQ-YKM"/>
                                 <exclude reference="0iV-18-q2O"/>
+                                <exclude reference="NtE-2S-zOm"/>
                                 <exclude reference="YXF-zV-pwk"/>
                                 <exclude reference="I26-pd-YVo"/>
-                                <exclude reference="i0Q-tb-Z7Y"/>
                                 <exclude reference="hpZ-Ii-1BR"/>
+                                <exclude reference="i0Q-tb-Z7Y"/>
                                 <exclude reference="7vY-Aw-nzt"/>
                                 <exclude reference="J60-br-enn"/>
-                                <exclude reference="iW5-D3-KeS"/>
                                 <exclude reference="Le4-yx-jjY"/>
-                                <exclude reference="xcQ-VQ-b2e"/>
+                                <exclude reference="iW5-D3-KeS"/>
                                 <exclude reference="sM5-SF-mnC"/>
+                                <exclude reference="xcQ-VQ-b2e"/>
                             </mask>
                         </variation>
                     </view>

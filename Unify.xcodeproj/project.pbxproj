@@ -12,7 +12,6 @@
 		77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40C11B1CD9B4006084E4 /* Images.xcassets */; };
 		77DF40D11B1CD9B4006084E4 /* UnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */; };
 		77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */; };
-		77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */; };
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
 		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
 		D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */; };
@@ -58,6 +57,8 @@
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
+		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
+		E08747021B4C04EB0060E5A6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08747011B4C04EB0060E5A6 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 77DF40B41B1CD9B4006084E4;
 			remoteInfo = Unify;
+		};
+		E08747081B4C14850060E5A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93E52A70168BB43700E5471A;
+			remoteInfo = TMTumblrSDK;
+		};
+		E087470A1B4C14850060E5A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93A015BB1B0696E20047F8C4;
+			remoteInfo = Tests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -81,7 +96,6 @@
 		77DF40CF1B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyTests.swift; sourceTree = "<group>"; };
 		77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
-		77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unify-Bridging-Header.h"; sourceTree = "<group>"; };
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +144,9 @@
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		E08747011B4C04EB0060E5A6 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +171,7 @@
 		101B7A77A5F2EA0B43B30BAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */,
 				3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */,
 				D21C955EBF8C304714409D74 /* Pods.release.xcconfig */,
 				B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */,
@@ -192,10 +210,11 @@
 		77DF40B71B1CD9B4006084E4 /* Unify */ = {
 			isa = PBXGroup;
 			children = (
+				E08747011B4C04EB0060E5A6 /* WebService.swift */,
 				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 				77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */,
 				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
-				77DF40DC1B1CDB47006084E4 /* Main_iPad.storyboard */,
+				E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */,
 				77DF41051B1CF15E006084E4 /* cloud */,
 				D17CE4D41B21C76600ED9E93 /* Models */,
 				77DF40E01B1CE7DF006084E4 /* shared */,
@@ -519,6 +538,15 @@
 			name = Xibs;
 			sourceTree = "<group>";
 		};
+		E08747041B4C14850060E5A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E08747091B4C14850060E5A6 /* libTMTumblrSDK.a */,
+				E087470B1B4C14850060E5A6 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -590,6 +618,12 @@
 			mainGroup = 77DF40AC1B1CD9B4006084E4;
 			productRefGroup = 77DF40B61B1CD9B4006084E4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E08747041B4C14850060E5A6 /* Products */;
+					ProjectRef = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				77DF40B41B1CD9B4006084E4 /* Unify */,
@@ -597,6 +631,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E08747091B4C14850060E5A6 /* libTMTumblrSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTMTumblrSDK.a;
+			remoteRef = E08747081B4C14850060E5A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E087470B1B4C14850060E5A6 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = E087470A1B4C14850060E5A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		77DF40B31B1CD9B4006084E4 /* Resources */ = {
@@ -607,13 +658,13 @@
 				D1B9E03F1B30066E00F59444 /* NumLikesTableViewCell.xib in Resources */,
 				D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */,
 				D17CE4971B1EF41600ED9E93 /* TumblrProfileView.xib in Resources */,
+				E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */,
 				D1B9E0391B30030D00F59444 /* CommentsTableViewCell.xib in Resources */,
 				D17CE4911B1EF3A400ED9E93 /* TwitterProfileView.xib in Resources */,
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
 				D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */,
 				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
-				77DF40DD1B1CDB47006084E4 /* Main_iPad.storyboard in Resources */,
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
 				D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */,
@@ -685,6 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E08747021B4C04EB0060E5A6 /* WebService.swift in Sources */,
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
 				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
 				D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */,
@@ -834,6 +886,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -848,6 +901,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -944,6 +998,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = AdHoc;
 		};
