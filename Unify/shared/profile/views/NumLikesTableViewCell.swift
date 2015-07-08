@@ -10,8 +10,10 @@ import UIKit
 
 class NumLikesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var symbolImage: UIImageView!
+
+    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

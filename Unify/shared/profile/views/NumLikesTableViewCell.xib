@@ -15,42 +15,73 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEU-0l-GWZ">
-                        <rect key="frame" x="0.0" y="0.5" width="320" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilledHeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-D4-np7">
-                        <rect key="frame" x="8" y="7" width="30" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFN-ib-9WI">
+                        <rect key="frame" x="8" y="7.5" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="M9Y-A6-hOL"/>
-                            <constraint firstAttribute="height" constant="30" id="gaz-bV-kVg"/>
+                            <constraint firstAttribute="width" constant="30" id="bKl-Xf-blw"/>
+                            <constraint firstAttribute="height" constant="30" id="tup-FM-4JT"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jennifer Aniston and 345 others like this." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-tE-jlU">
-                        <rect key="frame" x="46" y="13.5" width="254" height="16.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <state key="normal" image="NotLikedIcon">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b1-mC-ayq">
+                        <rect key="frame" x="272" y="9" width="40" height="26"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <state key="normal" title="Back">
+                            <color key="titleColor" red="0.4392156862745098" green="0.14901960784313725" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jennifer Aniston and 345 others like this." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-tE-jlU">
+                        <rect key="frame" x="46" y="14" width="218" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qul-RT-i1z">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FwX-4f-KVJ"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="jGu-tE-jlU" firstAttribute="leading" secondItem="pKL-D4-np7" secondAttribute="trailing" constant="8" id="9Zq-1s-VUy"/>
-                    <constraint firstAttribute="centerY" secondItem="pKL-D4-np7" secondAttribute="centerY" id="QaM-tb-C1o"/>
+                    <constraint firstItem="qul-RT-i1z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2GM-FI-dkb"/>
+                    <constraint firstAttribute="bottom" secondItem="qul-RT-i1z" secondAttribute="bottom" id="EMj-it-l2a"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5b1-mC-ayq" secondAttribute="trailing" id="OUO-Nx-exx"/>
+                    <constraint firstItem="5b1-mC-ayq" firstAttribute="leading" secondItem="jGu-tE-jlU" secondAttribute="trailing" constant="8" id="aYr-hv-JWv"/>
                     <constraint firstItem="AEU-0l-GWZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dPW-Za-0s9"/>
+                    <constraint firstAttribute="centerY" secondItem="5b1-mC-ayq" secondAttribute="centerY" id="eX6-Q9-me1"/>
                     <constraint firstItem="AEU-0l-GWZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fBU-GZ-8Ci"/>
-                    <constraint firstItem="pKL-D4-np7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ieS-JV-Duk"/>
                     <constraint firstAttribute="bottom" secondItem="AEU-0l-GWZ" secondAttribute="bottom" id="k9R-g2-Nco"/>
+                    <constraint firstItem="jGu-tE-jlU" firstAttribute="leading" secondItem="iFN-ib-9WI" secondAttribute="trailing" constant="8" id="lzR-r5-POI"/>
+                    <constraint firstAttribute="centerY" secondItem="iFN-ib-9WI" secondAttribute="centerY" id="m1H-2x-mDM"/>
+                    <constraint firstAttribute="trailing" secondItem="qul-RT-i1z" secondAttribute="trailing" id="ndt-MA-ccd"/>
                     <constraint firstAttribute="centerY" secondItem="jGu-tE-jlU" secondAttribute="centerY" id="pY6-Sw-QRp"/>
+                    <constraint firstItem="iFN-ib-9WI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tIa-Af-S4b"/>
                     <constraint firstAttribute="trailing" secondItem="AEU-0l-GWZ" secondAttribute="trailing" id="wvr-qg-IH0"/>
+                    <constraint firstItem="iFN-ib-9WI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zrc-LB-O3H"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="zrc-LB-O3H"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backButton" destination="5b1-mC-ayq" id="dZE-ms-aZY"/>
+                <outlet property="likeButton" destination="iFN-ib-9WI" id="AXC-Cm-UVp"/>
                 <outlet property="likesLabel" destination="jGu-tE-jlU" id="fXg-UL-FzY"/>
-                <outlet property="symbolImage" destination="pKL-D4-np7" id="Fmj-Li-WyE"/>
             </connections>
             <point key="canvasLocation" x="208" y="281"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="FilledHeartIcon" width="21" height="18"/>
+        <image name="NotLikedIcon" width="54" height="53"/>
     </resources>
 </document>

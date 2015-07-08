@@ -41,6 +41,14 @@ class EnlargedItemViewController: UIViewController {
         likeSymbol.tintColor = UIColor.whiteColor()
         commentSymbol.tintColor = UIColor.whiteColor()
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarHidden = false
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

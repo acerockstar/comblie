@@ -51,7 +51,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     func VineUserInfo(){
         api.delegate=self
         //api.Vine_get_user_info()
-        api.Vine_Avtar()
+        api.Vine_Avatar()
     }
     func returnFail() {
 

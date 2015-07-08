@@ -47,7 +47,7 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlPath = ""
         UrlConnectionBody(urlPath!)
     }
-    func Vine_Avtar(){
+    func Vine_Avatar(){
         //urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/info?api_key=PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE"
         urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/followers"
         //urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/avatar"

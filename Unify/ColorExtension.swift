@@ -60,6 +60,11 @@ extension UIColor {
         return UIColor(red: CGFloat(222.0/255.0), green: CGFloat(224.0/255.0), blue: CGFloat(225.0/255.0), alpha: 1.0)
     }
     
+    class func combliePurpleColor() -> UIColor {
+        // Hex: #702663, RGB: 112, 38, 99
+        return UIColor(red: CGFloat(112.0/255.0), green: CGFloat(38.0/255.0), blue: CGFloat(99.0/255.0), alpha: 1.0)
+    }
+    
     class func redHeartColor() -> UIColor {
         // Hex: #d55c3f, RGB: 213, 92, 63
         return UIColor(red: CGFloat(213.0/255.0), green: CGFloat(92.0/255.0), blue: CGFloat(63.0/255.0), alpha: 1.0)

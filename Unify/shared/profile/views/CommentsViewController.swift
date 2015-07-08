@@ -15,15 +15,12 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var comments: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
+    var commentLiked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         commentField.delegate = self
-        
-        var swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissCommentsVC")
-        swipe.direction = .Down
-        self.view.addGestureRecognizer(swipe)
         
         self.tableView.registerNib(UINib(nibName: "NumLikesTableViewCell", bundle: nil), forCellReuseIdentifier: "numLikesCell")
         self.tableView.registerNib(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "commentCell")
@@ -36,7 +33,18 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func toggleLike(sender: UIButton) {
+        if commentLiked {
+            sender.setImage(UIImage(named: "NotLikedIcon"), forState: .Normal)
+            commentLiked = false
+        } else {
+            sender.setImage(UIImage(named: "LikedIcon"), forState: .Normal)
+            commentLiked = true
+        }
+    }
+    
     override func viewWillAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarHidden = true
         self.commentField.frame = CGRectMake(0, 0, self.view.frame.size.width - 55, self.commentField.frame.size.height)
     }
 
@@ -44,6 +52,8 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("numLikesCell") as! NumLikesTableViewCell
+        cell.backButton.addTarget(self, action: "dismissCommentsVC", forControlEvents: .TouchUpInside)
+        cell.likeButton.addTarget(self, action: "toggleLike:", forControlEvents: .TouchUpInside)
         
         return cell
     }
