@@ -11,6 +11,8 @@
                 <outlet property="navBar" destination="5Y9-ms-Awh" id="tkJ-cV-jJM"/>
                 <outlet property="popUpView" destination="wXm-D8-gsH" id="eLY-Ef-wB5"/>
                 <outlet property="postButton" destination="3EJ-tQ-TQC" id="1Ne-Xb-Rrh"/>
+                <outlet property="postStatusNavBar" destination="5Y9-ms-Awh" id="pb3-dq-sxd"/>
+                <outlet property="socialMediaButtonsView" destination="Ky9-JU-Szm" id="PkG-GZ-Ixh"/>
                 <outlet property="tabBar" destination="5vp-aw-7jV" id="o0O-Af-Xhd"/>
                 <outlet property="textView" destination="pmD-MP-2Lq" id="9Wi-Fy-LEJ"/>
                 <outlet property="userImage" destination="VcV-LS-Oea" id="OmL-Y1-qQb"/>
@@ -74,14 +76,22 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky9-JU-Szm">
+                                    <rect key="frame" x="36" y="5" width="252" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="centerX" secondItem="n1s-sS-cNJ" secondAttribute="centerX" id="3vS-wq-sHW"/>
                                 <constraint firstAttribute="centerY" secondItem="n1s-sS-cNJ" secondAttribute="centerY" id="BmB-PQ-7kS"/>
+                                <constraint firstAttribute="bottom" secondItem="Ky9-JU-Szm" secondAttribute="bottom" constant="5" id="Efb-hq-Pva"/>
                                 <constraint firstAttribute="width" constant="275" id="THu-I0-PU9"/>
                                 <constraint firstAttribute="height" constant="30" id="ant-Qj-shO"/>
+                                <constraint firstItem="Ky9-JU-Szm" firstAttribute="top" secondItem="E8O-ET-N02" secondAttribute="top" constant="5" id="cmP-sl-ADL"/>
+                                <constraint firstItem="Ky9-JU-Szm" firstAttribute="leading" secondItem="n1s-sS-cNJ" secondAttribute="trailing" constant="8" id="jLA-Pc-5ja"/>
                                 <constraint firstItem="n1s-sS-cNJ" firstAttribute="leading" secondItem="E8O-ET-N02" secondAttribute="leading" constant="8" id="sy8-BL-N5R"/>
+                                <constraint firstAttribute="trailing" secondItem="Ky9-JU-Szm" secondAttribute="trailing" id="wc4-DP-a3a"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
@@ -152,6 +162,7 @@
                     <exclude reference="vGL-KW-pPl"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="231" y="232"/>
         </view>
     </objects>
     <resources>

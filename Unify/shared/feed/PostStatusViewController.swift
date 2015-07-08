@@ -11,6 +11,8 @@ import QuartzCore
 
 class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var postStatusNavBar: UINavigationBar!
+    @IBOutlet weak var socialMediaButtonsView: UIView!
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var textView: UITextView!
@@ -20,6 +22,10 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     @IBOutlet weak var postButton: UIBarButtonItem!
     
     var imagePicker = UIImagePickerController()
+    var socialMediaIcons = ["InstagramClearIcon", "TumblrClearIcon", "TwitterClearIcon", "VineClearIcon"]
+    var socialMediaStatusLabel = ["Post to Instagram", "Post to Tumblr", "Update Status", "Post to Vine"]
+    var socialMediaButtons: [UIButton!] = []
+    var currentSocialMediaIndex = 0
     
     // Initializers
     required init(coder aDecoder: NSCoder) {
@@ -46,6 +52,37 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         self.cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 12)!], forState: UIControlState.Normal)
         self.postButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 12)!], forState: UIControlState.Normal)
         self.postButton.enabled = false
+        
+        setUpSocialMediaButtons()
+    }
+    
+    func setUpSocialMediaButtons() {
+        let buttonHeight = socialMediaButtonsView.frame.size.height
+        let buttonXPos = socialMediaButtonsView.frame.origin.x
+        let buttonYPos = socialMediaButtonsView.frame.origin.y
+        
+        for (index, icon) in enumerate(socialMediaIcons) {
+            var socialMediaButton = UIButton(frame: CGRectMake((buttonHeight + 5) * CGFloat(index), 0, buttonHeight, buttonHeight))
+            socialMediaButton.addTarget(self, action: "changeSocialMedia:", forControlEvents: .TouchUpInside)
+            socialMediaButton.setImage(UIImage(named: icon), forState: .Normal)
+            socialMediaButton.tag = index
+            socialMediaButton.alpha = 0.5
+            socialMediaButtons.append(socialMediaButton)
+            
+            socialMediaButtonsView.addSubview(socialMediaButton)
+        }
+    }
+    
+    func changeSocialMedia(sender: UIButton) {
+        for button in socialMediaButtons {
+            if button == sender {
+                button.alpha = 1.0
+            } else {
+                button.alpha = 0.5
+            }
+        }
+        
+        postStatusNavBar.topItem!.title = socialMediaStatusLabel[sender.tag]
     }
     
     func showInView(aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool) {
