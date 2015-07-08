@@ -37,5 +37,4 @@ class ActivityTableViewCell: UITableViewCell {
             timeLabel.textColor = UIColor.customLightGrayColor()
         }
     }
-    
 }
