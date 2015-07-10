@@ -98,8 +98,8 @@
 		77DF40CA1B1CD9B4006084E4 /* UnifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF40CF1B1CD9B4006084E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyTests.swift; sourceTree = "<group>"; };
-		77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
-		77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unify-Bridging-Header.h"; sourceTree = "<group>"; };
+		77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPhone.storyboard; path = Unify/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Unify-Bridging-Header.h"; path = "Unify/Unify-Bridging-Header.h"; sourceTree = "<group>"; };
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -147,12 +147,12 @@
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 		E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
-		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Unify/WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,9 +198,11 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
-				E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */,
-				E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */,
-				77DF40B71B1CD9B4006084E4 /* Unify */,
+				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
+				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
+				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
+				E0A8A3FB1B4FB899005FCD50 /* WebService */,
+				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
 				77DF40CD1B1CD9B4006084E4 /* UnifyTests */,
 				77DF40B61B1CD9B4006084E4 /* Products */,
 				101B7A77A5F2EA0B43B30BAB /* Pods */,
@@ -217,20 +219,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		77DF40B71B1CD9B4006084E4 /* Unify */ = {
+		77DF40B71B1CD9B4006084E4 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				E0A8A3F71B4FB74D005FCD50 /* WebService.swift */,
-				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 				77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */,
-				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
-				E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */,
-				77DF41051B1CF15E006084E4 /* cloud */,
-				D17CE4D41B21C76600ED9E93 /* Models */,
-				77DF40E01B1CE7DF006084E4 /* shared */,
-				D12A8ACA1B1CFF0400320E1F /* Utilities */,
-				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 			);
+			name = AppDelegate;
 			path = Unify;
 			sourceTree = "<group>";
 		};
@@ -241,11 +235,16 @@
 				77DF40B91B1CD9B4006084E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = ../Unify;
 			sourceTree = "<group>";
 		};
 		77DF40CD1B1CD9B4006084E4 /* UnifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				77DF41051B1CF15E006084E4 /* cloud */,
+				D17CE4D41B21C76600ED9E93 /* Models */,
+				D12A8ACA1B1CFF0400320E1F /* Utilities */,
+				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 				77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */,
 				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
 			);
@@ -260,72 +259,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		77DF40E01B1CE7DF006084E4 /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				77DF40E11B1CEB8F006084E4 /* activity */,
-				77DF40E21B1CEB8F006084E4 /* feed */,
-				77DF40E31B1CEB8F006084E4 /* messages */,
-				77DF40E41B1CEB8F006084E4 /* profile */,
-				77DF40E51B1CEB8F006084E4 /* settings */,
-			);
-			name = shared;
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		77DF40E11B1CEB8F006084E4 /* activity */ = {
+		77DF40E11B1CEB8F006084E4 /* ActivityViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40E61B1CEBE6006084E4 /* cells */,
 				77DF40E71B1CEBE6006084E4 /* viewControllers */,
 				77DF40E81B1CEBE6006084E4 /* views */,
 			);
-			name = activity;
-			path = Activity;
+			name = ActivityViewController;
+			path = Unify/Shared/Activity;
 			sourceTree = "<group>";
 		};
-		77DF40E21B1CEB8F006084E4 /* feed */ = {
+		77DF40E21B1CEB8F006084E4 /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40E91B1CEBF2006084E4 /* cells */,
 				77DF40EA1B1CEBF2006084E4 /* viewControllers */,
 				77DF40EB1B1CEBF2006084E4 /* views */,
 			);
-			name = feed;
-			path = Feed;
+			name = FeedViewController;
+			path = Unify/Shared/Feed;
 			sourceTree = "<group>";
 		};
-		77DF40E31B1CEB8F006084E4 /* messages */ = {
+		77DF40E31B1CEB8F006084E4 /* MessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40EC1B1CEBFD006084E4 /* cells */,
 				77DF40ED1B1CEBFD006084E4 /* viewControllers */,
 				77DF40EE1B1CEBFD006084E4 /* views */,
 			);
-			name = messages;
-			path = Messages;
+			name = MessagesViewController;
+			path = Unify/Shared/Messages;
 			sourceTree = "<group>";
 		};
-		77DF40E41B1CEB8F006084E4 /* profile */ = {
+		77DF40E41B1CEB8F006084E4 /* ProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40EF1B1CEC0D006084E4 /* cells */,
 				77DF40F01B1CEC0D006084E4 /* viewControllers */,
 				77DF40F11B1CEC0D006084E4 /* views */,
 			);
-			name = profile;
-			path = Profile;
+			name = ProfileViewController;
+			path = Unify/Shared/Profile;
 			sourceTree = "<group>";
 		};
-		77DF40E51B1CEB8F006084E4 /* settings */ = {
+		77DF40E51B1CEB8F006084E4 /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40F21B1CEC19006084E4 /* cells */,
 				77DF40F31B1CEC19006084E4 /* viewControllers */,
 				77DF40F41B1CEC19006084E4 /* views */,
 			);
-			name = settings;
-			path = Settings;
+			name = SettingsViewController;
+			path = Unify/Shared/Settings;
 			sourceTree = "<group>";
 		};
 		77DF40E61B1CEBE6006084E4 /* cells */ = {
@@ -461,7 +447,8 @@
 			children = (
 				77DF41081B1CF28C006084E4 /* WebserviceManager.swift */,
 			);
-			path = cloud;
+			name = cloud;
+			path = ../Unify/cloud;
 			sourceTree = "<group>";
 		};
 		D12A8ACA1B1CFF0400320E1F /* Utilities */ = {
@@ -473,6 +460,7 @@
 				D1E08BF21B377FC800E40C41 /* Util.swift */,
 			);
 			name = Utilities;
+			path = ../Unify;
 			sourceTree = "<group>";
 		};
 		D17CE49A1B1EF44D00ED9E93 /* Swift files */ = {
@@ -527,7 +515,7 @@
 				D17CE4D51B21C78B00ED9E93 /* User.swift */,
 			);
 			name = Models;
-			path = cloud;
+			path = ../Unify/cloud;
 			sourceTree = "<group>";
 		};
 		D1B9E0401B30067B00F59444 /* Swift Files */ = {
@@ -555,6 +543,61 @@
 				E087470B1B4C14850060E5A6 /* Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */,
+			);
+			name = SocialMediaViewController;
+			sourceTree = "<group>";
+		};
+		E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */,
+			);
+			name = StartConnectingViewController;
+			sourceTree = "<group>";
+		};
+		E0A8A3FB1B4FB899005FCD50 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A3F71B4FB74D005FCD50 /* WebService.swift */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */ = {
+			isa = PBXGroup;
+			children = (
+				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
+				E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */,
+			);
+			name = StoryboardLayout;
+			sourceTree = "<group>";
+		};
+		E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */,
+				E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */,
+				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
+				77DF40E21B1CEB8F006084E4 /* FeedViewController */,
+				77DF40E31B1CEB8F006084E4 /* MessagesViewController */,
+				77DF40E41B1CEB8F006084E4 /* ProfileViewController */,
+				77DF40E51B1CEB8F006084E4 /* SettingsViewController */,
+			);
+			name = AllViewController;
+			sourceTree = "<group>";
+		};
+		E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */ = {
+			isa = PBXGroup;
+			children = (
+				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
+			);
+			name = "Unify-Bridging-Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
