@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,WebServiceDelegate {
     
     @IBOutlet weak var postStatusNavBar: UINavigationBar!
     @IBOutlet weak var socialMediaButtonsView: UIView!
@@ -20,6 +20,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     @IBOutlet weak var tabBar: UIToolbar!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var postButton: UIBarButtonItem!
+    var api: WebService = WebService()
     
     var imagePicker = UIImagePickerController()
     var socialMediaIcons = ["InstagramClearIcon", "TumblrClearIcon", "TwitterClearIcon", "VineClearIcon"]
@@ -122,9 +123,32 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     @IBAction func postStatus(sender: UIBarButtonItem) {
         // TODO: Send POST request to server and create new tableview cell and prepend to tableview
+        let PostToMediaName = postStatusNavBar.topItem!.title
+
+        if (PostToMediaName == "Post to Instagram"){
+
+        }
+        else if (PostToMediaName == "Post to Tumblr"){
+              postToTumbler()
+        }
+        else if (PostToMediaName == "Post to Twitter"){
+
+        }
+        else if (PostToMediaName == "Post to Vine"){
+
+        }
         self.removeAnimate()
     }
-    
+    func postToTumbler(){
+        api.delegate=self;
+        api.PostUpdateToTumblr(textView.text)
+    }
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        println("paraDict===\(paraDict)")
+    }
     @IBAction func cameraButtonClicked(sender: UIBarButtonItem) {
         let cameraMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         let showPhotoLibraryAction = UIAlertAction(title: "Photo Library", style: .Default) { action -> Void in

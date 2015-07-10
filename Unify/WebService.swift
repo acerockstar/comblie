@@ -16,24 +16,25 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
 
     var responseData: NSMutableData = NSMutableData()
     var delegate: WebServiceDelegate?
-    var request :NSMutableURLRequest?
+    var request : NSMutableURLRequest = NSMutableURLRequest()
 
     func Login_With_Vine(Username : String , Password: String){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/authenticate")!)
-        request!.HTTPMethod = "POST"
+        request.HTTPMethod = "POST"
         let postString = "username=\(Username)&password=\(Password)"
-        request!.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         urlSession()
     }
+
     func VineUserInfo(userId : NSString){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(userId)")!)
-        request!.HTTPMethod = "GET"
+        request.HTTPMethod = "GET"
         urlSession()
 
     }
 
     func urlSession(){
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request!) {
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
             if error != nil {
                 println("error=\(error)")
@@ -44,5 +45,19 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
             self.delegate?.returnSuccess(jsonResult)
         }
         task.resume()
+    }
+    func PostUpdateToTumblr(textMessage : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "api.tumblr.com/v2/blog/loveshailendra.tumblr.com/post")!)
+        var keys : NSMutableDictionary = NSMutableDictionary()
+        keys.setValue("CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99", forKey: "Consumer_Key")
+        keys.setValue("v5NbhosgGBXX5D3w0VKnPOTZovCdHfAtLD4bEfZnFWLUxTD517", forKey: "ConsuAccess_Tokenmer_Key")
+        keys.setValue("fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ", forKey: "Consumer_Secret")
+        keys.setValue("WjdAKsTM7sNDT2yJCnZUXaDLhkDQ2Kq7zopDzVXnhxm4excmXbQ", forKey: "Token_Secret")
+
+      //  request.setValuesForKeysWithDictionary(<#keyedValues: [NSObject : AnyObject]#>)
+        request.HTTPMethod = "POST"
+        let postString = "body=\(textMessage)"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlSession()
     }
 }

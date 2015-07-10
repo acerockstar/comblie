@@ -5,13 +5,9 @@
 #import <Crashlytics/Crashlytics.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
+
 // Tumbler
 static NSString *const kTumbler_api_key = @"PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE";
-static NSString *const kConsumer_Key = @"kCXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99";
-static NSString *const kRequest_token_URL = @"http://www.tumblr.com/oauth/request_token";
-static NSString *const kAuthorize_URL = @"http://www.tumblr.com/oauth/authorize";
-static NSString *const kAccess_token_URLL = @"http://www.tumblr.com/oauth/access_token";
-
 static NSString *const kOAuthConsumerKey = @"CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99";
 static NSString *const kOAuthConsumerSecret = @"fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ";
 static NSString *const kOAuthToken = @"v5NbhosgGBXX5D3w0VKnPOTZovCdHfAtLD4bEfZnFWLUxTD517";
