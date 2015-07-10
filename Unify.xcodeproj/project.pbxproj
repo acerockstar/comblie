@@ -58,7 +58,10 @@
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
-		E08747021B4C04EB0060E5A6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08747011B4C04EB0060E5A6 /* WebService.swift */; };
+		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
+		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
+		E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */; };
+		E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3F71B4FB74D005FCD50 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,8 +148,11 @@
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		E08747011B4C04EB0060E5A6 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
+		E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
+		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
+		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */,
 				6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +189,7 @@
 		1615BB4CCEF396B4845C765B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */,
 				2BFD9CB582B129FC0FCFBEDD /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -190,6 +198,8 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */,
+				E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */,
 				77DF40B71B1CD9B4006084E4 /* Unify */,
 				77DF40CD1B1CD9B4006084E4 /* UnifyTests */,
 				77DF40B61B1CD9B4006084E4 /* Products */,
@@ -210,7 +220,7 @@
 		77DF40B71B1CD9B4006084E4 /* Unify */ = {
 			isa = PBXGroup;
 			children = (
-				E08747011B4C04EB0060E5A6 /* WebService.swift */,
+				E0A8A3F71B4FB74D005FCD50 /* WebService.swift */,
 				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 				77DF40BA1B1CD9B4006084E4 /* AppDelegate.swift */,
 				77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */,
@@ -736,7 +746,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08747021B4C04EB0060E5A6 /* WebService.swift in Sources */,
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
 				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
 				D17CE4CB1B214ADA00ED9E93 /* UIViewExtension.swift in Sources */,
@@ -754,10 +763,13 @@
 				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
 				D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */,
 				D1B9E0381B30030D00F59444 /* CommentsTableViewCell.swift in Sources */,
+				E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */,
 				D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */,
 				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
+				E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
+				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
 				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,

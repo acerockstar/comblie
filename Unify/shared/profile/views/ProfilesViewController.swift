@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource,WebServiceDelegate {
     
     var pageViewController: UIPageViewController!
     var postStatusViewController : PostStatusViewController!
     var navBarView =  UIView()
     var pageControl: UIPageControl!
+    var api: WebService = WebService()
+    var CheckValue : String!
+    var userId : NSDecimalNumber!
     
     // TODO: Store as dictionary
     var pageLabels: NSArray = ["Combined", "Instagram", "Tumblr", "Twitter", "Vine"]
@@ -42,8 +45,46 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         self.pageControl = UIPageControl()
         self.pageControl.frame = CGRect(x: 0, y: navBar!.frame.size.height * 0.75, width: 0, height: 0)
         Util.setUpPageControl(self.pageControl, navBarView: self.navBarView, numPages: self.pageLabels.count)
+        LoginWithVine()
     }
-    
+
+    func LoginWithVine(){
+        CheckValue = "1"
+        api.delegate=self
+        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+    }
+
+    func VineUserInfo(userid : NSString){
+        print(userid)
+        CheckValue = "2"
+        api.delegate=self
+        api.VineUserInfo(userid)
+    }
+
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        println("paraDict===\(paraDict)")
+
+        var Status : AnyObject = paraDict.valueForKey("success") as! Bool
+        if Status as! NSObject == true{
+
+            if CheckValue == "1"{
+                userId = paraDict.objectForKey("data")?.valueForKey("userId") as! NSDecimalNumber
+                let userIdConvertToString = NSString(format: "%@", userId)
+                VineUserInfo(userIdConvertToString)
+
+            }
+            else if CheckValue == "2"{
+
+            }
+        }
+        else if Status as! NSObject == false{
+
+        }
+        //let userid : String = paraDict.objectForKey("data")?.valueForKey("userId") as! NSDictionary
+    }
     override func viewWillAppear(animated: Bool) {
         changeNavBar()
     }

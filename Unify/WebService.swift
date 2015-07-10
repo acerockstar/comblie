@@ -16,41 +16,33 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
 
     var responseData: NSMutableData = NSMutableData()
     var delegate: WebServiceDelegate?
-    var urlPath:NSString?
+    var request :NSMutableURLRequest?
 
-    func UrlConnectionBody(urlPath :NSString){
-        var url: NSURL = NSURL(string: urlPath as String)!
-        var request: NSURLRequest = NSURLRequest(URL: url)
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self,
-            startImmediately: false)!
-        println("Search iTunes API at URL \(url)")
-        connection.start()
+    func Login_With_Vine(Username : String , Password: String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/authenticate")!)
+        request!.HTTPMethod = "POST"
+        let postString = "username=\(Username)&password=\(Password)"
+        request!.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlSession()
+    }
+    func VineUserInfo(userId : NSString){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(userId)")!)
+        request!.HTTPMethod = "GET"
+        urlSession()
+
     }
 
-    public func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-        println("Failed with error:\(error.localizedDescription)")
-    }
-
-    public func connection(didReceiveResponse: NSURLConnection, didReceiveResponse response: NSURLResponse) {
-        self.responseData = NSMutableData()
-    }
-    public  func connection(connection: NSURLConnection, didReceiveData data: NSData) {
-        self.responseData.appendData(data)
-    }
-    public  func connectionDidFinishLoading(connection: NSURLConnection) {
-        var err: NSError
-        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(responseData,
-            options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        delegate?.returnSuccess(jsonResult)
-    }
-    func Vine_get_user_info(){
-        urlPath = ""
-        UrlConnectionBody(urlPath!)
-    }
-    func Vine_Avatar(){
-        //urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/info?api_key=PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE"
-        urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/followers"
-        //urlPath = "http://api.tumblr.com/v2/blog/unify.tumblr.com/avatar"
-        UrlConnectionBody(urlPath!)
+    func urlSession(){
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request!) {
+            data, response, error in
+            if error != nil {
+                println("error=\(error)")
+                return
+            }
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
+                options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            self.delegate?.returnSuccess(jsonResult)
+        }
+        task.resume()
     }
 }
