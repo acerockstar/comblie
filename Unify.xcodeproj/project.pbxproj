@@ -46,6 +46,7 @@
 		D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */; };
 		D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */; };
 		D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4D51B21C78B00ED9E93 /* User.swift */; };
+		D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */; };
 		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
 		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
 		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
@@ -148,6 +149,7 @@
 		D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4D51B21C78B00ED9E93 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Unify/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
 				E0A8A3FB1B4FB899005FCD50 /* WebService */,
 				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
+				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
 				77DF40CD1B1CD9B4006084E4 /* UnifyTests */,
 				77DF40B61B1CD9B4006084E4 /* Products */,
 				101B7A77A5F2EA0B43B30BAB /* Pods */,
@@ -256,12 +259,7 @@
 		77DF40CD1B1CD9B4006084E4 /* UnifyTests */ = {
 			isa = PBXGroup;
 			children = (
-				77DF41051B1CF15E006084E4 /* cloud */,
-				D17CE4D41B21C76600ED9E93 /* Models */,
-				D12A8ACA1B1CFF0400320E1F /* Utilities */,
-				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 				77DF40D01B1CD9B4006084E4 /* UnifyTests.swift */,
-				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
 			);
 			path = UnifyTests;
 			sourceTree = "<group>";
@@ -269,9 +267,14 @@
 		77DF40CE1B1CD9B4006084E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77DF41051B1CF15E006084E4 /* cloud */,
+				D17CE4D41B21C76600ED9E93 /* Models */,
+				D12A8ACA1B1CFF0400320E1F /* Utilities */,
+				77DF40B81B1CD9B4006084E4 /* Supporting Files */,
 				77DF40CF1B1CD9B4006084E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = UnifyTests;
 			sourceTree = "<group>";
 		};
 		77DF40E11B1CEB8F006084E4 /* ActivityViewController */ = {
@@ -446,6 +449,7 @@
 		77DF40F31B1CEC19006084E4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -669,6 +673,7 @@
 				TargetAttributes = {
 					77DF40B41B1CD9B4006084E4 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = S9S784A2B4;
 					};
 					77DF40C91B1CD9B4006084E4 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -813,6 +818,7 @@
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */,
 				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
 				D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */,
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
@@ -952,6 +958,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -969,6 +976,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1057,6 +1065,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;

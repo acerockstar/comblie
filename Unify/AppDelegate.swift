@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        self.window?.tintColor = UIColor.combliePurple()
 
         var tabBarController: UITabBarController = self.window?.rootViewController as! UITabBarController
         tabBarController.selectedIndex = 2

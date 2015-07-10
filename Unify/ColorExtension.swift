@@ -10,6 +10,11 @@ import UIKit
 import Foundation
 
 extension UIColor {
+    class func combliePurple() -> UIColor {
+        // Hex: #842D72, RGB: 132, 45, 114
+        return UIColor(red: CGFloat(132.0/255.0), green: CGFloat(45.0/255.0), blue: CGFloat(114.0/255.0), alpha: 1.0)
+    }
+    
     class func facebookBlue() -> UIColor {
         // Hex: #3b5998, RGB: 59, 89, 152
         return UIColor(red: CGFloat(59.0/255.0), green: CGFloat(89.0/255.0), blue: CGFloat(152.0/255.0), alpha: 1.0)
@@ -58,11 +63,6 @@ extension UIColor {
     class func customDarkGrayColor() -> UIColor {
         // Hex: #dee0e1, RGB: 222, 224, 225
         return UIColor(red: CGFloat(222.0/255.0), green: CGFloat(224.0/255.0), blue: CGFloat(225.0/255.0), alpha: 1.0)
-    }
-    
-    class func combliePurpleColor() -> UIColor {
-        // Hex: #702663, RGB: 112, 38, 99
-        return UIColor(red: CGFloat(112.0/255.0), green: CGFloat(38.0/255.0), blue: CGFloat(99.0/255.0), alpha: 1.0)
     }
     
     class func redHeartColor() -> UIColor {
