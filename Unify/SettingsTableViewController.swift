@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var nameCell: UITableViewCell!
+    @IBOutlet weak var bioCell: UITableViewCell!
     @IBOutlet weak var lightThemeCell: UITableViewCell!
     @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
@@ -47,12 +49,15 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         
-        lightThemeCell.selectionStyle = .None
-        refreshAutomaticallyCell.selectionStyle = .None
-        chatHeadsCell.selectionStyle = .None
+        let cells = [nameCell, bioCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
-//        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-//        self.view.addGestureRecognizer(tap)
+        for cell in cells {
+            cell.selectionStyle = .None
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.tableView.backgroundView = UIView(frame: self.tableView.bounds)
+        self.tableView.backgroundView!.addGestureRecognizer(tap)
     }
     
     // MARK: - Keyboard Functionality

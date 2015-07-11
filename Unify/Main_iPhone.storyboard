@@ -1061,11 +1061,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
+                        <outlet property="bioCell" destination="sA5-pt-OgH" id="SNp-9E-1CQ"/>
                         <outlet property="bioTextField" destination="Jxl-HB-Rwd" id="aJc-ry-Dxn"/>
                         <outlet property="chatHeadsCell" destination="Ic1-jt-xEz" id="CJL-EX-kDA"/>
                         <outlet property="chatHeadsSwitch" destination="wZC-Cc-ob7" id="Bfj-5n-pTF"/>
                         <outlet property="lightThemeCell" destination="qTq-Qe-5L7" id="ouL-CP-XeO"/>
                         <outlet property="lightThemeSwitch" destination="Lwh-sQ-rNS" id="iUX-Is-BgN"/>
+                        <outlet property="nameCell" destination="PQp-kP-BvA" id="hkL-5Z-34u"/>
                         <outlet property="nameTextField" destination="NGp-9N-Zws" id="PY4-Tw-Ewg"/>
                         <outlet property="refreshAutomaticallyCell" destination="xFe-4e-tbQ" id="LaW-R9-AlQ"/>
                         <outlet property="refreshAutomaticallySwitch" destination="Dvm-Ew-CYm" id="afK-f5-YcX"/>

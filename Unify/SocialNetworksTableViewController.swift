@@ -50,9 +50,13 @@ class SocialNetworksTableViewController: UITableViewController {
             if connectedSocialNetworks[socialNetwork] == "on" {
                 connectedCell.toggleSocialNetworkSwitch.setOn(true, animated: true)
                 connectedCell.connectedLabel.text = "Connected"
+                connectedCell.socialNetworkLabel.textColor = UIColor.blackColor()
+                connectedCell.connectedLabel.textColor = UIColor.blackColor()
             } else {
                 connectedCell.toggleSocialNetworkSwitch.setOn(false, animated: false)
                 connectedCell.connectedLabel.text = "Unconnected"
+                connectedCell.socialNetworkLabel.textColor = UIColor.lightGrayColor()
+                connectedCell.connectedLabel.textColor = UIColor.lightGrayColor()
             }
             
             connectedCell.socialNetworkLabel.text = socialNetworkNames[indexPath.row]
@@ -98,9 +102,13 @@ class SocialNetworksTableViewController: UITableViewController {
         
         if cell.toggleSocialNetworkSwitch.on {
             cell.connectedLabel.text = "Connected"
+            cell.socialNetworkLabel.textColor = UIColor.blackColor()
+            cell.connectedLabel.textColor = UIColor.blackColor()
             connectedSocialNetworks[socialNetworkNames[indexPath!.row]] = "on"
         } else {
             cell.connectedLabel.text = "Unconnected"
+            cell.socialNetworkLabel.textColor = UIColor.lightGrayColor()
+            cell.connectedLabel.textColor = UIColor.lightGrayColor()
             connectedSocialNetworks[socialNetworkNames[indexPath!.row]] = "off"
         }
     }
