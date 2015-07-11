@@ -30,6 +30,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         refreshControl?.addTarget(self, action: "refreshMessages", forControlEvents: .ValueChanged)
         refreshMessages()
         
+        self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
     }

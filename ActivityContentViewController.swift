@@ -28,6 +28,8 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         refreshActivities()
         
         self.tableView.estimatedRowHeight = 46.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         self.tableView.addSubview(self.refreshControl)
     }

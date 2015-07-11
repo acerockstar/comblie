@@ -41,6 +41,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.tableView.estimatedRowHeight = 60
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.tableFooterView = UIView()
         
         self.tableView.registerNib(UINib(nibName: "TwitterClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterClickedCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
