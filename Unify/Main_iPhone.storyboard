@@ -864,7 +864,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="fVO-7e-SvY">
-                                                    <rect key="frame" x="285" y="7.5" width="25" height="25"/>
+                                                    <rect key="frame" x="285" y="7" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="fGz-Cl-s32"/>
                                                         <constraint firstAttribute="height" constant="25" id="och-4q-VwO"/>
@@ -879,6 +879,9 @@
                                                 <constraint firstAttribute="centerY" secondItem="fVO-7e-SvY" secondAttribute="centerY" id="aiB-Dj-k4Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oqZ-oN-7gM" kind="push" identifier="goToReportProblem" id="bID-Jn-xhD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="wBk-aq-zHs">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1056,6 +1059,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wE-6O-XC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="2830"/>
+        </scene>
+        <!--Report Problem-->
+        <scene sceneID="f6R-Uc-QdF">
+            <objects>
+                <tableViewController id="oqZ-oN-7gM" customClass="ReportProblemTableViewController" customModule="Unify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="WIL-JV-Lc7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="oqZ-oN-7gM" id="Trj-di-wHD"/>
+                            <outlet property="delegate" destination="oqZ-oN-7gM" id="AZL-Qh-z2Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Report Problem" id="a9a-Ua-r1f">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2vj-fy-CHD">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="oqZ-oN-7gM" id="bkp-5h-2kw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="oer-MG-ieZ">
+                            <connections>
+                                <action selector="submitButtonClicked:" destination="oqZ-oN-7gM" id="CIg-K8-KN8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="submitButton" destination="oer-MG-ieZ" id="iIe-Pl-0h7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCg-FN-9bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="3721"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yuK-Ci-sXx">

@@ -16,7 +16,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
     @IBOutlet weak var chatHeadsSwitch: UISwitch!
 
-    var postStatusViewController : PostStatusViewController!
+    var postStatusViewController: PostStatusViewController!
     
     @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
         self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
@@ -40,8 +40,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         
-        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        self.view.addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+//        self.view.addGestureRecognizer(tap)
     }
     
     // MARK: - Keyboard Functionality
@@ -75,6 +75,15 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if let cell = sender as? UITableViewCell {
+            let i = tableView.indexPathForCell(cell)!.row
+            if segue.identifier == "goToReportProblem" {
+                let vc = segue.destinationViewController as! ReportProblemTableViewController
+            }
+        }
     }
     
 }
