@@ -9,6 +9,10 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var lightThemeCell: UITableViewCell!
+    @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
+    @IBOutlet weak var chatHeadsCell: UITableViewCell!
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
@@ -23,11 +27,14 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
     }
     @IBAction func toggleLightThemeSwitch(sender: UISwitch) {
+        println("toggle light theme")
     }
     @IBAction func toggleRefreshAutomaticallySwitch(sender: UISwitch) {
+        println("toggle refresh automatically")
     }
     
     @IBAction func toggleChatHeadsSwitch(sender: UISwitch) {
+        println("toggle chat heads")
     }
 
     override func viewDidLoad() {
@@ -39,6 +46,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         lightThemeSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
+        
+        lightThemeCell.selectionStyle = .None
+        refreshAutomaticallyCell.selectionStyle = .None
+        chatHeadsCell.selectionStyle = .None
         
 //        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 //        self.view.addGestureRecognizer(tap)
@@ -76,14 +87,5 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if let cell = sender as? UITableViewCell {
-            let i = tableView.indexPathForCell(cell)!.row
-            if segue.identifier == "goToReportProblem" {
-                let vc = segue.destinationViewController as! ReportProblemTableViewController
-            }
-        }
-    }
-    
+        
 }

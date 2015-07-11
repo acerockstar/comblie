@@ -714,13 +714,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6K-v7-RZw">
-                                                    <rect key="frame" x="10" y="11.5" width="251" height="16.5"/>
+                                                    <rect key="frame" x="10" y="11" width="251" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-sQ-rNS">
-                                                    <rect key="frame" x="261" y="4.5" width="51" height="31"/>
+                                                    <rect key="frame" x="261" y="4" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="toggleLightThemeSwitch:" destination="vsu-u1-Ykg" eventType="valueChanged" id="MIo-Km-gvd"/>
@@ -847,6 +847,9 @@
                                                 <constraint firstAttribute="centerY" secondItem="3gv-Zm-PER" secondAttribute="centerY" id="vOG-DT-oAU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="C4n-EQ-bk1" kind="push" identifier="goToTextSize" id="RHh-LW-vbG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -911,7 +914,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="AYM-MZ-GeB" kind="push" id="P7j-wR-w4W"/>
+                                            <segue destination="AYM-MZ-GeB" kind="push" identifier="goToSendFeedback" id="P7j-wR-w4W"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1053,15 +1056,114 @@
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="bioTextField" destination="Jxl-HB-Rwd" id="aJc-ry-Dxn"/>
+                        <outlet property="chatHeadsCell" destination="Ic1-jt-xEz" id="CJL-EX-kDA"/>
                         <outlet property="chatHeadsSwitch" destination="wZC-Cc-ob7" id="Bfj-5n-pTF"/>
+                        <outlet property="lightThemeCell" destination="qTq-Qe-5L7" id="ouL-CP-XeO"/>
                         <outlet property="lightThemeSwitch" destination="Lwh-sQ-rNS" id="iUX-Is-BgN"/>
                         <outlet property="nameTextField" destination="NGp-9N-Zws" id="PY4-Tw-Ewg"/>
+                        <outlet property="refreshAutomaticallyCell" destination="xFe-4e-tbQ" id="LaW-R9-AlQ"/>
                         <outlet property="refreshAutomaticallySwitch" destination="Dvm-Ew-CYm" id="afK-f5-YcX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wE-6O-XC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="417" y="2830"/>
+        </scene>
+        <!--Text Size-->
+        <scene sceneID="PbV-va-Ylq">
+            <objects>
+                <viewController id="C4n-EQ-bk1" customClass="TextSizeViewController" customModule="Unify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rbz-Ws-aHA"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEw-NU-tqA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4N-ZC-MN7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-2B-xHh">
+                                <rect key="frame" x="0.0" y="120" width="320" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFU-T2-p9e">
+                                        <rect key="frame" x="60" y="19.5" width="8" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-ar-AFp">
+                                        <rect key="frame" x="155" y="17.5" width="10" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBu-65-oU6">
+                                        <rect key="frame" x="247" y="14.5" width="13" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-PF-msb">
+                                        <rect key="frame" x="58" y="40" width="204" height="31"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="KAs-hf-SrT"/>
+                                        </constraints>
+                                        <color key="minimumTrackTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="textSizeSliderMoved:" destination="C4n-EQ-bk1" eventType="valueChanged" id="th9-Xl-vNH"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4Sa-PF-msb" firstAttribute="trailing" secondItem="lBu-65-oU6" secondAttribute="trailing" id="0R8-hn-oDF"/>
+                                    <constraint firstAttribute="centerX" secondItem="4Sa-PF-msb" secondAttribute="centerX" id="0ZS-uK-OM2"/>
+                                    <constraint firstItem="SLG-ar-AFp" firstAttribute="centerY" secondItem="lBu-65-oU6" secondAttribute="centerY" id="Kuq-Dn-eys"/>
+                                    <constraint firstAttribute="centerX" secondItem="SLG-ar-AFp" secondAttribute="centerX" id="SeY-1i-cd2"/>
+                                    <constraint firstAttribute="centerX" secondItem="4Sa-PF-msb" secondAttribute="centerX" id="Wt4-Ee-cnM"/>
+                                    <constraint firstAttribute="height" constant="100" id="arz-Gn-cHD"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Sa-PF-msb" secondAttribute="bottom" constant="30" id="mWw-1c-1qz"/>
+                                    <constraint firstItem="4Sa-PF-msb" firstAttribute="top" secondItem="SLG-ar-AFp" secondAttribute="bottom" constant="5" id="n5w-yk-8B6"/>
+                                    <constraint firstItem="4Sa-PF-msb" firstAttribute="leading" secondItem="JFU-T2-p9e" secondAttribute="leading" id="tw8-C5-0AL"/>
+                                    <constraint firstItem="SLG-ar-AFp" firstAttribute="centerY" secondItem="JFU-T2-p9e" secondAttribute="centerY" id="ypn-3t-8vx"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag slider below to change text size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmk-gJ-KhS">
+                                <rect key="frame" x="16" y="84" width="288" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G2x-2B-xHh" firstAttribute="leading" secondItem="I4N-ZC-MN7" secondAttribute="leading" id="40f-t6-1TO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qmk-gJ-KhS" secondAttribute="trailing" id="Dsy-dI-ke2"/>
+                            <constraint firstAttribute="trailing" secondItem="G2x-2B-xHh" secondAttribute="trailing" id="R38-RR-TEL"/>
+                            <constraint firstItem="Qmk-gJ-KhS" firstAttribute="leading" secondItem="I4N-ZC-MN7" secondAttribute="leadingMargin" id="Sa4-pg-GJG"/>
+                            <constraint firstItem="Qmk-gJ-KhS" firstAttribute="top" secondItem="Rbz-Ws-aHA" secondAttribute="bottom" constant="20" id="iFd-7t-8zf"/>
+                            <constraint firstItem="G2x-2B-xHh" firstAttribute="top" secondItem="Qmk-gJ-KhS" secondAttribute="bottom" constant="20" id="nlk-kw-b0J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Size" id="NyW-PP-YwR">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Eia-gq-a5a">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="C4n-EQ-bk1" id="yQa-lM-iIf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="zZ2-nR-hHl"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="textSizeBoxView" destination="G2x-2B-xHh" id="V0n-m1-EFx"/>
+                        <outlet property="textSizeSlider" destination="4Sa-PF-msb" id="KkO-dV-bud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxG-0O-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="2980"/>
         </scene>
         <!--Report Problem-->
         <scene sceneID="f6R-Uc-QdF">

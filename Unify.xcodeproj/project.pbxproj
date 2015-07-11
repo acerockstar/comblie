@@ -51,6 +51,7 @@
 		D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */; };
 		D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */; };
 		D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */; };
+		D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */; };
 		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
 		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
 		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
@@ -158,6 +159,7 @@
 		D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewTableViewCell.swift; path = Unify/TextViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewTableViewCell.xib; path = Unify/TextViewTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackTableViewController.swift; path = Unify/FeedbackTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextSizeViewController.swift; path = Unify/TextSizeViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 				D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */,
 				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
 				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
+				D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -837,6 +840,7 @@
 				D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */,
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
+				D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
 				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
