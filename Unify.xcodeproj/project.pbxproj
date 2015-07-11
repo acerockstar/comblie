@@ -63,6 +63,8 @@
 		D1DA88701B50EDF300B7D344 /* SocialNetworksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */; };
 		D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */; };
 		D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */; };
+		D1DA88761B5108F300B7D344 /* PushNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88751B5108F300B7D344 /* PushNotificationTableViewCell.swift */; };
+		D1DA88781B51095F00B7D344 /* PushNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88771B51095F00B7D344 /* PushNotificationTableViewController.swift */; };
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
@@ -174,6 +176,8 @@
 		D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialNetworksTableViewController.swift; path = Unify/SocialNetworksTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectedSocialNetworkTableViewCell.swift; path = Unify/ConnectedSocialNetworkTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnconnectedSocialNetworkTableViewCell.swift; path = Unify/UnconnectedSocialNetworkTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1DA88751B5108F300B7D344 /* PushNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationTableViewCell.swift; path = Unify/PushNotificationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1DA88771B51095F00B7D344 /* PushNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationTableViewController.swift; path = Unify/PushNotificationTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -462,6 +466,7 @@
 				D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */,
 				D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */,
 				D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */,
+				D1DA88751B5108F300B7D344 /* PushNotificationTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 				D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */,
 				D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */,
+				D1DA88771B51095F00B7D344 /* PushNotificationTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -847,9 +853,11 @@
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
 				D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */,
 				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
+				D1DA88761B5108F300B7D344 /* PushNotificationTableViewCell.swift in Sources */,
 				D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */,
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
+				D1DA88781B51095F00B7D344 /* PushNotificationTableViewController.swift in Sources */,
 				D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */,
 				D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,

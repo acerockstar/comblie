@@ -97,13 +97,11 @@ class SocialNetworksTableViewController: UITableViewController {
         let socialNetworkNames = connectedSocialNetworks.keys.array
         
         if cell.toggleSocialNetworkSwitch.on {
-            println("unconnect")
             cell.connectedLabel.text = "Connected"
             connectedSocialNetworks[socialNetworkNames[indexPath!.row]] = "on"
         } else {
             cell.connectedLabel.text = "Unconnected"
             connectedSocialNetworks[socialNetworkNames[indexPath!.row]] = "off"
         }
-        
     }
 }

@@ -822,6 +822,9 @@
                                                 <constraint firstItem="oCG-7s-nxN" firstAttribute="leading" secondItem="vY3-K3-lHc" secondAttribute="leading" constant="10" id="qsu-5H-kiB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rWQ-8O-hZW" kind="push" id="Kqs-zD-ETz"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="hag-rO-QNb">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1072,6 +1075,69 @@
             </objects>
             <point key="canvasLocation" x="417" y="2830"/>
         </scene>
+        <!--Push Notifications-->
+        <scene sceneID="Nih-I5-xrT">
+            <objects>
+                <tableViewController id="rWQ-8O-hZW" customClass="PushNotificationTableViewController" customModule="Unify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Rhf-aD-pGU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PushNotificationTableViewCell" rowHeight="40" id="axf-BM-CgP" customClass="PushNotificationTableViewCell" customModule="Unify" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axf-BM-CgP" id="uZK-s8-KVx">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
+                                            <rect key="frame" x="253" y="4" width="51" height="31"/>
+                                            <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-sM-8Qv">
+                                            <rect key="frame" x="10" y="11.5" width="243" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QSX-vK-sI4" secondAttribute="trailing" constant="10" id="822-4k-T3g"/>
+                                        <constraint firstItem="EC2-sM-8Qv" firstAttribute="leading" secondItem="uZK-s8-KVx" secondAttribute="leading" constant="10" id="Q46-cX-lRt"/>
+                                        <constraint firstItem="QSX-vK-sI4" firstAttribute="leading" secondItem="EC2-sM-8Qv" secondAttribute="trailing" id="jI0-qE-wKt"/>
+                                        <constraint firstAttribute="centerY" secondItem="EC2-sM-8Qv" secondAttribute="centerY" id="nKY-pZ-g3e"/>
+                                        <constraint firstAttribute="centerY" secondItem="QSX-vK-sI4" secondAttribute="centerY" id="oXf-Av-O76"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="socialNetworkLabel" destination="EC2-sM-8Qv" id="O6L-IT-HOD"/>
+                                    <outlet property="toggleSocialNetworkSwitch" destination="QSX-vK-sI4" id="o6l-uk-PP2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rWQ-8O-hZW" id="zgq-Cg-fEa"/>
+                            <outlet property="delegate" destination="rWQ-8O-hZW" id="Hfg-Uj-YYz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Push Notifications" id="Y91-kT-5Xt">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="KXq-6w-rlU">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="rWQ-8O-hZW" id="1OD-Wg-JXy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="iUk-kY-wDg">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="rWQ-8O-hZW" id="Mgo-NL-IQg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Eg-yb-hdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="3715"/>
+        </scene>
         <!--Text Size-->
         <scene sceneID="PbV-va-Ylq">
             <objects>
@@ -1166,7 +1232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxG-0O-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="3721"/>
+            <point key="canvasLocation" x="417" y="3715"/>
         </scene>
         <!--Report Problem-->
         <scene sceneID="f6R-Uc-QdF">
@@ -1203,7 +1269,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCg-FN-9bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="3721"/>
+            <point key="canvasLocation" x="777" y="3715"/>
         </scene>
         <!--Send Feedback-->
         <scene sceneID="ZMT-Cm-nXv">
@@ -1238,7 +1304,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cj-WE-Qch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="3721"/>
+            <point key="canvasLocation" x="1133" y="3715"/>
         </scene>
         <!--Social Networks-->
         <scene sceneID="lNu-Th-gpt">
@@ -1350,7 +1416,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL7-Gf-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="2678"/>
+            <point key="canvasLocation" x="-293" y="3715"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yuK-Ci-sXx">
