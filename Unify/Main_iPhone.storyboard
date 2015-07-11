@@ -703,6 +703,9 @@
                                                 <constraint firstAttribute="centerY" secondItem="zZz-7Y-nk8" secondAttribute="centerY" id="l7O-YF-DmZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Osu-bC-A0i" kind="push" id="Gc3-rN-JKY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1163,7 +1166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxG-0O-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="2980"/>
+            <point key="canvasLocation" x="1114" y="3721"/>
         </scene>
         <!--Report Problem-->
         <scene sceneID="f6R-Uc-QdF">
@@ -1236,6 +1239,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cj-WE-Qch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="3721"/>
+        </scene>
+        <!--Social Networks-->
+        <scene sceneID="lNu-Th-gpt">
+            <objects>
+                <tableViewController id="Osu-bC-A0i" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zhc-Ry-eHU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eBr-zg-ZvN">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eBr-zg-ZvN" id="OOg-C3-WP4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MP2-zz-jRb">
+                                            <rect key="frame" x="18" y="13" width="158" height="16.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Lby-vE-5tk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-DQ-mAr">
+                                            <rect key="frame" x="261" y="6" width="51" height="31"/>
+                                            <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
+                                            <rect key="frame" x="176" y="14" width="75" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="AZp-Vv-NcG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="MP2-zz-jRb" secondAttribute="centerY" id="AFm-S4-fiQ"/>
+                                        <constraint firstAttribute="centerY" secondItem="Gac-DQ-mAr" secondAttribute="centerY" id="Bfj-LA-CgQ"/>
+                                        <constraint firstItem="ey5-e9-zWE" firstAttribute="leading" secondItem="MP2-zz-jRb" secondAttribute="trailing" id="KwD-s7-G99"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gac-DQ-mAr" secondAttribute="trailing" constant="10" id="M6Q-PF-3zG"/>
+                                        <constraint firstAttribute="centerY" secondItem="ey5-e9-zWE" secondAttribute="centerY" id="aew-XK-J16"/>
+                                        <constraint firstItem="Gac-DQ-mAr" firstAttribute="leading" secondItem="ey5-e9-zWE" secondAttribute="trailing" constant="10" id="rrk-gk-EqR"/>
+                                        <constraint firstItem="MP2-zz-jRb" firstAttribute="leading" secondItem="OOg-C3-WP4" secondAttribute="leadingMargin" constant="10" id="rxT-6e-LJV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Osu-bC-A0i" id="vzq-iy-x8a"/>
+                            <outlet property="delegate" destination="Osu-bC-A0i" id="dOc-Zq-AFG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Social Networks" id="1e3-yx-B28">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ONK-5g-5fb"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Wcs-7n-g7h"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YL7-Gf-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="2678"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yuK-Ci-sXx">
