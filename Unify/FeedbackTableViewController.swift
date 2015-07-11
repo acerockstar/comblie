@@ -1,5 +1,5 @@
 //
-//  ReportProblemTableViewController.swift
+//  FeedbackTableViewController.swift
 //  Unify
 //
 //  Created by Annie Cheng on 7/10/15.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ReportProblemTableViewController: UITableViewController {
-    
-    @IBOutlet weak var submitButton: UIBarButtonItem!
+class FeedbackTableViewController: UITableViewController {
 
+    @IBOutlet weak var submitButton: UIBarButtonItem!
     @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
     }
@@ -29,10 +28,6 @@ class ReportProblemTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-    
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
 
     // MARK: - Table view data source
     
@@ -43,7 +38,7 @@ class ReportProblemTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TextViewTableViewCell", forIndexPath: indexPath) as! TextViewTableViewCell
         
-        cell.textView.text = "What problems or bugs should we fix?"
+        cell.textView.text = "What would you like us to improve?"
         
         return cell
     }

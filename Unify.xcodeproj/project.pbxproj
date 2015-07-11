@@ -48,8 +48,9 @@
 		D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */; };
 		D1855BDF1B50818100A5A244 /* ReportProblemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */; };
 		D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE21B50918C00A5A244 /* UIKitExtensions.swift */; };
-		D1855BE61B50925900A5A244 /* ReportProblemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE41B50925900A5A244 /* ReportProblemTableViewCell.swift */; };
-		D1855BE71B50925900A5A244 /* ReportProblemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855BE51B50925900A5A244 /* ReportProblemTableViewCell.xib */; };
+		D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */; };
+		D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */; };
+		D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */; };
 		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
 		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
 		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
@@ -154,8 +155,9 @@
 		D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Unify/SettingsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportProblemTableViewController.swift; path = Unify/ReportProblemTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1855BE21B50918C00A5A244 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
-		D1855BE41B50925900A5A244 /* ReportProblemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportProblemTableViewCell.swift; path = Unify/ReportProblemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		D1855BE51B50925900A5A244 /* ReportProblemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReportProblemTableViewCell.xib; path = Unify/ReportProblemTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewTableViewCell.swift; path = Unify/TextViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewTableViewCell.xib; path = Unify/TextViewTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackTableViewController.swift; path = Unify/FeedbackTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
@@ -448,8 +450,8 @@
 		77DF40F21B1CEC19006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				D1855BE41B50925900A5A244 /* ReportProblemTableViewCell.swift */,
-				D1855BE51B50925900A5A244 /* ReportProblemTableViewCell.xib */,
+				D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */,
+				D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -459,6 +461,7 @@
 			children = (
 				D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */,
 				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
+				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -748,7 +751,7 @@
 				D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */,
 				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
-				D1855BE71B50925900A5A244 /* ReportProblemTableViewCell.xib in Resources */,
+				D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */,
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
 				D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */,
@@ -848,9 +851,10 @@
 				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
 				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
-				D1855BE61B50925900A5A244 /* ReportProblemTableViewCell.swift in Sources */,
+				D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
+				D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
 				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,

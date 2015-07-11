@@ -1,5 +1,5 @@
 //
-//  ReportProblemTableViewCell.swift
+//  TextViewTableViewCell.swift
 //  Unify
 //
 //  Created by Annie Cheng on 7/10/15.
@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class ReportProblemTableViewCell: UITableViewCell {
+class TextViewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
@@ -48,7 +48,7 @@ class ReportProblemTableViewCell: UITableViewCell {
     
 }
 
-extension ReportProblemTableViewCell: UITextViewDelegate {
+extension TextViewTableViewCell: UITextViewDelegate {
     func textViewDidChange(textView: UITextView) {
         
         let size = textView.bounds.size
