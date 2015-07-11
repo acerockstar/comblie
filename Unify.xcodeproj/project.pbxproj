@@ -60,6 +60,9 @@
 		D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E03A1B30061C00F59444 /* CommentsViewController.swift */; };
 		D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E03C1B30066E00F59444 /* NumLikesTableViewCell.swift */; };
 		D1B9E03F1B30066E00F59444 /* NumLikesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B9E03D1B30066E00F59444 /* NumLikesTableViewCell.xib */; };
+		D1DA88701B50EDF300B7D344 /* SocialNetworksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */; };
+		D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */; };
+		D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */; };
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
@@ -168,6 +171,9 @@
 		D1B9E03A1B30061C00F59444 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = Unify/shared/profile/views/CommentsViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E03C1B30066E00F59444 /* NumLikesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumLikesTableViewCell.swift; path = Unify/shared/profile/views/NumLikesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E03D1B30066E00F59444 /* NumLikesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumLikesTableViewCell.xib; path = Unify/shared/profile/views/NumLikesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialNetworksTableViewController.swift; path = Unify/SocialNetworksTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectedSocialNetworkTableViewCell.swift; path = Unify/ConnectedSocialNetworkTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnconnectedSocialNetworkTableViewCell.swift; path = Unify/UnconnectedSocialNetworkTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -454,6 +460,8 @@
 			children = (
 				D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */,
 				D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */,
+				D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */,
+				D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -465,6 +473,7 @@
 				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
 				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 				D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */,
+				D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -832,6 +841,7 @@
 				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
+				D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
@@ -841,11 +851,13 @@
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
 				D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */,
+				D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
 				D17CE4871B1EF34700ED9E93 /* TwitterProfileView.swift in Sources */,
 				D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */,
 				D1B9E0381B30030D00F59444 /* CommentsTableViewCell.swift in Sources */,
+				D1DA88701B50EDF300B7D344 /* SocialNetworksTableViewController.swift in Sources */,
 				E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */,
 				D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */,
 				D17CE48D1B1EF36B00ED9E93 /* InstagramProfileView.swift in Sources */,
