@@ -60,6 +60,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         self.tableView.backgroundView!.addGestureRecognizer(tap)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+    }
+    
     // MARK: - Keyboard Functionality
 
     
