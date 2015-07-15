@@ -8,22 +8,18 @@
 
 import UIKit
 
-class ReportProblemTableViewController: UITableViewController {
+class ReportProblemTableViewController: UITableViewController,WebServiceDelegate {
     
     @IBOutlet weak var submitButton: UIBarButtonItem!
+    var Loader: ViewControllerUtils = ViewControllerUtils()
+    var api: WebService = WebService()
 
-    @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-    
-    @IBAction func submitButtonClicked(sender: UIBarButtonItem) {
-    }
-    
+    @IBOutlet var ReportTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: "TextViewTableViewCell", bundle: nil), forCellReuseIdentifier: "TextViewTableViewCell")
-        
         tableView.scrollEnabled = false
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100.0
@@ -42,9 +38,7 @@ class ReportProblemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TextViewTableViewCell", forIndexPath: indexPath) as! TextViewTableViewCell
-        
         cell.textView.text = "What problems or bugs should we fix?"
-        
         return cell
     }
     
@@ -53,5 +47,51 @@ class ReportProblemTableViewController: UITableViewController {
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
     }
+    @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+
+    @IBAction func submitButtonClicked(sender: UIBarButtonItem) {
+
+        if Reachability.isConnectedToNetwork() == true {
+         let StingValue = getTextValueFromTableViewCell()
+            Loader.showActivityIndicator(self.view)
+            api.delegate=self
+            api.reportProblem(StingValue)
+
+        } else {
+            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+        }
+        
+    }
+    func getTextValueFromTableViewCell()->String{
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0);
+        var tableViewCell = ReportTableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
+        let TextViews :UITextView = (tableViewCell?.viewWithTag(1) as! UITextView?)!
+        print(TextViews.text);
+        return TextViews.text
+    }
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        Loader.hideActivityIndicator(self.view)
+        println("paraDict===\(paraDict)")
+        var Status : AnyObject = paraDict.valueForKey("success") as! Bool
+        if Status as! NSObject == true{
+            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+        }
+        else if Status as! NSObject == false{
+            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    func alertTitle(title :String, message:String,btnTitle:String){
+        var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
+        alert.show()
+
+    }
+
+
 
 }

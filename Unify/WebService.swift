@@ -32,6 +32,42 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlSession()
 
     }
+    func Feedback(feedbackString : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(Feedback)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+    func reportProblem(reportProblemString : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(reportProblem)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+    func logoutVine(UserId : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+    func logoutInstagram(UserId : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+    func logoutTwitter(UserId : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+    func logoutTumbler(UserId : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
 
     func urlSession(){
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {

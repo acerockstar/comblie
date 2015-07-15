@@ -70,6 +70,7 @@
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
 		E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E5D381B5541E70078E6C4 /* Reachability.swift */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
+		E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08989341B562D04000A8C33 /* ViewControllerUtils.swift */; };
 		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
 		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
 		E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */; };
@@ -186,6 +187,7 @@
 		E02E5D381B5541E70078E6C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
+		E08989341B562D04000A8C33 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				E08989381B562D07000A8C33 /* ViewControllerUtils */,
 				E02E5D3A1B5541EB0078E6C4 /* Reachability */,
 				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
@@ -605,6 +608,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E08989381B562D07000A8C33 /* ViewControllerUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E08989341B562D04000A8C33 /* ViewControllerUtils.swift */,
+			);
+			name = ViewControllerUtils;
+			sourceTree = "<group>";
+		};
 		E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +868,7 @@
 				D1855BDF1B50818100A5A244 /* ReportProblemTableViewController.swift in Sources */,
 				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
+				E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */,
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
 				D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,

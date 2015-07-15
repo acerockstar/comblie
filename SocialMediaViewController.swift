@@ -51,7 +51,6 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         }
 
     }
-    
     @IBAction func NewUserLogin(sender: AnyObject) {
 
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)

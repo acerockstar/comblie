@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="What problems or bugs should we fix?" translatesAutoresizingMaskIntoConstraints="NO" id="l2f-Rp-hSz">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" text="What problems or bugs should we fix?" translatesAutoresizingMaskIntoConstraints="NO" id="l2f-Rp-hSz">
                         <rect key="frame" x="10" y="10" width="300" height="80"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

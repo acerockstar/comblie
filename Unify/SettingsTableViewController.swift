@@ -8,19 +8,25 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
+class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UIAlertViewDelegate,WebServiceDelegate {
     
     @IBOutlet weak var nameCell: UITableViewCell!
     @IBOutlet weak var bioCell: UITableViewCell!
     @IBOutlet weak var lightThemeCell: UITableViewCell!
     @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
+    @IBOutlet weak var LogoutCell: UITableViewCell!
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     @IBOutlet weak var lightThemeSwitch: UISwitch!
     @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
     @IBOutlet weak var chatHeadsSwitch: UISwitch!
+
+
+
+    var Loader: ViewControllerUtils = ViewControllerUtils()
+    var api: WebService = WebService()
 
     var postStatusViewController: PostStatusViewController!
     
@@ -90,11 +96,77 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
 
         return CGFloat(25.0)
     }
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+
+    }
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
     }
+
+
+
+    @IBAction func LogoutClick(sender: AnyObject) {
+        var alert = UIAlertController(title: "Conformation!", message: "Are you sure you want logout?", preferredStyle: UIAlertControllerStyle.Alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style:UIAlertActionStyle.Default, handler: { (ACTION :UIAlertAction!) -> Void in
+            if Reachability.isConnectedToNetwork() == true{
+                self.Loader.showActivityIndicator(self.view)
+                self.vineLogout()
+            }
+            else{
+                 self.alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+            }
+
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style:UIAlertActionStyle.Default, handler: { (ACTION :UIAlertAction!) -> Void in
+
+        }))
+
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func vineLogout(){
+        api.delegate=self
+        api.logoutVine("")
+
+    }
+    func TwitterLogOut(){
+        api.delegate=self
+        api.logoutTumbler("")
+    }
+    func TumblrLogOut(){
+        api.delegate=self
+        api.logoutTumbler("")
+
+    }
+    func InstagramLogOut(){
+        api.delegate=self
+        api.logoutInstagram("")
+
+    }
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        Loader.hideActivityIndicator(self.view)
+        println("paraDict===\(paraDict)")
+        var Status : AnyObject = paraDict.valueForKey("success") as! Bool
+        if Status as! NSObject == true{
+            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+        }
+        else if Status as! NSObject == false{
+            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    func alertTitle(title :String, message:String,btnTitle:String){
+        var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
+        alert.show()
         
+    }
+
+
 }

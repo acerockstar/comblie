@@ -8,15 +8,13 @@
 
 import UIKit
 
-class FeedbackTableViewController: UITableViewController {
+class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
 
     @IBOutlet weak var submitButton: UIBarButtonItem!
-    @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-    
-    @IBAction func submitButtonClicked(sender: UIBarButtonItem) {
-    }
+    var Loader: ViewControllerUtils = ViewControllerUtils()
+    var api: WebService = WebService()
+
+    @IBOutlet var FeedbackTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +45,51 @@ class FeedbackTableViewController: UITableViewController {
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
+    }
+
+    @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+
+    @IBAction func submitButtonClicked(sender: UIBarButtonItem) {
+
+        if Reachability.isConnectedToNetwork() == true {
+            let StingValue = getTextValueFromTableViewCell()
+            Loader.showActivityIndicator(self.view)
+            api.delegate=self
+            api.Feedback(StingValue)
+
+        } else {
+            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+        }
+
+    }
+    func getTextValueFromTableViewCell()->String{
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0);
+        var tableViewCell = FeedbackTableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
+        let TextViews :UITextView = (tableViewCell?.viewWithTag(1) as! UITextView?)!
+        print(TextViews.text);
+        return TextViews.text
+    }
+    func returnFail() {
+
+    }
+    func returnSuccess(paraDict: NSDictionary) {
+        Loader.hideActivityIndicator(self.view)
+        println("paraDict===\(paraDict)")
+        var Status : AnyObject = paraDict.valueForKey("success") as! Bool
+        if Status as! NSObject == true{
+            alertTitle("Report", message: "Your feedback submitted successfully.", btnTitle: "OK")
+        }
+        else if Status as! NSObject == false{
+            alertTitle("Report", message: "Your feedback submitted successfully.", btnTitle: "OK")
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    func alertTitle(title :String, message:String,btnTitle:String){
+        var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
+        alert.show()
+        
     }
 
 }
