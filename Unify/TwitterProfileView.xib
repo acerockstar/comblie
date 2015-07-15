@@ -13,7 +13,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-ex-HI9">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Aug-LM-eWg">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aug-LM-eWg">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jaden Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsz-KH-h2a">
@@ -109,7 +109,6 @@
         </view>
     </objects>
     <resources>
-        <image name="CoverPhoto" width="1920" height="1200"/>
         <image name="Persona" width="600" height="600"/>
     </resources>
 </document>

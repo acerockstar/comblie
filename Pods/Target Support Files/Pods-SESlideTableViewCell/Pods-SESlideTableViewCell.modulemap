@@ -1,0 +1,6 @@
+framework module SESlideTableViewCell {
+  umbrella header "Pods-SESlideTableViewCell-umbrella.h"
+
+  export *
+  module * { export * }
+}

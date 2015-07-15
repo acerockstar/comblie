@@ -13,7 +13,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCo-UK-Y72">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="4l7-XW-2lp">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4l7-XW-2lp">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cameron Dallas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arg-Me-W7d">
@@ -102,7 +102,6 @@
         </view>
     </objects>
     <resources>
-        <image name="CoverPhoto" width="1920" height="1200"/>
         <image name="Persona" width="600" height="600"/>
     </resources>
 </document>
