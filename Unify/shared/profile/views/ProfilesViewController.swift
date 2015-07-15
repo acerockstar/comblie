@@ -168,6 +168,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         var currentVC = self.pageViewController.viewControllers.last as! ProfileContentViewController
         self.pageControl.currentPage = currentVC.pageIndex
         self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+        UIApplication.sharedApplication().statusBarStyle = .Default
     }
 
 }

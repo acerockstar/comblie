@@ -34,6 +34,10 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.addSubview(self.refreshControl)
     }
     
+    override func viewDidLayoutSubviews() {
+        self.shyNavBarManager.scrollView = self.tableView
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

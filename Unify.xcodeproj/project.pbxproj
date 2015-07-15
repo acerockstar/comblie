@@ -68,6 +68,11 @@
 		D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */; };
 		D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */; };
 		D1E08BF31B377FC800E40C41 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E08BF21B377FC800E40C41 /* Util.swift */; };
+		D1E8A9041B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E8A8FB1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m */; };
+		D1E8A9051B562F95000827B8 /* UIViewController+BetterLayoutGuides.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E8A8FD1B562F95000827B8 /* UIViewController+BetterLayoutGuides.m */; };
+		D1E8A9061B562F95000827B8 /* TLYDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E8A8FF1B562F95000827B8 /* TLYDelegateProxy.m */; };
+		D1E8A9071B562F95000827B8 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E8A9011B562F95000827B8 /* TLYShyNavBarManager.m */; };
+		D1E8A9081B562F95000827B8 /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E8A9031B562F95000827B8 /* TLYShyViewController.m */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
 		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
 		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
@@ -181,6 +186,16 @@
 		D1DC333C1B2588DE00C9AFB6 /* PostStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostStatusViewController.swift; path = Unify/shared/feed/PostStatusViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1DC333E1B258C4300C9AFB6 /* PostStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostStatusView.xib; path = Unify/shared/feed/PostStatusView.xib; sourceTree = SOURCE_ROOT; };
 		D1E08BF21B377FC800E40C41 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		D1E8A8FA1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TLYSwizzlingHelpers.h"; sourceTree = "<group>"; };
+		D1E8A8FB1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TLYSwizzlingHelpers.m"; sourceTree = "<group>"; };
+		D1E8A8FC1B562F95000827B8 /* UIViewController+BetterLayoutGuides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BetterLayoutGuides.h"; sourceTree = "<group>"; };
+		D1E8A8FD1B562F95000827B8 /* UIViewController+BetterLayoutGuides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BetterLayoutGuides.m"; sourceTree = "<group>"; };
+		D1E8A8FE1B562F95000827B8 /* TLYDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYDelegateProxy.h; sourceTree = "<group>"; };
+		D1E8A8FF1B562F95000827B8 /* TLYDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYDelegateProxy.m; sourceTree = "<group>"; };
+		D1E8A9001B562F95000827B8 /* TLYShyNavBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyNavBarManager.h; sourceTree = "<group>"; };
+		D1E8A9011B562F95000827B8 /* TLYShyNavBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyNavBarManager.m; sourceTree = "<group>"; };
+		D1E8A9021B562F95000827B8 /* TLYShyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyViewController.h; sourceTree = "<group>"; };
+		D1E8A9031B562F95000827B8 /* TLYShyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyViewController.m; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
@@ -235,6 +250,7 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				D1E8A8F81B562F95000827B8 /* TLYShyNavBar */,
 				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
 				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
@@ -585,6 +601,31 @@
 			name = Xibs;
 			sourceTree = "<group>";
 		};
+		D1E8A8F81B562F95000827B8 /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8A8F91B562F95000827B8 /* Categories */,
+				D1E8A8FE1B562F95000827B8 /* TLYDelegateProxy.h */,
+				D1E8A8FF1B562F95000827B8 /* TLYDelegateProxy.m */,
+				D1E8A9001B562F95000827B8 /* TLYShyNavBarManager.h */,
+				D1E8A9011B562F95000827B8 /* TLYShyNavBarManager.m */,
+				D1E8A9021B562F95000827B8 /* TLYShyViewController.h */,
+				D1E8A9031B562F95000827B8 /* TLYShyViewController.m */,
+			);
+			path = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		D1E8A8F91B562F95000827B8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8A8FA1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.h */,
+				D1E8A8FB1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m */,
+				D1E8A8FC1B562F95000827B8 /* UIViewController+BetterLayoutGuides.h */,
+				D1E8A8FD1B562F95000827B8 /* UIViewController+BetterLayoutGuides.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		E08747041B4C14850060E5A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,9 +886,11 @@
 				D17CE48B1B1EF35E00ED9E93 /* TumblrProfileView.swift in Sources */,
 				D1855BDF1B50818100A5A244 /* ReportProblemTableViewController.swift in Sources */,
 				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
+				D1E8A9071B562F95000827B8 /* TLYShyNavBarManager.m in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
 				D17CE4851B1EF33B00ED9E93 /* CombinedProfileView.swift in Sources */,
 				D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */,
+				D1E8A9041B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
@@ -873,11 +916,14 @@
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
 				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
+				D1E8A9051B562F95000827B8 /* UIViewController+BetterLayoutGuides.m in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
+				D1E8A9061B562F95000827B8 /* TLYDelegateProxy.m in Sources */,
 				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
 				D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
+				D1E8A9081B562F95000827B8 /* TLYShyViewController.m in Sources */,
 				D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
