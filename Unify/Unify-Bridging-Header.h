@@ -5,13 +5,6 @@
 #import <Crashlytics/Crashlytics.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
-// Scrolling Navigation Bar
-#import "TLYShyNavBarManager.h"
-#import "TLYShyViewController.h"
-#import "TLYDelegateProxy.h"
-#import "NSObject+TLYSwizzlingHelpers.h"
-#import "UIViewController+BetterLayoutGuides.h"
-
 
 // Tumbler
 static NSString *const kTumbler_api_key = @"PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE";

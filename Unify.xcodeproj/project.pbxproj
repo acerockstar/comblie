@@ -609,6 +609,17 @@
 			name = Reachability;
 			sourceTree = "<group>";
 		};
+		D1E8A8F91B562F95000827B8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8A8FA1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.h */,
+				D1E8A8FB1B562F95000827B8 /* NSObject+TLYSwizzlingHelpers.m */,
+				D1E8A8FC1B562F95000827B8 /* UIViewController+BetterLayoutGuides.h */,
+				D1E8A8FD1B562F95000827B8 /* UIViewController+BetterLayoutGuides.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		E08747041B4C14850060E5A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
