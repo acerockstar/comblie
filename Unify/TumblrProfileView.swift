@@ -22,7 +22,7 @@ class TumblrProfileView: UIView {
         profilePicture.clipsToBounds = true
         profilePicBorder.layer.cornerRadius = profilePicBorder.bounds.size.width/2
         profilePicBorder.clipsToBounds = true
-        coverPhoto.alpha = 0.5
+        coverPhoto.backgroundColor = UIColor.tumblrBlue()
     }
     
     class func instanceFromNib() -> UIView {

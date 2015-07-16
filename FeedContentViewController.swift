@@ -49,6 +49,10 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         self.tableView.addSubview(self.refreshControl)
     }
     
+    override func viewDidLayoutSubviews() {
+        self.shyNavBarManager.scrollView = self.tableView
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

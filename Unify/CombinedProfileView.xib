@@ -13,7 +13,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5N-Ni-anM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoverPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="MJl-gk-AXz">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJl-gk-AXz">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         </imageView>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIK-31-WE2">
@@ -59,7 +59,6 @@
         </view>
     </objects>
     <resources>
-        <image name="CoverPhoto" width="1920" height="1200"/>
         <image name="Persona" width="600" height="600"/>
     </resources>
 </document>

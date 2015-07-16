@@ -17,6 +17,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     var pageIndex: Int = 0
     var labelText: String!
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
+    var titleView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,13 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.addSubview(self.refreshControl)
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        let sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
+        self.tableView.tableHeaderView = sectionHeader
+        self.shyNavBarManager.scrollView = self.tableView
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -49,23 +56,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
 
-    
     // MARK: - Table View Methods
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        // TODO: Make dynamic
-        if self.labelText == "Combined" {
-            return CGFloat(100)
-        } else if self.labelText == "Tumblr" {
-            return CGFloat(130)
-        } else {
-            return CGFloat(190)
-        }
-    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if items.count == 0 {

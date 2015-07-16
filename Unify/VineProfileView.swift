@@ -25,7 +25,7 @@ class VineProfileView: UIView {
         profilePicture.clipsToBounds = true
         profilePicBorder.layer.cornerRadius = profilePicBorder.bounds.size.width/2
         profilePicBorder.clipsToBounds = true
-        coverPhoto.alpha = 0.5
+        coverPhoto.backgroundColor = UIColor.vineGreen()
     }
     
     class func instanceFromNib() -> UIView {
