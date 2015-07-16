@@ -62,7 +62,7 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlSession()
 
     }
-    func logoutTumbler(UserId : String){
+    func logoutTumblr(UserId : String){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
         request.HTTPMethod = "GET"
         urlSession()

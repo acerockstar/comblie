@@ -26,7 +26,7 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
             alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
         }
     }
-    @IBAction func LoginWithTumbler(sender: AnyObject) {
+    @IBAction func LoginWithTumblr(sender: AnyObject) {
         if Reachability.isConnectedToNetwork() == true {
             LoginWithVine()
         } else {

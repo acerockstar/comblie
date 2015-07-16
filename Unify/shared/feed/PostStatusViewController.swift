@@ -129,7 +129,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
 
         }
         else if (PostToMediaName == "Post to Tumblr"){
-              postToTumbler()
+              postToTumblr()
         }
         else if (PostToMediaName == "Post to Twitter"){
 
@@ -139,7 +139,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         }
         self.removeAnimate()
     }
-    func postToTumbler(){
+    func postToTumblr(){
         api.delegate=self;
         api.PostUpdateToTumblr(textView.text)
     }

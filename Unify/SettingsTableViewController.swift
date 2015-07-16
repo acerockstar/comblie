@@ -96,20 +96,19 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
 
         return CGFloat(25.0)
     }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
-
     }
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
     }
 
-
-
     @IBAction func LogoutClick(sender: AnyObject) {
-        var alert = UIAlertController(title: "Conformation!", message: "Are you sure you want logout?", preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: "Confirmation!", message: "Are you sure you want log out?", preferredStyle: UIAlertControllerStyle.Alert)
 
         alert.addAction(UIAlertAction(title: "Yes", style:UIAlertActionStyle.Default, handler: { (ACTION :UIAlertAction!) -> Void in
             if Reachability.isConnectedToNetwork() == true{
@@ -117,11 +116,11 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
                 self.vineLogout()
             }
             else{
-                 self.alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+                 self.alertTitle("No Internet Connection", message: "Make sure your device is connected to the Internet.", btnTitle: "OK")
             }
 
         }))
-        alert.addAction(UIAlertAction(title: "NO", style:UIAlertActionStyle.Default, handler: { (ACTION :UIAlertAction!) -> Void in
+        alert.addAction(UIAlertAction(title: "No", style:UIAlertActionStyle.Default, handler: { (ACTION :UIAlertAction!) -> Void in
 
         }))
 
@@ -135,11 +134,11 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     }
     func TwitterLogOut(){
         api.delegate=self
-        api.logoutTumbler("")
+        api.logoutTwitter("")
     }
     func TumblrLogOut(){
         api.delegate=self
-        api.logoutTumbler("")
+        api.logoutTumblr("")
 
     }
     func InstagramLogOut(){
@@ -167,6 +166,5 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         alert.show()
         
     }
-
 
 }

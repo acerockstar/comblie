@@ -5,9 +5,16 @@
 #import <Crashlytics/Crashlytics.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
+// Scrolling Navigation Bar
+#import "TLYShyNavBarManager.h"
+#import "TLYShyViewController.h"
+#import "TLYDelegateProxy.h"
+#import "NSObject+TLYSwizzlingHelpers.h"
+#import "UIViewController+BetterLayoutGuides.h"
 
-// Tumbler
-static NSString *const kTumbler_api_key = @"PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE";
+
+// Tumblr
+static NSString *const kTumblr_api_key = @"PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE";
 static NSString *const kOAuthConsumerKey = @"CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99";
 static NSString *const kOAuthConsumerSecret = @"fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ";
 static NSString *const kOAuthToken = @"v5NbhosgGBXX5D3w0VKnPOTZovCdHfAtLD4bEfZnFWLUxTD517";
