@@ -26,6 +26,5 @@ static NSString *const kVine_api_key = @"k6sEPpZrbbmsh1F0LOgYhUgEH7xep1f1fkijsnq
 
 
 //Twitter
-
 static NSString *const kConsumerAPI_Key = @"2tSw1fBv6xtLcaE6IKyQXFeV1";
 static NSString *const kConsumer_Secret_API_Secret = @"2tSw1fBv6xtLcaE6IKyQXFeV1";
