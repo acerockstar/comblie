@@ -44,6 +44,18 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlSession()
 
     }
+    func InstragramUserLogin(reportProblemString : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.instagram.com/v1/subscriptions?client_secret=dd1075a3c17544bdbc3b9436aa074826&client_id=5fc9397900424d6e9087921ecdca8005")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+
+    }
+
+
+
+
+
+    //************************************* Logout ******************************************************
     func logoutVine(UserId : String){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
         request.HTTPMethod = "GET"

@@ -28,3 +28,9 @@ static NSString *const kVine_api_key = @"k6sEPpZrbbmsh1F0LOgYhUgEH7xep1f1fkijsnq
 //Twitter
 static NSString *const kConsumerAPI_Key = @"2tSw1fBv6xtLcaE6IKyQXFeV1";
 static NSString *const kConsumer_Secret_API_Secret = @"2tSw1fBv6xtLcaE6IKyQXFeV1";
+
+
+// Instagram
+
+static NSString *const kCLIENT_ID = @"5fc9397900424d6e9087921ecdca8005";
+static NSString *const kCLIENT_SECRET_Key = @"dd1075a3c17544bdbc3b9436aa074826";

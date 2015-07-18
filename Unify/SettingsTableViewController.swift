@@ -154,10 +154,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         println("paraDict===\(paraDict)")
         var Status : AnyObject = paraDict.valueForKey("success") as! Bool
         if Status as! NSObject == true{
-            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+            alertTitle("Report", message: "Logout successfully.", btnTitle: "OK")
         }
         else if Status as! NSObject == false{
-            alertTitle("Report", message: "Your report submitted successfully.", btnTitle: "OK")
+            alertTitle("Report", message: "Logout successfully.", btnTitle: "OK")
         }
         self.navigationController?.popViewControllerAnimated(true)
     }

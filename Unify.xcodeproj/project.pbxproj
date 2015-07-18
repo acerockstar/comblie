@@ -74,6 +74,8 @@
 		D1F3FA851B578D68003ED306 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F3FA7F1B578D68003ED306 /* TLYShyNavBarManager.m */; };
 		D1F3FA861B578D68003ED306 /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F3FA811B578D68003ED306 /* TLYShyViewController.m */; };
 		E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E5D381B5541E70078E6C4 /* Reachability.swift */; };
+		E0349B0D1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
+		E0349B0E1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
 		E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08989341B562D04000A8C33 /* ViewControllerUtils.swift */; };
 		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
@@ -89,6 +91,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 77DF40B41B1CD9B4006084E4;
 			remoteInfo = Unify;
+		};
+		E0349B021B5A360F002A6E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60F46B6D7CC3172927CF93FF;
+			remoteInfo = Pods;
+		};
+		E0349B041B5A360F002A6E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B22D31B7319E6715772E7430;
+			remoteInfo = "Pods-Alamofire";
+		};
+		E0349B061B5A360F002A6E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F11E2E50E20B54A1C58F73C;
+			remoteInfo = "Pods-SVProgressHUD";
+		};
+		E0349B081B5A360F002A6E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F519B57FA1683EE7CEE9865;
+			remoteInfo = "Pods-SwiftyJSON";
 		};
 		E08747081B4C14850060E5A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -200,6 +230,8 @@
 		D1F3FA811B578D68003ED306 /* TLYShyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyViewController.m; sourceTree = "<group>"; };
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E02E5D381B5541E70078E6C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = UnifyDetails.rtf; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 		E08989341B562D04000A8C33 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
@@ -233,6 +265,7 @@
 		101B7A77A5F2EA0B43B30BAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */,
 				E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */,
 				3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */,
 				D21C955EBF8C304714409D74 /* Pods.release.xcconfig */,
@@ -254,6 +287,7 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
 				D1F3FA761B578D68003ED306 /* TLYShyNavBar */,
 				E08989381B562D07000A8C33 /* ViewControllerUtils */,
 				E02E5D3A1B5541EB0078E6C4 /* Reachability */,
@@ -640,6 +674,17 @@
 			name = Reachability;
 			sourceTree = "<group>";
 		};
+		E0349AFC1B5A360F002A6E3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0349B031B5A360F002A6E3E /* Pods.framework */,
+				E0349B051B5A360F002A6E3E /* Alamofire.framework */,
+				E0349B071B5A360F002A6E3E /* SVProgressHUD.framework */,
+				E0349B091B5A360F002A6E3E /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E08747041B4C14850060E5A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +832,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = E0349AFC1B5A360F002A6E3E /* Products */;
+					ProjectRef = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
+				},
+				{
 					ProductGroup = E08747041B4C14850060E5A6 /* Products */;
 					ProjectRef = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
 				},
@@ -800,6 +849,34 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E0349B031B5A360F002A6E3E /* Pods.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods.framework;
+			remoteRef = E0349B021B5A360F002A6E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0349B051B5A360F002A6E3E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E0349B041B5A360F002A6E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0349B071B5A360F002A6E3E /* SVProgressHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SVProgressHUD.framework;
+			remoteRef = E0349B061B5A360F002A6E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0349B091B5A360F002A6E3E /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = E0349B081B5A360F002A6E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E08747091B4C14850060E5A6 /* libTMTumblrSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -834,6 +911,7 @@
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */,
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
+				E0349B0D1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
 				D17CE4931B1EF3B500ED9E93 /* VineProfileView.xib in Resources */,
 				D17CE4991B1EF43300ED9E93 /* InstagramProfileView.xib in Resources */,
@@ -846,6 +924,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0349B0E1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
