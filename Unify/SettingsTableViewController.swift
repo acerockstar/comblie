@@ -10,6 +10,16 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UIAlertViewDelegate,WebServiceDelegate {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var bioTextField: UITextField!
+    
+    // Profile Images
+    @IBOutlet weak var nameCellImageView: UIView!
+    @IBOutlet weak var nameCellImage: UIImageView!
+    @IBOutlet weak var bioCellImageView: UIView!
+    @IBOutlet weak var bioCellImage: UIImageView!
+    
+    // Cells
     @IBOutlet weak var nameCell: UITableViewCell!
     @IBOutlet weak var bioCell: UITableViewCell!
     @IBOutlet weak var lightThemeCell: UITableViewCell!
@@ -17,17 +27,24 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
     @IBOutlet weak var LogoutCell: UITableViewCell!
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var bioTextField: UITextField!
+    // Cell Arrows
+    @IBOutlet weak var socialNetworkCellArrow: UIImageView!
+    @IBOutlet weak var pushNotificationCellArrow: UIImageView!
+    @IBOutlet weak var textSizeCellArrow: UIImageView!
+    @IBOutlet weak var reportProblemCellArrow: UIImageView!
+    @IBOutlet weak var feedbackCellArrow: UIImageView!
+    @IBOutlet weak var blogCellArrow: UIImageView!
+    @IBOutlet weak var privacyPolicyCellArrow: UIImageView!
+    @IBOutlet weak var inviteFriendsArrow: UIImageView!
+    @IBOutlet weak var LogoutCellArrow: UIImageView!
+
+    // Cell Switches
     @IBOutlet weak var lightThemeSwitch: UISwitch!
     @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
     @IBOutlet weak var chatHeadsSwitch: UISwitch!
 
-
-
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
-
     var postStatusViewController: PostStatusViewController!
     
     @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
@@ -51,6 +68,18 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         nameTextField.delegate = self
         bioTextField.delegate = self
         
+        nameCellImage.tintColor = UIColor.combliePurple()
+        nameCellImageView.backgroundColor = UIColor.whiteColor()
+        nameCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        nameCellImageView.layer.borderWidth = 1.25
+        nameCellImageView.layer.cornerRadius = nameCellImageView.frame.size.width * (0.4)
+        
+        bioCellImage.tintColor = UIColor.combliePurple()
+        bioCellImageView.backgroundColor = UIColor.whiteColor()
+        bioCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        bioCellImageView.layer.borderWidth = 1.25
+        bioCellImageView.layer.cornerRadius = bioCellImageView.frame.size.width * (0.4)
+
         lightThemeSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
         chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
@@ -59,6 +88,13 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         
         for cell in cells {
             cell.selectionStyle = .None
+        }
+        
+        let cellArrows = [socialNetworkCellArrow, pushNotificationCellArrow, textSizeCellArrow, reportProblemCellArrow,
+            feedbackCellArrow, blogCellArrow, privacyPolicyCellArrow, inviteFriendsArrow, LogoutCellArrow]
+        
+        for arrow in cellArrows {
+            arrow.tintColor = UIColor.combliePurple()
         }
         
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
