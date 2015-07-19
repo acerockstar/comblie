@@ -40,6 +40,8 @@ class EnlargedItemViewController: UIViewController {
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
         likeSymbol.tintColor = UIColor.whiteColor()
         commentSymbol.tintColor = UIColor.whiteColor()
+        
+        configureTextSize()
     }
     
     override func viewDidAppear(animated: Bool) {

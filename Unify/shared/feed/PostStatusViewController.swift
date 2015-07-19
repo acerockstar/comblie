@@ -11,6 +11,7 @@ import QuartzCore
 
 class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,WebServiceDelegate {
     
+    @IBOutlet weak var customView: UIView!
     @IBOutlet weak var postStatusNavBar: UINavigationBar!
     @IBOutlet weak var socialMediaButtonsView: UIView!
     @IBOutlet weak var popUpView: UIView!
@@ -49,16 +50,43 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         self.textView.textColor = UIColor.lightGrayColor()
         self.textView.becomeFirstResponder()
         self.textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
-        self.navBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 14)!]
-        self.cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 12)!], forState: UIControlState.Normal)
-        self.postButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 12)!], forState: UIControlState.Normal)
         self.postButton.enabled = false
         
         setUpSocialMediaButtons()
+        configureTextSize()
     }
     
     override func viewDidLayoutSubviews() {
-        self.view.frame = self.view.frame
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        
+        self.view.frame.size.width = screenSize.width
+        self.view.frame.size.height = screenSize.height
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        configureTextSize()
+    }
+    
+    func configureTextSize() {
+        let barButtonFont = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        let navBarTitleFont = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
+        
+        textView.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: barButtonFont], forState: UIControlState.Normal)
+        postButton.setTitleTextAttributes([NSFontAttributeName: barButtonFont], forState: UIControlState.Normal)
+        postStatusNavBar.titleTextAttributes = [ NSFontAttributeName: navBarTitleFont]
     }
     
     func setUpSocialMediaButtons() {
