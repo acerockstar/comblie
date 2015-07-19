@@ -30,9 +30,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For my republic I stand." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE3-tV-jew">
-                            <rect key="frame" x="60" y="145" width="200" height="16.5"/>
+                            <rect key="frame" x="35" y="145" width="250" height="16.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="D9e-9y-TGR"/>
+                                <constraint firstAttribute="width" constant="250" id="D9e-9y-TGR"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +132,8 @@
                         <constraint firstItem="1Fa-Ng-VmU" firstAttribute="centerY" secondItem="wBu-VC-zNo" secondAttribute="centerY" id="e1r-ZL-eNA"/>
                         <constraint firstAttribute="trailing" secondItem="Aug-LM-eWg" secondAttribute="trailing" id="kZH-eV-gYf"/>
                         <constraint firstItem="8iv-SQ-nBU" firstAttribute="centerX" secondItem="IaI-h9-TG2" secondAttribute="centerX" id="mWZ-M0-V1c"/>
+                        <constraint firstAttribute="bottom" secondItem="wBu-VC-zNo" secondAttribute="bottom" constant="20" id="oFR-Ga-2Rm"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wBu-VC-zNo" secondAttribute="bottom" constant="20" id="oSR-9O-DYA"/>
                         <constraint firstAttribute="centerX" secondItem="8iv-SQ-nBU" secondAttribute="centerX" id="qJ7-be-SfP"/>
                         <constraint firstItem="8iv-SQ-nBU" firstAttribute="centerY" secondItem="IaI-h9-TG2" secondAttribute="centerY" id="riS-Lh-H03"/>
                         <constraint firstItem="llp-qG-0ZV" firstAttribute="centerX" secondItem="hKr-do-E4Q" secondAttribute="centerX" id="tdC-m5-fz8"/>
@@ -142,6 +144,8 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="oFR-Ga-2Rm"/>
+                            <exclude reference="oSR-9O-DYA"/>
                             <exclude reference="RuX-gs-eEn"/>
                         </mask>
                     </variation>

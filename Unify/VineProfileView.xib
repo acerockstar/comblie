@@ -24,9 +24,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For my republic I stand." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh1-2o-RS3">
-                            <rect key="frame" x="60" y="128.5" width="200" height="16.5"/>
+                            <rect key="frame" x="35" y="128.5" width="250" height="16.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="Vek-KR-z9W"/>
+                                <constraint firstAttribute="width" constant="250" id="Vek-KR-z9W"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,6 +111,7 @@
                         <constraint firstItem="ivu-CB-Npv" firstAttribute="centerX" secondItem="rSn-iX-uXO" secondAttribute="centerX" id="EYn-bD-A2j"/>
                         <constraint firstItem="UJx-8j-Gcq" firstAttribute="centerY" secondItem="YiL-yW-O4j" secondAttribute="centerY" id="IYt-6K-YSg"/>
                         <constraint firstItem="gFA-4D-aCC" firstAttribute="leading" secondItem="zX5-VH-q2p" secondAttribute="trailing" constant="20" id="MZJ-ki-PqM"/>
+                        <constraint firstAttribute="bottom" secondItem="zX5-VH-q2p" secondAttribute="bottom" constant="20" id="Pv4-A9-XFA"/>
                         <constraint firstItem="zX5-VH-q2p" firstAttribute="leading" secondItem="VP5-LR-3cM" secondAttribute="trailing" constant="20" id="UMB-TV-jgr"/>
                         <constraint firstAttribute="centerX" secondItem="01D-XG-DAy" secondAttribute="centerX" id="X5f-CK-SUw"/>
                         <constraint firstItem="01D-XG-DAy" firstAttribute="top" secondItem="UJx-8j-Gcq" secondAttribute="bottom" constant="5" id="XAQ-Nz-dK7"/>
@@ -134,6 +135,7 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="Pv4-A9-XFA"/>
                             <exclude reference="4Vg-ch-LE1"/>
                         </mask>
                     </variation>

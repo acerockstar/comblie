@@ -57,9 +57,15 @@
                         <constraint firstItem="q93-pV-16U" firstAttribute="top" secondItem="LMx-Pk-Usw" secondAttribute="bottom" constant="5" id="Q0H-qm-36t"/>
                         <constraint firstItem="lTp-s3-6eS" firstAttribute="leading" secondItem="TAe-rk-0j9" secondAttribute="leading" id="Ued-M1-Deu"/>
                         <constraint firstAttribute="centerX" secondItem="kDr-11-txC" secondAttribute="centerX" id="fgc-Rb-LYx"/>
+                        <constraint firstAttribute="bottom" secondItem="qGC-Mr-Cpb" secondAttribute="bottom" constant="20" id="iST-vY-y7q"/>
                         <constraint firstItem="LMx-Pk-Usw" firstAttribute="centerX" secondItem="kDr-11-txC" secondAttribute="centerX" id="kn6-U7-sWs"/>
                         <constraint firstAttribute="centerX" secondItem="q93-pV-16U" secondAttribute="centerX" id="nel-1q-3JY"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="iST-vY-y7q"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

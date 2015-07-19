@@ -10,7 +10,6 @@ import UIKit
 
 class NumLikesTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!

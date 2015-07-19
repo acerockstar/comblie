@@ -45,9 +45,9 @@
                             </variation>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a short bio about David." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDu-0n-kdO">
-                            <rect key="frame" x="60" y="128.5" width="200" height="16.5"/>
+                            <rect key="frame" x="35" y="128.5" width="250" height="16.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="WWs-ae-GkP"/>
+                                <constraint firstAttribute="width" constant="250" id="WWs-ae-GkP"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,11 +65,18 @@
                         <constraint firstAttribute="trailing" secondItem="MJl-gk-AXz" secondAttribute="trailing" id="OxF-10-jWf"/>
                         <constraint firstAttribute="centerX" secondItem="zcU-FS-iM4" secondAttribute="centerX" id="PFX-5s-fip"/>
                         <constraint firstItem="WDu-0n-kdO" firstAttribute="top" secondItem="zcU-FS-iM4" secondAttribute="bottom" constant="10" id="Pon-w4-OcF"/>
+                        <constraint firstAttribute="bottom" secondItem="WDu-0n-kdO" secondAttribute="bottom" constant="20" id="Ppx-TD-h6j"/>
                         <constraint firstAttribute="centerX" secondItem="XIK-31-WE2" secondAttribute="centerX" id="SzL-yG-UGN"/>
                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WDu-0n-kdO" secondAttribute="bottom" constant="20" id="dxd-XK-6OB"/>
                         <constraint firstItem="MJl-gk-AXz" firstAttribute="leading" secondItem="M5N-Ni-anM" secondAttribute="leading" id="j7m-o5-Vbs"/>
                         <constraint firstAttribute="bottom" secondItem="MJl-gk-AXz" secondAttribute="bottom" id="zI3-UB-LtO"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ppx-TD-h6j"/>
+                            <exclude reference="dxd-XK-6OB"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

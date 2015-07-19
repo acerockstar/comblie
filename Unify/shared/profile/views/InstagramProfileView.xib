@@ -30,9 +30,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For my republic I stand." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ4-fg-AHg">
-                            <rect key="frame" x="60" y="145" width="200" height="16.5"/>
+                            <rect key="frame" x="35" y="145" width="250" height="16.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="BSo-mP-FUz"/>
+                                <constraint firstAttribute="width" constant="250" id="BSo-mP-FUz"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,6 +107,7 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="TE6-DG-eRB" firstAttribute="bottom" secondItem="xbk-PW-RsU" secondAttribute="bottom" id="0hN-Dz-den"/>
+                        <constraint firstAttribute="bottom" secondItem="EDa-OB-IGa" secondAttribute="bottom" constant="20" id="2qq-po-4dx"/>
                         <constraint firstItem="hJ4-fg-AHg" firstAttribute="top" secondItem="t1b-DF-UeA" secondAttribute="bottom" constant="10" id="3kA-Sh-SfD"/>
                         <constraint firstItem="vBO-HS-I0p" firstAttribute="leading" secondItem="Vna-vH-Jfw" secondAttribute="trailing" constant="20" id="82G-Qd-ZoW"/>
                         <constraint firstItem="t1b-DF-UeA" firstAttribute="top" secondItem="Shj-8c-4ww" secondAttribute="bottom" id="BYZ-uh-KUu"/>
@@ -142,6 +143,7 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="2qq-po-4dx"/>
                             <exclude reference="e7B-NU-3RO"/>
                         </mask>
                     </variation>
