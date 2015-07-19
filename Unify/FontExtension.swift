@@ -21,6 +21,8 @@ extension UIFontDescriptor {
         
         if textStyle == UIFontTextStyleHeadline {
             preferredFontName = "HelveticaNeue-Medium"
+        } else if textStyle == UIFontTextStyleSubheadline {
+            preferredFontName = "HelveticaNeue-Medium"
         }
         
         dispatch_once(&Static.onceToken) {
@@ -40,18 +42,18 @@ extension UIFontDescriptor {
                     UIContentSizeCategoryExtraSmall: 13
                 ],
                 UIFontTextStyleSubheadline: [
-                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 22,
-                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 21,
-                    UIContentSizeCategoryAccessibilityExtraLarge: 20,
-                    UIContentSizeCategoryAccessibilityLarge: 19,
-                    UIContentSizeCategoryAccessibilityMedium: 18,
-                    UIContentSizeCategoryExtraExtraExtraLarge: 17,
-                    UIContentSizeCategoryExtraExtraLarge: 16,
-                    UIContentSizeCategoryExtraLarge: 15,
-                    UIContentSizeCategoryLarge: 14,
-                    UIContentSizeCategoryMedium: 13,
-                    UIContentSizeCategorySmall: 12,
-                    UIContentSizeCategoryExtraSmall: 11
+                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 23,
+                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 22,
+                    UIContentSizeCategoryAccessibilityExtraLarge: 21,
+                    UIContentSizeCategoryAccessibilityLarge: 20,
+                    UIContentSizeCategoryAccessibilityMedium: 19,
+                    UIContentSizeCategoryExtraExtraExtraLarge: 18,
+                    UIContentSizeCategoryExtraExtraLarge: 17,
+                    UIContentSizeCategoryExtraLarge: 16,
+                    UIContentSizeCategoryLarge: 15,
+                    UIContentSizeCategoryMedium: 14,
+                    UIContentSizeCategorySmall: 13,
+                    UIContentSizeCategoryExtraSmall: 12
                 ],
                 UIFontTextStyleBody: [
                     UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 23,
@@ -82,32 +84,32 @@ extension UIFontDescriptor {
                     UIContentSizeCategoryExtraSmall: 14
                 ],
                 UIFontTextStyleCaption2: [
-                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 18,
-                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 17,
-                    UIContentSizeCategoryAccessibilityExtraLarge: 16,
-                    UIContentSizeCategoryAccessibilityLarge: 16,
-                    UIContentSizeCategoryAccessibilityMedium: 15,
-                    UIContentSizeCategoryExtraExtraExtraLarge: 15,
-                    UIContentSizeCategoryExtraExtraLarge: 14,
-                    UIContentSizeCategoryExtraLarge: 14,
-                    UIContentSizeCategoryLarge: 13,
-                    UIContentSizeCategoryMedium: 12,
+                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 22,
+                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 21,
+                    UIContentSizeCategoryAccessibilityExtraLarge: 20,
+                    UIContentSizeCategoryAccessibilityLarge: 19,
+                    UIContentSizeCategoryAccessibilityMedium: 18,
+                    UIContentSizeCategoryExtraExtraExtraLarge: 17,
+                    UIContentSizeCategoryExtraExtraLarge: 16,
+                    UIContentSizeCategoryExtraLarge: 15,
+                    UIContentSizeCategoryLarge: 14,
+                    UIContentSizeCategoryMedium: 13,
                     UIContentSizeCategorySmall: 12,
                     UIContentSizeCategoryExtraSmall: 11
                 ],
                 UIFontTextStyleFootnote: [
-                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 16,
-                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 15,
-                    UIContentSizeCategoryAccessibilityExtraLarge: 14,
-                    UIContentSizeCategoryAccessibilityLarge: 14,
-                    UIContentSizeCategoryAccessibilityMedium: 13,
-                    UIContentSizeCategoryExtraExtraExtraLarge: 13,
-                    UIContentSizeCategoryExtraExtraLarge: 12,
-                    UIContentSizeCategoryExtraLarge: 12,
-                    UIContentSizeCategoryLarge: 11,
-                    UIContentSizeCategoryMedium: 11,
-                    UIContentSizeCategorySmall: 10,
-                    UIContentSizeCategoryExtraSmall: 10
+                    UIContentSizeCategoryAccessibilityExtraExtraExtraLarge: 17,
+                    UIContentSizeCategoryAccessibilityExtraExtraLarge: 16,
+                    UIContentSizeCategoryAccessibilityExtraLarge: 15,
+                    UIContentSizeCategoryAccessibilityLarge: 15,
+                    UIContentSizeCategoryAccessibilityMedium: 14,
+                    UIContentSizeCategoryExtraExtraExtraLarge: 14,
+                    UIContentSizeCategoryExtraExtraLarge: 13,
+                    UIContentSizeCategoryExtraLarge: 13,
+                    UIContentSizeCategoryLarge: 12,
+                    UIContentSizeCategoryMedium: 12,
+                    UIContentSizeCategorySmall: 11,
+                    UIContentSizeCategoryExtraSmall: 11
                 ],
             ]
         }

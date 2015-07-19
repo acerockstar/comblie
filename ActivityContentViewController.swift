@@ -27,11 +27,29 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         refreshControl?.addTarget(self, action: "refreshActivities", forControlEvents: .ValueChanged)
         refreshActivities()
         
-        self.tableView.estimatedRowHeight = 46.0
+        self.tableView.estimatedRowHeight = 64.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "ActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "activityCell")
         self.tableView.addSubview(self.refreshControl)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -79,6 +97,13 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell") as! ActivityTableViewCell
+        
+        cell.descriptionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        
         return cell
     }
     
@@ -86,10 +111,6 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(55)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

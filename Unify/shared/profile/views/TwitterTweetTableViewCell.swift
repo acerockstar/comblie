@@ -25,6 +25,7 @@ class TwitterTweetTableViewCell: UITableViewCell {
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
+        tweetLabel.sizeToFit()
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
