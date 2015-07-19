@@ -1652,8 +1652,8 @@
         <image name="Persona" width="600" height="600"/>
         <image name="Photo" width="794" height="800"/>
         <image name="ProfilesIcon" width="25" height="27"/>
-        <image name="Settings-Profile-Bio-Icon" width="12" height="8"/>
-        <image name="Settings-Profile-Name-Icon" width="12" height="12"/>
+        <image name="Settings-Profile-Bio-Icon" width="15" height="11"/>
+        <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
         <image name="SettingsIcon" width="31" height="27"/>
         <image name="UnfilledHeartIcon" width="23" height="21"/>
         <image name="UploadIcon" width="16" height="21"/>

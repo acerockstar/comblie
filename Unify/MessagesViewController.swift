@@ -30,6 +30,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         refreshControl?.addTarget(self, action: "refreshMessages", forControlEvents: .ValueChanged)
         refreshMessages()
         
+        self.tableView.estimatedRowHeight = 76
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.reloadData()
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
@@ -90,15 +94,15 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
         
-        cell.userName.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        
-        //cell.userName.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        cell.userName.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleHeadline), size: 0)
+        cell.userMessage.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        cell.messageTime.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(65)
+        return CGFloat(76)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
