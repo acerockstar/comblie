@@ -33,6 +33,15 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -81,6 +90,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
         
+        cell.userName.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        
+        //cell.userName.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        
         return cell
     }
     
@@ -89,12 +102,13 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        var selectedCell = tableView.cellForRowAtIndexPath(indexPath)! as! MessagesTableViewCell
         selectedCell.contentView.backgroundColor = UIColor.lightGrayColor()
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
+        newVC.name = selectedCell.userName.text!
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     

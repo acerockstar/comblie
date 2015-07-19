@@ -26,22 +26,29 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
     @IBOutlet weak var LogoutCell: UITableViewCell!
+    
+    // Cell Labels
+    @IBOutlet weak var socialNetworkLabel: UILabel!
+    @IBOutlet weak var lightThemeLabel: UILabel!
+    @IBOutlet weak var refreshAutomaticallyLabel: UILabel!
+    @IBOutlet weak var chatHeadsLabel: UILabel!
+    @IBOutlet weak var pushNotificationsLabel: UILabel!
+    @IBOutlet weak var reportProblemLabel: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
+    @IBOutlet weak var blogLabel: UILabel!
+    @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var inviteFriendsLabel: UILabel!
+    @IBOutlet weak var logoutLabel: UILabel!
 
     // Cell Arrows
     @IBOutlet weak var socialNetworkCellArrow: UIImageView!
     @IBOutlet weak var pushNotificationCellArrow: UIImageView!
-    @IBOutlet weak var textSizeCellArrow: UIImageView!
     @IBOutlet weak var reportProblemCellArrow: UIImageView!
     @IBOutlet weak var feedbackCellArrow: UIImageView!
     @IBOutlet weak var blogCellArrow: UIImageView!
     @IBOutlet weak var privacyPolicyCellArrow: UIImageView!
     @IBOutlet weak var inviteFriendsArrow: UIImageView!
     @IBOutlet weak var LogoutCellArrow: UIImageView!
-
-    // Cell Switches
-    @IBOutlet weak var lightThemeSwitch: UISwitch!
-    @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
-    @IBOutlet weak var chatHeadsSwitch: UISwitch!
 
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
@@ -80,17 +87,13 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         bioCellImageView.layer.borderWidth = 1.25
         bioCellImageView.layer.cornerRadius = bioCellImageView.frame.size.width * (0.4)
 
-        lightThemeSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
-        refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
-        chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
-        
         let cells = [nameCell, bioCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
         for cell in cells {
             cell.selectionStyle = .None
         }
         
-        let cellArrows = [socialNetworkCellArrow, pushNotificationCellArrow, textSizeCellArrow, reportProblemCellArrow,
+        let cellArrows = [socialNetworkCellArrow, pushNotificationCellArrow, reportProblemCellArrow,
             feedbackCellArrow, blogCellArrow, privacyPolicyCellArrow, inviteFriendsArrow, LogoutCellArrow]
         
         for arrow in cellArrows {
@@ -100,6 +103,19 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.tableView.backgroundView = UIView(frame: self.tableView.bounds)
         self.tableView.backgroundView!.addGestureRecognizer(tap)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        let cellLabels = [socialNetworkLabel, lightThemeLabel, refreshAutomaticallyLabel, chatHeadsLabel, pushNotificationsLabel, reportProblemLabel, feedbackLabel, blogLabel, privacyPolicyLabel, inviteFriendsLabel, logoutLabel]
+        
+        for label in cellLabels {
+            label.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -166,25 +182,27 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     func vineLogout(){
         api.delegate=self
         api.logoutVine("")
-
     }
+    
     func TwitterLogOut(){
         api.delegate=self
         api.logoutTwitter("")
     }
+    
     func TumblrLogOut(){
         api.delegate=self
         api.logoutTumblr("")
-
     }
+    
     func InstagramLogOut(){
         api.delegate=self
         api.logoutInstagram("")
-
     }
+    
     func returnFail() {
 
     }
+    
     func returnSuccess(paraDict: NSDictionary) {
         Loader.hideActivityIndicator(self.view)
         println("paraDict===\(paraDict)")
@@ -197,6 +215,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         }
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
         alert.show()
