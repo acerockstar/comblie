@@ -24,8 +24,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How can mirrors be real if our eyes..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-Wu-RmJ">
-                                <rect key="frame" x="74" y="26" width="251" height="16.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="74" y="26" width="251" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,6 +62,13 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-Dg-gEr">
+                                <rect key="frame" x="47" y="42" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="1Ra-lw-OZg"/>
+                                    <constraint firstAttribute="height" constant="17" id="DLW-Gu-Bfw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -69,6 +76,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BRA-Wu-RmJ" secondAttribute="trailing" constant="26" id="76o-o0-Frt"/>
                             <constraint firstAttribute="trailing" secondItem="bMz-yE-0IX" secondAttribute="trailing" constant="10" id="BOx-Ng-Ddb"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2rk-VX-Xi3" secondAttribute="bottom" constant="5" id="BY4-sC-bNn"/>
+                            <constraint firstItem="XLw-Dg-gEr" firstAttribute="bottom" secondItem="2rk-VX-Xi3" secondAttribute="bottom" id="EMZ-8h-Qx9"/>
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="centerY" secondItem="toD-Ui-Vhy" secondAttribute="centerY" id="Edg-kh-uKM"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bMz-yE-0IX" secondAttribute="bottom" constant="34" id="Ew1-Dj-zfj"/>
                             <constraint firstAttribute="centerY" secondItem="2rk-VX-Xi3" secondAttribute="centerY" id="Flj-B6-oeN"/>
@@ -95,6 +103,7 @@
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="centerY" secondItem="tKt-ef-y9I" secondAttribute="centerY" id="ovc-Xk-PBy"/>
                             <constraint firstAttribute="trailing" secondItem="bMz-yE-0IX" secondAttribute="trailing" constant="8" id="t74-Pp-mAQ"/>
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="top" secondItem="dPb-oL-QrV" secondAttribute="top" constant="12" id="u5a-vm-frA"/>
+                            <constraint firstItem="XLw-Dg-gEr" firstAttribute="trailing" secondItem="2rk-VX-Xi3" secondAttribute="trailing" id="u9i-ck-oTI"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="trailing" constant="-70" id="uq5-iJ-lSg"/>
                             <constraint firstItem="toD-Ui-Vhy" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="trailing" constant="3" id="yqX-Lb-BP0"/>
                             <constraint firstItem="tKt-ef-y9I" firstAttribute="leading" secondItem="2rk-VX-Xi3" secondAttribute="trailing" constant="10" id="zeT-K9-taC"/>
@@ -133,6 +142,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="tKt-ef-y9I" id="GVg-W2-IDS"/>
+                <outlet property="socialMediaIcon" destination="XLw-Dg-gEr" id="eny-dU-ZMu"/>
                 <outlet property="timeLabel" destination="bMz-yE-0IX" id="u0H-y1-Qza"/>
                 <outlet property="tweetLabel" destination="BRA-Wu-RmJ" id="Mmr-pi-Prz"/>
                 <outlet property="userImage" destination="2rk-VX-Xi3" id="8SA-tj-1IC"/>

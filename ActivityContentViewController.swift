@@ -101,6 +101,12 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         cell.descriptionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
         
+        if pageIndex == 0 {
+            cell.socialMediaIcon.hidden = false
+        } else {
+            cell.socialMediaIcon.hidden = true
+        }
+        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         

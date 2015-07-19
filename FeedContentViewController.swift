@@ -39,14 +39,31 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         refreshControl?.addTarget(self, action: "refreshFeed", forControlEvents: .ValueChanged)
         refreshFeed()
         
-        self.tableView.estimatedRowHeight = 60
+        self.tableView.estimatedRowHeight = 64
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
         
-        self.tableView.registerNib(UINib(nibName: "TwitterClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterClickedCell")
+        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
         self.tableView.addSubview(self.refreshControl)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -93,14 +110,59 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row % 3 == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("twitterClickedCell") as! TwitterClickedTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
+            
+            cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
+            cell.usernameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+            cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+            
+            cell.tweetLabel.text = " complex situation which can't fit here to explain, but in a brief, after the cell is created, some frames of the cell's subviews are changed after the views have been created, so I need to fix these frames after the cell has appeared."
+            
+            if pageIndex == 0 {
+                cell.socialMediaIcon.hidden = false
+            } else {
+                cell.socialMediaIcon.hidden = true
+            }
+            
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            
             return cell
         } else if indexPath.row % 3 == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterActivityCell") as! TwitterActivityTableViewCell
+            
+            cell.activityLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+            cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+            
+            if pageIndex == 0 {
+                cell.socialMediaIcon.hidden = false
+            } else {
+                cell.socialMediaIcon.hidden = true
+            }
+            
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("photoVideoCell") as! PhotoVideoTableViewCell
             cell.backgroundView = UIImageView(image: UIImage(named: "Photo"))
+            
+            cell.descriptionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+            cell.activityLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+            
+            if pageIndex == 0 {
+                cell.socialMediaIcon.hidden = false
+            } else {
+                cell.socialMediaIcon.hidden = true
+            }
+            
+            cell.setNeedsUpdateConstraints()
+            cell.updateConstraintsIfNeeded()
+            
             return cell
         }
     }
@@ -111,16 +173,15 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         cell.layoutMargins = UIEdgeInsetsZero
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        // TODO: make cells dynamic
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row % 3 == 0 {
             if indexPath.row == currentRow {
-                return CGFloat(75)
+                return CGFloat(84)
             } else {
-                return CGFloat(60)
+                return CGFloat(64)
             }
         } else if indexPath.row % 3 == 1 {
-            return CGFloat(60)
+            return CGFloat(64)
         } else {
             return CGFloat(300)
         }

@@ -57,6 +57,10 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         setUpSocialMediaButtons()
     }
     
+    override func viewDidLayoutSubviews() {
+        self.view.frame = self.view.frame
+    }
+    
     func setUpSocialMediaButtons() {
         let buttonHeight = socialMediaButtonsView.frame.size.height
         let buttonXPos = socialMediaButtonsView.frame.origin.x

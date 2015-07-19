@@ -102,11 +102,15 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         
         cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
         cell.usernameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        cell.tweetLabel.text = "This is going to be a very long text to test the dynamic table view cell.This is going to be a very long text to test the dynamic table view cell."
-        cell.tweetLabel.sizeToFit()
         cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
         
+        if pageIndex == 0 {
+            cell.socialMediaIcon.hidden = false
+        } else {
+            cell.socialMediaIcon.hidden = true
+        }
+
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         

@@ -11,7 +11,8 @@ import UIKit
 class TwitterActivityTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIButton!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var socialMediaIcon: UIImageView!
+    @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBAction func userImageClicked(sender: UIButton) {
@@ -24,18 +25,19 @@ class TwitterActivityTableViewCell: UITableViewCell {
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
+        socialMediaIcon.image = UIImage(named: "TwitterIcon")
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if (selected) {
             self.contentView.backgroundColor = UIColor.selectedFeedCell()
-            nameLabel.textColor = UIColor.whiteColor()
+            activityLabel.textColor = UIColor.whiteColor()
             tweetLabel.textColor = UIColor.whiteColor()
             timeLabel.textColor = UIColor.whiteColor()
         } else {
             self.contentView.backgroundColor = UIColor.clearColor()
-            nameLabel.textColor = UIColor.blackColor()
+            activityLabel.textColor = UIColor.blackColor()
             tweetLabel.textColor = UIColor.blackColor()
             timeLabel.textColor = UIColor.customLightGrayColor()
         }

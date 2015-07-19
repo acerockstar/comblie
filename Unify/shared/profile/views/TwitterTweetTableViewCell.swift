@@ -11,6 +11,7 @@ import UIKit
 class TwitterTweetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImage: UIButton!
+    @IBOutlet weak var socialMediaIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
@@ -25,7 +26,7 @@ class TwitterTweetTableViewCell: UITableViewCell {
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        tweetLabel.sizeToFit()
+        socialMediaIcon.image = UIImage(named: "TwitterIcon")
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
