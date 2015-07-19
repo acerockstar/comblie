@@ -24,7 +24,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     var api: WebService = WebService()
     
     var imagePicker = UIImagePickerController()
-    var socialMediaIcons = ["InstagramClearIcon", "TumblrClearIcon", "TwitterClearIcon", "VineClearIcon"]
+    var socialMediaIcons = ["Instagram-Large-Icon", "Tumblr-Large-Icon", "Twitter-Large-Icon", "Vine-Large-Icon"]
     var socialMediaStatusLabel = ["Post to Instagram", "Post to Tumblr", "Update Status", "Post to Vine"]
     var socialMediaButtons: [UIButton!] = []
     var currentSocialMediaIndex = 0

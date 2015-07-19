@@ -78,12 +78,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-qQ-ClS">
-                                <rect key="frame" x="47" y="42" width="17" height="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zZ-mM-hsF">
+                                <rect key="frame" x="47" y="42" width="19" height="19"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="17" id="SN3-Qx-9Ra"/>
+                                    <constraint firstAttribute="width" constant="19" id="MDc-1g-mRI"/>
+                                    <constraint firstAttribute="width" secondItem="0zZ-mM-hsF" secondAttribute="height" multiplier="1:1" id="dMk-af-qE7"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-qQ-ClS">
+                                <rect key="frame" x="49" y="44" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x4y-qQ-ClS" secondAttribute="height" id="RdX-Iz-UBD"/>
+                                    <constraint firstAttribute="width" constant="15" id="SN3-Qx-9Ra"/>
                                     <constraint firstAttribute="height" constant="17" id="ftJ-si-Lf0"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ftJ-si-Lf0"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -99,8 +113,10 @@
                             <constraint firstItem="Oeh-LI-0kN" firstAttribute="leading" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="5" id="GvO-zY-IAa"/>
                             <constraint firstItem="mST-7c-y6I" firstAttribute="top" secondItem="tuK-7v-g4W" secondAttribute="top" constant="12" id="I7j-Wr-YIm"/>
                             <constraint firstItem="BOO-8U-Vk0" firstAttribute="leading" secondItem="tuK-7v-g4W" secondAttribute="leading" constant="10" id="Jp3-Fp-3Mh"/>
+                            <constraint firstItem="x4y-qQ-ClS" firstAttribute="centerX" secondItem="0zZ-mM-hsF" secondAttribute="centerX" id="Oc4-YB-7xL"/>
                             <constraint firstItem="h5X-mr-zS3" firstAttribute="top" secondItem="Oeh-LI-0kN" secondAttribute="bottom" id="Od6-0s-hzA"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h5X-mr-zS3" secondAttribute="bottom" constant="8" id="U80-2r-WDS"/>
+                            <constraint firstItem="0zZ-mM-hsF" firstAttribute="width" secondItem="0zZ-mM-hsF" secondAttribute="height" multiplier="1:1" id="VWb-l6-Uyb"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="272" id="bRS-K3-Rqd"/>
                             <constraint firstItem="mST-7c-y6I" firstAttribute="top" secondItem="Oeh-LI-0kN" secondAttribute="top" id="bqX-P4-GMV"/>
                             <constraint firstAttribute="trailing" secondItem="mST-7c-y6I" secondAttribute="trailing" constant="8" id="cZb-XJ-wBB"/>
@@ -113,6 +129,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Oeh-LI-0kN" secondAttribute="trailing" constant="55" id="rpB-QW-nAz"/>
                             <constraint firstItem="BOO-8U-Vk0" firstAttribute="leading" secondItem="tuK-7v-g4W" secondAttribute="leading" constant="8" id="u2N-mK-qII"/>
                             <constraint firstItem="BOO-8U-Vk0" firstAttribute="bottom" secondItem="x4y-qQ-ClS" secondAttribute="bottom" id="u2Q-QB-W3d"/>
+                            <constraint firstItem="x4y-qQ-ClS" firstAttribute="centerY" secondItem="0zZ-mM-hsF" secondAttribute="centerY" id="uzJ-tc-leo"/>
                             <constraint firstItem="mST-7c-y6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oeh-LI-0kN" secondAttribute="trailing" constant="10" id="vhz-Sx-LMx"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Oeh-LI-0kN" secondAttribute="trailing" constant="203" id="vpA-7u-V7R"/>
                             <constraint firstItem="Oeh-LI-0kN" firstAttribute="leading" secondItem="BOO-8U-Vk0" secondAttribute="trailing" constant="10" id="w4H-jO-12J"/>
@@ -155,6 +172,7 @@
             <connections>
                 <outlet property="activityLabel" destination="Oeh-LI-0kN" id="DMv-no-QdC"/>
                 <outlet property="socialMediaIcon" destination="x4y-qQ-ClS" id="2t6-rc-Pq6"/>
+                <outlet property="socialMediaIconBorder" destination="0zZ-mM-hsF" id="bbM-7X-biY"/>
                 <outlet property="timeLabel" destination="mST-7c-y6I" id="d6K-Vw-say"/>
                 <outlet property="tweetLabel" destination="h5X-mr-zS3" id="KNo-Ne-8OG"/>
                 <outlet property="userImage" destination="BOO-8U-Vk0" id="eZK-TO-3SV"/>

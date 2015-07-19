@@ -81,6 +81,14 @@
                                     <action selector="userImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OtD-NU-n3F"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-wt-ZVt">
+                                <rect key="frame" x="46.5" y="42.5" width="19" height="19"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AMa-wt-ZVt" secondAttribute="height" multiplier="1:1" id="6iF-zF-7lX"/>
+                                    <constraint firstAttribute="width" constant="19" id="mnq-h5-9yl"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today at 9:36 PM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-wb-Wch">
                                 <rect key="frame" x="74" y="42" width="94" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
@@ -88,11 +96,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8f-o4-SZc">
-                                <rect key="frame" x="47" y="42" width="17" height="17"/>
+                                <rect key="frame" x="49" y="44" width="15" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="YOp-xN-afH"/>
-                                    <constraint firstAttribute="width" constant="17" id="bHF-VL-Iea"/>
+                                    <constraint firstAttribute="width" secondItem="d8f-o4-SZc" secondAttribute="height" multiplier="1:1" id="Iri-A1-fvs"/>
+                                    <constraint firstAttribute="height" constant="15" id="YOp-xN-afH"/>
+                                    <constraint firstAttribute="width" constant="15" id="bHF-VL-Iea"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YOp-xN-afH"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -103,6 +117,8 @@
                             <constraint firstItem="tfP-wb-Wch" firstAttribute="leading" secondItem="S0g-pK-67o" secondAttribute="leading" id="5M8-wd-heL"/>
                             <constraint firstItem="tfP-wb-Wch" firstAttribute="leading" secondItem="S0g-pK-67o" secondAttribute="trailing" constant="8" id="79d-1Y-K9W"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tfP-wb-Wch" secondAttribute="trailing" constant="170" id="8QN-K7-7Qi"/>
+                            <constraint firstItem="d8f-o4-SZc" firstAttribute="centerY" secondItem="AMa-wt-ZVt" secondAttribute="centerY" id="8fS-Ju-img"/>
+                            <constraint firstItem="AMa-wt-ZVt" firstAttribute="width" secondItem="AMa-wt-ZVt" secondAttribute="height" multiplier="1:1" id="Abd-8K-yHW"/>
                             <constraint firstAttribute="bottom" secondItem="tfP-wb-Wch" secondAttribute="bottom" constant="4" id="Cac-hm-n1A"/>
                             <constraint firstItem="Hia-2g-EXE" firstAttribute="top" secondItem="S0g-pK-67o" secondAttribute="top" id="CeZ-sy-eqz"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hia-2g-EXE" secondAttribute="bottom" constant="2" id="GfM-pZ-NUU"/>
@@ -110,6 +126,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S0g-pK-67o" secondAttribute="trailing" constant="8" id="J7d-aP-gh4"/>
                             <constraint firstItem="S0g-pK-67o" firstAttribute="leading" secondItem="Hia-2g-EXE" secondAttribute="trailing" constant="10" id="Koa-V4-b0b"/>
                             <constraint firstItem="Hia-2g-EXE" firstAttribute="leading" secondItem="ecN-fy-aIu" secondAttribute="leading" constant="10" id="LCt-Ow-JK2"/>
+                            <constraint firstItem="d8f-o4-SZc" firstAttribute="centerX" secondItem="AMa-wt-ZVt" secondAttribute="centerX" id="LbG-bc-87Q"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tfP-wb-Wch" secondAttribute="bottom" constant="6" id="MVz-Be-hqK"/>
                             <constraint firstAttribute="bottom" secondItem="tfP-wb-Wch" secondAttribute="bottom" constant="3" id="OUe-Vj-EdP"/>
                             <constraint firstItem="Hia-2g-EXE" firstAttribute="leading" secondItem="ecN-fy-aIu" secondAttribute="leading" constant="8" id="QNi-ac-xh3"/>
@@ -157,6 +174,7 @@
                                 <exclude reference="Rfc-f9-AEM"/>
                                 <exclude reference="cW6-d1-BLN"/>
                                 <exclude reference="dKt-48-MXD"/>
+                                <exclude reference="Abd-8K-yHW"/>
                             </mask>
                         </variation>
                     </view>
@@ -171,6 +189,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="S0g-pK-67o" id="Of0-6U-c1I"/>
                 <outlet property="socialMediaIcon" destination="d8f-o4-SZc" id="5ST-Mv-5bV"/>
+                <outlet property="socialMediaIconBorder" destination="AMa-wt-ZVt" id="V8O-XZ-bJm"/>
                 <outlet property="timeLabel" destination="tfP-wb-Wch" id="bjO-wZ-seh"/>
                 <outlet property="userImage" destination="Hia-2g-EXE" id="GIF-fb-oVN"/>
             </connections>

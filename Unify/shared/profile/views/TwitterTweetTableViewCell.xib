@@ -35,6 +35,12 @@
                                 <color key="textColor" red="0.87058823529411766" green="0.8784313725490196" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jadenofficial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toD-Ui-Vhy">
+                                <rect key="frame" x="164" y="10" width="74" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-VX-Xi3">
                                 <rect key="frame" x="10" y="5" width="54" height="54"/>
                                 <constraints>
@@ -56,17 +62,19 @@
                                     <action selector="userImageClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zsr-2W-rIO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@jadenofficial" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toD-Ui-Vhy">
-                                <rect key="frame" x="164" y="10" width="74" height="14"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-Dg-gEr">
-                                <rect key="frame" x="47" y="42" width="17" height="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHJ-PU-hhf">
+                                <rect key="frame" x="47" y="42" width="19" height="19"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="17" id="1Ra-lw-OZg"/>
-                                    <constraint firstAttribute="height" constant="17" id="DLW-Gu-Bfw"/>
+                                    <constraint firstAttribute="width" constant="19" id="NJF-jC-c96"/>
+                                    <constraint firstAttribute="width" secondItem="dHJ-PU-hhf" secondAttribute="height" multiplier="1:1" id="cQA-MF-PAM"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-Dg-gEr">
+                                <rect key="frame" x="49" y="44" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="1Ra-lw-OZg"/>
+                                    <constraint firstAttribute="height" constant="15" id="DLW-Gu-Bfw"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -82,6 +90,7 @@
                             <constraint firstAttribute="centerY" secondItem="2rk-VX-Xi3" secondAttribute="centerY" id="Flj-B6-oeN"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="top" secondItem="tKt-ef-y9I" secondAttribute="bottom" id="HJR-gR-GQO"/>
                             <constraint firstItem="2rk-VX-Xi3" firstAttribute="leading" secondItem="dPb-oL-QrV" secondAttribute="leading" constant="8" id="HLa-KM-C8Q"/>
+                            <constraint firstItem="dHJ-PU-hhf" firstAttribute="centerX" secondItem="XLw-Dg-gEr" secondAttribute="centerX" id="IAs-l0-nF9"/>
                             <constraint firstItem="toD-Ui-Vhy" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="trailing" constant="3" id="JN8-9Q-tHa"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="toD-Ui-Vhy" secondAttribute="trailing" constant="116" id="NY4-rU-VEA"/>
                             <constraint firstItem="tKt-ef-y9I" firstAttribute="leading" secondItem="BRA-Wu-RmJ" secondAttribute="leading" id="QDJ-Rt-bXc"/>
@@ -93,9 +102,12 @@
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dPb-oL-QrV" secondAttribute="leading" constant="296" id="Vdh-4h-o00"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2rk-VX-Xi3" secondAttribute="trailing" constant="272" id="XRO-cS-WdJ"/>
                             <constraint firstItem="tKt-ef-y9I" firstAttribute="leading" secondItem="2rk-VX-Xi3" secondAttribute="trailing" constant="5" id="YX6-cG-6sR"/>
+                            <constraint firstItem="dHJ-PU-hhf" firstAttribute="bottom" secondItem="2rk-VX-Xi3" secondAttribute="bottom" id="YyI-cW-pfU"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="toD-Ui-Vhy" secondAttribute="trailing" constant="116" id="b0t-Oq-5KC"/>
                             <constraint firstItem="bMz-yE-0IX" firstAttribute="centerY" secondItem="tKt-ef-y9I" secondAttribute="centerY" id="cem-YJ-udh"/>
+                            <constraint firstItem="dHJ-PU-hhf" firstAttribute="trailing" secondItem="2rk-VX-Xi3" secondAttribute="trailing" id="dec-5M-6iM"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BRA-Wu-RmJ" secondAttribute="bottom" constant="8" id="eoj-3K-dNd"/>
+                            <constraint firstItem="dHJ-PU-hhf" firstAttribute="centerY" secondItem="XLw-Dg-gEr" secondAttribute="centerY" id="fBB-JI-dCY"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="top" secondItem="tKt-ef-y9I" secondAttribute="bottom" id="g6v-Dc-me8"/>
                             <constraint firstItem="BRA-Wu-RmJ" firstAttribute="leading" secondItem="tKt-ef-y9I" secondAttribute="leading" id="hgd-69-PhD"/>
                             <constraint firstAttribute="trailing" secondItem="BRA-Wu-RmJ" secondAttribute="trailing" constant="25" id="it8-1l-YKf"/>
@@ -114,6 +126,8 @@
                                 <exclude reference="HLa-KM-C8Q"/>
                                 <exclude reference="XRO-cS-WdJ"/>
                                 <exclude reference="kms-9O-fmI"/>
+                                <exclude reference="YyI-cW-pfU"/>
+                                <exclude reference="dec-5M-6iM"/>
                                 <exclude reference="QDJ-Rt-bXc"/>
                                 <exclude reference="ScY-jB-TNL"/>
                                 <exclude reference="YX6-cG-6sR"/>
@@ -143,6 +157,7 @@
             <connections>
                 <outlet property="nameLabel" destination="tKt-ef-y9I" id="GVg-W2-IDS"/>
                 <outlet property="socialMediaIcon" destination="XLw-Dg-gEr" id="eny-dU-ZMu"/>
+                <outlet property="socialMediaIconBorder" destination="dHJ-PU-hhf" id="95g-Op-7bX"/>
                 <outlet property="timeLabel" destination="bMz-yE-0IX" id="u0H-y1-Qza"/>
                 <outlet property="tweetLabel" destination="BRA-Wu-RmJ" id="Mmr-pi-Prz"/>
                 <outlet property="userImage" destination="2rk-VX-Xi3" id="8SA-tj-1IC"/>

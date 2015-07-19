@@ -103,8 +103,10 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         
         if pageIndex == 0 {
             cell.socialMediaIcon.hidden = false
+            cell.socialMediaIconBorder.hidden = false
         } else {
             cell.socialMediaIcon.hidden = true
+            cell.socialMediaIconBorder.hidden = true
         }
         
         cell.setNeedsUpdateConstraints()

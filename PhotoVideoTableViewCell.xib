@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -65,39 +66,65 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-HB-Q0Y">
-                                <rect key="frame" x="8" y="8" width="15" height="12"/>
+                                <rect key="frame" x="8" y="8" width="30" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="CMf-cM-CEr"/>
-                                    <constraint firstAttribute="width" constant="15" id="Q2w-im-Tok"/>
+                                    <constraint firstAttribute="width" constant="30" id="Q2w-im-Tok"/>
+                                    <constraint firstAttribute="width" secondItem="Ddc-HB-Q0Y" secondAttribute="height" multiplier="5:4" id="wiW-LQ-b2c"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CMf-cM-CEr"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="repostImageClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wll-Om-foV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-f1-XjJ">
-                                <rect key="frame" x="31" y="8" width="15" height="12"/>
+                                <rect key="frame" x="46" y="8" width="30" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="58R-9Y-jga"/>
+                                    <constraint firstAttribute="width" constant="30" id="58R-9Y-jga"/>
+                                    <constraint firstAttribute="width" secondItem="dI1-f1-XjJ" secondAttribute="height" multiplier="5:4" id="Agk-bD-6kE"/>
                                     <constraint firstAttribute="height" constant="12" id="JY4-zG-JOQ"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JY4-zG-JOQ"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="heartImageClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6ae-CU-QUW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHl-b7-JWE">
+                                <rect key="frame" x="45" y="250.5" width="19" height="19"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PHl-b7-JWE" secondAttribute="height" id="eM7-ek-af4"/>
+                                    <constraint firstAttribute="width" constant="19" id="sG6-qm-HB7"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-HV-QAQ">
-                                <rect key="frame" x="45" y="250.5" width="17" height="17"/>
+                                <rect key="frame" x="47" y="252.5" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="7fd-mv-7tK"/>
-                                    <constraint firstAttribute="width" constant="17" id="Ma2-qk-7FA"/>
+                                    <constraint firstAttribute="width" constant="15" id="Ma2-qk-7FA"/>
+                                    <constraint firstAttribute="width" secondItem="Sob-HV-QAQ" secondAttribute="height" multiplier="1:1" id="ccx-rc-eAg"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7fd-mv-7tK"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -122,11 +149,13 @@
                             <constraint firstItem="Sob-HV-QAQ" firstAttribute="bottom" secondItem="87o-Ib-MYO" secondAttribute="bottom" id="Tyv-Ql-KTX"/>
                             <constraint firstItem="mOW-i1-4QF" firstAttribute="leading" secondItem="87o-Ib-MYO" secondAttribute="trailing" constant="5" id="Ugo-3h-2rN"/>
                             <constraint firstAttribute="trailing" secondItem="mOW-i1-4QF" secondAttribute="trailing" constant="8" id="Zo7-y0-tYm"/>
+                            <constraint firstItem="Sob-HV-QAQ" firstAttribute="centerY" secondItem="PHl-b7-JWE" secondAttribute="centerY" id="cNg-kM-EDR"/>
                             <constraint firstAttribute="trailing" secondItem="wr5-at-9ed" secondAttribute="trailing" constant="8" id="cn0-gb-Adl"/>
                             <constraint firstItem="dI1-f1-XjJ" firstAttribute="centerY" secondItem="Ddc-HB-Q0Y" secondAttribute="centerY" id="dMV-l5-udj"/>
                             <constraint firstItem="Sob-HV-QAQ" firstAttribute="trailing" secondItem="87o-Ib-MYO" secondAttribute="trailing" id="evX-ga-mQn"/>
                             <constraint firstItem="mOW-i1-4QF" firstAttribute="centerY" secondItem="87o-Ib-MYO" secondAttribute="centerY" id="iVe-HW-WjP"/>
                             <constraint firstItem="Fmz-wM-RYQ" firstAttribute="centerY" secondItem="0VH-w2-ZDh" secondAttribute="centerY" id="k9t-UR-Hw7"/>
+                            <constraint firstItem="Sob-HV-QAQ" firstAttribute="centerX" secondItem="PHl-b7-JWE" secondAttribute="centerX" id="koc-rY-VIs"/>
                             <constraint firstItem="dI1-f1-XjJ" firstAttribute="leading" secondItem="Ddc-HB-Q0Y" secondAttribute="trailing" constant="8" id="sJB-pY-0TJ"/>
                             <constraint firstItem="87o-Ib-MYO" firstAttribute="bottom" secondItem="mOW-i1-4QF" secondAttribute="bottom" id="tF0-g7-zmv"/>
                         </constraints>
@@ -155,6 +184,7 @@
                 <outlet property="heartImage" destination="dI1-f1-XjJ" id="gck-VD-RXz"/>
                 <outlet property="repostImage" destination="Ddc-HB-Q0Y" id="lcb-cd-pbI"/>
                 <outlet property="socialMediaIcon" destination="Sob-HV-QAQ" id="puR-vM-QmP"/>
+                <outlet property="socialMediaIconBorder" destination="PHl-b7-JWE" id="gib-j8-soJ"/>
                 <outlet property="timeLabel" destination="Fmz-wM-RYQ" id="J1C-KP-vTZ"/>
                 <outlet property="userImage" destination="87o-Ib-MYO" id="9Bg-go-fwR"/>
             </connections>

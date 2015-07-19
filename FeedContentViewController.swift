@@ -121,8 +121,10 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
             
             if pageIndex == 0 {
                 cell.socialMediaIcon.hidden = false
+                cell.socialMediaIconBorder.hidden = false
             } else {
                 cell.socialMediaIcon.hidden = true
+                cell.socialMediaIconBorder.hidden = true
             }
             
             cell.setNeedsUpdateConstraints()
@@ -138,8 +140,10 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
             
             if pageIndex == 0 {
                 cell.socialMediaIcon.hidden = false
+                cell.socialMediaIconBorder.hidden = false
             } else {
                 cell.socialMediaIcon.hidden = true
+                cell.socialMediaIconBorder.hidden = true
             }
             
             cell.setNeedsUpdateConstraints()
@@ -156,8 +160,10 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
             
             if pageIndex == 0 {
                 cell.socialMediaIcon.hidden = false
+                cell.socialMediaIconBorder.hidden = false
             } else {
                 cell.socialMediaIcon.hidden = true
+                cell.socialMediaIconBorder.hidden = true
             }
             
             cell.setNeedsUpdateConstraints()
