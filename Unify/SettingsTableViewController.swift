@@ -104,6 +104,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         self.tableView.backgroundView = UIView(frame: self.tableView.bounds)
         self.tableView.backgroundView!.addGestureRecognizer(tap)
         
+        setTextSize()
+        
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "preferredContentSizeChanged:",
             name: UIContentSizeCategoryDidChangeNotification,
@@ -111,11 +113,18 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     }
     
     func preferredContentSizeChanged(notification: NSNotification) {
+        setTextSize()
+    }
+    
+    func setTextSize() {
         let cellLabels = [socialNetworkLabel, lightThemeLabel, refreshAutomaticallyLabel, chatHeadsLabel, pushNotificationsLabel, reportProblemLabel, feedbackLabel, blogLabel, privacyPolicyLabel, inviteFriendsLabel, logoutLabel]
         
         for label in cellLabels {
             label.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         }
+        
+        nameTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+        bioTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
     }
     
     override func viewDidAppear(animated: Bool) {

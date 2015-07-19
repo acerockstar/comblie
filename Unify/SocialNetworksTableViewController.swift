@@ -22,7 +22,17 @@ class SocialNetworksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -60,6 +70,8 @@ class SocialNetworksTableViewController: UITableViewController {
             }
             
             connectedCell.socialNetworkLabel.text = socialNetworkNames[indexPath.row]
+            connectedCell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+            connectedCell.connectedLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
             connectedCell.toggleSocialNetworkSwitch.addTarget(self, action: "toggleSocialNetwork:", forControlEvents: .ValueChanged)
             connectedCell.toggleSocialNetworkSwitch.tag = indexPath.row
             
@@ -68,6 +80,8 @@ class SocialNetworksTableViewController: UITableViewController {
             let unconnectedCell = tableView.dequeueReusableCellWithIdentifier("UnconnectedSocialNetworkTableViewCell", forIndexPath: indexPath) as! UnconnectedSocialNetworkTableViewCell
             
             unconnectedCell.socialNetworkLabel.text = unconnectedSocialNetworks[indexPath.row]
+            unconnectedCell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+            unconnectedCell.connectButton.titleLabel!.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
             unconnectedCell.connectButton.addTarget(self, action: "connectToSocialNetwork:", forControlEvents: .TouchUpInside)
             unconnectedCell.connectButton.tag = indexPath.row
             

@@ -25,6 +25,17 @@ class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
+    
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -37,6 +48,7 @@ class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("TextViewTableViewCell", forIndexPath: indexPath) as! TextViewTableViewCell
         
         cell.textView.text = "What would you like us to improve?"
+        cell.textView.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         
         return cell
     }

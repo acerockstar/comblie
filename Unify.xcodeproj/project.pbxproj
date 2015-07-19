@@ -531,10 +531,10 @@
 			isa = PBXGroup;
 			children = (
 				D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */,
-				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
-				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 				D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */,
 				D1DA88771B51095F00B7D344 /* PushNotificationTableViewController.swift */,
+				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
+				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
