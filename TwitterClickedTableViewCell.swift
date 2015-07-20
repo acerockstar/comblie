@@ -31,8 +31,6 @@ class TwitterClickedTableViewCell: UITableViewCell {
         replyIcon.tintColor = UIColor.whiteColor()
         repostIcon.tintColor = UIColor.whiteColor()
         starIcon.tintColor = UIColor.whiteColor()
-        
-        tweetLabel.text = "Hello, my name is Annie, and this is the tweet clicked cell. Testing to make sure the image assets are the right size"
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

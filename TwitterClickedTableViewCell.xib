@@ -228,8 +228,8 @@
     </objects>
     <resources>
         <image name="Persona" width="600" height="600"/>
-        <image name="Reply-Icon" width="24" height="21"/>
-        <image name="Retweet-Icon" width="32" height="20"/>
-        <image name="Star-Icon" width="18" height="17"/>
+        <image name="Reply-Icon" width="22" height="19"/>
+        <image name="Retweet-Icon" width="26" height="16"/>
+        <image name="Star-Icon" width="19" height="18"/>
     </resources>
 </document>

@@ -31,8 +31,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.estimatedRowHeight = 64
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-//        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
-        self.tableView.registerNib(UINib(nibName: "TwitterClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterClickedCell")
+        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         
         self.tableView.addSubview(self.refreshControl)
     }
@@ -100,21 +99,20 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
-        let cell = tableView.dequeueReusableCellWithIdentifier("twitterClickedCell") as! TwitterClickedTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
         
         cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
         cell.usernameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
         cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
         
-//        if pageIndex == 0 {
-//            cell.socialMediaIcon.hidden = false
-//            cell.socialMediaIconBorder.hidden = false
-//        } else {
-//            cell.socialMediaIcon.hidden = true
-//            cell.socialMediaIconBorder.hidden = true
-//        }
+        if pageIndex == 0 {
+            cell.socialMediaIcon.hidden = false
+            cell.socialMediaIconBorder.hidden = false
+        } else {
+            cell.socialMediaIcon.hidden = true
+            cell.socialMediaIconBorder.hidden = true
+        }
 
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
