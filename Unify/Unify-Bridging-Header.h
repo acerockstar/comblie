@@ -12,7 +12,7 @@
 #import "NSObject+TLYSwizzlingHelpers.h"
 #import "UIViewController+BetterLayoutGuides.h"
 
-// Tumblr
+/// Tumblr
 static NSString *const kTumblr_api_key = @"PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE";
 static NSString *const kOAuthConsumerKey = @"CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99";
 static NSString *const kOAuthConsumerSecret = @"fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ";
