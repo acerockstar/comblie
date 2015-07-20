@@ -3,22 +3,22 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Write-Status-Icon.png"
+      "filename" : "Not-Liked-Icon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Write-Status-Icon@2x.png"
+      "filename" : "Not-Liked-Icon@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Write-Status-Icon@3x.png"
+      "filename" : "Not-Liked-Icon@3x.png"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode",
-    "template-rendering-intent" : "template"
+    "template-rendering-intent" : "original"
   }
 }

@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Write-Status-Icon.png"
+      "filename" : "Retweet-Icon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Write-Status-Icon@2x.png"
+      "filename" : "Retweet-Icon@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Write-Status-Icon@3x.png"
+      "filename" : "Retweet-Icon@3x.png"
     }
   ],
   "info" : {

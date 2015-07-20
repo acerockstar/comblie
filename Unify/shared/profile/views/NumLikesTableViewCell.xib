@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" constant="30" id="bKl-Xf-blw"/>
                             <constraint firstAttribute="height" constant="30" id="tup-FM-4JT"/>
                         </constraints>
-                        <state key="normal" image="NotLikedIcon">
+                        <state key="normal" image="Not-Liked-Icon">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -94,6 +94,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="NotLikedIcon" width="54" height="53"/>
+        <image name="Not-Liked-Icon" width="30" height="30"/>
     </resources>
 </document>

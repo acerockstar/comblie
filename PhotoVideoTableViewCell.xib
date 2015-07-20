@@ -65,39 +65,43 @@
                                     <action selector="userImageClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3O9-RO-Opl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-HB-Q0Y">
-                                <rect key="frame" x="8" y="8" width="30" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-HB-Q0Y">
+                                <rect key="frame" x="10" y="10" width="18.5" height="18"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="9Xm-sL-TMF"/>
                                     <constraint firstAttribute="height" constant="12" id="CMf-cM-CEr"/>
                                     <constraint firstAttribute="width" constant="30" id="Q2w-im-Tok"/>
-                                    <constraint firstAttribute="width" secondItem="Ddc-HB-Q0Y" secondAttribute="height" multiplier="5:4" id="wiW-LQ-b2c"/>
+                                    <constraint firstAttribute="width" secondItem="Ddc-HB-Q0Y" secondAttribute="height" multiplier="50:48" id="wiW-LQ-b2c"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" image="Reblog-Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="CMf-cM-CEr"/>
+                                        <exclude reference="Q2w-im-Tok"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="repostImageClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wll-Om-foV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-f1-XjJ">
-                                <rect key="frame" x="46" y="8" width="30" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-f1-XjJ">
+                                <rect key="frame" x="38.5" y="10.5" width="19.5" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="58R-9Y-jga"/>
-                                    <constraint firstAttribute="width" secondItem="dI1-f1-XjJ" secondAttribute="height" multiplier="5:4" id="Agk-bD-6kE"/>
+                                    <constraint firstAttribute="width" secondItem="dI1-f1-XjJ" secondAttribute="height" multiplier="41:36" id="Agk-bD-6kE"/>
+                                    <constraint firstAttribute="height" constant="17" id="CGw-vb-gTR"/>
                                     <constraint firstAttribute="height" constant="12" id="JY4-zG-JOQ"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" image="Filled-Heart-Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="58R-9Y-jga"/>
                                         <exclude reference="JY4-zG-JOQ"/>
                                     </mask>
                                 </variation>
@@ -106,7 +110,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHl-b7-JWE">
-                                <rect key="frame" x="45" y="250.5" width="19" height="19"/>
+                                <rect key="frame" x="45" y="250" width="19" height="19"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PHl-b7-JWE" secondAttribute="height" id="eM7-ek-af4"/>
@@ -114,7 +118,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-HV-QAQ">
-                                <rect key="frame" x="47" y="252.5" width="15" height="15"/>
+                                <rect key="frame" x="47" y="252" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="7fd-mv-7tK"/>
                                     <constraint firstAttribute="width" constant="15" id="Ma2-qk-7FA"/>
@@ -131,14 +135,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xuF-cG-guW" secondAttribute="trailing" id="258-yc-1oH"/>
                             <constraint firstItem="xuF-cG-guW" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="-47" id="2cj-5l-nnu"/>
-                            <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="top" secondItem="dNP-Bo-kZY" secondAttribute="top" constant="8" id="2fS-XL-nyZ"/>
+                            <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="top" secondItem="dNP-Bo-kZY" secondAttribute="top" constant="10" id="2fS-XL-nyZ"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="36w-2x-KHI"/>
                             <constraint firstItem="0VH-w2-ZDh" firstAttribute="top" secondItem="wr5-at-9ed" secondAttribute="bottom" constant="5" id="5rh-36-aVZ"/>
                             <constraint firstAttribute="trailing" secondItem="Fmz-wM-RYQ" secondAttribute="trailing" constant="8" id="5wH-4S-NAu"/>
                             <constraint firstAttribute="bottom" secondItem="xuF-cG-guW" secondAttribute="bottom" id="7np-IV-QEH"/>
                             <constraint firstItem="87o-Ib-MYO" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="8pP-Yn-Eck"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="87o-Ib-MYO" secondAttribute="leading" id="98u-Eo-UQi"/>
-                            <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="8" id="D9E-Cu-ALh"/>
+                            <constraint firstItem="Ddc-HB-Q0Y" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" constant="10" id="D9E-Cu-ALh"/>
                             <constraint firstAttribute="bottom" secondItem="0VH-w2-ZDh" secondAttribute="bottom" constant="8" id="FKU-Od-BFH"/>
                             <constraint firstItem="xuF-cG-guW" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="-63" id="Gqc-Cf-nEA"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="5" id="HBi-og-4zI"/>
@@ -156,7 +160,7 @@
                             <constraint firstItem="mOW-i1-4QF" firstAttribute="centerY" secondItem="87o-Ib-MYO" secondAttribute="centerY" id="iVe-HW-WjP"/>
                             <constraint firstItem="Fmz-wM-RYQ" firstAttribute="centerY" secondItem="0VH-w2-ZDh" secondAttribute="centerY" id="k9t-UR-Hw7"/>
                             <constraint firstItem="Sob-HV-QAQ" firstAttribute="centerX" secondItem="PHl-b7-JWE" secondAttribute="centerX" id="koc-rY-VIs"/>
-                            <constraint firstItem="dI1-f1-XjJ" firstAttribute="leading" secondItem="Ddc-HB-Q0Y" secondAttribute="trailing" constant="8" id="sJB-pY-0TJ"/>
+                            <constraint firstItem="dI1-f1-XjJ" firstAttribute="leading" secondItem="Ddc-HB-Q0Y" secondAttribute="trailing" constant="10" id="sJB-pY-0TJ"/>
                             <constraint firstItem="87o-Ib-MYO" firstAttribute="bottom" secondItem="mOW-i1-4QF" secondAttribute="bottom" id="tF0-g7-zmv"/>
                         </constraints>
                         <variation key="default">
@@ -188,10 +192,12 @@
                 <outlet property="timeLabel" destination="Fmz-wM-RYQ" id="J1C-KP-vTZ"/>
                 <outlet property="userImage" destination="87o-Ib-MYO" id="9Bg-go-fwR"/>
             </connections>
-            <point key="canvasLocation" x="135.5" y="245"/>
+            <point key="canvasLocation" x="112.5" y="221"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Filled-Heart-Icon" width="20" height="17"/>
         <image name="Persona" width="600" height="600"/>
+        <image name="Reblog-Icon" width="21" height="22"/>
     </resources>
 </document>

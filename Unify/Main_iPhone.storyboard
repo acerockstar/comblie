@@ -239,7 +239,7 @@
                                     <constraint firstAttribute="width" constant="20" id="SaA-9a-66z"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="CommentIcon">
+                                <state key="normal" image="Comment-Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -253,7 +253,7 @@
                                     <constraint firstAttribute="height" constant="20" id="xeD-ot-n7n"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="UnfilledHeartIcon">
+                                <state key="normal" image="Unfilled-Heart-Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -466,7 +466,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-1F-SLD">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem image="UploadIcon" id="AK0-2F-vjD">
+                                    <barButtonItem image="Upload-Icon" id="AK0-2F-vjD">
                                         <color key="tintColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="uploadItem:" destination="h2t-px-mmH" id="eAC-la-ZGi"/>
@@ -570,7 +570,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fC-DS-eYt">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem image="UploadIcon" id="EdY-we-jb1">
+                                    <barButtonItem image="Upload-Icon" id="EdY-we-jb1">
                                         <color key="tintColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="uploadItem:" destination="MwB-OS-pfc" id="XnC-c6-YDC"/>
@@ -1665,7 +1665,7 @@
     <resources>
         <image name="Activity-Icon" width="29" height="27"/>
         <image name="Back-Arrow-Icon" width="14" height="22"/>
-        <image name="CommentIcon" width="32" height="31"/>
+        <image name="Comment-Icon" width="20" height="19"/>
         <image name="Feed-Icon" width="32" height="29"/>
         <image name="Forward-Arrow-Icon" width="11" height="15"/>
         <image name="Messages-Icon" width="35" height="25"/>
@@ -1675,8 +1675,8 @@
         <image name="Settings-Icon" width="29" height="27"/>
         <image name="Settings-Profile-Bio-Icon" width="15" height="11"/>
         <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
-        <image name="UnfilledHeartIcon" width="23" height="21"/>
-        <image name="UploadIcon" width="16" height="21"/>
+        <image name="Unfilled-Heart-Icon" width="20" height="17"/>
+        <image name="Upload-Icon" width="16" height="22"/>
         <image name="Write-Status-Icon" width="22" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

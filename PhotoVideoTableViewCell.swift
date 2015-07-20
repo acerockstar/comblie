@@ -40,8 +40,6 @@ class PhotoVideoTableViewCell: UITableViewCell {
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        repostImage.setImage(UIImage(named: "ReplyIcon"), forState: .Normal)
-        heartImage.setImage(UIImage(named: "FilledHeartIcon"), forState: .Normal)
         socialMediaIcon.image = UIImage(named: "Instagram-Small-Icon")
         
         var gradient: CAGradientLayer = CAGradientLayer()

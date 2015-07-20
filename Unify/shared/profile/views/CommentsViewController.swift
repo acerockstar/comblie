@@ -58,10 +58,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func toggleLike(sender: UIButton) {
         if commentLiked {
-            sender.setImage(UIImage(named: "NotLikedIcon"), forState: .Normal)
+            sender.setImage(UIImage(named: "Not-Liked-Icon"), forState: .Normal)
             commentLiked = false
         } else {
-            sender.setImage(UIImage(named: "LikedIcon"), forState: .Normal)
+            sender.setImage(UIImage(named: "Liked-Icon"), forState: .Normal)
             commentLiked = true
         }
     }
