@@ -1179,7 +1179,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Eg-yb-hdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="3715"/>
+            <point key="canvasLocation" x="243" y="3745"/>
         </scene>
         <!--Report Problem-->
         <scene sceneID="f6R-Uc-QdF">
@@ -1217,7 +1217,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCg-FN-9bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="3715"/>
+            <point key="canvasLocation" x="603" y="3745"/>
         </scene>
         <!--Send Feedback-->
         <scene sceneID="ZMT-Cm-nXv">
@@ -1253,7 +1253,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cj-WE-Qch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="3715"/>
+            <point key="canvasLocation" x="969" y="3745"/>
         </scene>
         <!--Social Networks-->
         <scene sceneID="lNu-Th-gpt">
@@ -1354,7 +1354,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL7-Gf-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="3715"/>
+            <point key="canvasLocation" x="-127" y="3745"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yuK-Ci-sXx">
@@ -1538,11 +1538,13 @@
             </objects>
             <point key="canvasLocation" x="-214" y="722"/>
         </scene>
-        <!--Profiles-->
+        <!--Navigation Controller-->
         <scene sceneID="G0b-1t-AmZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gaD-Kt-EMg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profiles" image="ProfilesIcon" id="VBe-Pg-5Mg"/>
+                    <tabBarItem key="tabBarItem" title="" image="Profiles-Icon" id="VBe-Pg-5Mg">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqt-Io-DGO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1557,11 +1559,13 @@
             </objects>
             <point key="canvasLocation" x="417" y="-517"/>
         </scene>
-        <!--Activity-->
+        <!--Navigation Controller-->
         <scene sceneID="okD-vH-Rr3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVe-Ng-Fge" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Activity" image="ActivityIcon" id="Feg-to-v5x"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="Activity-Icon" id="Feg-to-v5x">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMa-x4-nHi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1576,11 +1580,13 @@
             </objects>
             <point key="canvasLocation" x="417" y="98"/>
         </scene>
-        <!--Feed-->
+        <!--Navigation Controller-->
         <scene sceneID="XI6-tD-UjL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SDT-N3-giK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Feed" image="FeedIcon" id="Tde-XC-yx4"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="Feed-Icon" id="Tde-XC-yx4">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-dz-LaO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1595,11 +1601,13 @@
             </objects>
             <point key="canvasLocation" x="417" y="722"/>
         </scene>
-        <!--Messages-->
+        <!--Navigation Controller-->
         <scene sceneID="veQ-Rs-aux">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2XC-zZ-ccL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="Messages" image="MessagesIcon" id="5Wx-8f-dMd"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="" image="Messages-Icon" id="5Wx-8f-dMd">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5W9-Q3-R2Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1614,11 +1622,13 @@
             </objects>
             <point key="canvasLocation" x="417" y="1345"/>
         </scene>
-        <!--Settings-->
+        <!--Navigation Controller-->
         <scene sceneID="Z0R-cf-UQb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZMB-CH-QjU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="4" title="Settings" image="SettingsIcon" id="z7f-on-O0q"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="" image="Settings-Icon" id="z7f-on-O0q">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0qD-dU-Hae">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1653,18 +1663,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ActivityIcon" width="28" height="28"/>
+        <image name="Activity-Icon" width="29" height="27"/>
         <image name="Back-Arrow-Icon" width="14" height="22"/>
         <image name="CommentIcon" width="32" height="31"/>
-        <image name="FeedIcon" width="29" height="27"/>
+        <image name="Feed-Icon" width="32" height="29"/>
         <image name="Forward-Arrow-Icon" width="11" height="15"/>
-        <image name="MessagesIcon" width="27" height="27"/>
+        <image name="Messages-Icon" width="35" height="25"/>
         <image name="Persona" width="600" height="600"/>
         <image name="Photo" width="794" height="800"/>
-        <image name="ProfilesIcon" width="25" height="27"/>
+        <image name="Profiles-Icon" width="33" height="27"/>
+        <image name="Settings-Icon" width="29" height="27"/>
         <image name="Settings-Profile-Bio-Icon" width="15" height="11"/>
         <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
-        <image name="SettingsIcon" width="31" height="27"/>
         <image name="UnfilledHeartIcon" width="23" height="21"/>
         <image name="UploadIcon" width="16" height="21"/>
         <image name="Write-Status-Icon" width="22" height="22"/>

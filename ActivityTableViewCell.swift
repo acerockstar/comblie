@@ -20,6 +20,7 @@ class ActivityTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .None
         socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true

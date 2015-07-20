@@ -38,6 +38,14 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.addSubview(self.refreshControl)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let indexPath = tableView.indexPathForSelectedRow()
+        
+        if let path = indexPath {
+            tableView.deselectRowAtIndexPath(path, animated: true)
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
         self.tableView.reloadData()

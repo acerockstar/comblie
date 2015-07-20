@@ -19,6 +19,7 @@ class MessagesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .None
         socialMediaIcon.layer.cornerRadius = socialMediaIcon.bounds.size.width/2
         socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         socialMediaIcon.clipsToBounds = true
@@ -30,6 +31,12 @@ class MessagesTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        if (selected) {
+            self.contentView.backgroundColor = UIColor.lightGrayColor()
+        } else {
+            self.contentView.backgroundColor = UIColor.clearColor()
+        }
     }
     
 }

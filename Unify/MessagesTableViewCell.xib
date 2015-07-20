@@ -98,7 +98,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rvH-jD-MPl" secondAttribute="bottom" constant="7" id="1VP-Nz-4H6"/>
                             <constraint firstItem="MAy-3j-EhS" firstAttribute="centerY" secondItem="S9e-OM-J3f" secondAttribute="centerY" id="1nH-Pb-txT"/>
