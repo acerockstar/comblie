@@ -11,6 +11,7 @@ import UIKit
 class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     let imagePicker = UIImagePickerController()
+    var name = "Name"
     
     @IBOutlet weak var addContactField: UITextField!
     @IBOutlet weak var typeMessageField: UITextField!
@@ -20,7 +21,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     @IBAction func addContact(sender: AnyObject) {
     }
     
-    @IBAction func popToPrevious(sender: UIBarButtonItem) {
+    @IBAction func goBackToMessages(sender: UIBarButtonItem) {
         self.navigationController!.popViewControllerAnimated(true)
     }
     
@@ -52,6 +53,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationItem.title = name
         typeMessageField.frame = CGRectMake(0, 0, self.view.frame.size.width - self.uploadButton.width - 55, self.typeMessageField.frame.size.height)
     }
     

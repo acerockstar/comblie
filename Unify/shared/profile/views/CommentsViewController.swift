@@ -22,11 +22,34 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         commentField.delegate = self
         
+        self.tableView.estimatedRowHeight = 64.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.tableView.estimatedSectionHeaderHeight = 44.0
+        self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        
         self.tableView.registerNib(UINib(nibName: "NumLikesTableViewCell", bundle: nil), forCellReuseIdentifier: "numLikesCell")
         self.tableView.registerNib(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "commentCell")
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardShown:"), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardHidden:"), name:UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     func dismissCommentsVC() {
@@ -35,10 +58,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func toggleLike(sender: UIButton) {
         if commentLiked {
-            sender.setImage(UIImage(named: "NotLikedIcon"), forState: .Normal)
+            sender.setImage(UIImage(named: "Not-Liked-Icon"), forState: .Normal)
             commentLiked = false
         } else {
-            sender.setImage(UIImage(named: "LikedIcon"), forState: .Normal)
+            sender.setImage(UIImage(named: "Liked-Icon"), forState: .Normal)
             commentLiked = true
         }
     }
@@ -54,12 +77,12 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("numLikesCell") as! NumLikesTableViewCell
         cell.backButton.addTarget(self, action: "dismissCommentsVC", forControlEvents: .TouchUpInside)
         cell.likeButton.addTarget(self, action: "toggleLike:", forControlEvents: .TouchUpInside)
+        cell.likesLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
         
         return cell
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(44)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +92,13 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("commentCell") as! CommentsTableViewCell
         
+        cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
+        cell.commentLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        
         return cell
     }
     
@@ -76,10 +106,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.layoutMargins = UIEdgeInsetsZero
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(60)
     }
     
     // MARK: - Keyboard Functionality

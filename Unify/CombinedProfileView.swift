@@ -16,6 +16,7 @@ class CombinedProfileView: UIView {
     @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     
     override func didMoveToSuperview() {
         profilePicture.layer.cornerRadius = profilePicture.bounds.size.width/2

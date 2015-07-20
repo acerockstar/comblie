@@ -14,6 +14,7 @@
 		77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DF40DA1B1CDA2D006084E4 /* Main_iPhone.storyboard */; };
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
 		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
+		D1360E3E1B5B2EA70071AA16 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1360E3D1B5B2EA70071AA16 /* FontExtension.swift */; };
 		D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */; };
 		D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */; };
 		D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */; };
@@ -51,7 +52,6 @@
 		D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */; };
 		D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */; };
 		D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */; };
-		D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */; };
 		D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */; };
 		D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */; };
 		D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */; };
@@ -164,6 +164,7 @@
 		77DF41081B1CF28C006084E4 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		D1360E3D1B5B2EA70071AA16 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Unify/MessagesViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesTableViewCell.swift; path = Unify/MessagesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesTableViewCell.xib; path = Unify/MessagesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -201,7 +202,6 @@
 		D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewTableViewCell.swift; path = Unify/TextViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextViewTableViewCell.xib; path = Unify/TextViewTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackTableViewController.swift; path = Unify/FeedbackTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextSizeViewController.swift; path = Unify/TextSizeViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0261B2CEF1600F59444 /* ActivityContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E0281B2CF2C200F59444 /* FeedContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRefreshControl.swift; sourceTree = "<group>"; };
@@ -531,11 +531,10 @@
 			isa = PBXGroup;
 			children = (
 				D1855BDC1B50666300A5A244 /* SettingsTableViewController.swift */,
-				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
-				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
-				D1855BEA1B50A2F200A5A244 /* TextSizeViewController.swift */,
 				D1DA886F1B50EDF300B7D344 /* SocialNetworksTableViewController.swift */,
 				D1DA88771B51095F00B7D344 /* PushNotificationTableViewController.swift */,
+				D1855BDE1B50818100A5A244 /* ReportProblemTableViewController.swift */,
+				D1855BE81B509D2200A5A244 /* FeedbackTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -559,6 +558,7 @@
 		D12A8ACA1B1CFF0400320E1F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D1360E3D1B5B2EA70071AA16 /* FontExtension.swift */,
 				D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */,
 				D1855BE21B50918C00A5A244 /* UIKitExtensions.swift */,
 				D1B9E02E1B2D0BAC00F59444 /* CustomRefreshControl.swift */,
@@ -994,6 +994,7 @@
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
 				D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
+				D1360E3E1B5B2EA70071AA16 /* FontExtension.swift in Sources */,
 				D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */,
 				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
 				D1DA88761B5108F300B7D344 /* PushNotificationTableViewCell.swift in Sources */,
@@ -1001,7 +1002,6 @@
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
 				D1DA88781B51095F00B7D344 /* PushNotificationTableViewController.swift in Sources */,
-				D1855BEB1B50A2F200A5A244 /* TextSizeViewController.swift in Sources */,
 				D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D1F3FA861B578D68003ED306 /* TLYShyViewController.m in Sources */,
@@ -1152,6 +1152,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1170,6 +1171,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1269,6 +1271,7 @@
 					"\"QuartzCore\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

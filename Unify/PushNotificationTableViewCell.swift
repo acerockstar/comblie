@@ -17,7 +17,6 @@ class PushNotificationTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectionStyle = .None
-        toggleSocialNetworkSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
     }
 
 }

@@ -23,7 +23,18 @@ class PushNotificationTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
 
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -55,6 +66,7 @@ class PushNotificationTableViewController: UITableViewController {
         }
         
         cell.socialNetworkLabel.text = socialNetworkNames[indexPath.row]
+        cell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         cell.toggleSocialNetworkSwitch.addTarget(self, action: "toggleSocialNetwork:", forControlEvents: .ValueChanged)
         cell.toggleSocialNetworkSwitch.tag = indexPath.row
 

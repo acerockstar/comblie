@@ -10,6 +10,7 @@ import UIKit
 
 class ActivityTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var socialMediaIconBorder: UIView!
     @IBOutlet weak var userImage: UIButton!
     @IBOutlet weak var socialMediaIcon: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -19,10 +20,12 @@ class ActivityTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .None
+        socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        socialMediaIcon.image = UIImage(named: "VineIcon")
+        socialMediaIcon.image = UIImage(named: "Tumblr-Small-Icon")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

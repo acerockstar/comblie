@@ -18,26 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+
+        var tabBarController: UITabBarController = self.window?.rootViewController as! UITabBarController
+        tabBarController.selectedIndex = 2
 
         let userDefaults=NSUserDefaults.standardUserDefaults()
         var getObject: AnyObject?=userDefaults.valueForKey("Session")
         let storyboard:UIStoryboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         //let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        if (getObject == nil)
-        {
+        if (getObject == nil) {
             let ObjSocialMediaViewController:UIViewController = (storyboard.instantiateViewControllerWithIdentifier("SocialMediaViewController") as? SocialMediaViewController)!
             let navigationController = UINavigationController(rootViewController: ObjSocialMediaViewController);
             self.window?.rootViewController = navigationController
-
-        }else{
-
-            var tabBarController: UITabBarController = self.window?.rootViewController as! UITabBarController
-            tabBarController.selectedIndex = 2
-            let tabItems = tabBarController.tabBar.items as! [UITabBarItem]
-            tabItems[2].image = UIImage(named: "FeedIcon")?.imageWithRenderingMode(.AlwaysOriginal)
-            tabItems[2].selectedImage = UIImage(named: "FeedIcon")?.imageWithRenderingMode(.AlwaysOriginal)
         }
+        
         self.window?.tintColor = UIColor.combliePurple()
+        
         return true
     }
 

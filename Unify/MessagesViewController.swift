@@ -30,13 +30,37 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         refreshControl?.addTarget(self, action: "refreshMessages", forControlEvents: .ValueChanged)
         refreshMessages()
         
+        self.tableView.estimatedRowHeight = 76
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.tableView.tableFooterView = UIView()
         self.tableView.registerNib(UINib(nibName: "MessagesTableViewCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.tableView.addSubview(self.refreshControl)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let indexPath = tableView.indexPathForSelectedRow()
+        
+        if let path = indexPath {
+            tableView.deselectRowAtIndexPath(path, animated: true)
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
+        self.tableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,20 +105,24 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
         
+        cell.userName.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleHeadline), size: 0)
+        cell.userMessage.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        cell.messageTime.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(65)
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        var selectedCell = tableView.cellForRowAtIndexPath(indexPath)! as! MessagesTableViewCell
         selectedCell.contentView.backgroundColor = UIColor.lightGrayColor()
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
+        newVC.name = selectedCell.userName.text!
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     

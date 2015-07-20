@@ -10,6 +10,7 @@ import UIKit
 
 class MessagesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var socialMediaIconBorder: UIView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var socialMediaIcon: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -18,9 +19,11 @@ class MessagesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .None
         socialMediaIcon.layer.cornerRadius = socialMediaIcon.bounds.size.width/2
+        socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         socialMediaIcon.clipsToBounds = true
-        socialMediaIcon.image = UIImage(named: "FacebookIcon")
+        socialMediaIcon.image = UIImage(named: "Twitter-Icon")
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.image = UIImage(named: "Persona")
@@ -28,6 +31,12 @@ class MessagesTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        if (selected) {
+            self.contentView.backgroundColor = UIColor.lightGrayColor()
+        } else {
+            self.contentView.backgroundColor = UIColor.clearColor()
+        }
     }
     
 }

@@ -10,24 +10,48 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UIAlertViewDelegate,WebServiceDelegate {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var bioTextField: UITextField!
+    
+    // Profile Images
+    @IBOutlet weak var nameCellImageView: UIView!
+    @IBOutlet weak var nameCellImage: UIImageView!
+    @IBOutlet weak var bioCellImageView: UIView!
+    @IBOutlet weak var bioCellImage: UIImageView!
+    
+    // Cells
     @IBOutlet weak var nameCell: UITableViewCell!
     @IBOutlet weak var bioCell: UITableViewCell!
     @IBOutlet weak var lightThemeCell: UITableViewCell!
     @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
     @IBOutlet weak var LogoutCell: UITableViewCell!
+    
+    // Cell Labels
+    @IBOutlet weak var socialNetworkLabel: UILabel!
+    @IBOutlet weak var lightThemeLabel: UILabel!
+    @IBOutlet weak var refreshAutomaticallyLabel: UILabel!
+    @IBOutlet weak var chatHeadsLabel: UILabel!
+    @IBOutlet weak var pushNotificationsLabel: UILabel!
+    @IBOutlet weak var reportProblemLabel: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
+    @IBOutlet weak var blogLabel: UILabel!
+    @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var inviteFriendsLabel: UILabel!
+    @IBOutlet weak var logoutLabel: UILabel!
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var bioTextField: UITextField!
-    @IBOutlet weak var lightThemeSwitch: UISwitch!
-    @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
-    @IBOutlet weak var chatHeadsSwitch: UISwitch!
-
-
+    // Cell Arrows
+    @IBOutlet weak var socialNetworkCellArrow: UIImageView!
+    @IBOutlet weak var pushNotificationCellArrow: UIImageView!
+    @IBOutlet weak var reportProblemCellArrow: UIImageView!
+    @IBOutlet weak var feedbackCellArrow: UIImageView!
+    @IBOutlet weak var blogCellArrow: UIImageView!
+    @IBOutlet weak var privacyPolicyCellArrow: UIImageView!
+    @IBOutlet weak var inviteFriendsArrow: UIImageView!
+    @IBOutlet weak var LogoutCellArrow: UIImageView!
 
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
-
     var postStatusViewController: PostStatusViewController!
     
     @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
@@ -51,19 +75,56 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         nameTextField.delegate = self
         bioTextField.delegate = self
         
-        lightThemeSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
-        refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
-        chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75)
+        nameCellImage.tintColor = UIColor.combliePurple()
+        nameCellImageView.backgroundColor = UIColor.whiteColor()
+        nameCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        nameCellImageView.layer.borderWidth = 1.25
+        nameCellImageView.layer.cornerRadius = nameCellImageView.frame.size.width * (0.4)
         
+        bioCellImage.tintColor = UIColor.combliePurple()
+        bioCellImageView.backgroundColor = UIColor.whiteColor()
+        bioCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        bioCellImageView.layer.borderWidth = 1.25
+        bioCellImageView.layer.cornerRadius = bioCellImageView.frame.size.width * (0.4)
+
         let cells = [nameCell, bioCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
         for cell in cells {
             cell.selectionStyle = .None
         }
         
+        let cellArrows = [socialNetworkCellArrow, pushNotificationCellArrow, reportProblemCellArrow,
+            feedbackCellArrow, blogCellArrow, privacyPolicyCellArrow, inviteFriendsArrow, LogoutCellArrow]
+        
+        for arrow in cellArrows {
+            arrow.tintColor = UIColor.combliePurple()
+        }
+        
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.tableView.backgroundView = UIView(frame: self.tableView.bounds)
         self.tableView.backgroundView!.addGestureRecognizer(tap)
+        
+        setTextSize()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "preferredContentSizeChanged:",
+            name: UIContentSizeCategoryDidChangeNotification,
+            object: nil)
+    }
+    
+    func preferredContentSizeChanged(notification: NSNotification) {
+        setTextSize()
+    }
+    
+    func setTextSize() {
+        let cellLabels = [socialNetworkLabel, lightThemeLabel, refreshAutomaticallyLabel, chatHeadsLabel, pushNotificationsLabel, reportProblemLabel, feedbackLabel, blogLabel, privacyPolicyLabel, inviteFriendsLabel, logoutLabel]
+        
+        for label in cellLabels {
+            label.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+        }
+        
+        nameTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+        bioTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -130,25 +191,27 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     func vineLogout(){
         api.delegate=self
         api.logoutVine("")
-
     }
+    
     func TwitterLogOut(){
         api.delegate=self
         api.logoutTwitter("")
     }
+    
     func TumblrLogOut(){
         api.delegate=self
         api.logoutTumblr("")
-
     }
+    
     func InstagramLogOut(){
         api.delegate=self
         api.logoutInstagram("")
-
     }
+    
     func returnFail() {
 
     }
+    
     func returnSuccess(paraDict: NSDictionary) {
         Loader.hideActivityIndicator(self.view)
         println("paraDict===\(paraDict)")
@@ -161,6 +224,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
         }
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
         alert.show()
