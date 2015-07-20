@@ -21,7 +21,7 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
     }
     @IBAction func LoginWithInstagram(sender: AnyObject) {
         if Reachability.isConnectedToNetwork() == true {
-            LoginWithVine()
+            LoginWithInstagram()
         } else {
             alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
         }
@@ -57,42 +57,58 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         var vc = storyboard.instantiateViewControllerWithIdentifier("StartConnectingViewController") as! StartConnectingViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    //**********************************************Vine user area ***************************************
     func LoginWithVine(){
         CheckValue = "1"
         api.delegate=self
         api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
     }
-    func LoginWithInstagram(){
-        CheckValue = "1"
-        api.delegate=self
-        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
-    }
-    func LoginWithTwitter(){
-        CheckValue = "1"
-        api.delegate=self
-        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
-    }
-    func LoginWithTubmler(){
-        CheckValue = "1"
-        api.delegate=self
-        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
-    }
+
     func VineUserInfo(userid : NSString){
         print(userid)
-        CheckValue = "2"
+        CheckValue = "4"
         api.delegate=self
         api.VineUserInfo(userid)
     }
+
+    //**********************************************Vine user area ***************************************
+    func LoginWithInstagram(){
+        CheckValue = "2"
+        api.delegate=self
+        api.InstagramUserLogin("comblie12")
+    }
+    func InstagramUser_Info(userid : NSString){
+        CheckValue = "5"
+        api.delegate=self
+        api.Instagram_user_info(userid as String)
+    }
+
+
+   //********************************************** Twitter user area ***************************************
+
+    func LoginWithTwitter(){
+        CheckValue = "3"
+        api.delegate=self
+        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+    }
+
+    //********************************************** Tubmlr user area ***************************************
+
+    func LoginWithTubmlr(){
+        CheckValue = "3"
+        api.delegate=self
+        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+    }
+
     func returnFail() {
 
     }
     func returnSuccess(paraDict: NSDictionary) {
         println("paraDict===\(paraDict)")
 
-        var Status : AnyObject = paraDict.valueForKey("success") as! Bool
-        if Status as! NSObject == true{
-
             if CheckValue == "1"{
+                var Status : AnyObject = paraDict.valueForKey("success") as! Bool
+                if Status as! NSObject == true{
                 userId = paraDict.objectForKey("data")?.valueForKey("userId") as! NSDecimalNumber
                 let userIdConvertToString = NSString(format: "%@", userId)
                 VineUserInfo(userIdConvertToString)
@@ -101,17 +117,17 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
                 userDefault.setObject(data, forKey:"UserInfo")
                 userDefault.setObject("1", forKey: "Session")
                 userDefault.synchronize()
-
+                }
 
             }
             else if CheckValue == "2"{
 
+                var DataArray : AnyObject = paraDict.valueForKey("data")!
+                if DataArray.count > 0{
+                    var idSting : String = DataArray.objectAtIndex(0).valueForKey("id") as! String
+                    InstagramUser_Info(idSting)
+                }
             }
-        }
-        else if Status as! NSObject == false{
-
-        }
-        //let userid : String = paraDict.objectForKey("data")?.valueForKey("userId") as! NSDictionary
     }
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)

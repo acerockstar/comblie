@@ -18,6 +18,7 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
     var delegate: WebServiceDelegate?
     var request : NSMutableURLRequest = NSMutableURLRequest()
 
+    //****************************************** Vine Area ********************************************
     func Login_With_Vine(Username : String , Password: String){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/authenticate")!)
         request.HTTPMethod = "POST"
@@ -32,30 +33,20 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlSession()
 
     }
-    func Feedback(feedbackString : String){
-        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(Feedback)")!)
+    //****************************************** Instagram Area ********************************************
+    func InstagramUserLogin(username:String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.instagram.com/v1/users/search?q=\(username)&client_id=5fc9397900424d6e9087921ecdca8005")!)
         request.HTTPMethod = "GET"
         urlSession()
 
     }
-    func reportProblem(reportProblemString : String){
-        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(reportProblem)")!)
+    func Instagram_user_info(userid : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.instagram.com/v1/users/\(userid)?access_token=5fc9397900424d6e9087921ecdca8005")!)
         request.HTTPMethod = "GET"
         urlSession()
-
-    }
-    func InstragramUserLogin(reportProblemString : String){
-        request = NSMutableURLRequest(URL: NSURL(string: "https://api.instagram.com/v1/subscriptions?client_secret=dd1075a3c17544bdbc3b9436aa074826&client_id=5fc9397900424d6e9087921ecdca8005")!)
-        request.HTTPMethod = "GET"
-        urlSession()
-
     }
 
-
-
-
-
-    //************************************* Logout ******************************************************
+    //************************************* Logout Area ******************************************************
     func logoutVine(UserId : String){
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
         request.HTTPMethod = "GET"
@@ -78,9 +69,21 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(UserId)")!)
         request.HTTPMethod = "GET"
         urlSession()
+    }
+    //****************************************** Feedback Area ********************************************
+    func Feedback(feedbackString : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(Feedback)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
 
     }
-
+    //****************************************** reportProblem Area ********************************************
+    func reportProblem(reportProblemString : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/users/profiles/\(reportProblem)")!)
+        request.HTTPMethod = "GET"
+        urlSession()
+        
+    }
     func urlSession(){
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
