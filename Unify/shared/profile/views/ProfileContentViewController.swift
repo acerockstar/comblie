@@ -54,9 +54,13 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidLayoutSubviews() {
-        let sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
-        self.tableView.tableHeaderView = sectionHeader
+        var sectionHeader :UIView?
+        sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
+        let nameLabel = sectionHeader!.viewWithTag(2) as? UILabel
+        nameLabel?.text="Shailendra"
+        self.tableView.tableHeaderView=sectionHeader
         self.shyNavBarManager.scrollView = self.tableView
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,7 +80,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     // MARK: - Table View Methods
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if items.count == 0 {
             var label = UILabel(frame: CGRectMake(0,0,200, 50))
@@ -93,7 +96,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         
         return 1
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }

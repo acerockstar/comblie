@@ -76,6 +76,7 @@
 		E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E5D381B5541E70078E6C4 /* Reachability.swift */; };
 		E0349B0D1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
 		E0349B0E1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
+		E0672A561B5CE9DE0065D336 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0672A551B5CE9DE0065D336 /* HomeViewController.swift */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
 		E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08989341B562D04000A8C33 /* ViewControllerUtils.swift */; };
 		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
@@ -232,6 +233,7 @@
 		E02E5D381B5541E70078E6C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = UnifyDetails.rtf; sourceTree = "<group>"; };
+		E0672A551B5CE9DE0065D336 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
 		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 		E08989341B562D04000A8C33 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
@@ -295,7 +297,6 @@
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
 				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
 				E0A8A3FB1B4FB899005FCD50 /* WebService */,
-				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
 				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
 				77DF40CD1B1CD9B4006084E4 /* UnifyTests */,
 				77DF40B61B1CD9B4006084E4 /* Products */,
@@ -685,6 +686,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E0672A4E1B5CE98B0065D336 /* HomeScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0672A551B5CE9DE0065D336 /* HomeViewController.swift */,
+			);
+			name = HomeScreenViewController;
+			sourceTree = "<group>";
+		};
 		E08747041B4C14850060E5A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,9 +747,11 @@
 		E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */ = {
 			isa = PBXGroup;
 			children = (
+				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
+				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
+				E0672A4E1B5CE98B0065D336 /* HomeScreenViewController */,
 				E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */,
 				E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */,
-				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
 				77DF40E21B1CEB8F006084E4 /* FeedViewController */,
 				77DF40E31B1CEB8F006084E4 /* MessagesViewController */,
 				77DF40E41B1CEB8F006084E4 /* ProfileViewController */,
@@ -806,6 +817,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = U;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Unify;
 				TargetAttributes = {
@@ -1003,6 +1015,7 @@
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
 				D1DA88781B51095F00B7D344 /* PushNotificationTableViewController.swift in Sources */,
 				D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */,
+				E0672A561B5CE9DE0065D336 /* HomeViewController.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
 				D1F3FA861B578D68003ED306 /* TLYShyViewController.m in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
@@ -1093,7 +1106,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1132,7 +1145,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1149,7 +1162,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Unify/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1168,7 +1181,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Unify/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1241,7 +1254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1259,7 +1272,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"$(inherited)",

@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         //let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         if (getObject == nil) {
-            let ObjSocialMediaViewController:UIViewController = (storyboard.instantiateViewControllerWithIdentifier("SocialMediaViewController") as? SocialMediaViewController)!
+            let ObjSocialMediaViewController:UIViewController = (storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as? HomeViewController)!
             let navigationController = UINavigationController(rootViewController: ObjSocialMediaViewController);
             self.window?.rootViewController = navigationController
         }
