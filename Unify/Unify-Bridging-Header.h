@@ -31,3 +31,11 @@ static NSString *const kConsumer_Secret_API_Secret = @"2tSw1fBv6xtLcaE6IKyQXFeV1
 
 static NSString *const kCLIENT_ID = @"5fc9397900424d6e9087921ecdca8005";
 static NSString *const kCLIENT_SECRET_Key = @"dd1075a3c17544bdbc3b9436aa074826";
+
+
+
+// Parse
+
+static NSString *const kApplication_ID = @"zsNeOQ3y6WHVaBMg1se7FIuv2c5uLtXrn59HOqcV";
+static NSString *const kClient_Key = @"KsY7BPh17bfLEAHy4O89l314m54XYbOaqNJf8XcS";
+static NSString *const kREST_API_Key = @"Eha9HPYMRTZq5rXyDLesaFM3UYZBcrC1IPbku0Xz";

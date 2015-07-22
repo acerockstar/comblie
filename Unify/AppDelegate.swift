@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("zsNeOQ3y6WHVaBMg1se7FIuv2c5uLtXrn59HOqcV", clientKey: "KsY7BPh17bfLEAHy4O89l314m54XYbOaqNJf8XcS")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+
+
+        let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+
         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
         UITabBar.appearance().tintColor = UIColor.whiteColor()
 

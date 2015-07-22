@@ -108,9 +108,22 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
             cell.socialMediaIcon.hidden = true
             cell.socialMediaIconBorder.hidden = true
         }
-        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
+        if self.labelText == "Combined"{
+
+        }else if self.labelText == "Instagram"{
+
+        }
+        else if self.labelText == "Tumblr"{
+
+        }
+        else if self.labelText == "Twitter"{
+
+        }
+        else if self.labelText == "Vine"{
+            
+        }
         
         return cell
     }

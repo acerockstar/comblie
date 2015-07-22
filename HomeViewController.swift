@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import Parse
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         self.navigationController?.navigationBarHidden.boolValue
+
         super.viewDidLoad()
+
 
         // Do any additional setup after loading the view.
     }

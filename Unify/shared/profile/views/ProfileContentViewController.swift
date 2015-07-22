@@ -56,6 +56,20 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLayoutSubviews() {
         var sectionHeader :UIView?
         sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
+        if self.labelText == "Combined"{
+
+        }else if self.labelText == "Instagram"{
+
+        }
+        else if self.labelText == "Tumblr"{
+
+        }
+        else if self.labelText == "Twitter"{
+
+        }
+        else if self.labelText == "Vine"{
+
+        }
         let nameLabel = sectionHeader!.viewWithTag(2) as? UILabel
         nameLabel?.text="Shailendra"
         self.tableView.tableHeaderView=sectionHeader

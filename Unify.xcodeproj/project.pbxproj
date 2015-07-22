@@ -76,10 +76,25 @@
 		E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E5D381B5541E70078E6C4 /* Reachability.swift */; };
 		E0349B0D1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
 		E0349B0E1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */; };
+		E039B44C1B5F6E92002E8EF8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B44B1B5F6E92002E8EF8 /* CloudKit.framework */; };
+		E039B4601B5FA439002E8EF8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B45F1B5FA439002E8EF8 /* AudioToolbox.framework */; };
+		E039B4621B5FA43F002E8EF8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4611B5FA43F002E8EF8 /* CFNetwork.framework */; };
+		E039B4641B5FA44A002E8EF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4631B5FA44A002E8EF8 /* CoreGraphics.framework */; };
+		E039B4661B5FA454002E8EF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4651B5FA454002E8EF8 /* CoreLocation.framework */; };
+		E039B4681B5FA45C002E8EF8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4671B5FA45C002E8EF8 /* QuartzCore.framework */; };
+		E039B46A1B5FA46A002E8EF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4691B5FA46A002E8EF8 /* Security.framework */; };
+		E039B46C1B5FA472002E8EF8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B46B1B5FA472002E8EF8 /* StoreKit.framework */; };
+		E039B46E1B5FA477002E8EF8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B46D1B5FA477002E8EF8 /* SystemConfiguration.framework */; };
+		E039B4701B5FA483002E8EF8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B46F1B5FA483002E8EF8 /* libz.dylib */; };
+		E039B4721B5FA48D002E8EF8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4711B5FA48D002E8EF8 /* libsqlite3.dylib */; };
+		E039B4741B5FA495002E8EF8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4731B5FA495002E8EF8 /* Accounts.framework */; };
+		E039B4761B5FA49F002E8EF8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4751B5FA49F002E8EF8 /* Social.framework */; };
+		E039B4B11B5FAA56002E8EF8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4B01B5FAA56002E8EF8 /* libz.1.1.3.dylib */; };
+		E039B4D01B5FBA3C002E8EF8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4CF1B5FBA3C002E8EF8 /* Parse.framework */; };
+		E039B4D21B5FBAC9002E8EF8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E039B4D11B5FBAC9002E8EF8 /* Bolts.framework */; };
 		E0672A561B5CE9DE0065D336 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0672A551B5CE9DE0065D336 /* HomeViewController.swift */; };
 		E08747001B4BDB8F0060E5A6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */; };
 		E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08989341B562D04000A8C33 /* ViewControllerUtils.swift */; };
-		E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */; };
 		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
 		E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */; };
 		E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3F71B4FB74D005FCD50 /* WebService.swift */; };
@@ -120,20 +135,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2F519B57FA1683EE7CEE9865;
 			remoteInfo = "Pods-SwiftyJSON";
-		};
-		E08747081B4C14850060E5A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 93E52A70168BB43700E5471A;
-			remoteInfo = TMTumblrSDK;
-		};
-		E087470A1B4C14850060E5A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 93A015BB1B0696E20047F8C4;
-			remoteInfo = Tests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -232,12 +233,27 @@
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E02E5D381B5541E70078E6C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = UnifyDetails.rtf; sourceTree = "<group>"; };
+		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = UnifyDetails.rtf; path = ../UnifyDetails.rtf; sourceTree = "<group>"; };
+		E039B44A1B5F6E91002E8EF8 /* Unify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Unify.entitlements; path = ../Unify/Unify.entitlements; sourceTree = "<group>"; };
+		E039B44B1B5F6E92002E8EF8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E039B45F1B5FA439002E8EF8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E039B4611B5FA43F002E8EF8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E039B4631B5FA44A002E8EF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E039B4651B5FA454002E8EF8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E039B4671B5FA45C002E8EF8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E039B4691B5FA46A002E8EF8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E039B46B1B5FA472002E8EF8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E039B46D1B5FA477002E8EF8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E039B46F1B5FA483002E8EF8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E039B4711B5FA48D002E8EF8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E039B4731B5FA495002E8EF8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E039B4751B5FA49F002E8EF8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E039B4B01B5FAA56002E8EF8 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		E039B4CF1B5FBA3C002E8EF8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E039B4D11B5FBAC9002E8EF8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E0672A551B5CE9DE0065D336 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main_iPad.storyboard; path = Unify/Main_iPad.storyboard; sourceTree = "<group>"; };
-		E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "../../Downloads/TMTumblrSDK-master-2/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 		E08989341B562D04000A8C33 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
-		E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
 		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Unify/WebService.swift; sourceTree = "<group>"; };
@@ -249,8 +265,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A8A3E71B4FB633005FCD50 /* CloudKit.framework in Frameworks */,
+				E039B4B11B5FAA56002E8EF8 /* libz.1.1.3.dylib in Frameworks */,
+				E039B4761B5FA49F002E8EF8 /* Social.framework in Frameworks */,
+				E039B4741B5FA495002E8EF8 /* Accounts.framework in Frameworks */,
+				E039B4721B5FA48D002E8EF8 /* libsqlite3.dylib in Frameworks */,
+				E039B4701B5FA483002E8EF8 /* libz.dylib in Frameworks */,
+				E039B46E1B5FA477002E8EF8 /* SystemConfiguration.framework in Frameworks */,
+				E039B4D01B5FBA3C002E8EF8 /* Parse.framework in Frameworks */,
+				E039B46C1B5FA472002E8EF8 /* StoreKit.framework in Frameworks */,
+				E039B46A1B5FA46A002E8EF8 /* Security.framework in Frameworks */,
+				E039B4681B5FA45C002E8EF8 /* QuartzCore.framework in Frameworks */,
+				E039B4661B5FA454002E8EF8 /* CoreLocation.framework in Frameworks */,
+				E039B4641B5FA44A002E8EF8 /* CoreGraphics.framework in Frameworks */,
+				E039B4D21B5FBAC9002E8EF8 /* Bolts.framework in Frameworks */,
+				E039B4621B5FA43F002E8EF8 /* CFNetwork.framework in Frameworks */,
+				E039B4601B5FA439002E8EF8 /* AudioToolbox.framework in Frameworks */,
 				6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */,
+				E039B44C1B5F6E92002E8EF8 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */,
-				E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */,
 				3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */,
 				D21C955EBF8C304714409D74 /* Pods.release.xcconfig */,
 				B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */,
@@ -279,8 +309,23 @@
 		1615BB4CCEF396B4845C765B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E039B4D11B5FBAC9002E8EF8 /* Bolts.framework */,
+				E039B4CF1B5FBA3C002E8EF8 /* Parse.framework */,
+				E039B4B01B5FAA56002E8EF8 /* libz.1.1.3.dylib */,
+				E039B4751B5FA49F002E8EF8 /* Social.framework */,
+				E039B4731B5FA495002E8EF8 /* Accounts.framework */,
+				E039B4711B5FA48D002E8EF8 /* libsqlite3.dylib */,
+				E039B46F1B5FA483002E8EF8 /* libz.dylib */,
+				E039B46D1B5FA477002E8EF8 /* SystemConfiguration.framework */,
+				E039B46B1B5FA472002E8EF8 /* StoreKit.framework */,
+				E039B4691B5FA46A002E8EF8 /* Security.framework */,
+				E039B4671B5FA45C002E8EF8 /* QuartzCore.framework */,
+				E039B4651B5FA454002E8EF8 /* CoreLocation.framework */,
+				E039B4631B5FA44A002E8EF8 /* CoreGraphics.framework */,
+				E039B4611B5FA43F002E8EF8 /* CFNetwork.framework */,
+				E039B45F1B5FA439002E8EF8 /* AudioToolbox.framework */,
+				E039B44B1B5F6E92002E8EF8 /* CloudKit.framework */,
 				E0A8A4141B4FF6CB005FCD50 /* OAuth2+iOS.swift */,
-				E0A8A3E61B4FB633005FCD50 /* CloudKit.framework */,
 				2BFD9CB582B129FC0FCFBEDD /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -289,14 +334,7 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
-				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
-				D1F3FA761B578D68003ED306 /* TLYShyNavBar */,
-				E08989381B562D07000A8C33 /* ViewControllerUtils */,
-				E02E5D3A1B5541EB0078E6C4 /* Reachability */,
-				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
-				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
-				E0A8A3FB1B4FB899005FCD50 /* WebService */,
 				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
 				77DF40CD1B1CD9B4006084E4 /* UnifyTests */,
 				77DF40B61B1CD9B4006084E4 /* Products */,
@@ -344,6 +382,14 @@
 		77DF40CE1B1CD9B4006084E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E039B44A1B5F6E91002E8EF8 /* Unify.entitlements */,
+				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
+				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
+				E0A8A3FB1B4FB899005FCD50 /* WebService */,
+				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
+				D1F3FA761B578D68003ED306 /* TLYShyNavBar */,
+				E08989381B562D07000A8C33 /* ViewControllerUtils */,
+				E02E5D3A1B5541EB0078E6C4 /* Reachability */,
 				77DF41051B1CF15E006084E4 /* cloud */,
 				D17CE4D41B21C76600ED9E93 /* Models */,
 				D12A8ACA1B1CFF0400320E1F /* Utilities */,
@@ -653,7 +699,8 @@
 				D1F3FA801B578D68003ED306 /* TLYShyViewController.h */,
 				D1F3FA811B578D68003ED306 /* TLYShyViewController.m */,
 			);
-			path = TLYShyNavBar;
+			name = TLYShyNavBar;
+			path = ../TLYShyNavBar;
 			sourceTree = "<group>";
 		};
 		D1F3FA771B578D68003ED306 /* Categories */ = {
@@ -673,6 +720,7 @@
 				E02E5D381B5541E70078E6C4 /* Reachability.swift */,
 			);
 			name = Reachability;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E0349AFC1B5A360F002A6E3E /* Products */ = {
@@ -694,21 +742,13 @@
 			name = HomeScreenViewController;
 			sourceTree = "<group>";
 		};
-		E08747041B4C14850060E5A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E08747091B4C14850060E5A6 /* libTMTumblrSDK.a */,
-				E087470B1B4C14850060E5A6 /* Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		E08989381B562D07000A8C33 /* ViewControllerUtils */ = {
 			isa = PBXGroup;
 			children = (
 				E08989341B562D04000A8C33 /* ViewControllerUtils.swift */,
 			);
 			name = ViewControllerUtils;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */ = {
@@ -733,6 +773,7 @@
 				E0A8A3F71B4FB74D005FCD50 /* WebService.swift */,
 			);
 			name = WebService;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */ = {
@@ -742,16 +783,17 @@
 				E08746FF1B4BDB8F0060E5A6 /* Main_iPad.storyboard */,
 			);
 			name = StoryboardLayout;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
-				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
 				E0672A4E1B5CE98B0065D336 /* HomeScreenViewController */,
 				E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */,
 				E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */,
+				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
 				77DF40E21B1CEB8F006084E4 /* FeedViewController */,
 				77DF40E31B1CEB8F006084E4 /* MessagesViewController */,
 				77DF40E41B1CEB8F006084E4 /* ProfileViewController */,
@@ -766,6 +808,7 @@
 				77DF40F51B1CED31006084E4 /* Unify-Bridging-Header.h */,
 			);
 			name = "Unify-Bridging-Header";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -823,10 +866,16 @@
 				TargetAttributes = {
 					77DF40B41B1CD9B4006084E4 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = S9S784A2B4;
+						DevelopmentTeam = 875L3NCYK8;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 0;
+							};
+						};
 					};
 					77DF40C91B1CD9B4006084E4 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 875L3NCYK8;
 						TestTargetID = 77DF40B41B1CD9B4006084E4;
 					};
 				};
@@ -846,10 +895,6 @@
 				{
 					ProductGroup = E0349AFC1B5A360F002A6E3E /* Products */;
 					ProjectRef = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
-				},
-				{
-					ProductGroup = E08747041B4C14850060E5A6 /* Products */;
-					ProjectRef = E08747031B4C14850060E5A6 /* TMTumblrSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -887,20 +932,6 @@
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
 			remoteRef = E0349B081B5A360F002A6E3E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E08747091B4C14850060E5A6 /* libTMTumblrSDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTMTumblrSDK.a;
-			remoteRef = E08747081B4C14850060E5A6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E087470B1B4C14850060E5A6 /* Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Tests.xctest;
-			remoteRef = E087470A1B4C14850060E5A6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1087,7 +1118,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: mragendra sengar (ZABDZGGQ75)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: mragendra sengar (ZABDZGGQ75)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1109,6 +1141,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "83e85ff2-20ee-413e-bdab-2b5ce94b1021";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1132,7 +1165,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1160,10 +1193,29 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Unify/Unify.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library",
+				);
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unify/Unify-Bridging-Header.h";
@@ -1179,7 +1231,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Unify/Unify.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library",
+				);
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1194,9 +1253,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/parse-library",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1205,6 +1269,7 @@
 				INFOPLIST_FILE = UnifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unify.app/Unify";
 			};
 			name = Debug;
@@ -1213,13 +1278,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/parse-library",
 				);
 				INFOPLIST_FILE = UnifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unify.app/Unify";
 			};
 			name = Release;
@@ -1241,7 +1312,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1269,7 +1340,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Unify/Unify.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = "ADHOC=2";
 				INFOPLIST_FILE = Unify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1294,13 +1372,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library-1",
+					"$(PROJECT_DIR)/parse-library",
 				);
 				INFOPLIST_FILE = UnifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unify.app/Unify";
 			};
 			name = AdHoc;
