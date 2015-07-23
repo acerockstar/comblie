@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7703" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLTStd-Md.otf">
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+            <string>HelveticaNeueLTStd-Md</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLTStd-Roman.otf">
+            <string>HelveticaNeueLTStd-Roman</string>
+            <string>HelveticaNeueLTStd-Roman</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Activity-->
         <scene sceneID="PMu-Fu-5LA">
@@ -722,7 +742,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-BS-4G6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-BS-4G6">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -758,7 +778,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-sQ-rNS">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-sQ-rNS">
                                                     <rect key="frame" x="256" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
@@ -786,7 +806,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvm-Ew-CYm">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dvm-Ew-CYm">
                                                     <rect key="frame" x="256" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
@@ -842,7 +862,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="79M-Tg-kMN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="79M-Tg-kMN">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -878,7 +898,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fVO-7e-SvY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fVO-7e-SvY">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -910,7 +930,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-Cp-Hwj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-Cp-Hwj">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -940,7 +960,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pIY-NA-LCZ" id="HD0-mU-HsB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Xd-ehV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Xd-ehV">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -975,7 +995,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="d44-bO-Vch">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="d44-bO-Vch">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1002,7 +1022,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue5-g1-Mhv" id="Y7h-5N-BL5">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-oZ-DQ9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forward-Arrow-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-oZ-DQ9">
                                                     <rect key="frame" x="294" y="15" width="11" height="15"/>
                                                     <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1045,7 +1065,7 @@
                                                         <constraint firstAttribute="width" constant="11" id="zTc-9c-qtN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal">
@@ -1138,7 +1158,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axf-BM-CgP" id="uZK-s8-KVx">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
                                             <rect key="frame" x="248" y="7" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
@@ -1452,53 +1472,145 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
-                                <rect key="frame" x="23" y="498" width="264" height="50"/>
-                                <state key="normal" title="New user? Sign Up"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
+                                <rect key="frame" x="103" y="506" width="114" height="25"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="New user? ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Sign Up">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <segue destination="B54-sZ-x5a" kind="push" id="ZVG-B9-sIh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
-                                <rect key="frame" x="75" y="460" width="166" height="30"/>
-                                <state key="normal" title="Login with Instagram">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
+                                <rect key="frame" x="60" y="459" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="DUF-sg-lf7"/>
+                                    <constraint firstAttribute="width" constant="199" id="MR6-GI-u0h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="LoginWithInstagram:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="ow0-fb-0DT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
-                                <rect key="frame" x="75" y="422" width="166" height="30"/>
-                                <state key="normal" title="Login with Tumblr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
+                                <rect key="frame" x="60" y="406" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Fn8-qW-yK8"/>
+                                    <constraint firstAttribute="width" constant="199" id="xoO-V2-bvA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Tumblr">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginWithTumbler:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="4iz-hN-1nR"/>
+                                    <action selector="LoginWithTumblr:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="lPJ-Nt-PRp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
-                                <rect key="frame" x="75" y="346" width="166" height="30"/>
-                                <state key="normal" title="Login with Twitter">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
+                                <rect key="frame" x="60" y="300" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="Rdl-yk-SOG"/>
+                                    <constraint firstAttribute="height" constant="41" id="hfK-4d-o6F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="LoginWithTwitter:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="nuq-oG-LT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
-                                <rect key="frame" x="70" y="384" width="166" height="30"/>
-                                <state key="normal" title="Login with Vine">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
+                                <rect key="frame" x="60" y="353" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Uux-80-frb"/>
+                                    <constraint firstAttribute="width" constant="199" id="uAe-Wq-sIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Vine">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="LoginWithVine:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="zII-4N-6Tm"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-App-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="iMn-n1-uCe">
+                                <rect key="frame" x="112" y="74" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Xrx-CQ-hsT"/>
+                                    <constraint firstAttribute="width" secondItem="iMn-n1-uCe" secondAttribute="height" id="nKy-LS-DeW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-us-28u">
+                                <rect key="frame" x="97" y="193" width="125" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.13333333333333333" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to one of your social media accounts to resume." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAV-4p-2CZ">
+                                <rect key="frame" x="37" y="216" width="245" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="N66-Pk-t4t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="16"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.13333333333333333" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nID-mK-KRf" secondAttribute="centerX" id="7ZN-Xi-KiQ"/>
+                            <constraint firstItem="iMn-n1-uCe" firstAttribute="top" secondItem="avo-Uc-BFM" secondAttribute="bottom" constant="54" id="8f1-eB-h0o"/>
+                            <constraint firstItem="VbT-e3-CcU" firstAttribute="top" secondItem="nID-mK-KRf" secondAttribute="bottom" constant="6" id="Bh7-1C-b9E"/>
+                            <constraint firstItem="VAV-4p-2CZ" firstAttribute="top" secondItem="mLz-us-28u" secondAttribute="bottom" constant="5" id="Im9-Of-L9g"/>
+                            <constraint firstItem="D3Z-5C-cSp" firstAttribute="top" secondItem="VbT-e3-CcU" secondAttribute="bottom" constant="37" id="Mph-Vu-dM4"/>
+                            <constraint firstAttribute="centerX" secondItem="VbT-e3-CcU" secondAttribute="centerX" id="Nwd-du-TxV"/>
+                            <constraint firstAttribute="centerX" secondItem="lVB-wU-dOO" secondAttribute="centerX" id="WTV-vy-FLR"/>
+                            <constraint firstAttribute="centerX" secondItem="JvP-J3-2fR" secondAttribute="centerX" id="YFq-tb-l0y"/>
+                            <constraint firstAttribute="centerX" secondItem="VAV-4p-2CZ" secondAttribute="centerX" id="Yfm-dE-unq"/>
+                            <constraint firstItem="lVB-wU-dOO" firstAttribute="top" secondItem="JvP-J3-2fR" secondAttribute="bottom" constant="12" id="Z4t-Ip-7n4"/>
+                            <constraint firstItem="nID-mK-KRf" firstAttribute="top" secondItem="V7P-Ra-qe3" secondAttribute="bottom" constant="12" id="ePT-dY-HgO"/>
+                            <constraint firstAttribute="centerX" secondItem="V7P-Ra-qe3" secondAttribute="centerX" id="hV3-N5-0h6"/>
+                            <constraint firstAttribute="centerX" secondItem="iMn-n1-uCe" secondAttribute="centerX" id="iMv-RY-AId"/>
+                            <constraint firstItem="mLz-us-28u" firstAttribute="top" secondItem="iMn-n1-uCe" secondAttribute="bottom" constant="24" id="jzD-p2-3wn"/>
+                            <constraint firstItem="V7P-Ra-qe3" firstAttribute="top" secondItem="lVB-wU-dOO" secondAttribute="bottom" constant="12" id="uXR-UJ-UG4"/>
+                            <constraint firstAttribute="centerX" secondItem="mLz-us-28u" secondAttribute="centerX" id="yUJ-g6-yL0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d2s-Uu-M3Y"/>
+                    <connections>
+                        <outlet property="instagramButton" destination="nID-mK-KRf" id="Nsx-Vc-IId"/>
+                        <outlet property="messageLabel" destination="VAV-4p-2CZ" id="Rqi-rH-p8q"/>
+                        <outlet property="signUpButton" destination="VbT-e3-CcU" id="5eB-nR-LK0"/>
+                        <outlet property="tumblrButton" destination="V7P-Ra-qe3" id="VJ7-Rs-0ej"/>
+                        <outlet property="twitterButton" destination="JvP-J3-2fR" id="RTG-4S-b2R"/>
+                        <outlet property="vineButton" destination="lVB-wU-dOO" id="PLG-7X-fIi"/>
+                        <outlet property="welcomeBackLabel" destination="mLz-us-28u" id="LU8-zO-zlq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgk-jZ-G9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1516,18 +1628,156 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-Ye-uwc">
-                                <rect key="frame" x="26" y="444" width="264" height="50"/>
-                                <state key="normal" title="New user? Sign Up"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-bd-8Zg">
+                                <rect key="frame" x="93" y="506" width="134" height="25"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Returning user? ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Log In">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Oec-Ix-EfZ" kind="push" id="cQg-2K-RnR"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-R9-DLJ">
+                                <rect key="frame" x="61" y="459" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="TOW-Yg-QiU"/>
+                                    <constraint firstAttribute="width" constant="199" id="al9-Q6-mIN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginWithInstagram:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="QPM-E6-3Y4"/>
+                                    <action selector="connectToInstagram:" destination="B54-sZ-x5a" eventType="touchUpInside" id="Zw8-bB-cSq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-ZA-WnA">
+                                <rect key="frame" x="61" y="406" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Me5-O4-Sq2"/>
+                                    <constraint firstAttribute="width" constant="199" id="Tca-gt-0eG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Tumblr">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginWithTumblr:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="eGD-kG-pQt"/>
+                                    <action selector="connectToTumblr:" destination="B54-sZ-x5a" eventType="touchUpInside" id="4ID-MR-9N5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-7h-q8l">
+                                <rect key="frame" x="61" y="300" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="5oF-Ww-1WU"/>
+                                    <constraint firstAttribute="width" constant="199" id="JEE-ay-y32"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginWithTwitter:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="6tm-wt-XVN"/>
+                                    <action selector="connectToTwitter:" destination="B54-sZ-x5a" eventType="touchUpInside" id="GQt-4e-PIT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-oV-4GJ">
+                                <rect key="frame" x="61" y="353" width="199" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="F0l-19-oZr"/>
+                                    <constraint firstAttribute="height" constant="41" id="NQf-Sj-Dhy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Vine">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginWithVine:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="ZYz-lL-aLH"/>
+                                    <action selector="connectToVine:" destination="B54-sZ-x5a" eventType="touchUpInside" id="k65-k7-K2G"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-App-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-IC-OP0">
+                                <rect key="frame" x="113" y="74" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="2xj-Wb-eOw"/>
+                                    <constraint firstAttribute="width" secondItem="4Ko-IC-OP0" secondAttribute="height" id="CCk-NG-OmA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-eU-EOy">
+                                <rect key="frame" x="119" y="193" width="82.5" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <color key="textColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to your social media accounts below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-ZV-jg8">
+                                <rect key="frame" x="54.5" y="216" width="211" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="eb9-mj-6Fm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="16"/>
+                                <color key="textColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XqG-R9-DLJ" secondAttribute="centerX" id="2SL-qy-Y9Y"/>
+                            <constraint firstItem="DPh-eU-EOy" firstAttribute="top" secondItem="4Ko-IC-OP0" secondAttribute="bottom" constant="24" id="4F4-3d-oCX"/>
+                            <constraint firstItem="XT1-bd-8Zg" firstAttribute="top" secondItem="XqG-R9-DLJ" secondAttribute="bottom" constant="6" id="6F8-Ir-50f"/>
+                            <constraint firstItem="wKI-fF-tt1" firstAttribute="top" secondItem="XT1-bd-8Zg" secondAttribute="bottom" constant="37" id="BdA-GX-vta"/>
+                            <constraint firstAttribute="centerX" secondItem="DPh-eU-EOy" secondAttribute="centerX" id="CWl-sB-agz"/>
+                            <constraint firstAttribute="centerX" secondItem="0fw-ZV-jg8" secondAttribute="centerX" id="NDh-6f-DbK"/>
+                            <constraint firstItem="XqG-R9-DLJ" firstAttribute="top" secondItem="cm7-ZA-WnA" secondAttribute="bottom" constant="12" id="SFf-Xj-5VG"/>
+                            <constraint firstAttribute="centerX" secondItem="cm7-ZA-WnA" secondAttribute="centerX" id="aE3-BI-i9e"/>
+                            <constraint firstAttribute="centerX" secondItem="eqX-oV-4GJ" secondAttribute="centerX" id="eJH-md-BBn"/>
+                            <constraint firstItem="cm7-ZA-WnA" firstAttribute="top" secondItem="eqX-oV-4GJ" secondAttribute="bottom" constant="12" id="jxU-Hf-OKB"/>
+                            <constraint firstItem="0fw-ZV-jg8" firstAttribute="top" secondItem="DPh-eU-EOy" secondAttribute="bottom" constant="5" id="k8D-mj-gso"/>
+                            <constraint firstAttribute="centerX" secondItem="XT1-bd-8Zg" secondAttribute="centerX" id="kCA-kx-pLT"/>
+                            <constraint firstAttribute="centerX" secondItem="4Ko-IC-OP0" secondAttribute="centerX" id="mEx-27-TvX"/>
+                            <constraint firstItem="4Ko-IC-OP0" firstAttribute="width" secondItem="4Ko-IC-OP0" secondAttribute="height" id="p3w-Iy-rYv"/>
+                            <constraint firstItem="eqX-oV-4GJ" firstAttribute="top" secondItem="wZa-7h-q8l" secondAttribute="bottom" constant="12" id="ubt-H8-Stg"/>
+                            <constraint firstItem="4Ko-IC-OP0" firstAttribute="top" secondItem="zFw-ga-R5e" secondAttribute="bottom" constant="54" id="vEo-dz-vip"/>
+                            <constraint firstAttribute="centerX" secondItem="wZa-7h-q8l" secondAttribute="centerX" id="vPb-3Q-vCx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5T1-q2-aR1"/>
+                    <connections>
+                        <outlet property="instagramButton" destination="XqG-R9-DLJ" id="Dym-DP-Acq"/>
+                        <outlet property="messageLabel" destination="0fw-ZV-jg8" id="NbZ-Jj-yrY"/>
+                        <outlet property="signUpButton" destination="XT1-bd-8Zg" id="nLZ-3S-2fi"/>
+                        <outlet property="tumblrButton" destination="cm7-ZA-WnA" id="yZX-13-wnK"/>
+                        <outlet property="twitterButton" destination="wZa-7h-q8l" id="w1O-Hi-TiD"/>
+                        <outlet property="vineButton" destination="eqX-oV-4GJ" id="RS3-qR-ye9"/>
+                        <outlet property="welcomeLabel" destination="DPh-eU-EOy" id="kuC-Os-5j7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-UW-Wvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="1465"/>
+            <point key="canvasLocation" x="-644" y="1375"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="XLj-aO-K0M">
@@ -1541,31 +1791,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
-                                <rect key="frame" x="113" y="448" width="95" height="30"/>
-                                <state key="normal" title="Sing up">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
+                                <rect key="frame" x="52.5" y="452" width="216" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kfT-yf-Tsr"/>
+                                    <constraint firstAttribute="width" constant="216" id="rgW-CQ-FM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpButtonClicked:" destination="rFe-OE-5kN" eventType="touchUpInside" id="a8k-GM-bsa"/>
                                     <segue destination="B54-sZ-x5a" kind="push" id="wcl-aJ-Hka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
-                                <rect key="frame" x="69" y="486" width="182" height="30"/>
-                                <state key="normal" title="Returning user? Log In">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
+                                <rect key="frame" x="92" y="501" width="135" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Returning user?">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Log In">
+                                            <attributes>
+                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                                <font key="NSOriginalFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="Oec-Ix-EfZ" kind="push" id="ibe-aD-Qft"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-App-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-N6-aw1">
+                                <rect key="frame" x="112.5" y="128" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="PNH-4Q-2ce"/>
+                                    <constraint firstAttribute="width" secondItem="HIa-N6-aw1" secondAttribute="height" id="vcy-gt-WYu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-Name-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-Qi-1Nb">
+                                <rect key="frame" x="87" y="240" width="146.5" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146.5" id="Sh5-WX-EY4"/>
+                                    <constraint firstAttribute="height" constant="47" id="hSk-uY-kkF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WTP-bu-eoW" firstAttribute="top" secondItem="9Xe-2E-GXr" secondAttribute="bottom" constant="5" id="5a6-TC-5VG"/>
+                            <constraint firstAttribute="centerX" secondItem="WTP-bu-eoW" secondAttribute="centerX" id="6lH-vg-kth"/>
+                            <constraint firstAttribute="centerX" secondItem="oDe-Qi-1Nb" secondAttribute="centerX" id="Ba2-54-dNt"/>
+                            <constraint firstItem="HIa-N6-aw1" firstAttribute="top" secondItem="Pg7-Cu-kog" secondAttribute="bottom" constant="108" id="NiM-pj-2or"/>
+                            <constraint firstItem="oDe-Qi-1Nb" firstAttribute="top" secondItem="HIa-N6-aw1" secondAttribute="bottom" constant="17" id="OCH-bz-2ko"/>
+                            <constraint firstItem="L9B-7Z-jld" firstAttribute="top" secondItem="WTP-bu-eoW" secondAttribute="bottom" constant="37" id="d5j-38-E2L"/>
+                            <constraint firstAttribute="centerX" secondItem="9Xe-2E-GXr" secondAttribute="centerX" id="f2H-t2-VVr"/>
+                            <constraint firstAttribute="centerX" secondItem="HIa-N6-aw1" secondAttribute="centerX" id="k9J-zw-3cv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="WTP-bu-eoW" id="ftU-1w-GAc"/>
+                        <outlet property="signUpButton" destination="9Xe-2E-GXr" id="eQS-hq-teH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zw6-om-aDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1062" y="722"/>
+            <point key="canvasLocation" x="-1076" y="722"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TLE-Ud-zK5">
@@ -1714,16 +2020,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Activity-Icon" width="29" height="27"/>
+        <image name="Activity-Icon" width="25" height="25"/>
         <image name="Back-Arrow-Icon" width="14" height="22"/>
+        <image name="Comblie-App-Icon" width="95" height="95"/>
+        <image name="Comblie-Name-Icon" width="148" height="48"/>
         <image name="Comment-Icon" width="20" height="19"/>
-        <image name="Feed-Icon" width="32" height="29"/>
+        <image name="Feed-Icon" width="29" height="25"/>
         <image name="Forward-Arrow-Icon" width="11" height="15"/>
-        <image name="Messages-Icon" width="35" height="25"/>
+        <image name="Messages-Icon" width="29" height="20"/>
         <image name="Persona" width="600" height="600"/>
         <image name="Photo" width="794" height="800"/>
-        <image name="Profiles-Icon" width="33" height="27"/>
-        <image name="Settings-Icon" width="29" height="27"/>
+        <image name="Profiles-Icon" width="29" height="26"/>
+        <image name="Settings-Icon" width="26" height="26"/>
         <image name="Settings-Profile-Bio-Icon" width="15" height="11"/>
         <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
         <image name="Unfilled-Heart-Icon" width="20" height="17"/>
@@ -1736,6 +2044,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZVG-B9-sIh"/>
+        <segue reference="wcl-aJ-Hka"/>
+        <segue reference="cQg-2K-RnR"/>
     </inferredMetricsTieBreakers>
 </document>

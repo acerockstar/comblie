@@ -15,6 +15,11 @@ extension UIColor {
         return UIColor(red: CGFloat(132.0/255.0), green: CGFloat(45.0/255.0), blue: CGFloat(114.0/255.0), alpha: 1.0)
     }
     
+    class func comblieDarkPurple() -> UIColor {
+        // Hex: #792269, RGB: 121, 34, 105
+        return UIColor(red: CGFloat(121.0/255.0), green: CGFloat(34.0/255.0), blue: CGFloat(105.0/255.0), alpha: 1.0)
+    }
+
     class func facebookBlue() -> UIColor {
         // Hex: #3b5998, RGB: 59, 89, 152
         return UIColor(red: CGFloat(59.0/255.0), green: CGFloat(89.0/255.0), blue: CGFloat(152.0/255.0), alpha: 1.0)
@@ -58,6 +63,11 @@ extension UIColor {
     class func customLightGrayColor() -> UIColor {
         // Hex: #aeaeae, RGB: 174, 174, 174
         return UIColor(red: CGFloat(174.0/255.0), green: CGFloat(174.0/255.0), blue: CGFloat(174.0/255.0), alpha: 1.0)
+    }
+    
+    class func backgroundLightGrey() -> UIColor {
+        // Hex: #eeeeee, RGB: 238, 238, 238
+        return UIColor(red: CGFloat(238.0/255.0), green: CGFloat(238.0/255.0), blue: CGFloat(238.0/255.0), alpha: 1.0)
     }
     
     class func customDarkGrayColor() -> UIColor {
