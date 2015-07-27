@@ -10,11 +10,8 @@ import UIKit
 
 class TwitterTweetTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var socialMediaIconBorder: UIView!
     @IBOutlet weak var userImage: UIButton!
-    @IBOutlet weak var socialMediaIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBAction func userImageClicked(sender: UIButton) {
@@ -24,25 +21,21 @@ class TwitterTweetTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .None
-        socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        socialMediaIcon.image = UIImage(named: "Twitter-Small-Icon")
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if (selected) {
-            self.contentView.backgroundColor = UIColor.selectedFeedCell()
+            self.contentView.backgroundColor = UIColor.twitterBlue()
             nameLabel.textColor = UIColor.whiteColor()
-            usernameLabel.textColor = UIColor.whiteColor()
             tweetLabel.textColor = UIColor.whiteColor()
             timeLabel.textColor = UIColor.whiteColor()
         } else {
             self.contentView.backgroundColor = UIColor.clearColor()
-            nameLabel.textColor = UIColor.blackColor()
-            usernameLabel.textColor = UIColor.blackColor()
+            nameLabel.textColor = UIColor.twitterBlue()
             tweetLabel.textColor = UIColor.blackColor()
             timeLabel.textColor = UIColor.customLightGrayColor()
         }

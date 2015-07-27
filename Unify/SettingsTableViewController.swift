@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UIAlertViewDelegate,WebServiceDelegate {
+class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIAlertViewDelegate,WebServiceDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var bioTextField: UITextField!
+    @IBOutlet weak var nameTextView: UITextView!
+    @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var dividerHeightConstraint: NSLayoutConstraint!
     
     // Profile Images
     @IBOutlet weak var nameCellImageView: UIView!
@@ -20,8 +22,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     @IBOutlet weak var bioCellImage: UIImageView!
     
     // Cells
-    @IBOutlet weak var nameCell: UITableViewCell!
-    @IBOutlet weak var bioCell: UITableViewCell!
+    @IBOutlet weak var profileCell: UITableViewCell!
     @IBOutlet weak var lightThemeCell: UITableViewCell!
     @IBOutlet weak var refreshAutomaticallyCell: UITableViewCell!
     @IBOutlet weak var chatHeadsCell: UITableViewCell!
@@ -40,6 +41,11 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     @IBOutlet weak var inviteFriendsLabel: UILabel!
     @IBOutlet weak var logoutLabel: UILabel!
 
+    // Cell Switches
+    @IBOutlet weak var lightThemeSwitch: UISwitch!
+    @IBOutlet weak var refreshAutomaticallySwitch: UISwitch!
+    @IBOutlet weak var chatHeadsSwitch: UISwitch!
+    
     // Cell Arrows
     @IBOutlet weak var socialNetworkCellArrow: UIImageView!
     @IBOutlet weak var pushNotificationCellArrow: UIImageView!
@@ -53,7 +59,11 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
     var postStatusViewController: PostStatusViewController!
+    var sectionLabels = ["PROFILE", "ACCOUNTS", "PREFERENCES", "SUPPORT", "ABOUT", ""]
     
+    @IBAction func changeButtonClicked(sender: UIButton) {
+    }
+
     @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
         self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
         self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
@@ -72,22 +82,41 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.delegate = self
-        bioTextField.delegate = self
+        userImage.layer.cornerRadius = userImage.frame.size.width/2
+        userImage.layer.masksToBounds = true
+
+        dividerHeightConstraint.constant = 0.5
         
         nameCellImage.tintColor = UIColor.combliePurple()
         nameCellImageView.backgroundColor = UIColor.whiteColor()
         nameCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
-        nameCellImageView.layer.borderWidth = 1.25
-        nameCellImageView.layer.cornerRadius = nameCellImageView.frame.size.width * (0.4)
+        nameCellImageView.layer.borderWidth = 1
+        nameCellImageView.layer.cornerRadius = 10
         
         bioCellImage.tintColor = UIColor.combliePurple()
         bioCellImageView.backgroundColor = UIColor.whiteColor()
         bioCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
-        bioCellImageView.layer.borderWidth = 1.25
-        bioCellImageView.layer.cornerRadius = bioCellImageView.frame.size.width * (0.4)
+        bioCellImageView.layer.borderWidth = 1
+        bioCellImageView.layer.cornerRadius = 10
+        
+        nameTextView.delegate = self
+        nameTextView.contentInset = UIEdgeInsetsMake(5, -5, 0, 0)
+        nameTextView.textAlignment = .Left
+        nameTextView.scrollEnabled = false
+        nameTextView.textContainer.maximumNumberOfLines = 1
 
-        let cells = [nameCell, bioCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
+        bioTextView.delegate = self
+        bioTextView.contentInset = UIEdgeInsetsMake(1, -5, 0, 0)
+        bioTextView.textAlignment = .Left
+        bioTextView.scrollEnabled = false
+        bioTextView.textContainer.maximumNumberOfLines = 3
+        bioTextView.textContainer.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        
+        lightThemeSwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
+        refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
+        chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
+        
+        let cells = [profileCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
         for cell in cells {
             cell.selectionStyle = .None
@@ -100,31 +129,15 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
             arrow.tintColor = UIColor.combliePurple()
         }
         
-        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        self.tableView.backgroundView = UIView(frame: self.tableView.bounds)
-        self.tableView.backgroundView!.addGestureRecognizer(tap)
+        tableView.rowHeight = 32.0
+        tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = UIColor.sectionHeaderGrey()
         
-        setTextSize()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        setTextSize()
-    }
-    
-    func setTextSize() {
-        let cellLabels = [socialNetworkLabel, lightThemeLabel, refreshAutomaticallyLabel, chatHeadsLabel, pushNotificationsLabel, reportProblemLabel, feedbackLabel, blogLabel, privacyPolicyLabel, inviteFriendsLabel, logoutLabel]
-        
-        for label in cellLabels {
-            label.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
-        }
-        
-        nameTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
-        bioTextField.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
+        let tapGesture = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.cancelsTouchesInView = false
+        self.tableView.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -133,33 +146,92 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     
     // MARK: - Keyboard Functionality
 
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        
-        return true
-    }
-    
     func dismissKeyboard() {
-        if nameTextField.isFirstResponder() {
-            nameTextField.resignFirstResponder()
-        } else if bioTextField.isFirstResponder() {
-            bioTextField.resignFirstResponder()
-        }
+        self.view.endEditing(true)
     }
+    
+//    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+//        
+//        let newText = textView.text.stringByReplacingCharactersInRange(range, withString: text)
+//        let textWidth = CGRectGetWidth(UIEdgeInsetsInsetRect(textView.frame, textView.textContainerInset))
+//        textWidth -= 2.0 * textView.textContainer.lineFragmentPadding
+//        
+//        let numberOf
+//        
+//        NSString *newText = [textView.text stringByReplacingCharactersInRange:range withString:text];
+//        
+//        NSDictionary *textAttributes = @{NSFontAttributeName : textView.font};
+//        
+//        CGFloat textWidth = CGRectGetWidth(UIEdgeInsetsInsetRect(textView.frame, textView.textContainerInset));
+//        textWidth -= 2.0f * textView.textContainer.lineFragmentPadding;
+//        CGRect boundingRect = [newText boundingRectWithSize:CGSizeMake(textWidth, 0)
+//            options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
+//            attributes:textAttributes
+//            context:nil];
+//        
+//        NSUInteger numberOfLines = CGRectGetHeight(boundingRect) / textView.font.lineHeight;
+//        
+//        return newText.length <= 500 && numberOfLines <= 2;
+//        
+//    }
+    
+//    
+//    func textViewDidChange(textView: UITextView) {
+//        <#code#>
+//    }
 
     // MARK: - Table View Data Source
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
+        switch(section) {
+        case 0:
             return CGFloat(40.0)
+        case 1:
+            return CGFloat(23.0)
+        case 2:
+            return CGFloat(12.0)
+        case 3:
+            return CGFloat(15.0)
+        case 4:
+            return CGFloat(18.0)
+        default:
+            return CGFloat(42.0)
         }
-
-        return CGFloat(25.0)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(0.0)
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        var headerHeight: CGFloat = 0.0
+        
+        switch(section) {
+        case 0:
+            headerHeight = 40.0
+        case 1:
+            headerHeight = 23.0
+        case 2:
+            headerHeight = 12.0
+        case 3:
+            headerHeight = 15.0
+        case 4:
+            headerHeight = 18.0
+        default:
+            headerHeight = 42.0
+        }
+        
+        var headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, headerHeight))
+        var titleLabel = UILabel()
+        titleLabel.font = UIFont(name: "HelveticaNeueLTStd-Roman", size: 11)
+        titleLabel.frame = CGRectMake(9, headerHeight - titleLabel.font.capHeight - 5, tableView.frame.size.width, titleLabel.font.capHeight + 2)
+        titleLabel.text = sectionLabels[section]
+        titleLabel.textColor = UIColor.sectionTitleGrey()
+        
+        headerView.addSubview(titleLabel)
+        
+        return headerView
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -189,22 +261,22 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     }
 
     func vineLogout(){
-        api.delegate=self
+        api.delegate = self
         api.logoutVine("")
     }
     
     func TwitterLogOut(){
-        api.delegate=self
+        api.delegate = self
         api.logoutTwitter("")
     }
     
     func TumblrLogOut(){
-        api.delegate=self
+        api.delegate = self
         api.logoutTumblr("")
     }
     
     func InstagramLogOut(){
-        api.delegate=self
+        api.delegate = self
         api.logoutInstagram("")
     }
     
@@ -228,7 +300,6 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate,UI
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
         alert.show()
-        
     }
 
 }

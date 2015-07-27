@@ -48,19 +48,6 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,10 +91,6 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
-        
-        cell.userName.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleHeadline), size: 0)
-        cell.userMessage.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        cell.messageTime.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()

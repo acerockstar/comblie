@@ -53,7 +53,6 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         self.postButton.enabled = false
         
         setUpSocialMediaButtons()
-        configureTextSize()
     }
     
     override func viewDidLayoutSubviews() {
@@ -65,30 +64,8 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        configureTextSize()
-    }
-    
-    func configureTextSize() {
-        let barButtonFont = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        let navBarTitleFont = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
-        
-        textView.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        cancelButton.setTitleTextAttributes([NSFontAttributeName: barButtonFont], forState: UIControlState.Normal)
-        postButton.setTitleTextAttributes([NSFontAttributeName: barButtonFont], forState: UIControlState.Normal)
-        postStatusNavBar.titleTextAttributes = [ NSFontAttributeName: navBarTitleFont]
-    }
-    
+
     func setUpSocialMediaButtons() {
         let buttonHeight = socialMediaButtonsView.frame.size.height
         let buttonXPos = socialMediaButtonsView.frame.origin.x

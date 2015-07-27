@@ -37,19 +37,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
     }
     
     func dismissCommentsVC() {
@@ -77,7 +64,6 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("numLikesCell") as! NumLikesTableViewCell
         cell.backButton.addTarget(self, action: "dismissCommentsVC", forControlEvents: .TouchUpInside)
         cell.likeButton.addTarget(self, action: "toggleLike:", forControlEvents: .TouchUpInside)
-        cell.likesLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
         
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
@@ -91,11 +77,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("commentCell") as! CommentsTableViewCell
-        
-        cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
-        cell.commentLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        
+
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         

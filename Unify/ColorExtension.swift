@@ -84,6 +84,16 @@ extension UIColor {
         return UIColor(red: CGFloat(85.0/255.0), green: CGFloat(177.0/255.0), blue: CGFloat(226.0/255.0), alpha: 1.0)
     }
     
+    class func sectionTitleGrey() -> UIColor {
+        // Hex: #757575, RGB: 117, 117, 117
+        return UIColor(red: CGFloat(117.0/255.0), green: CGFloat(117.0/255.0), blue: CGFloat(117.0/255.0), alpha: 1.0)
+    }
+    
+    class func sectionHeaderGrey() -> UIColor {
+        // Hex: #f9f4f4, RGB: 249, 244, 244
+        return UIColor(red: CGFloat(249.0/255.0), green: CGFloat(244.0/255.0), blue: CGFloat(244.0/255.0), alpha: 1.0)
+    }
+    
     class func pictureBorderColor() -> UIColor {
         return UIColor(red: CGFloat(0.5), green: CGFloat(0.5), blue: CGFloat(0.5), alpha: 0.5)
     }

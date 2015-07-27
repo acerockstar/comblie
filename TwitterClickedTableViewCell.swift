@@ -36,7 +36,7 @@ class TwitterClickedTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        self.contentView.backgroundColor = selected ? UIColor.selectedFeedCell() : UIColor.clearColor()
+        self.contentView.backgroundColor = selected ? UIColor.twitterBlue() : UIColor.clearColor()
         nameLabel.textColor = selected ? UIColor.whiteColor() : UIColor.blackColor()
         usernameLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.darkGrayColor()
         tweetLabel.textColor = selected ?  UIColor.whiteColor() : UIColor.blackColor()

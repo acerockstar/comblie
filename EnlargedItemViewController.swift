@@ -40,32 +40,10 @@ class EnlargedItemViewController: UIViewController {
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
         likeSymbol.tintColor = UIColor.whiteColor()
         commentSymbol.tintColor = UIColor.whiteColor()
-        
-        configureTextSize()
     }
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarHidden = true
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        UIApplication.sharedApplication().statusBarHidden = false
-        
-         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        
-    }
-    
-    func configureTextSize() {
-        captionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        activityLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        numLikesLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        numCommentsLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        
     }
 
     override func didReceiveMemoryWarning() {

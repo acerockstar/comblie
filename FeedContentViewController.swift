@@ -51,19 +51,6 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -112,20 +99,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         if indexPath.row % 3 == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
             
-            cell.nameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleSubheadline), size: 0)
-            cell.usernameLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-            cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-            
-            cell.tweetLabel.text = " complex situation which can't fit here to explain, but in a brief, after the cell is created, some frames of the cell's subviews are changed after the views have been created, so I need to fix these frames after the cell has appeared."
-            
-            if pageIndex == 0 {
-                cell.socialMediaIcon.hidden = false
-                cell.socialMediaIconBorder.hidden = false
-            } else {
-                cell.socialMediaIcon.hidden = true
-                cell.socialMediaIconBorder.hidden = true
-            }
+            cell.tweetLabel.text = "Hello, this message is to test whether the twitter tweet cell is actually dynamic and expands correctly."
             
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
@@ -134,17 +108,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         } else if indexPath.row % 3 == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterActivityCell") as! TwitterActivityTableViewCell
             
-            cell.activityLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-            cell.tweetLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-            
-            if pageIndex == 0 {
-                cell.socialMediaIcon.hidden = false
-                cell.socialMediaIconBorder.hidden = false
-            } else {
-                cell.socialMediaIcon.hidden = true
-                cell.socialMediaIconBorder.hidden = true
-            }
+            cell.tweetLabel.text = "Hello, this message is to test whether the twitter tweet cell is actually dynamic and expands correctly."
             
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
@@ -153,19 +117,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("photoVideoCell") as! PhotoVideoTableViewCell
             cell.backgroundView = UIImageView(image: UIImage(named: "Photo"))
-            
-            cell.descriptionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-            cell.activityLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-            cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-            
-            if pageIndex == 0 {
-                cell.socialMediaIcon.hidden = false
-                cell.socialMediaIconBorder.hidden = false
-            } else {
-                cell.socialMediaIcon.hidden = true
-                cell.socialMediaIconBorder.hidden = true
-            }
-            
+
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
             

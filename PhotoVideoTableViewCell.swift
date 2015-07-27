@@ -10,12 +10,10 @@ import UIKit
 
 class PhotoVideoTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var socialMediaIconBorder: UIView!
     @IBOutlet weak var repostImage: UIButton!
     @IBOutlet weak var heartImage: UIButton!
     @IBOutlet weak var userImage: UIButton!
-    @IBOutlet weak var socialMediaIcon: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var divider: UIView!
@@ -36,11 +34,12 @@ class PhotoVideoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .None
-        socialMediaIconBorder.layer.cornerRadius = socialMediaIconBorder.bounds.size.width/2
         userImage.layer.cornerRadius = userImage.bounds.size.width/2
         userImage.clipsToBounds = true
         userImage.setImage(UIImage(named: "Persona"), forState: .Normal)
-        socialMediaIcon.image = UIImage(named: "Instagram-Small-Icon")
+        
+        repostImage.hidden = true
+        heartImage.hidden = true
         
         var gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = gradientView.bounds

@@ -37,19 +37,6 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -98,9 +85,6 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell") as! ActivityTableViewCell
         
-        cell.descriptionLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleBody), size: 0)
-        cell.timeLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
-        
         if pageIndex == 0 {
             cell.socialMediaIcon.hidden = false
             cell.socialMediaIconBorder.hidden = false
@@ -110,6 +94,7 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         }
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
+        
         if self.labelText == "Combined"{
 
         }else if self.labelText == "Instagram"{
