@@ -10,6 +10,9 @@ import UIKit
 
 class PushNotificationTableViewController: UITableViewController {
 
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -24,20 +27,18 @@ class PushNotificationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.reloadData()
+        tableView.rowHeight = 32
+        tableView.backgroundColor = UIColor.sectionHeaderGrey()
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
-
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        saveButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(18.0)
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -66,7 +67,6 @@ class PushNotificationTableViewController: UITableViewController {
         }
         
         cell.socialNetworkLabel.text = socialNetworkNames[indexPath.row]
-        cell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         cell.toggleSocialNetworkSwitch.addTarget(self, action: "toggleSocialNetwork:", forControlEvents: .ValueChanged)
         cell.toggleSocialNetworkSwitch.tag = indexPath.row
 

@@ -18,6 +18,7 @@ class ConnectedSocialNetworkTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.selectionStyle = .None
+        toggleSocialNetworkSwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
     }
 
 }

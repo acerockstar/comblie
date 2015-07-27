@@ -15,6 +15,9 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var dividerHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var closeButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     // Profile Images
     @IBOutlet weak var nameCellImageView: UIView!
     @IBOutlet weak var nameCellImage: UIImageView!
@@ -58,19 +61,21 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
 
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
-    var postStatusViewController: PostStatusViewController!
     var sectionLabels = ["PROFILE", "ACCOUNTS", "PREFERENCES", "SUPPORT", "ABOUT", ""]
+    
+    @IBAction func closeButtonClicked(sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
+    }
     
     @IBAction func changeButtonClicked(sender: UIButton) {
     }
 
-    @IBAction func postStatusButtonClicked(sender: UIBarButtonItem) {
-        self.postStatusViewController = PostStatusViewController(nibName: "PostStatusView", bundle: nil)
-        self.postStatusViewController.showInView(self.view.window, withImage: nil, withMessage: nil, animated: true)
-    }
     @IBAction func toggleLightThemeSwitch(sender: UISwitch) {
         println("toggle light theme")
     }
+    
     @IBAction func toggleRefreshAutomaticallySwitch(sender: UISwitch) {
         println("toggle refresh automatically")
     }
@@ -86,6 +91,9 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         userImage.layer.masksToBounds = true
 
         dividerHeightConstraint.constant = 0.5
+        
+        closeButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        saveButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
         
         nameCellImage.tintColor = UIColor.combliePurple()
         nameCellImageView.backgroundColor = UIColor.whiteColor()
@@ -112,9 +120,9 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         bioTextView.textContainer.maximumNumberOfLines = 3
         bioTextView.textContainer.lineBreakMode = NSLineBreakMode.ByWordWrapping
         
-        lightThemeSwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
-        refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
-        chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.7, 0.7)
+        lightThemeSwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
+        refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
+        chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
         
         let cells = [profileCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
@@ -149,36 +157,6 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     func dismissKeyboard() {
         self.view.endEditing(true)
     }
-    
-//    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-//        
-//        let newText = textView.text.stringByReplacingCharactersInRange(range, withString: text)
-//        let textWidth = CGRectGetWidth(UIEdgeInsetsInsetRect(textView.frame, textView.textContainerInset))
-//        textWidth -= 2.0 * textView.textContainer.lineFragmentPadding
-//        
-//        let numberOf
-//        
-//        NSString *newText = [textView.text stringByReplacingCharactersInRange:range withString:text];
-//        
-//        NSDictionary *textAttributes = @{NSFontAttributeName : textView.font};
-//        
-//        CGFloat textWidth = CGRectGetWidth(UIEdgeInsetsInsetRect(textView.frame, textView.textContainerInset));
-//        textWidth -= 2.0f * textView.textContainer.lineFragmentPadding;
-//        CGRect boundingRect = [newText boundingRectWithSize:CGSizeMake(textWidth, 0)
-//            options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
-//            attributes:textAttributes
-//            context:nil];
-//        
-//        NSUInteger numberOfLines = CGRectGetHeight(boundingRect) / textView.font.lineHeight;
-//        
-//        return newText.length <= 500 && numberOfLines <= 2;
-//        
-//    }
-    
-//    
-//    func textViewDidChange(textView: UITextView) {
-//        <#code#>
-//    }
 
     // MARK: - Table View Data Source
     

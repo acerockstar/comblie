@@ -10,14 +10,18 @@ import UIKit
 
 class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
 
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var submitButton: UIBarButtonItem!
+    @IBOutlet var FeedbackTableView: UITableView!
+    
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
-
-    @IBOutlet var FeedbackTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        submitButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
         
         tableView.registerNib(UINib(nibName: "TextViewTableViewCell", bundle: nil), forCellReuseIdentifier: "TextViewTableViewCell")
         
@@ -25,19 +29,9 @@ class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
-    
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
+        tableView.backgroundColor = UIColor.sectionHeaderGrey()
     }
     
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
-    }
-
     // MARK: - Table view data source
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +42,6 @@ class FeedbackTableViewController: UITableViewController,WebServiceDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("TextViewTableViewCell", forIndexPath: indexPath) as! TextViewTableViewCell
         
         cell.textView.text = "What would you like us to improve?"
-        cell.textView.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         
         return cell
     }

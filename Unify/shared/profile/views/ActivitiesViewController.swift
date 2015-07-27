@@ -38,6 +38,7 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
         self.pageViewController.didMoveToParentViewController(self)
         
         let navBar = self.navigationController?.navigationBar
+        navBar!.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Bd", size: 16.5)!]
         navBar!.setTitleVerticalPositionAdjustment(-navBar!.frame.size.height * 0.1, forBarMetrics: .Default)
         self.pageControl = UIPageControl()
         self.pageControl.frame = CGRect(x: 0, y: navBar!.frame.size.height * 0.75, width: 0, height: 0)

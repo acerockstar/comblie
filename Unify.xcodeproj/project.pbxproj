@@ -15,6 +15,7 @@
 		77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF41081B1CF28C006084E4 /* WebserviceManager.swift */; };
 		D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */; };
 		D1360E3E1B5B2EA70071AA16 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1360E3D1B5B2EA70071AA16 /* FontExtension.swift */; };
+		D1479FF81B66043F002ADB69 /* HelveticaNeueLTStd-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = D1479FF71B66043F002ADB69 /* HelveticaNeueLTStd-Bd.otf */; };
 		D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */; };
 		D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */; };
 		D17CE4591B1E689800ED9E93 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */; };
@@ -168,6 +169,7 @@
 		B4C49C5EC9208FD9B405BB87 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		D12A8ACB1B1CFF2F00320E1F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		D1360E3D1B5B2EA70071AA16 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		D1479FF71B66043F002ADB69 /* HelveticaNeueLTStd-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTStd-Bd.otf"; sourceTree = "<group>"; };
 		D17CE4541B1E64CA00ED9E93 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesViewController.swift; path = Unify/MessagesViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesTableViewCell.swift; path = Unify/MessagesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessagesTableViewCell.xib; path = Unify/MessagesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -564,11 +566,11 @@
 		77DF40F21B1CEC19006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */,
 				D1855BE41B50925900A5A244 /* TextViewTableViewCell.swift */,
 				D1DA88711B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift */,
 				D1DA88731B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift */,
 				D1DA88751B5108F300B7D344 /* PushNotificationTableViewCell.swift */,
+				D1855BE51B50925900A5A244 /* TextViewTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -693,6 +695,7 @@
 				D1DDBF701B5FF9DA00FE7EA6 /* HelveticaNeueLTStd-Lt.otf */,
 				D1DDBF721B5FF9E900FE7EA6 /* HelveticaNeueLTStd-Md.otf */,
 				D1DDBF741B5FF9F400FE7EA6 /* HelveticaNeueLTStd-Roman.otf */,
+				D1479FF71B66043F002ADB69 /* HelveticaNeueLTStd-Bd.otf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17CE4BF1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib in Resources */,
+				D1479FF81B66043F002ADB69 /* HelveticaNeueLTStd-Bd.otf in Resources */,
 				D1B9E03F1B30066E00F59444 /* NumLikesTableViewCell.xib in Resources */,
 				D1DDBF751B5FF9F400FE7EA6 /* HelveticaNeueLTStd-Roman.otf in Resources */,
 				D17CE4C71B20568C00ED9E93 /* ActivityTableViewCell.xib in Resources */,

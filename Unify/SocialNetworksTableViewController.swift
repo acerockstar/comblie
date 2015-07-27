@@ -10,6 +10,9 @@ import UIKit
 
 class SocialNetworksTableViewController: UITableViewController {
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     // TODO: Get social networks from user info
     var connectedSocialNetworks = ["Twitter": "on", "Instagram": "off", "Tumblr": "on", "Vine": "off"]
     var unconnectedSocialNetworks = ["Facebook", "GooglePlus", "Linkedin", "Pinterest"]
@@ -17,27 +20,31 @@ class SocialNetworksTableViewController: UITableViewController {
     @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
-
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.reloadData()
+        tableView.rowHeight = 32
+        tableView.backgroundColor = UIColor.sectionHeaderGrey()
         
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        saveButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if section == 0 {
+            return CGFloat(18.0)
+        } else {
+            return CGFloat(46.0)
+        }
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -72,8 +79,6 @@ class SocialNetworksTableViewController: UITableViewController {
             }
             
             connectedCell.socialNetworkLabel.text = socialNetworkNames[indexPath.row]
-            connectedCell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
-            connectedCell.connectedLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleFootnote), size: 0)
             connectedCell.toggleSocialNetworkSwitch.addTarget(self, action: "toggleSocialNetwork:", forControlEvents: .ValueChanged)
             connectedCell.toggleSocialNetworkSwitch.tag = indexPath.row
             
@@ -82,8 +87,6 @@ class SocialNetworksTableViewController: UITableViewController {
             let unconnectedCell = tableView.dequeueReusableCellWithIdentifier("UnconnectedSocialNetworkTableViewCell", forIndexPath: indexPath) as! UnconnectedSocialNetworkTableViewCell
             
             unconnectedCell.socialNetworkLabel.text = unconnectedSocialNetworks[indexPath.row]
-            unconnectedCell.socialNetworkLabel.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
-            unconnectedCell.connectButton.titleLabel!.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
             unconnectedCell.connectButton.addTarget(self, action: "connectToSocialNetwork:", forControlEvents: .TouchUpInside)
             unconnectedCell.connectButton.tag = indexPath.row
             

@@ -10,31 +10,25 @@ import UIKit
 
 class ReportProblemTableViewController: UITableViewController,WebServiceDelegate {
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var submitButton: UIBarButtonItem!
+    @IBOutlet var ReportTableView: UITableView!
+    
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
 
-    @IBOutlet var ReportTableView: UITableView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        submitButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
         
         tableView.registerNib(UINib(nibName: "TextViewTableViewCell", bundle: nil), forCellReuseIdentifier: "TextViewTableViewCell")
         tableView.scrollEnabled = false
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "preferredContentSizeChanged:",
-            name: UIContentSizeCategoryDidChangeNotification,
-            object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
+        tableView.backgroundColor = UIColor.sectionHeaderGrey()
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -50,7 +44,6 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TextViewTableViewCell", forIndexPath: indexPath) as! TextViewTableViewCell
         cell.textView.text = "What problems or bugs should we fix?"
-        cell.textView.font = UIFont(descriptor: UIFontDescriptor.preferredDescriptor(UIFontTextStyleCaption1), size: 0)
         
         return cell
     }
@@ -60,6 +53,7 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
         tableView.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero
     }
+    
     @IBAction func cancelButtonClicked(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
     }
@@ -77,16 +71,19 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
         }
         
     }
-    func getTextValueFromTableViewCell()->String{
+    
+    func getTextValueFromTableViewCell() -> String {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0);
         var tableViewCell = ReportTableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
         let TextViews :UITextView = (tableViewCell?.viewWithTag(1) as! UITextView?)!
         print(TextViews.text);
         return TextViews.text
     }
+    
     func returnFail() {
 
     }
+    
     func returnSuccess(paraDict: NSDictionary) {
         Loader.hideActivityIndicator(self.view)
         println("paraDict===\(paraDict)")

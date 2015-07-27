@@ -27,6 +27,7 @@
 		<string>HelveticaNeueLTStd-Lt.otf</string>
 		<string>HelveticaNeueLTStd-Md.otf</string>
 		<string>HelveticaNeueLTStd-Roman.otf</string>
+		<string>HelveticaNeueLTStd-Bd.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main_iPhone</string>
