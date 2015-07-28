@@ -38,19 +38,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        self.tableView.reloadData()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-    }
-    
-    func preferredContentSizeChanged(notification: NSNotification) {
-        self.tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,8 +58,8 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
 
         }
         let nameLabel = sectionHeader!.viewWithTag(2) as? UILabel
-        nameLabel?.text="Shailendra"
-        self.tableView.tableHeaderView=sectionHeader
+        nameLabel?.text = "Shailendra"
+        self.tableView.tableHeaderView = sectionHeader
         self.shyNavBarManager.scrollView = self.tableView
         
     }
@@ -96,7 +83,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     // MARK: - Table View Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if items.count == 0 {
-            var label = UILabel(frame: CGRectMake(0,0,200, 50))
+            var label = UILabel(frame: CGRectMake(0, 0, 200, 50))
             label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
             label.textAlignment = NSTextAlignment.Center
             label.text = "You have no feed"
@@ -117,8 +104,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
-        
-        cell.tweetLabel.text = "Hello, this message is to test whether the twitter tweet cell is actually dynamic and expands correctly."
 
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()

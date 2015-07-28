@@ -94,6 +94,11 @@ extension UIColor {
         return UIColor(red: CGFloat(249.0/255.0), green: CGFloat(244.0/255.0), blue: CGFloat(244.0/255.0), alpha: 1.0)
     }
     
+    class func timeLabelGrey() -> UIColor {
+        // Hex: #dee0e1, RGB: 222, 224, 225
+        return UIColor(red: CGFloat(222.0/255.0), green: CGFloat(224.0/255.0), blue: CGFloat(225.0/255.0), alpha: 1.0)
+    }
+    
     class func pictureBorderColor() -> UIColor {
         return UIColor(red: CGFloat(0.5), green: CGFloat(0.5), blue: CGFloat(0.5), alpha: 0.5)
     }

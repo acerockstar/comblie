@@ -99,8 +99,6 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         if indexPath.row % 3 == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
             
-            cell.tweetLabel.text = "Hello, this message is to test whether the twitter tweet cell is actually dynamic and expands correctly."
-            
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
             
@@ -108,15 +106,13 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         } else if indexPath.row % 3 == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("twitterActivityCell") as! TwitterActivityTableViewCell
             
-            cell.tweetLabel.text = "Hello, this message is to test whether the twitter tweet cell is actually dynamic and expands correctly."
-            
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("photoVideoCell") as! PhotoVideoTableViewCell
-            cell.backgroundView = UIImageView(image: UIImage(named: "Photo"))
+            cell.backgroundView = UIImageView(image: UIImage(named: "Photo-2"))
 
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()

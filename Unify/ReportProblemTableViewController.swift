@@ -76,7 +76,6 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
         let indexPath = NSIndexPath(forRow: 0, inSection: 0);
         var tableViewCell = ReportTableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
         let TextViews :UITextView = (tableViewCell?.viewWithTag(1) as! UITextView?)!
-        print(TextViews.text);
         return TextViews.text
     }
     
