@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7703" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -715,8 +715,8 @@
                                                         <constraint firstAttribute="height" constant="1" id="Rh5-Q7-EFs"/>
                                                     </constraints>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-yo-gtH">
-                                                    <rect key="frame" x="46" y="34" width="190" height="65.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-yo-gtH">
+                                                    <rect key="frame" x="46" y="34" width="190" height="66"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="13"/>
@@ -735,8 +735,8 @@
                                                         <constraint firstAttribute="width" secondItem="7M7-Qn-hZ1" secondAttribute="height" multiplier="1:1" id="kVB-gx-hLE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-g5-2NK">
-                                                    <rect key="frame" x="248.5" y="72" width="44" height="12.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-g5-2NK">
+                                                    <rect key="frame" x="249" y="72" width="44" height="13"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12.5"/>
                                                     <state key="normal" title="Change">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1112,8 +1112,8 @@
                                                         <constraint firstAttribute="width" constant="11" id="zTc-9c-qtN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="31.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="14"/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1216,8 +1216,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axf-BM-CgP" id="uZK-s8-KVx">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
-                                            <rect key="frame" x="267" y="0.5" width="51" height="31"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
+                                            <rect key="frame" x="267" y="1" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-sM-8Qv">
@@ -1368,8 +1368,8 @@
                                             <rect key="frame" x="267" y="0.0" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
-                                            <rect key="frame" x="181.5" y="12" width="72.5" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
+                                            <rect key="frame" x="182" y="12" width="73" height="12"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1541,20 +1541,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
                                 <rect key="frame" x="103" y="506" width="114" height="25"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="New user? ">
+                                        <fragment content="New user? Sign Up">
                                             <attributes>
                                                 <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Sign Up">
-                                            <attributes>
-                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -1563,7 +1557,7 @@
                                     <segue destination="B54-sZ-x5a" kind="push" id="ZVG-B9-sIh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
                                 <rect key="frame" x="60" y="459" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="DUF-sg-lf7"/>
@@ -1579,7 +1573,7 @@
                                     <action selector="LoginWithInstagram:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="ow0-fb-0DT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
                                 <rect key="frame" x="60" y="406" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Fn8-qW-yK8"/>
@@ -1595,7 +1589,7 @@
                                     <action selector="LoginWithTumblr:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="lPJ-Nt-PRp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
                                 <rect key="frame" x="60" y="300" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="Rdl-yk-SOG"/>
@@ -1611,7 +1605,7 @@
                                     <action selector="LoginWithTwitter:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="nuq-oG-LT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
                                 <rect key="frame" x="60" y="353" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Uux-80-frb"/>
@@ -1697,21 +1691,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-bd-8Zg">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-bd-8Zg">
                                 <rect key="frame" x="93" y="506" width="134" height="25"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Returning user? ">
+                                        <fragment content="Returning user? Log In">
                                             <attributes>
                                                 <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Log In">
-                                            <attributes>
-                                                <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                                <font key="NSFont" metaFont="system"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -1721,7 +1708,7 @@
                                     <segue destination="Oec-Ix-EfZ" kind="push" id="cQg-2K-RnR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-R9-DLJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-R9-DLJ">
                                 <rect key="frame" x="61" y="459" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="TOW-Yg-QiU"/>
@@ -1738,7 +1725,7 @@
                                     <action selector="connectToInstagram:" destination="B54-sZ-x5a" eventType="touchUpInside" id="Zw8-bB-cSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-ZA-WnA">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-ZA-WnA">
                                 <rect key="frame" x="61" y="406" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Me5-O4-Sq2"/>
@@ -1755,7 +1742,7 @@
                                     <action selector="connectToTumblr:" destination="B54-sZ-x5a" eventType="touchUpInside" id="4ID-MR-9N5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-7h-q8l">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-7h-q8l">
                                 <rect key="frame" x="61" y="300" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="5oF-Ww-1WU"/>
@@ -1772,7 +1759,7 @@
                                     <action selector="connectToTwitter:" destination="B54-sZ-x5a" eventType="touchUpInside" id="GQt-4e-PIT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-oV-4GJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-oV-4GJ">
                                 <rect key="frame" x="61" y="353" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="F0l-19-oZr"/>
@@ -1797,13 +1784,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-eU-EOy">
-                                <rect key="frame" x="119" y="193" width="82.5" height="18"/>
+                                <rect key="frame" x="119" y="193" width="83" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="18"/>
                                 <color key="textColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to your social media accounts below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-ZV-jg8">
-                                <rect key="frame" x="54.5" y="216" width="211" height="32"/>
+                                <rect key="frame" x="55" y="216" width="211" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="211" id="eb9-mj-6Fm"/>
                                 </constraints>
@@ -1860,8 +1847,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
-                                <rect key="frame" x="52.5" y="452" width="216" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
+                                <rect key="frame" x="53" y="452" width="216" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="kfT-yf-Tsr"/>
                                     <constraint firstAttribute="width" constant="216" id="rgW-CQ-FM2"/>
@@ -1877,14 +1864,14 @@
                                     <segue destination="B54-sZ-x5a" kind="push" id="wcl-aJ-Hka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
                                 <rect key="frame" x="92" y="501" width="135" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Returning user?">
                                             <attributes>
                                                 <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
@@ -1896,8 +1883,8 @@
                                         <fragment content="Log In">
                                             <attributes>
                                                 <color key="NSColor" red="0.47450980390000003" green="0.1333333333" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
-                                                <font key="NSOriginalFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                                <font key="NSFont" metaFont="system"/>
+                                                <font key="NSOriginalFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -1907,14 +1894,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-App-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HIa-N6-aw1">
-                                <rect key="frame" x="112.5" y="128" width="95" height="95"/>
+                                <rect key="frame" x="113" y="128" width="95" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="PNH-4Q-2ce"/>
                                     <constraint firstAttribute="width" secondItem="HIa-N6-aw1" secondAttribute="height" id="vcy-gt-WYu"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comblie-Name-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="oDe-Qi-1Nb">
-                                <rect key="frame" x="87" y="240" width="146.5" height="47"/>
+                                <rect key="frame" x="87" y="240" width="147" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146.5" id="Sh5-WX-EY4"/>
                                     <constraint firstAttribute="height" constant="47" id="hSk-uY-kkF"/>
