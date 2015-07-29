@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7703" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1541,8 +1541,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
-                                <rect key="frame" x="103" y="506" width="114" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-e3-CcU">
+                                <rect key="frame" x="98" y="502" width="125" height="29"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="New user? Sign Up">
@@ -1557,8 +1557,8 @@
                                     <segue destination="B54-sZ-x5a" kind="push" id="ZVG-B9-sIh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
-                                <rect key="frame" x="60" y="459" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nID-mK-KRf">
+                                <rect key="frame" x="60" y="455" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="DUF-sg-lf7"/>
                                     <constraint firstAttribute="width" constant="199" id="MR6-GI-u0h"/>
@@ -1573,8 +1573,8 @@
                                     <action selector="LoginWithInstagram:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="ow0-fb-0DT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
-                                <rect key="frame" x="60" y="406" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-Ra-qe3">
+                                <rect key="frame" x="60" y="402" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Fn8-qW-yK8"/>
                                     <constraint firstAttribute="width" constant="199" id="xoO-V2-bvA"/>
@@ -1589,8 +1589,8 @@
                                     <action selector="LoginWithTumblr:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="lPJ-Nt-PRp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
-                                <rect key="frame" x="60" y="300" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-J3-2fR">
+                                <rect key="frame" x="60" y="296" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="Rdl-yk-SOG"/>
                                     <constraint firstAttribute="height" constant="41" id="hfK-4d-o6F"/>
@@ -1605,8 +1605,8 @@
                                     <action selector="LoginWithTwitter:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="nuq-oG-LT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
-                                <rect key="frame" x="60" y="353" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVB-wU-dOO">
+                                <rect key="frame" x="60" y="349" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Uux-80-frb"/>
                                     <constraint firstAttribute="width" constant="199" id="uAe-Wq-sIH"/>
@@ -1643,20 +1643,60 @@
                                 <color key="textColor" red="0.47450980392156861" green="0.13333333333333333" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-mj-GGc">
+                                <rect key="frame" x="23" y="60" width="271" height="249"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uKr-h7-hZO">
+                                        <rect key="frame" x="33" y="115" width="204" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5r-Gz-3ix">
+                                        <rect key="frame" x="97" y="169" width="72" height="30"/>
+                                        <state key="normal" title="login">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="LoginClick:" destination="Oec-Ix-EfZ" eventType="touchUpInside" id="uJF-Py-VUR"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wyn-fx-3OQ">
+                                        <rect key="frame" x="33" y="56" width="204" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wyn-fx-3OQ" secondAttribute="trailing" constant="34" id="5b9-Ff-XS0"/>
+                                    <constraint firstItem="H5r-Gz-3ix" firstAttribute="leading" secondItem="hyr-mj-GGc" secondAttribute="leading" constant="97" id="JXz-31-IYB"/>
+                                    <constraint firstAttribute="trailing" secondItem="uKr-h7-hZO" secondAttribute="trailing" constant="34" id="Ndb-tU-ahA"/>
+                                    <constraint firstAttribute="trailing" secondItem="H5r-Gz-3ix" secondAttribute="trailing" constant="102" id="P19-rC-xV0"/>
+                                    <constraint firstItem="Wyn-fx-3OQ" firstAttribute="leading" secondItem="hyr-mj-GGc" secondAttribute="leading" constant="33" id="YM9-wx-ZcK"/>
+                                    <constraint firstItem="uKr-h7-hZO" firstAttribute="top" secondItem="Wyn-fx-3OQ" secondAttribute="bottom" constant="29" id="ZFL-09-GiU"/>
+                                    <constraint firstItem="Wyn-fx-3OQ" firstAttribute="top" secondItem="hyr-mj-GGc" secondAttribute="top" constant="56" id="bwJ-q4-1Gf"/>
+                                    <constraint firstItem="uKr-h7-hZO" firstAttribute="leading" secondItem="hyr-mj-GGc" secondAttribute="leading" constant="33" id="kjq-bK-f5s"/>
+                                    <constraint firstItem="H5r-Gz-3ix" firstAttribute="top" secondItem="uKr-h7-hZO" secondAttribute="bottom" constant="24" id="tui-JW-CpR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="nID-mK-KRf" secondAttribute="centerX" id="7ZN-Xi-KiQ"/>
                             <constraint firstItem="iMn-n1-uCe" firstAttribute="top" secondItem="avo-Uc-BFM" secondAttribute="bottom" constant="54" id="8f1-eB-h0o"/>
+                            <constraint firstItem="hyr-mj-GGc" firstAttribute="top" secondItem="avo-Uc-BFM" secondAttribute="bottom" constant="40" id="BD0-kN-gEc"/>
                             <constraint firstItem="VbT-e3-CcU" firstAttribute="top" secondItem="nID-mK-KRf" secondAttribute="bottom" constant="6" id="Bh7-1C-b9E"/>
                             <constraint firstItem="VAV-4p-2CZ" firstAttribute="top" secondItem="mLz-us-28u" secondAttribute="bottom" constant="5" id="Im9-Of-L9g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hyr-mj-GGc" secondAttribute="trailing" constant="10" id="M4e-0b-03L"/>
                             <constraint firstItem="D3Z-5C-cSp" firstAttribute="top" secondItem="VbT-e3-CcU" secondAttribute="bottom" constant="37" id="Mph-Vu-dM4"/>
                             <constraint firstAttribute="centerX" secondItem="VbT-e3-CcU" secondAttribute="centerX" id="Nwd-du-TxV"/>
+                            <constraint firstItem="D3Z-5C-cSp" firstAttribute="top" secondItem="hyr-mj-GGc" secondAttribute="bottom" constant="259" id="QpZ-Au-vG5"/>
                             <constraint firstAttribute="centerX" secondItem="lVB-wU-dOO" secondAttribute="centerX" id="WTV-vy-FLR"/>
                             <constraint firstAttribute="centerX" secondItem="JvP-J3-2fR" secondAttribute="centerX" id="YFq-tb-l0y"/>
                             <constraint firstAttribute="centerX" secondItem="VAV-4p-2CZ" secondAttribute="centerX" id="Yfm-dE-unq"/>
                             <constraint firstItem="lVB-wU-dOO" firstAttribute="top" secondItem="JvP-J3-2fR" secondAttribute="bottom" constant="12" id="Z4t-Ip-7n4"/>
                             <constraint firstItem="nID-mK-KRf" firstAttribute="top" secondItem="V7P-Ra-qe3" secondAttribute="bottom" constant="12" id="ePT-dY-HgO"/>
+                            <constraint firstItem="hyr-mj-GGc" firstAttribute="leading" secondItem="IyS-J6-i9y" secondAttribute="leadingMargin" constant="7" id="gTj-IZ-pun"/>
                             <constraint firstAttribute="centerX" secondItem="V7P-Ra-qe3" secondAttribute="centerX" id="hV3-N5-0h6"/>
                             <constraint firstAttribute="centerX" secondItem="iMn-n1-uCe" secondAttribute="centerX" id="iMv-RY-AId"/>
                             <constraint firstItem="mLz-us-28u" firstAttribute="top" secondItem="iMn-n1-uCe" secondAttribute="bottom" constant="24" id="jzD-p2-3wn"/>
@@ -1666,8 +1706,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="d2s-Uu-M3Y"/>
                     <connections>
+                        <outlet property="emailIdTextField" destination="Wyn-fx-3OQ" id="hOX-Jw-f4g"/>
                         <outlet property="instagramButton" destination="nID-mK-KRf" id="Nsx-Vc-IId"/>
+                        <outlet property="loginPopupView" destination="hyr-mj-GGc" id="TwO-iU-Ew7"/>
                         <outlet property="messageLabel" destination="VAV-4p-2CZ" id="Rqi-rH-p8q"/>
+                        <outlet property="passwordTextField" destination="uKr-h7-hZO" id="yAG-Mq-J5H"/>
                         <outlet property="signUpButton" destination="VbT-e3-CcU" id="5eB-nR-LK0"/>
                         <outlet property="tumblrButton" destination="V7P-Ra-qe3" id="VJ7-Rs-0ej"/>
                         <outlet property="twitterButton" destination="JvP-J3-2fR" id="RTG-4S-b2R"/>
@@ -1691,8 +1734,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-bd-8Zg">
-                                <rect key="frame" x="93" y="506" width="134" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT1-bd-8Zg">
+                                <rect key="frame" x="87" y="502" width="147" height="29"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Returning user? Log In">
@@ -1708,8 +1751,8 @@
                                     <segue destination="Oec-Ix-EfZ" kind="push" id="cQg-2K-RnR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-R9-DLJ">
-                                <rect key="frame" x="61" y="459" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-R9-DLJ">
+                                <rect key="frame" x="61" y="455" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="TOW-Yg-QiU"/>
                                     <constraint firstAttribute="width" constant="199" id="al9-Q6-mIN"/>
@@ -1725,8 +1768,8 @@
                                     <action selector="connectToInstagram:" destination="B54-sZ-x5a" eventType="touchUpInside" id="Zw8-bB-cSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-ZA-WnA">
-                                <rect key="frame" x="61" y="406" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-ZA-WnA">
+                                <rect key="frame" x="61" y="402" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Me5-O4-Sq2"/>
                                     <constraint firstAttribute="width" constant="199" id="Tca-gt-0eG"/>
@@ -1742,8 +1785,8 @@
                                     <action selector="connectToTumblr:" destination="B54-sZ-x5a" eventType="touchUpInside" id="4ID-MR-9N5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-7h-q8l">
-                                <rect key="frame" x="61" y="300" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-7h-q8l">
+                                <rect key="frame" x="61" y="296" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="5oF-Ww-1WU"/>
                                     <constraint firstAttribute="width" constant="199" id="JEE-ay-y32"/>
@@ -1759,8 +1802,8 @@
                                     <action selector="connectToTwitter:" destination="B54-sZ-x5a" eventType="touchUpInside" id="GQt-4e-PIT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-oV-4GJ">
-                                <rect key="frame" x="61" y="353" width="199" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-oV-4GJ">
+                                <rect key="frame" x="61" y="349" width="199" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="F0l-19-oZr"/>
                                     <constraint firstAttribute="height" constant="41" id="NQf-Sj-Dhy"/>
@@ -1833,7 +1876,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-UW-Wvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-644" y="1375"/>
+            <point key="canvasLocation" x="-632" y="1608"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="XLj-aO-K0M">
@@ -1847,8 +1890,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
-                                <rect key="frame" x="53" y="452" width="216" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xe-2E-GXr">
+                                <rect key="frame" x="52" y="452" width="216" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="kfT-yf-Tsr"/>
                                     <constraint firstAttribute="width" constant="216" id="rgW-CQ-FM2"/>
@@ -1864,8 +1907,8 @@
                                     <segue destination="B54-sZ-x5a" kind="push" id="wcl-aJ-Hka"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
-                                <rect key="frame" x="92" y="501" width="135" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-bu-eoW">
+                                <rect key="frame" x="86" y="501" width="148" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Returning user?">
@@ -2100,7 +2143,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wcl-aJ-Hka"/>
-        <segue reference="cQg-2K-RnR"/>
+        <segue reference="ibe-aD-Qft"/>
+        <segue reference="ZVG-B9-sIh"/>
     </inferredMetricsTieBreakers>
 </document>
