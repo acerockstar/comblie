@@ -39,7 +39,7 @@
                             </constraints>
                             <items>
                                 <navigationItem title="Update Status" id="jbn-Jd-r38">
-                                    <barButtonItem key="leftBarButtonItem" title="Cancel" id="1J6-pk-yrp">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1J6-pk-yrp">
                                         <color key="tintColor" red="0.24313725490196078" green="0.65490196078431373" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="closePopup:" destination="-1" id="Qhk-9R-dni"/>

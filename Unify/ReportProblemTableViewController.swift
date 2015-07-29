@@ -37,6 +37,10 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
 
     // MARK: - Table view data source
     
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(18.0)
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

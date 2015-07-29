@@ -21,7 +21,7 @@ class TwitterTweetTableViewCell: UITableViewCell {
     
     var name = "Jaden Smith"
     var userName = "@officialjaden"
-    var tweet = "People will try to take advantage of u...they will try to tear you down. Keep your head up and know who your truth. Be kind in the face of anger."
+    var tweet = "People will try to take advantage of u..."
     var time = "1m"
     
     override func awakeFromNib() {
