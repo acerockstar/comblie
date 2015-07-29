@@ -63,7 +63,7 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if activities.count == 0 {
-            var label = UILabel(frame: CGRectMake(0,0,200, 50))
+            var label = UILabel(frame: CGRectMake(0, 0, 200, 50))
             label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
             label.textAlignment = NSTextAlignment.Center
             label.text = "You have no activities"
@@ -85,6 +85,11 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell") as! ActivityTableViewCell
         
+        if indexPath.row % 2 == 1 {
+            cell.setUpLabels("Serena Williams, Cameron Diaz", and: " and ", others: "29 others", action: "retweeted your post: \"My new album is out!\"", time: "Yesterday at 3:12 AM")
+            cell.contentView.backgroundColor = UIColor.unreadActivityCell()
+        }
+        
         if pageIndex == 0 {
             cell.socialMediaIcon.hidden = false
             cell.socialMediaIconBorder.hidden = false
@@ -92,23 +97,21 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
             cell.socialMediaIcon.hidden = true
             cell.socialMediaIconBorder.hidden = true
         }
-        cell.setNeedsUpdateConstraints()
-        cell.updateConstraintsIfNeeded()
         
         if self.labelText == "Combined"{
 
-        }else if self.labelText == "Instagram"{
+        } else if self.labelText == "Instagram"{
 
-        }
-        else if self.labelText == "Tumblr"{
+        } else if self.labelText == "Tumblr"{
 
-        }
-        else if self.labelText == "Twitter"{
+        } else if self.labelText == "Twitter"{
 
-        }
-        else if self.labelText == "Vine"{
+        } else if self.labelText == "Vine"{
             
         }
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
         
         return cell
     }

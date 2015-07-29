@@ -28,7 +28,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         refreshControl?.addTarget(self, action: "refreshProfiles", forControlEvents: .ValueChanged)
         refreshProfiles()
         
-        self.tableView.estimatedRowHeight = 66
+        self.tableView.estimatedRowHeight = 64
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")

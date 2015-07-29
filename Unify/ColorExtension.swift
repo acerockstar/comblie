@@ -80,8 +80,9 @@ extension UIColor {
         return UIColor(red: CGFloat(213.0/255.0), green: CGFloat(92.0/255.0), blue: CGFloat(63.0/255.0), alpha: 1.0)
     }
     
-    class func selectedFeedCell() -> UIColor {
-        return UIColor(red: CGFloat(85.0/255.0), green: CGFloat(177.0/255.0), blue: CGFloat(226.0/255.0), alpha: 1.0)
+    class func unreadActivityCell() -> UIColor {
+        // Hex: e9e8f3, RGB: 233, 232, 243
+        return UIColor(red: CGFloat(233.0/255.0), green: CGFloat(232.0/255.0), blue: CGFloat(243.0/255.0), alpha: 1.0)
     }
     
     class func sectionTitleGrey() -> UIColor {
@@ -95,8 +96,8 @@ extension UIColor {
     }
     
     class func timeLabelGrey() -> UIColor {
-        // Hex: #dee0e1, RGB: 222, 224, 225
-        return UIColor(red: CGFloat(222.0/255.0), green: CGFloat(224.0/255.0), blue: CGFloat(225.0/255.0), alpha: 1.0)
+        // Hex: #979797, RGB: 151, 151, 151
+        return UIColor(red: CGFloat(151.0/255.0), green: CGFloat(151.0/255.0), blue: CGFloat(151.0/255.0), alpha: 1.0)
     }
     
     class func pictureBorderColor() -> UIColor {

@@ -23,7 +23,7 @@ class TwitterActivityTableViewCell: UITableViewCell {
     var userAction = "shared"
     var otherUserName = "Justin Bieber"
     var otherUserItem = "'s post"
-    var tweet = "People will try to take advantage of u...they will try to tear you down. Keep your head up and know who your truth. Be kind in the face of anger."
+    var tweet = "People will try to take advantage of u...they will try to tear you down. Keep your head up and know your truth. Be kind in the face of anger."
     var time = "1m"
     
     override func awakeFromNib() {
@@ -62,7 +62,7 @@ class TwitterActivityTableViewCell: UITableViewCell {
         }
         
         if let lightFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 13.5) {
-            let thinString = NSAttributedString(string: " \(otherUserItem)", attributes: [NSFontAttributeName: lightFont])
+            let thinString = NSAttributedString(string: "\(otherUserItem)", attributes: [NSFontAttributeName: lightFont])
             activityString.appendAttributedString(thinString)
         }
         

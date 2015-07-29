@@ -92,6 +92,10 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("messageCell") as! MessagesTableViewCell
         
+        if indexPath.row % 2 == 1 {
+            cell.setUpLabels("Gigi Hadid", message: "Why aren't you replying to me?", time: "8:39pm", read: true)
+        }
+        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         
@@ -105,7 +109,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
         let newVC = storyboard.instantiateViewControllerWithIdentifier("messaging") as! OldMessageViewController
-        newVC.name = selectedCell.userName.text!
+        newVC.name = selectedCell.nameLabel.text!
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
