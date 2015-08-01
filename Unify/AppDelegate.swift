@@ -21,9 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        Parse.enableLocalDatastore()
-        Parse.setApplicationId("zsNeOQ3y6WHVaBMg1se7FIuv2c5uLtXrn59HOqcV", clientKey: "KsY7BPh17bfLEAHy4O89l314m54XYbOaqNJf8XcS")
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
 //        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Bd", size: 16.5)!]
 
@@ -39,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefaults=NSUserDefaults.standardUserDefaults()
         var getObject: AnyObject?=userDefaults.valueForKey("Session")
         let storyboard:UIStoryboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
-        //let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         if (getObject == nil) {
             let ObjSocialMediaViewController:UIViewController = (storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as? HomeViewController)!
             let navigationController = UINavigationController(rootViewController: ObjSocialMediaViewController);

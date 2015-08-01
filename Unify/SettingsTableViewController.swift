@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIAlertViewDelegate,WebServiceDelegate {
+class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIAlertViewDelegate,WebServiceDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var nameTextView: UITextView!
     @IBOutlet weak var bioTextView: UITextView!
@@ -59,17 +59,21 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     @IBOutlet weak var inviteFriendsArrow: UIImageView!
     @IBOutlet weak var LogoutCellArrow: UIImageView!
 
+
+    var imagePicker = UIImagePickerController()
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
     var sectionLabels = ["PROFILE", "ACCOUNTS", "PREFERENCES", "SUPPORT", "ABOUT", ""]
     
-    @IBAction func closeButtonClicked(sender: UIBarButtonItem) {
-    }
     
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
+        if userImage.image != UIImage(named: "Persona"){
+            NSUserDefaults.standardUserDefaults().setObject(UIImagePNGRepresentation(userImage.image), forKey: "userimages")
+        }
     }
     
     @IBAction func changeButtonClicked(sender: UIButton) {
+         ActionSheet()
     }
 
     @IBAction func toggleLightThemeSwitch(sender: UISwitch) {
@@ -86,7 +90,10 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var Imagedata =   NSUserDefaults.standardUserDefaults().objectForKey("userimages") as! NSData?
+        if Imagedata != nil {
+        userImage.image = UIImage(data: Imagedata!)
+        }
         userImage.layer.cornerRadius = userImage.frame.size.width/2
         userImage.layer.masksToBounds = true
 
@@ -146,6 +153,54 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         tapGesture.numberOfTapsRequired = 1
         tapGesture.cancelsTouchesInView = false
         self.tableView.addGestureRecognizer(tapGesture)
+       
+    }
+    func ActionSheet(){
+        let cameraMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let showPhotoLibraryAction = UIAlertAction(title: "Photo Library", style: .Default) { action -> Void in
+            self.openPhotoLibrary()
+        }
+        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .Default) { action -> Void in
+            self.openImagePicker()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { action -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        cameraMenu.addAction(showPhotoLibraryAction)
+        cameraMenu.addAction(takePhotoAction)
+        cameraMenu.addAction(cancelAction)
+        
+        self.presentViewController(cameraMenu, animated: true, completion: nil)
+    }
+    func openPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func openImagePicker() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        userImage.image = image.copy() as? UIImage
+       
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+        })
+        
+        // TODO: Post photo in box
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -250,7 +305,12 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     func returnFail() {
 
     }
-    
+    func removeTheSession()
+    {
+        let defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        defaults.removeObjectForKey("Session")
+        defaults.synchronize()
+    }
     func returnSuccess(paraDict: NSDictionary) {
         Loader.hideActivityIndicator(self.view)
         println("paraDict===\(paraDict)")
@@ -258,12 +318,11 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         if Status as! NSObject == true{
             alertTitle("Report", message: "Logout successfully.", btnTitle: "OK")
         }
-        else if Status as! NSObject == false{
-            alertTitle("Report", message: "Logout successfully.", btnTitle: "OK")
-        }
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        removeTheSession()
+        UIApplication.sharedApplication().delegate?.application!(UIApplication.sharedApplication(), didFinishLaunchingWithOptions: nil)
     }
-    
+  
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
         alert.show()

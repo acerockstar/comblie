@@ -16,7 +16,8 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     var pageControl: UIPageControl!
     
     // TODO: Store as dictionary
-    var pageLabels: NSArray = ["Newsfeed", "Instagram", "Tumblr", "Twitter", "Vine"]
+    //var pageLabels: NSArray = ["Newsfeed", "Instagram", "Tumblr", "Twitter", "Vine"]
+    var pageLabels: [String] = []
     var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
     
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
@@ -24,8 +25,25 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        pageLabels.append("Newsfeed")
+        let CheckVineLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("VineLogin")
+        let CheckInstagramLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("InstagramLogin")
+        let CheckTwitterLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TwitterLogin")
+        let CheckTubmlroginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        if CheckInstagramLoginStatus == "Yes"{
+            pageLabels.append("Instagram")
+        }
+        if CheckTubmlroginStatus == "Yes"{
+            pageLabels.append("Tumblr")
+        }
+        if CheckTwitterLoginStatus == "Yes"{
+            pageLabels.append("Twitter")
+        }
+        if CheckVineLoginStatus == "Yes"{
+            pageLabels.append("Vine")
+        }
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfilePageViewController") as! UIPageViewController
@@ -74,7 +92,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
         
         var pageContentVC: FeedContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FeedContentViewController") as! FeedContentViewController
         
-        pageContentVC.labelText = self.pageLabels[index] as! String
+        pageContentVC.labelText = self.pageLabels[index] as String
         pageContentVC.pageIndex = index
         
         return pageContentVC

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uBh-hg-0jJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -759,10 +759,10 @@
                                                 <constraint firstItem="7M7-Qn-hZ1" firstAttribute="leading" secondItem="dmc-wk-K2X" secondAttribute="trailing" constant="15" id="HJa-cF-5s3"/>
                                                 <constraint firstItem="Gp4-bo-FYl" firstAttribute="top" secondItem="dmc-wk-K2X" secondAttribute="bottom" constant="3" id="KvN-3w-LsX"/>
                                                 <constraint firstItem="Gp4-bo-FYl" firstAttribute="leading" secondItem="taq-rR-AXq" secondAttribute="leading" constant="15" id="Njt-UR-7xs"/>
-                                                <constraint firstAttribute="bottom" secondItem="Tvw-g5-2NK" secondAttribute="bottom" constant="5" id="PFC-Vi-hoA"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tvw-g5-2NK" secondAttribute="bottom" constant="4" id="PFC-Vi-hoA"/>
                                                 <constraint firstItem="7M7-Qn-hZ1" firstAttribute="centerX" secondItem="Tvw-g5-2NK" secondAttribute="centerX" id="Raa-qt-STg"/>
                                                 <constraint firstItem="ZOR-yo-gtH" firstAttribute="top" secondItem="dmc-wk-K2X" secondAttribute="bottom" id="Sz4-K1-5rE"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZOR-yo-gtH" secondAttribute="bottom" constant="-10" id="V2a-xD-jDD"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZOR-yo-gtH" secondAttribute="bottom" constant="-11" id="V2a-xD-jDD"/>
                                                 <constraint firstItem="nEv-09-Bu7" firstAttribute="top" secondItem="taq-rR-AXq" secondAttribute="top" constant="7" id="VJf-Dj-5eg"/>
                                                 <constraint firstItem="dmc-wk-K2X" firstAttribute="top" secondItem="nEv-09-Bu7" secondAttribute="bottom" constant="3" id="XXG-cB-msD"/>
                                                 <constraint firstItem="7M7-Qn-hZ1" firstAttribute="leading" secondItem="ZOR-yo-gtH" secondAttribute="trailing" constant="5" id="Y83-qP-gxc"/>
@@ -1113,7 +1113,7 @@
                                                         <constraint firstAttribute="width" constant="11" id="zTc-9c-qtN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-Ed-Iim">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="14"/>
                                                     <state key="normal">
@@ -1146,7 +1146,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="z9z-Ah-jeY">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="xhX-XO-w4j">
+                        <barButtonItem key="leftBarButtonItem" id="xhX-XO-w4j">
                             <connections>
                                 <action selector="closeButtonClicked:" destination="vsu-u1-Ykg" id="VPc-2n-rEM"/>
                             </connections>
@@ -1217,7 +1217,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axf-BM-CgP" id="uZK-s8-KVx">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
                                             <rect key="frame" x="267" y="1" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
@@ -1369,7 +1369,7 @@
                                             <rect key="frame" x="267" y="0.0" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
                                             <rect key="frame" x="182" y="12" width="73" height="12"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

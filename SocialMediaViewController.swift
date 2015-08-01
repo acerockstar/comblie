@@ -32,11 +32,12 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
     let container = CKContainer.defaultContainer()
     var publicDatabase: CKDatabase?
     var currentRecord: CKRecord?
-    
+    var DefaulstUser : NSUserDefaults?
     var CheckClickBtn : String!
 
      var window: UIWindow?
     override func viewDidLoad() {
+        DefaulstUser = NSUserDefaults.standardUserDefaults()
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden=true
         publicDatabase = container.publicCloudDatabase
@@ -187,7 +188,7 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
     }
     func returnSuccess(paraDict: NSDictionary) {
         println("paraDict===\(paraDict)")
-
+        Loader.hideActivityIndicator(self.view)
             if CheckValue == "1"{
                 var Status : AnyObject = paraDict.valueForKey("success") as! Bool
                 if Status as! NSObject == true {
@@ -253,8 +254,15 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
                                 println("Object has been saved.")
                             }
                             }
+                            
+                            self.DefaulstUser?.setValue("Yes", forKey: "VineLogin")
+                            self.DefaulstUser?.synchronize()
                         }
                    })
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.gotofeedpage()
+                    })
+                   
                 }
                 else{
                    alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
@@ -269,6 +277,14 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
 //                    InstagramUser_Info(idSting)
 //                }
 //            }
+    }
+    func gotofeedpage(){
+        
+      let storyboard1 : UIStoryboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
+      let DefaultController:UITabBarController = (storyboard1.instantiateViewControllerWithIdentifier("Main") as? UITabBarController)!
+        DefaultController.selectedIndex=2
+        self.presentViewController(DefaultController, animated: true, completion: nil)
+        
     }
     @IBAction func LoginClick(sender: AnyObject) {
         

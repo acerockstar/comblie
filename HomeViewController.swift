@@ -14,6 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
+        
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId("zsNeOQ3y6WHVaBMg1se7FIuv2c5uLtXrn59HOqcV", clientKey: "KsY7BPh17bfLEAHy4O89l314m54XYbOaqNJf8XcS")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(nil)
+
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
         

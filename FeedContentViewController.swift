@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class FeedContentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var refreshControl: UIRefreshControl!

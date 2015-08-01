@@ -16,14 +16,31 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
     var pageControl: UIPageControl!
     
     // TODO: Store as dictionary
-    var pageLabels: NSArray = ["Activity", "Instagram", "Tumblr", "Twitter", "Vine"]
+    //var pageLabels: NSArray = ["Activity", "Instagram", "Tumblr", "Twitter", "Vine"]
+    var pageLabels: [String] = []
     var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
     
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        pageLabels.append("Activity")
+        let CheckVineLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("VineLogin")
+        let CheckInstagramLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("InstagramLogin")
+        let CheckTwitterLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TwitterLogin")
+        let CheckTubmlroginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        if CheckInstagramLoginStatus == "Yes"{
+            pageLabels.append("Instagram")
+        }
+        if CheckTubmlroginStatus == "Yes"{
+            pageLabels.append("Tumblr")
+        }
+        if CheckTwitterLoginStatus == "Yes"{
+            pageLabels.append("Twitter")
+        }
+        if CheckVineLoginStatus == "Yes"{
+            pageLabels.append("Vine")
+        }
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ActivityPageViewController") as! UIPageViewController
@@ -70,7 +87,7 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
         
         var pageContentVC: ActivityContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ActivityContentViewController") as! ActivityContentViewController
         
-        pageContentVC.labelText = self.pageLabels[index] as! String
+        pageContentVC.labelText = self.pageLabels[index] as String
         pageContentVC.pageIndex = index
         
         return pageContentVC

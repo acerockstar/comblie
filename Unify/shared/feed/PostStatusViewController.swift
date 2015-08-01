@@ -11,6 +11,7 @@ import QuartzCore
 
 class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,WebServiceDelegate {
     
+    @IBOutlet weak var PostImage: UIImageView!
     @IBOutlet weak var customView: UIView!
     @IBOutlet weak var postStatusNavBar: UINavigationBar!
     @IBOutlet weak var socialMediaButtonsView: UIView!
@@ -23,6 +24,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     @IBOutlet weak var postButton: UIBarButtonItem!
     var api: WebService = WebService()
     var Loader: ViewControllerUtils = ViewControllerUtils()
+    var defaultsUser : NSUserDefaults?
     
     var imagePicker = UIImagePickerController()
     var socialMediaIcons = ["Instagram-Large-Icon", "Tumblr-Large-Icon", "Twitter-Large-Icon", "Vine-Large-Icon"]
@@ -52,7 +54,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         self.textView.becomeFirstResponder()
         self.textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
         self.postButton.enabled = false
-        
+        self.PostImage.layer.cornerRadius = 5
         setUpSocialMediaButtons()
     }
     
@@ -80,22 +82,49 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
             socialMediaButton.alpha = 0.5
             socialMediaButtons.append(socialMediaButton)
             socialMediaButtonsView.addSubview(socialMediaButton)
+            
         }
     }
     
     func changeSocialMedia(sender: UIButton) {
+        let CheckVineLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("VineLogin")
+        let CheckInstagramLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("InstagramLogin")
+        let CheckTwitterLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TwitterLogin")
+        let CheckTubmlroginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        
+        if CheckVineLoginStatus == "Yes" {
+            if sender.currentImage == UIImage(named: "Vine-Large-Icon"){
+            Socia_icon_Change_Alpha_Value(sender)
+            }
+        }
+        else if CheckInstagramLoginStatus == "Yes" {
+            if sender.currentImage == UIImage(named: "Instagram-Large-Icon"){
+                Socia_icon_Change_Alpha_Value(sender)
+            }
+        }
+        else if CheckTwitterLoginStatus == "Yes" {
+            if sender.currentImage == UIImage(named: "Twitter-Large-Icon"){
+                Socia_icon_Change_Alpha_Value(sender)
+            }
+        }
+        else if CheckTubmlroginStatus == "Yes" {
+            if sender.currentImage == UIImage(named: "Tumblr-Large-Iconn"){
+                Socia_icon_Change_Alpha_Value(sender)
+            }
+        }
+    }
+    func Socia_icon_Change_Alpha_Value(BtnSender:UIButton)
+    {
         for button in socialMediaButtons {
-            if button == sender {
+            if button == BtnSender {
                 button.alpha = 1.0
                 
             } else {
                 button.alpha = 0.5
             }
         }
-        
-        postStatusNavBar.topItem!.title = socialMediaStatusLabel[sender.tag]
+        postStatusNavBar.topItem!.title = socialMediaStatusLabel[BtnSender.tag]
     }
-    
     func showInView(aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool) {
         aView.addSubview(self.view)
         if animated {
@@ -222,6 +251,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        PostImage.image = image.copy() as? UIImage
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
         })
         

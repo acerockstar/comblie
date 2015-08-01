@@ -15,16 +15,32 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
     var navBarView =  UIView()
     var pageControl: UIPageControl!
     
-    
+    var pageLabels: [String] = []
     // TODO: Store as dictionary
-    var pageLabels: NSArray = ["Combined", "Instagram", "Tumblr", "Twitter", "Vine"]
+   // var pageLabels: NSArray = ["Combined", "Instagram", "Tumblr", "Twitter", "Vine"]
     var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
 
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        pageLabels.append("Combined")
+        let CheckVineLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("VineLogin")
+        let CheckInstagramLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("InstagramLogin")
+        let CheckTwitterLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TwitterLogin")
+        let CheckTubmlroginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        if CheckInstagramLoginStatus == "Yes"{
+            pageLabels.append("Instagram")
+        }
+        if CheckTubmlroginStatus == "Yes"{
+            pageLabels.append("Tumblr")
+        }
+        if CheckTwitterLoginStatus == "Yes"{
+            pageLabels.append("Twitter")
+        }
+        if CheckVineLoginStatus == "Yes"{
+            pageLabels.append("Vine")
+        }
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfilePageViewController") as! UIPageViewController
@@ -74,7 +90,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         
         var pageContentVC: ProfileContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileContentViewController") as! ProfileContentViewController
         
-        pageContentVC.labelText = self.pageLabels[index] as! String
+        pageContentVC.labelText = self.pageLabels[index] as String
         pageContentVC.pageIndex = index
         
         return pageContentVC

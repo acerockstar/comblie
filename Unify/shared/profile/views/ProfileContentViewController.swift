@@ -41,6 +41,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidLayoutSubviews() {
+        print(self.labelText)
         var sectionHeader :UIView?
         sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
         if self.labelText == "Combined"{
