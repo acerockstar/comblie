@@ -22,6 +22,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var postButton: UIBarButtonItem!
     var api: WebService = WebService()
+    var Loader: ViewControllerUtils = ViewControllerUtils()
     
     var imagePicker = UIImagePickerController()
     var socialMediaIcons = ["Instagram-Large-Icon", "Tumblr-Large-Icon", "Twitter-Large-Icon", "Vine-Large-Icon"]
@@ -78,7 +79,6 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
             socialMediaButton.tag = index
             socialMediaButton.alpha = 0.5
             socialMediaButtons.append(socialMediaButton)
-            
             socialMediaButtonsView.addSubview(socialMediaButton)
         }
     }
@@ -87,6 +87,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         for button in socialMediaButtons {
             if button == sender {
                 button.alpha = 1.0
+                
             } else {
                 button.alpha = 0.5
             }
@@ -134,24 +135,45 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         // TODO: Send POST request to server and create new tableview cell and prepend to tableview
         let PostToMediaName = postStatusNavBar.topItem!.title
 
-        if (PostToMediaName == "Post to Instagram"){
-
+        if Reachability.isConnectedToNetwork() == true {
+            
+            if (PostToMediaName == "Post to Instagram"){
+                postToInstagram()
+            }
+            else if (PostToMediaName == "Post to Tumblr"){
+                 postToTumblr()
+            }
+            else if (PostToMediaName == "Post to Twitter"){
+                 postToTwitter()
+            }
+            else if (PostToMediaName == "Post to Vine"){
+                postToVine()
+            }
+             self.removeAnimate()
+        } else {
+            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
         }
-        else if (PostToMediaName == "Post to Tumblr"){
-              postToTumblr()
-        }
-        else if (PostToMediaName == "Post to Twitter"){
-
-        }
-        else if (PostToMediaName == "Post to Vine"){
-
-        }
-        self.removeAnimate()
+        
+       
+    }
+    func postToVine(){
+        api.delegate=self;
+        api.PostUpdateToVine(textView.text)
     }
     func postToTumblr(){
         api.delegate=self;
         api.PostUpdateToTumblr(textView.text)
     }
+    func postToTwitter(){
+        api.delegate=self;
+        api.PostUpdateToTwitter(textView.text)
+    }
+
+    func postToInstagram(){
+        api.delegate=self;
+        api.PostUpdateToInstagram(textView.text)
+    }
+
     func returnFail() {
 
     }
@@ -242,6 +264,11 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
                 textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
             }
         }
+    }
+    func alertTitle(title :String, message:String,btnTitle:String){
+        var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
+        alert.show()
+        
     }
 
 }

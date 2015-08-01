@@ -97,6 +97,7 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         }
         task.resume()
     }
+    //************************************ Post area ************************************
     func PostUpdateToTumblr(textMessage : String){
         request = NSMutableURLRequest(URL: NSURL(string: "api.tumblr.com/v2/blog/loveshailendra.tumblr.com/post")!)
         var keys : NSMutableDictionary = NSMutableDictionary()
@@ -111,4 +112,43 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         urlSession()
     }
+    
+    func PostUpdateToVine(textMessage : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "https://api.vineapp.com/posts")!)
+        request.HTTPMethod = "POST"
+        let postString = "description=\(textMessage)"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlSession()
+    }
+    func PostUpdateToTwitter(textMessage : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "api.tumblr.com/v2/blog/loveshailendra.tumblr.com/post")!)
+        var keys : NSMutableDictionary = NSMutableDictionary()
+        keys.setValue("CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99", forKey: "Consumer_Key")
+        keys.setValue("v5NbhosgGBXX5D3w0VKnPOTZovCdHfAtLD4bEfZnFWLUxTD517", forKey: "ConsuAccess_Tokenmer_Key")
+        keys.setValue("fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ", forKey: "Consumer_Secret")
+        keys.setValue("WjdAKsTM7sNDT2yJCnZUXaDLhkDQ2Kq7zopDzVXnhxm4excmXbQ", forKey: "Token_Secret")
+        
+        //  request.setValuesForKeysWithDictionary(<#keyedValues: [NSObject : AnyObject]#>)
+        request.HTTPMethod = "POST"
+        let postString = "body=\(textMessage)"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlSession()
+    }
+    
+    func PostUpdateToInstagram(textMessage : String){
+        request = NSMutableURLRequest(URL: NSURL(string: "api.tumblr.com/v2/blog/loveshailendra.tumblr.com/post")!)
+        var keys : NSMutableDictionary = NSMutableDictionary()
+        keys.setValue("CXGIaODPGTLU0sjy8tcg8YkWMZYOFxvDTzMMT3mvilWv55mm99", forKey: "Consumer_Key")
+        keys.setValue("v5NbhosgGBXX5D3w0VKnPOTZovCdHfAtLD4bEfZnFWLUxTD517", forKey: "ConsuAccess_Tokenmer_Key")
+        keys.setValue("fy4i8stvK3Gmr9i2n2835QY3cezLPTIsjdG526EQK4SBEPNEBQ", forKey: "Consumer_Secret")
+        keys.setValue("WjdAKsTM7sNDT2yJCnZUXaDLhkDQ2Kq7zopDzVXnhxm4excmXbQ", forKey: "Token_Secret")
+        
+        //  request.setValuesForKeysWithDictionary(<#keyedValues: [NSObject : AnyObject]#>)
+        request.HTTPMethod = "POST"
+        let postString = "body=\(textMessage)"
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlSession()
+    }
+    
+    
 }
