@@ -34,6 +34,10 @@ class SocialNetworksTableViewController: UITableViewController {
         cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
         saveButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
+    }
 
     // MARK: - Table view data source
     

@@ -25,8 +25,10 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.estimatedRowHeight = 64.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        self.tableView.estimatedSectionHeaderHeight = 44.0
+        self.tableView.estimatedSectionHeaderHeight = 40.0
         self.tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        
+        self.tableView.separatorStyle = .None
         
         self.tableView.registerNib(UINib(nibName: "NumLikesTableViewCell", bundle: nil), forCellReuseIdentifier: "numLikesCell")
         self.tableView.registerNib(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "commentCell")

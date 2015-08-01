@@ -100,6 +100,11 @@ extension UIColor {
         return UIColor(red: CGFloat(151.0/255.0), green: CGFloat(151.0/255.0), blue: CGFloat(151.0/255.0), alpha: 1.0)
     }
     
+    class func messageBoxGrey() -> UIColor {
+        // Hex: #E7E3E3, RGB: 231, 227, 227
+        return UIColor(red: CGFloat(231.0/255.0), green: CGFloat(227.0/255.0), blue: CGFloat(227.0/255.0), alpha: 1.0)
+    }
+    
     class func pictureBorderColor() -> UIColor {
         return UIColor(red: CGFloat(0.5), green: CGFloat(0.5), blue: CGFloat(0.5), alpha: 0.5)
     }
