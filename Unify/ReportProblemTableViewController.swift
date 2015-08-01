@@ -31,6 +31,10 @@ class ReportProblemTableViewController: UITableViewController,WebServiceDelegate
         tableView.backgroundColor = UIColor.sectionHeaderGrey()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
+    }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }

@@ -48,6 +48,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
     }
     
     override func didReceiveMemoryWarning() {

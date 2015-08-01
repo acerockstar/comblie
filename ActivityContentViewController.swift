@@ -27,7 +27,7 @@ class ActivityContentViewController: UIViewController, UITableViewDelegate, UITa
         refreshControl?.addTarget(self, action: "refreshActivities", forControlEvents: .ValueChanged)
         refreshActivities()
         
-        self.tableView.estimatedRowHeight = 64.0
+        self.tableView.estimatedRowHeight = 60.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         self.tableView.tableFooterView = UIView()

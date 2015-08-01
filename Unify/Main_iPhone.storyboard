@@ -372,6 +372,7 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt1-yb-KHf">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <barButtonItem width="290" style="plain" id="4gZ-ZI-yth">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say something nice" minimumFontSize="17" id="fye-dd-04g">
@@ -2090,7 +2091,7 @@
     </scenes>
     <resources>
         <image name="Activity-Icon" width="25" height="25"/>
-        <image name="Back-Arrow-Icon" width="14" height="22"/>
+        <image name="Back-Arrow-Icon" width="17" height="27"/>
         <image name="Comblie-App-Icon" width="95" height="95"/>
         <image name="Comblie-Name-Icon" width="148" height="48"/>
         <image name="Comment-Icon" width="20" height="19"/>
@@ -2105,7 +2106,7 @@
         <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
         <image name="Unfilled-Heart-Icon" width="20" height="17"/>
         <image name="Upload-Icon" width="19" height="25"/>
-        <image name="Write-Status-Icon" width="22" height="22"/>
+        <image name="Write-Status-Icon" width="26" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

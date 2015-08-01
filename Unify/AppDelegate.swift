@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Unify
 //
-//  Created by Luke McDonald on 6/1/15.
+//  Created by Annie Cheng on 6/1/15.
 //  Copyright (c) 2015 Unify. All rights reserved.
 //
 
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("zsNeOQ3y6WHVaBMg1se7FIuv2c5uLtXrn59HOqcV", clientKey: "KsY7BPh17bfLEAHy4O89l314m54XYbOaqNJf8XcS")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Bd", size: 16.5)!]
+//        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Bd", size: 16.5)!]
 
         let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
         let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)

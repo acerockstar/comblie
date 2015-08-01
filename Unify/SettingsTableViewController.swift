@@ -150,6 +150,7 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarStyle = .Default
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
     }
     
     // MARK: - Keyboard Functionality
@@ -164,16 +165,10 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         switch(section) {
         case 0:
             return CGFloat(40.0)
-        case 1:
-            return CGFloat(23.0)
-        case 2:
-            return CGFloat(12.0)
-        case 3:
-            return CGFloat(15.0)
-        case 4:
-            return CGFloat(18.0)
+        case 5:
+            return CGFloat(40.0)
         default:
-            return CGFloat(42.0)
+            return CGFloat(30.0)
         }
     }
     
@@ -188,16 +183,10 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         switch(section) {
         case 0:
             headerHeight = 40.0
-        case 1:
-            headerHeight = 23.0
-        case 2:
-            headerHeight = 12.0
-        case 3:
-            headerHeight = 15.0
-        case 4:
-            headerHeight = 18.0
+        case 5:
+            headerHeight = 40.0
         default:
-            headerHeight = 42.0
+            headerHeight = 30.0
         }
         
         var headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, headerHeight))
