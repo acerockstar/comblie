@@ -102,6 +102,10 @@
 		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
 		E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */; };
 		E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3F71B4FB74D005FCD50 /* WebService.swift */; };
+		F3C929011B6E7A6C00CF6613 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C929001B6E7A6C00CF6613 /* Twitter.framework */; };
+		F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929061B6EAF0300CF6613 /* BlogViewController.swift */; };
+		F3C929091B6EAF5400CF6613 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */; };
+		F3C9290D1B6EB13700CF6613 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9290C1B6EB13700CF6613 /* InviteFriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +270,10 @@
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
 		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Unify/WebService.swift; sourceTree = "<group>"; };
 		E0A8A4141B4FF6CB005FCD50 /* OAuth2+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OAuth2+iOS.swift"; path = "../OAuth2-master/OAuth2+iOS/OAuth2+iOS.swift"; sourceTree = "<group>"; };
+		F3C929001B6E7A6C00CF6613 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		F3C929061B6EAF0300CF6613 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		F3C9290C1B6EB13700CF6613 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,9 +281,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E039B4B11B5FAA56002E8EF8 /* libz.1.1.3.dylib in Frameworks */,
-				E039B4761B5FA49F002E8EF8 /* Social.framework in Frameworks */,
 				E039B4741B5FA495002E8EF8 /* Accounts.framework in Frameworks */,
+				E039B4761B5FA49F002E8EF8 /* Social.framework in Frameworks */,
+				F3C929011B6E7A6C00CF6613 /* Twitter.framework in Frameworks */,
+				E039B4B11B5FAA56002E8EF8 /* libz.1.1.3.dylib in Frameworks */,
 				E039B4721B5FA48D002E8EF8 /* libsqlite3.dylib in Frameworks */,
 				E039B4701B5FA483002E8EF8 /* libz.dylib in Frameworks */,
 				E039B46E1B5FA477002E8EF8 /* SystemConfiguration.framework in Frameworks */,
@@ -315,6 +324,7 @@
 		1615BB4CCEF396B4845C765B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3C929001B6E7A6C00CF6613 /* Twitter.framework */,
 				E039B4D11B5FBAC9002E8EF8 /* Bolts.framework */,
 				E039B4CF1B5FBA3C002E8EF8 /* Parse.framework */,
 				E039B4B01B5FAA56002E8EF8 /* libz.1.1.3.dylib */,
@@ -808,6 +818,9 @@
 			isa = PBXGroup;
 			children = (
 				77DF40B71B1CD9B4006084E4 /* AppDelegate */,
+				F3C9290E1B6EB14100CF6613 /* InviteFriendsViewController */,
+				F3C9290B1B6EAF7300CF6613 /* PrivacyViewController */,
+				F3C9290A1B6EAF5F00CF6613 /* BlogViewController */,
 				E0672A4E1B5CE98B0065D336 /* HomeScreenViewController */,
 				E0A8A3F91B4FB87E005FCD50 /* SocialMediaViewController */,
 				E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */,
@@ -827,6 +840,30 @@
 			);
 			name = "Unify-Bridging-Header";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		F3C9290A1B6EAF5F00CF6613 /* BlogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3C929061B6EAF0300CF6613 /* BlogViewController.swift */,
+			);
+			name = BlogViewController;
+			sourceTree = "<group>";
+		};
+		F3C9290B1B6EAF7300CF6613 /* PrivacyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */,
+			);
+			name = PrivacyViewController;
+			sourceTree = "<group>";
+		};
+		F3C9290E1B6EB14100CF6613 /* InviteFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9290C1B6EB13700CF6613 /* InviteFriendsViewController.swift */,
+			);
+			name = InviteFriendsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1058,6 +1095,7 @@
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
 				D1855BDF1B50818100A5A244 /* ReportProblemTableViewController.swift in Sources */,
 				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
+				F3C929091B6EAF5400CF6613 /* PrivacyViewController.swift in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
 				E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */,
 				D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */,
@@ -1101,6 +1139,7 @@
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
 				D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */,
+				F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */,
 				E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D1F3FA821B578D68003ED306 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
@@ -1108,6 +1147,7 @@
 				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,
 				D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */,
 				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
+				F3C9290D1B6EB13700CF6613 /* InviteFriendsViewController.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeueLTStd-Roman.otf">
@@ -20,26 +21,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0g-pK-67o">
-                        <rect key="frame" x="66" y="15" width="291.5" height="13"/>
+                        <rect key="frame" x="59" y="15" width="299" height="17"/>
                         <attributedString key="attributedText">
-                            <fragment content="Jaden Smith">
+                            <fragment content="Jaden Smith and ">
                                 <attributes>
                                     <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" and ">
-                                <attributes>
-                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                    <font key="NSFont" metaFont="system"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                             <fragment content="5 others">
                                 <attributes>
                                     <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeueLTStd-Md"/>
+                                    <font key="NSFont" metaFont="system"/>
                                     <font key="NSOriginalFont" size="12" name="HelveticaNeue-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
@@ -47,7 +41,7 @@
                             <fragment content=" like your photo.">
                                 <attributes>
                                     <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
+                                    <font key="NSFont" metaFont="system"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
@@ -55,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-2g-EXE">
-                        <rect key="frame" x="12" y="8" width="44" height="44"/>
+                        <rect key="frame" x="12" y="15" width="37" height="37"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="6Q5-q8-Xcj"/>
                             <constraint firstAttribute="height" constant="45" id="TTB-0P-TKi"/>
@@ -71,6 +65,7 @@
                         </state>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6Q5-q8-Xcj"/>
                                 <exclude reference="TTB-0P-TKi"/>
                                 <exclude reference="TtN-Z1-2ye"/>
                                 <exclude reference="aUl-sz-4AK"/>
@@ -83,8 +78,8 @@
                             <action selector="userImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OtD-NU-n3F"/>
                         </connections>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-wt-ZVt">
-                        <rect key="frame" x="42" y="38" width="15" height="15"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-wt-ZVt">
+                        <rect key="frame" x="35" y="38" width="15" height="15"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="AMa-wt-ZVt" secondAttribute="height" multiplier="1:1" id="6iF-zF-7lX"/>
@@ -92,7 +87,7 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8f-o4-SZc">
-                        <rect key="frame" x="43" y="39" width="13" height="13"/>
+                        <rect key="frame" x="36" y="39" width="13" height="13"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="d8f-o4-SZc" secondAttribute="height" multiplier="1:1" id="Iri-A1-fvs"/>
                             <constraint firstAttribute="height" constant="15" id="YOp-xN-afH"/>
@@ -105,13 +100,14 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today at 9:36 PM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-wb-Wch">
-                        <rect key="frame" x="66.5" y="31" width="291.5" height="12.5"/>
+                        <rect key="frame" x="60" y="35" width="299" height="13"/>
                         <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12.5"/>
                         <color key="textColor" red="0.71764705882352942" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="AMa-wt-ZVt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="445-XP-KX1"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hia-2g-EXE" secondAttribute="bottom" constant="8" id="6Nq-Vz-DCr"/>
                     <constraint firstItem="S0g-pK-67o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="7Ea-rR-t3O"/>
                     <constraint firstItem="S0g-pK-67o" firstAttribute="leading" secondItem="Hia-2g-EXE" secondAttribute="trailing" constant="10" id="Eo9-bZ-XKf"/>
@@ -119,14 +115,21 @@
                     <constraint firstAttribute="trailing" secondItem="S0g-pK-67o" secondAttribute="trailing" constant="17" id="FVS-P0-RzS"/>
                     <constraint firstItem="AMa-wt-ZVt" firstAttribute="bottom" secondItem="Hia-2g-EXE" secondAttribute="bottom" constant="1" id="IUe-xs-SYw"/>
                     <constraint firstItem="AMa-wt-ZVt" firstAttribute="centerY" secondItem="d8f-o4-SZc" secondAttribute="centerY" id="KSm-dj-84p"/>
-                    <constraint firstItem="S0g-pK-67o" firstAttribute="leading" secondItem="tfP-wb-Wch" secondAttribute="leading" id="LdU-6L-v7B"/>
+                    <constraint firstItem="AMa-wt-ZVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="27" id="Kyy-37-Nyq"/>
+                    <constraint firstItem="S0g-pK-67o" firstAttribute="leading" secondItem="tfP-wb-Wch" secondAttribute="leading" constant="-1" id="LdU-6L-v7B"/>
                     <constraint firstItem="AMa-wt-ZVt" firstAttribute="trailing" secondItem="Hia-2g-EXE" secondAttribute="trailing" constant="1" id="WWh-cG-AVr"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tfP-wb-Wch" secondAttribute="bottom" constant="8" id="b3Z-JS-azJ"/>
                     <constraint firstItem="Hia-2g-EXE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="eZW-kH-LEi"/>
-                    <constraint firstAttribute="trailing" secondItem="tfP-wb-Wch" secondAttribute="trailing" constant="17" id="hSR-2x-d7d"/>
+                    <constraint firstAttribute="trailing" secondItem="tfP-wb-Wch" secondAttribute="trailing" constant="16" id="hSR-2x-d7d"/>
                     <constraint firstItem="Hia-2g-EXE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="r2g-k2-Ot1"/>
                     <constraint firstItem="tfP-wb-Wch" firstAttribute="top" secondItem="S0g-pK-67o" secondAttribute="bottom" constant="3" id="tdd-Ji-s8R"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6Nq-Vz-DCr"/>
+                        <exclude reference="r2g-k2-Ot1"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="S0g-pK-67o" id="Of0-6U-c1I"/>

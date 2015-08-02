@@ -11,7 +11,7 @@ import CloudKit
 import SwiftyJSON
 import Parse
 
-class SocialMediaViewController: UIViewController,WebServiceDelegate {
+class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var emailIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,6 +23,8 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
     @IBOutlet weak var tumblrButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var LoginIcon: UIImageView!
     
     var api: WebService = WebService()
     var Loader: ViewControllerUtils = ViewControllerUtils()
@@ -41,10 +43,8 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden=true
         publicDatabase = container.publicCloudDatabase
-        
         // Styling
         let loginButtons = [twitterButton, vineButton, tumblrButton, instagramButton]
-        
         for button in loginButtons {
             button.layer.cornerRadius = twitterButton.frame.size.height/2
             button.layer.borderWidth = 1.5
@@ -82,59 +82,54 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         signUpButton.setAttributedTitle(signUpString, forState: .Normal)
         
     }
-    @IBAction func LoginWithInstagram(sender: AnyObject) {
-        CheckClickBtn = "Instagram"
-        instagramButton.backgroundColor = UIColor.comblieDarkPurple()
-        instagramButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
+    @IBAction func LoginWithTwitter(sender: AnyObject) {
+        CheckClickBtn = "Twitter"
+        twitterButton.backgroundColor = UIColor.comblieDarkPurple()
+        twitterButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
+        LoginIcon.image = UIImage(named: "Twitter-Large-Icon")
         if loginPopupView.hidden == true {
             loginPopupView.hidden = false
         }
-        if Reachability.isConnectedToNetwork() == true {
-            LoginWithInstagram()
-        } else {
-            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+    }
+    
+    @IBAction func LoginWithVine(sender: AnyObject) {
+        CheckClickBtn = "Vine"
+        LoginIcon.image = UIImage(named: "Vine-Large-Icon")
+        vineButton.backgroundColor = UIColor.comblieDarkPurple()
+        vineButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
+        if loginPopupView.hidden == true {
+            loginPopupView.hidden = false
         }
     }
     @IBAction func LoginWithTumblr(sender: AnyObject) {
         CheckClickBtn = "Tumblr"
         tumblrButton.backgroundColor = UIColor.comblieDarkPurple()
         tumblrButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
-        
-        if Reachability.isConnectedToNetwork() == true {
-            LoginWithVine()
-        } else {
-            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
-        }
-    }
-
-    @IBAction func LoginWithTwitter(sender: AnyObject) {
-        CheckClickBtn = "Twitter"
-        twitterButton.backgroundColor = UIColor.comblieDarkPurple()
-        twitterButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
-        
-        if Reachability.isConnectedToNetwork() == true {
-            LoginWithVine()
-        } else {
-            alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
-        }
-    }
-
-    @IBAction func LoginWithVine(sender: AnyObject) {
-        CheckClickBtn = "Vine"
-        vineButton.backgroundColor = UIColor.comblieDarkPurple()
-        vineButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
+        LoginIcon.image = UIImage(named: "Tumblr-Large-Icon")
         if loginPopupView.hidden == true {
             loginPopupView.hidden = false
         }
-       
-
     }
-    @IBAction func NewUserLogin(sender: AnyObject) {
-
-        let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("StartConnectingViewController") as! StartConnectingViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+   
+    @IBAction func LoginWithInstagram(sender: AnyObject) {
+        CheckClickBtn = "Instagram"
+        instagramButton.backgroundColor = UIColor.comblieDarkPurple()
+        instagramButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
+        LoginIcon.image = UIImage(named: "Instagram-Large-Icon")
+        if loginPopupView.hidden == true {
+            loginPopupView.hidden = false
+        }
     }
+
+
+    //********************************************** Twitter user area ***************************************
+    
+    func LoginWithTwitter(){
+        CheckValue = "3"
+        api.delegate=self
+        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+    }
+    
     //**********************************************Vine user area ***************************************
     
     func LoginWithVine(){
@@ -152,7 +147,14 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         api.delegate=self
         api.VineUserInfo(userid)
     }
-
+    
+    //********************************************** Tubmlr user area ***************************************
+    
+    func LoginWithTubmlr(){
+        CheckValue = "3"
+        api.delegate=self
+        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+    }
     //**********************************************Instagram user area ***************************************
     
     func LoginWithInstagram(){
@@ -165,27 +167,56 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         api.delegate=self
         api.Instagram_user_info(userid as String)
     }
-
-
-   //********************************************** Twitter user area ***************************************
-
-    func LoginWithTwitter(){
-        CheckValue = "3"
+    //**********************************************Facevook user area ***************************************
+    
+    func LoginWithFacebook(){
+        CheckValue = "2"
         api.delegate=self
-        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+        api.InstagramUserLogin("comblie12")
     }
-
-    //********************************************** Tubmlr user area ***************************************
-
-    func LoginWithTubmlr(){
-        CheckValue = "3"
+    func FacebookUser_Info(userid : NSString){
+        CheckValue = "5"
         api.delegate=self
-        api.Login_With_Vine("Shailendragupta35@yahoo.com", Password: "Monu1987")
+        api.Instagram_user_info(userid as String)
     }
 
-    func returnFail() {
-
+    
+    @IBAction func LoginClick(sender: AnyObject) {
+        
+        if emailIdTextField.text == "" || passwordTextField.text == "" {
+            alertTitle("alert!", message: "All field is requird", btnTitle: "OK")
+        }
+        else {
+            
+            if Reachability.isConnectedToNetwork() == true {
+                if CheckClickBtn == "Vine" {
+                    LoginWithVine()
+                }
+                else if CheckClickBtn == "Instagram" {
+                    LoginWithInstagram()
+                }
+                else if CheckClickBtn == "Tumblr" {
+                    LoginWithTubmlr()
+                }
+                else if CheckClickBtn == "Twitter" {
+                    LoginWithTubmlr()
+                }
+                else if CheckClickBtn == "Facebook" {
+                    LoginWithFacebook()
+                }
+            }
+            else {
+                alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
+            }
+            emailIdTextField.resignFirstResponder()
+            passwordTextField.resignFirstResponder()
+        }
     }
+    
+    
+    
+//**********************************************Reasult user area ***************************************
+    
     func returnSuccess(paraDict: NSDictionary) {
         println("paraDict===\(paraDict)")
         Loader.hideActivityIndicator(self.view)
@@ -286,30 +317,32 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate {
         self.presentViewController(DefaultController, animated: true, completion: nil)
         
     }
-    @IBAction func LoginClick(sender: AnyObject) {
-        
-        if emailIdTextField.text == "" || passwordTextField.text == "" {
-            alertTitle("alert!", message: "All field is requird", btnTitle: "OK")
-        }
-        else {
-            
-            if CheckClickBtn == "Vine" {
-                
-                if Reachability.isConnectedToNetwork() == true {
-                    LoginWithVine()
-                } else {
-                    alertTitle("No Internet Connection", message: "Make sure your device is connected to the internet.", btnTitle: "OK")
-                }
-            }
-        }
-    }
+  
     func alertTitle(title :String, message:String,btnTitle:String){
         var alert = UIAlertView(title: title, message:message, delegate: nil, cancelButtonTitle: btnTitle)
         alert.show()
 
     }
-
-
-
-
+    func returnFail() {
+        
+    }
+    @IBAction func NewUserLogin(sender: AnyObject) {
+        
+        let storyboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("StartConnectingViewController") as! StartConnectingViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        emailIdTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        emailIdTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        loginPopupView.hidden = true
+    }
 }

@@ -70,6 +70,11 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         if userImage.image != UIImage(named: "Persona"){
             NSUserDefaults.standardUserDefaults().setObject(UIImagePNGRepresentation(userImage.image), forKey: "userimages")
         }
+        NSUserDefaults.standardUserDefaults().setObject(nameTextView.text, forKey: "UserName")
+        NSUserDefaults.standardUserDefaults().setObject(bioTextView.text, forKey: "UserBio")
+        
+        bioTextView.resignFirstResponder()
+        nameTextView.resignFirstResponder()
     }
     
     @IBAction func changeButtonClicked(sender: UIButton) {
@@ -96,7 +101,13 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         }
         userImage.layer.cornerRadius = userImage.frame.size.width/2
         userImage.layer.masksToBounds = true
-
+        
+        var UserNameValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserName") as! String?
+        var UserBioValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserBio") as! String?
+        
+        nameTextView.text = UserNameValue
+        bioTextView.text = UserBioValue
+ 
         dividerHeightConstraint.constant = 0.5
         
         closeButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)

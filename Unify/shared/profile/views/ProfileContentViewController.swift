@@ -18,6 +18,9 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     var labelText: String!
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
     var titleView: UIScrollView!
+    var Imagedata : NSData?
+    var UserNameValue : String?
+    var UserBioValue : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +52,14 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLayoutSubviews() {
         self.shyNavBarManager.scrollView = self.tableView
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+        Imagedata =   NSUserDefaults.standardUserDefaults().objectForKey("userimages") as! NSData?
+        UserNameValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserName") as! String?
+        UserBioValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserBio") as! String?
+        self.tableView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -93,6 +103,11 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         if indexPath.row == 0 {
             if self.labelText == "Combined" {
                 let sectionHeader = tableView.dequeueReusableCellWithIdentifier("CombinedProfileTableViewCell") as! CombinedProfileTableViewCell
+               
+                sectionHeader.profilePicture.image = UIImage(data: Imagedata!)
+                sectionHeader.nameLabel.text = UserNameValue
+                sectionHeader.bioLabel.text = UserBioValue
+                
                 return sectionHeader
             } else if self.labelText == "Instagram" {
                 let sectionHeader = tableView.dequeueReusableCellWithIdentifier("InstagramProfileTableViewCell") as! InstagramProfileTableViewCell
@@ -110,7 +125,6 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
-
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         
