@@ -48,7 +48,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-w2-ZDh">
-                                <rect key="frame" x="12" y="285.5" width="188" height="11.5"/>
+                                <rect key="frame" x="12" y="285" width="188" height="11.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Heidi Klum ">
@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmz-wM-RYQ">
-                                <rect key="frame" x="470" y="285.5" width="16" height="11.5"/>
+                                <rect key="frame" x="470" y="285" width="16" height="11.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="11.5"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,6 +164,7 @@
                             <constraint firstItem="Fmz-wM-RYQ" firstAttribute="top" secondItem="wr5-at-9ed" secondAttribute="bottom" constant="5" id="DCO-fz-XVm"/>
                             <constraint firstAttribute="bottom" secondItem="0VH-w2-ZDh" secondAttribute="bottom" constant="8" id="FKU-Od-BFH"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="top" secondItem="87o-Ib-MYO" secondAttribute="bottom" constant="5" id="HBi-og-4zI"/>
+                            <constraint firstItem="Fmz-wM-RYQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0VH-w2-ZDh" secondAttribute="trailing" constant="10" id="NXP-MP-GWj"/>
                             <constraint firstAttribute="trailing" secondItem="Fmz-wM-RYQ" secondAttribute="trailing" constant="19" id="Nlr-Xn-GUW"/>
                             <constraint firstItem="rHB-Rz-VJ5" firstAttribute="leading" secondItem="dNP-Bo-kZY" secondAttribute="leading" id="PDZ-a1-qFa"/>
                             <constraint firstItem="wr5-at-9ed" firstAttribute="leading" secondItem="0VH-w2-ZDh" secondAttribute="leading" id="QAV-GP-lgR"/>

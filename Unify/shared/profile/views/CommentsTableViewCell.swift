@@ -16,7 +16,7 @@ class CommentsTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     var name = "Savannah Brinson"
-    var comment = "Hahahahaha this is totally about me."
+    var comment = "Hahaha that's totally about me."
     var names = "Lebron James"
     var time = "4 minutes ago"
     

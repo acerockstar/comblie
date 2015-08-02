@@ -32,6 +32,12 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
+        self.tableView.registerNib(UINib(nibName: "CombinedProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "CombinedProfileTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "InstagramProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "InstagramProfileTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "TumblrProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "TumblrProfileTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "TumblrOwnProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "TumblrOwnProfileTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "TwitterProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "TwitterProfileTableViewCell")
+        self.tableView.registerNib(UINib(nibName: "VineProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "VineProfileTableViewCell")
         
         self.tableView.addSubview(self.refreshControl)
     }
@@ -41,28 +47,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidLayoutSubviews() {
-        print(self.labelText)
-        var sectionHeader :UIView?
-        sectionHeader = NSBundle.mainBundle().loadNibNamed("\(self.labelText)ProfileView", owner: nil, options: nil)[0] as? UIView
-        if self.labelText == "Combined"{
-
-        }else if self.labelText == "Instagram"{
-
-        }
-        else if self.labelText == "Tumblr"{
-
-        }
-        else if self.labelText == "Twitter"{
-
-        }
-        else if self.labelText == "Vine"{
-
-        }
-        let nameLabel = sectionHeader!.viewWithTag(2) as? UILabel
-        nameLabel?.text = "Shailendra"
-        self.tableView.tableHeaderView = sectionHeader
         self.shyNavBarManager.scrollView = self.tableView
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,7 +72,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
             var label = UILabel(frame: CGRectMake(0, 0, 200, 50))
             label.center = CGPointMake(view.frame.size.width/2, view.frame.size.height/2)
             label.textAlignment = NSTextAlignment.Center
-            label.text = "You have no feed"
+            label.text = "You have no profiles"
             label.sizeToFit()
             self.tableView.backgroundView = label
             self.tableView.separatorColor = UIColor.clearColor()
@@ -98,12 +83,32 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         
         return 1
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            if self.labelText == "Combined" {
+                let sectionHeader = tableView.dequeueReusableCellWithIdentifier("CombinedProfileTableViewCell") as! CombinedProfileTableViewCell
+                return sectionHeader
+            } else if self.labelText == "Instagram" {
+                let sectionHeader = tableView.dequeueReusableCellWithIdentifier("InstagramProfileTableViewCell") as! InstagramProfileTableViewCell
+                return sectionHeader
+            } else if self.labelText == "Tumblr" {
+                let sectionHeader = tableView.dequeueReusableCellWithIdentifier("TumblrProfileTableViewCell") as! TumblrProfileTableViewCell
+                return sectionHeader
+            } else if self.labelText == "Twitter" {
+                let sectionHeader = tableView.dequeueReusableCellWithIdentifier("TwitterProfileTableViewCell") as! TwitterProfileTableViewCell
+                return sectionHeader
+            } else if self.labelText == "Vine" {
+                let sectionHeader = tableView.dequeueReusableCellWithIdentifier("VineProfileTableViewCell") as! VineProfileTableViewCell
+                return sectionHeader
+            }
+        }
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
 
         cell.setNeedsUpdateConstraints()

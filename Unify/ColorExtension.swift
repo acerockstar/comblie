@@ -15,6 +15,11 @@ extension UIColor {
         return UIColor(red: CGFloat(132.0/255.0), green: CGFloat(45.0/255.0), blue: CGFloat(114.0/255.0), alpha: 1.0)
     }
     
+    class func comblieProfilePurple() -> UIColor {
+        // Hex: #610167, RGB: 97, 1, 103
+        return UIColor(red: CGFloat(97.0/255.0), green: CGFloat(1.0/255.0), blue: CGFloat(103.0/255.0), alpha: 1.0)
+    }
+    
     class func comblieDarkPurple() -> UIColor {
         // Hex: #792269, RGB: 121, 34, 105
         return UIColor(red: CGFloat(121.0/255.0), green: CGFloat(34.0/255.0), blue: CGFloat(105.0/255.0), alpha: 1.0)
@@ -30,9 +35,19 @@ extension UIColor {
         return UIColor(red: CGFloat(0.0/255.0), green: CGFloat(172.0/255.0), blue: CGFloat(237.0/255.0), alpha: 1.0)
     }
     
+    class func twitterProfileBlue() -> UIColor {
+        // Hex: #8dc8f0, RGB: 141, 200, 240
+        return UIColor(red: CGFloat(141.0/255.0), green: CGFloat(200.0/255.0), blue: CGFloat(240.0/255.0), alpha: 1.0)
+    }
+    
     class func tumblrBlue() -> UIColor {
         // Hex: #32506d, RGB: 50, 80, 109
         return UIColor(red: CGFloat(50.0/255.0), green: CGFloat(80.0/255.0), blue: CGFloat(109.0/255.0), alpha: 1.0)
+    }
+    
+    class func tumblrProfileBlue() -> UIColor {
+        // Hex: #35465d, RGB: 53, 70, 93
+        return UIColor(red: CGFloat(53.0/255.0), green: CGFloat(70.0/255.0), blue: CGFloat(93.0/255.0), alpha: 1.0)
     }
     
     class func instagramBlue() -> UIColor {
@@ -40,9 +55,19 @@ extension UIColor {
         return UIColor(red: CGFloat(81.0/255.0), green: CGFloat(127.0/255.0), blue: CGFloat(164.0/255.0), alpha: 1.0)
     }
     
+    class func instagramProfileBlue() -> UIColor {
+        // Hex: #3f729b, RGB: 63, 114, 155
+        return UIColor(red: CGFloat(63.0/255.0), green: CGFloat(114.0/255.0), blue: CGFloat(155.0/255.0), alpha: 1.0)
+    }
+    
     class func vineGreen() -> UIColor {
         // Hex: #00bf8f, RGB: 0, 191, 143
         return UIColor(red: CGFloat(0.0/255.0), green: CGFloat(191.0/255.0), blue: CGFloat(143.0/255.0), alpha: 1.0)
+    }
+    
+    class func vineProfileGreen() -> UIColor {
+        // Hex: #03d29e, RGB: 3, 210, 158
+        return UIColor(red: CGFloat(3.0/255.0), green: CGFloat(210.0/255.0), blue: CGFloat(158.0/255.0), alpha: 1.0)
     }
     
     class func linkedinBlue() -> UIColor {
