@@ -25,7 +25,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Custom Refresh.
+        // Custom Refresh..
         self.refreshControl = UIRefreshControl()
         customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
         refreshControl?.addTarget(self, action: "refreshProfiles", forControlEvents: .ValueChanged)
