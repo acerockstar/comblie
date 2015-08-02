@@ -43,16 +43,26 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+        
+        postStatusNavBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
+        postButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
+        
+        cancelButton.setTitlePositionAdjustment(UIOffsetMake(5, 0), forBarMetrics: .Default)
+        postButton.setTitlePositionAdjustment(UIOffsetMake(-5, 0), forBarMetrics: .Default)
+        
+        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
         self.popUpView.layer.cornerRadius = 5
         self.popUpView.layer.masksToBounds = true
         self.userImage.layer.cornerRadius = 5
         self.userImage.layer.masksToBounds = true
+        
         self.textView.delegate = self
         self.textView.text = "What are you thinking?"
         self.textView.textColor = UIColor.lightGrayColor()
         self.textView.becomeFirstResponder()
         self.textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
+        
         self.postButton.enabled = false
         self.PostImage.layer.cornerRadius = 5
         setUpSocialMediaButtons()
@@ -94,7 +104,7 @@ class PostStatusViewController: UIViewController, UITextViewDelegate, UIImagePic
         
         if CheckVineLoginStatus == "Yes" {
             if sender.currentImage == UIImage(named: "Vine-Large-Icon"){
-            Socia_icon_Change_Alpha_Value(sender)
+                Socia_icon_Change_Alpha_Value(sender)
             }
         }
         else if CheckInstagramLoginStatus == "Yes" {
