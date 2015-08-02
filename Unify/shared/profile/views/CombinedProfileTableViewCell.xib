@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeueLTStd-Lt.otf">
+            <string>HelveticaNeueLTStd-Lt</string>
+        </mutableArray>
+        <mutableArray key="HelveticaNeueLTStd-Md.otf">
+            <string>HelveticaNeueLTStd-Md</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="159" id="KGk-i7-Jjw" customClass="CombinedProfileTableViewCell" customModule="Unify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-qE-jEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="158.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDF-L5-5E7">
+                                <rect key="frame" x="118.5" y="5" width="84" height="84"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="BF9-NX-soE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="fOT-Ah-2QZ"/>
+                                    <constraint firstAttribute="width" secondItem="qDF-L5-5E7" secondAttribute="height" id="hol-qL-U4e"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fOT-Ah-2QZ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="Ntm-Yw-3xM">
+                                <rect key="frame" x="123" y="10" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ntm-Yw-3xM" secondAttribute="height" id="Xfj-nc-PwO"/>
+                                    <constraint firstAttribute="height" constant="74" id="nHy-NU-bFK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtk-aV-uRB">
+                                <rect key="frame" x="116" y="95" width="87" height="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a short bio about me." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlB-oV-xhk">
+                                <rect key="frame" x="55" y="118" width="210" height="12.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="POe-vr-8bC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="12.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mtk-aV-uRB" firstAttribute="top" secondItem="qDF-L5-5E7" secondAttribute="bottom" constant="6" id="CfJ-Cm-gbI"/>
+                            <constraint firstAttribute="centerX" secondItem="mtk-aV-uRB" secondAttribute="centerX" id="Eq4-Z5-LcT"/>
+                            <constraint firstItem="zlB-oV-xhk" firstAttribute="top" secondItem="mtk-aV-uRB" secondAttribute="bottom" constant="8" id="FFw-Hu-LuG"/>
+                            <constraint firstItem="mtk-aV-uRB" firstAttribute="top" secondItem="qDF-L5-5E7" secondAttribute="bottom" constant="6" id="KCC-2v-If9"/>
+                            <constraint firstAttribute="centerX" secondItem="qDF-L5-5E7" secondAttribute="centerX" id="SMr-s5-hWm"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="top" secondItem="gjC-qE-jEJ" secondAttribute="top" constant="5" id="TeA-dq-HNM"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zlB-oV-xhk" secondAttribute="bottom" constant="25" id="fT6-Hr-qgK"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="width" secondItem="Ntm-Yw-3xM" secondAttribute="height" id="gpm-bE-TgP"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="centerY" secondItem="Ntm-Yw-3xM" secondAttribute="centerY" id="hCW-QR-NyQ"/>
+                            <constraint firstAttribute="centerX" secondItem="zlB-oV-xhk" secondAttribute="centerX" id="j63-5q-QZh"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="centerX" secondItem="Ntm-Yw-3xM" secondAttribute="centerX" id="xJH-eU-Ryd"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="centerY" secondItem="Ntm-Yw-3xM" secondAttribute="centerY" id="xR6-3V-veu"/>
+                            <constraint firstItem="qDF-L5-5E7" firstAttribute="centerX" secondItem="Ntm-Yw-3xM" secondAttribute="centerX" id="zSP-po-hth"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gpm-bE-TgP"/>
+                                <exclude reference="hCW-QR-NyQ"/>
+                                <exclude reference="xJH-eU-Ryd"/>
+                                <exclude reference="CfJ-Cm-gbI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gjC-qE-jEJ" secondAttribute="bottom" id="6ht-aS-7uE"/>
+                    <constraint firstAttribute="trailing" secondItem="gjC-qE-jEJ" secondAttribute="trailing" id="NOh-5B-X6O"/>
+                    <constraint firstItem="gjC-qE-jEJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TXM-2A-72x"/>
+                    <constraint firstItem="gjC-qE-jEJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="r0q-Tj-kFn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.51764705882352946" green="0.17647058823529413" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bioLabel" destination="zlB-oV-xhk" id="gaz-kH-9Ra"/>
+                <outlet property="nameLabel" destination="mtk-aV-uRB" id="XFy-59-h4U"/>
+                <outlet property="profilePicBorder" destination="qDF-L5-5E7" id="3GN-ox-q1f"/>
+                <outlet property="profilePicture" destination="Ntm-Yw-3xM" id="tiX-zg-qPO"/>
+            </connections>
+            <point key="canvasLocation" x="473" y="305"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Persona" width="600" height="600"/>
+    </resources>
+</document>

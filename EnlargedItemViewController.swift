@@ -54,7 +54,6 @@ class EnlargedItemViewController: UIViewController {
         setUpLabels(userName, userAction: userAction, socialMediaName: socialMediaName, caption: caption, numLikes: numLikes, numComments: numComments)
     }
     
-    
     func setUpLabels(userName: String, userAction: String, socialMediaName: String, caption: String, numLikes: String, numComments: String) {
         
         captionTextView.text = caption
@@ -89,6 +88,10 @@ class EnlargedItemViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().statusBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {

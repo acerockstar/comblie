@@ -66,7 +66,6 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
 
     }
     
-
     override func viewDidAppear(animated: Bool) {
         changeNavBar()
     }
