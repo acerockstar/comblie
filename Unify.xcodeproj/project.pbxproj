@@ -106,6 +106,14 @@
 		F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929061B6EAF0300CF6613 /* BlogViewController.swift */; };
 		F3C929091B6EAF5400CF6613 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */; };
 		F3C9290D1B6EB13700CF6613 /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9290C1B6EB13700CF6613 /* InviteFriendsViewController.swift */; };
+		F3C929161B6ED73300CF6613 /* Vinelogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929151B6ED73300CF6613 /* Vinelogin.swift */; };
+		F3C929191B6ED79F00CF6613 /* TwitterLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929181B6ED79F00CF6613 /* TwitterLogin.swift */; };
+		F3C9291F1B6ED7B300CF6613 /* InstagramLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9291E1B6ED7B300CF6613 /* InstagramLogin.swift */; };
+		F3C929211B6ED7CE00CF6613 /* TumblerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929201B6ED7CE00CF6613 /* TumblerLogin.swift */; };
+		F3C929231B6ED7EE00CF6613 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929221B6ED7EE00CF6613 /* FacebookLogin.swift */; };
+		F3C929251B6ED84800CF6613 /* GooglePlusLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929241B6ED84800CF6613 /* GooglePlusLogin.swift */; };
+		F3C929291B6ED89E00CF6613 /* PinterestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929281B6ED89E00CF6613 /* PinterestLogin.swift */; };
+		F3C9292B1B6ED8C900CF6613 /* LinkedinLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9292A1B6ED8C900CF6613 /* LinkedinLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +282,14 @@
 		F3C929061B6EAF0300CF6613 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		F3C9290C1B6EB13700CF6613 /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
+		F3C929151B6ED73300CF6613 /* Vinelogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vinelogin.swift; sourceTree = "<group>"; };
+		F3C929181B6ED79F00CF6613 /* TwitterLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterLogin.swift; sourceTree = "<group>"; };
+		F3C9291E1B6ED7B300CF6613 /* InstagramLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramLogin.swift; sourceTree = "<group>"; };
+		F3C929201B6ED7CE00CF6613 /* TumblerLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TumblerLogin.swift; sourceTree = "<group>"; };
+		F3C929221B6ED7EE00CF6613 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
+		F3C929241B6ED84800CF6613 /* GooglePlusLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusLogin.swift; sourceTree = "<group>"; };
+		F3C929281B6ED89E00CF6613 /* PinterestLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLogin.swift; sourceTree = "<group>"; };
+		F3C9292A1B6ED8C900CF6613 /* LinkedinLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +364,7 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				F3C929101B6ED6D900CF6613 /* Login */,
 				D1DDBF6B1B5FF96F00FE7EA6 /* Fonts */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
 				77DF40CE1B1CD9B4006084E4 /* Supporting Files */,
@@ -866,6 +883,21 @@
 			name = InviteFriendsViewController;
 			sourceTree = "<group>";
 		};
+		F3C929101B6ED6D900CF6613 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F3C929151B6ED73300CF6613 /* Vinelogin.swift */,
+				F3C929181B6ED79F00CF6613 /* TwitterLogin.swift */,
+				F3C9291E1B6ED7B300CF6613 /* InstagramLogin.swift */,
+				F3C929201B6ED7CE00CF6613 /* TumblerLogin.swift */,
+				F3C929221B6ED7EE00CF6613 /* FacebookLogin.swift */,
+				F3C929241B6ED84800CF6613 /* GooglePlusLogin.swift */,
+				F3C929281B6ED89E00CF6613 /* PinterestLogin.swift */,
+				F3C9292A1B6ED8C900CF6613 /* LinkedinLogin.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1095,6 +1127,7 @@
 				D17CE4601B1EC4FE00ED9E93 /* OldMessageViewController.swift in Sources */,
 				D1855BDF1B50818100A5A244 /* ReportProblemTableViewController.swift in Sources */,
 				D1E08BF31B377FC800E40C41 /* Util.swift in Sources */,
+				F3C929161B6ED73300CF6613 /* Vinelogin.swift in Sources */,
 				F3C929091B6EAF5400CF6613 /* PrivacyViewController.swift in Sources */,
 				D17CE4C61B20568C00ED9E93 /* ActivityTableViewCell.swift in Sources */,
 				E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */,
@@ -1114,21 +1147,28 @@
 				D183E1CA1B6DD733009455B5 /* TwitterProfileTableViewCell.swift in Sources */,
 				D1DA88781B51095F00B7D344 /* PushNotificationTableViewController.swift in Sources */,
 				D1DA88741B50F1D200B7D344 /* UnconnectedSocialNetworkTableViewCell.swift in Sources */,
+				F3C9292B1B6ED8C900CF6613 /* LinkedinLogin.swift in Sources */,
 				E0672A561B5CE9DE0065D336 /* HomeViewController.swift in Sources */,
 				D17CE45D1B1E9E2A00ED9E93 /* NewMessageViewController.swift in Sources */,
+				F3C929251B6ED84800CF6613 /* GooglePlusLogin.swift in Sources */,
 				D183E1B61B6DC869009455B5 /* CombinedProfileTableViewCell.swift in Sources */,
+				F3C9291F1B6ED7B300CF6613 /* InstagramLogin.swift in Sources */,
 				D1F3FA861B578D68003ED306 /* TLYShyViewController.m in Sources */,
 				D183E1C61B6DD723009455B5 /* VineProfileTableViewCell.swift in Sources */,
 				D12A8ACC1B1CFF2F00320E1F /* ColorExtension.swift in Sources */,
 				D1F3FA851B578D68003ED306 /* TLYShyNavBarManager.m in Sources */,
+				F3C929231B6ED7EE00CF6613 /* FacebookLogin.swift in Sources */,
 				D1F3FA841B578D68003ED306 /* TLYDelegateProxy.m in Sources */,
 				D1DC333D1B2588DE00C9AFB6 /* PostStatusViewController.swift in Sources */,
 				D1B9E0381B30030D00F59444 /* CommentsTableViewCell.swift in Sources */,
 				D1DA88701B50EDF300B7D344 /* SocialNetworksTableViewController.swift in Sources */,
 				E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */,
+				F3C929291B6ED89E00CF6613 /* PinterestLogin.swift in Sources */,
 				D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */,
 				E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */,
+				F3C929211B6ED7CE00CF6613 /* TumblerLogin.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
+				F3C929191B6ED79F00CF6613 /* TwitterLogin.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
 				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
