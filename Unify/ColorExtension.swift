@@ -133,5 +133,9 @@ extension UIColor {
     class func pictureBorderColor() -> UIColor {
         return UIColor(red: CGFloat(0.5), green: CGFloat(0.5), blue: CGFloat(0.5), alpha: 0.5)
     }
+    //Theme Change
+    class func ThemeColor() -> UIColor {
+        return UIColor(red: CGFloat(72.16/255.0), green: CGFloat(56.72/255.0), blue: CGFloat(56.72/255.0), alpha:1)
+    }
 
 }

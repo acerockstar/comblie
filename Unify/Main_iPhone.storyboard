@@ -142,7 +142,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Newsfeed" id="fA9-XH-X0d">
                         <barButtonItem key="rightBarButtonItem" image="Write-Status-Icon" id="VBF-v9-URn">
-                            <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="postStatus:" destination="4XJ-bP-E5w" id="A0V-h0-tFn"/>
                             </connections>
@@ -455,7 +454,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="28s-tw-BWL">
                         <barButtonItem key="rightBarButtonItem" image="Write-Status-Icon" id="1MA-J3-f7O">
-                            <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Sx6-eC-iLZ" kind="modal" id="XXd-vE-tZK"/>
                             </connections>
@@ -496,9 +494,8 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-gX-JHN">
                                         <rect key="frame" x="290" y="14" width="22" height="22"/>
-                                        <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
-                                            <color key="titleShadowColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="addContact:" destination="h2t-px-mmH" eventType="touchUpInside" id="mF7-eN-WaX"/>
@@ -556,14 +553,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Message" id="Xjp-dp-ivu">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="arG-yf-rSH">
-                            <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="h2t-px-mmH" id="CHg-V2-VSx"/>
                                 <segue destination="0gk-W8-kwR" kind="unwind" unwindAction="unwindToMessagesVC:" id="42l-Bh-IVk"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Group" id="O63-YR-4RA">
-                            <color key="tintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -844,9 +841,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bV9-qG-mz1">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bV9-qG-mz1">
                                                     <rect key="frame" x="267" y="0.0" width="51" height="31"/>
-                                                    <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="toggleLightThemeSwitch:" destination="vsu-u1-Ykg" eventType="valueChanged" id="j2Q-wv-7tu"/>
                                                     </connections>
@@ -872,9 +868,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvP-q2-1nc">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xvP-q2-1nc">
                                                     <rect key="frame" x="267" y="0.0" width="51" height="31"/>
-                                                    <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="toggleRefreshAutomaticallySwitch:" destination="vsu-u1-Ykg" eventType="valueChanged" id="RuD-rc-Me0"/>
                                                     </connections>
@@ -900,9 +895,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLQ-cl-A2f">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OLQ-cl-A2f">
                                                     <rect key="frame" x="267" y="0.0" width="51" height="31"/>
-                                                    <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="toggleChatHeadsSwitch:" destination="vsu-u1-Ykg" eventType="valueChanged" id="Ii0-97-0CT"/>
                                                     </connections>
@@ -1244,7 +1238,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axf-BM-CgP" id="uZK-s8-KVx">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-vK-sI4">
                                             <rect key="frame" x="267" y="1" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
@@ -1258,7 +1252,7 @@
                                     <constraints>
                                         <constraint firstItem="EC2-sM-8Qv" firstAttribute="leading" secondItem="uZK-s8-KVx" secondAttribute="leading" constant="11" id="Q46-cX-lRt"/>
                                         <constraint firstAttribute="centerY" secondItem="EC2-sM-8Qv" secondAttribute="centerY" constant="-2" id="nKY-pZ-g3e"/>
-                                        <constraint firstAttribute="centerY" secondItem="QSX-vK-sI4" secondAttribute="centerY" id="oXf-Av-O76"/>
+                                        <constraint firstAttribute="centerY" secondItem="QSX-vK-sI4" secondAttribute="centerY" constant="-1" id="oXf-Av-O76"/>
                                         <constraint firstAttribute="trailing" secondItem="QSX-vK-sI4" secondAttribute="trailing" constant="4" id="ude-zy-4AC"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1518,11 +1512,11 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-DQ-mAr">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-DQ-mAr">
                                             <rect key="frame" x="267" y="0.0" width="51" height="31"/>
                                             <color key="onTintColor" red="0.51764705879999995" green="0.1764705882" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-e9-zWE">
                                             <rect key="frame" x="182" y="12" width="73" height="12"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1535,7 +1529,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Gac-DQ-mAr" secondAttribute="trailing" constant="4" id="M6Q-PF-3zG"/>
                                         <constraint firstItem="MP2-zz-jRb" firstAttribute="leading" secondItem="OOg-C3-WP4" secondAttribute="leading" constant="11" id="SBS-Zi-5GS"/>
                                         <constraint firstAttribute="centerY" secondItem="ey5-e9-zWE" secondAttribute="centerY" constant="-2" id="aew-XK-J16"/>
-                                        <constraint firstItem="Gac-DQ-mAr" firstAttribute="leading" secondItem="ey5-e9-zWE" secondAttribute="trailing" constant="13" id="rrk-gk-EqR"/>
+                                        <constraint firstItem="Gac-DQ-mAr" firstAttribute="leading" secondItem="ey5-e9-zWE" secondAttribute="trailing" constant="12" id="rrk-gk-EqR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

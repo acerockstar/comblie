@@ -14,6 +14,7 @@ class CombinedProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var BgView: UIView!
     
     var name = "Cameron Dallas"
     var bio = "This is a bio about me."

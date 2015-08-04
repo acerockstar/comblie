@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     class func appDelegate() -> AppDelegate {
+       
         return UIApplication.sharedApplication().delegate as! AppDelegate
     }
 
@@ -28,9 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
         let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
 
-        UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
-
+       
         var tabBarController: UITabBarController = self.window?.rootViewController as! UITabBarController
         tabBarController.selectedIndex = 2
 
@@ -44,11 +43,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = navigationController
         }
         
-        self.window?.tintColor = UIColor.combliePurple()
+        var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+        if ThemeChanges == "Yes"{
+            self.window?.tintColor = UIColor.ThemeColor()
+            UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Grey-Highlight.png")
+            UITabBar.appearance().tintColor = UIColor.whiteColor()
+            
+        }
+        else if ThemeChanges == "No"
+        {
+            self.window?.tintColor = UIColor.purpleColor()
+            UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
+            UITabBar.appearance().tintColor = UIColor.whiteColor()
+            
+        }
         
         return true
     }
+    func windowThemeChange(Yes_No : String)
+    {
+        if Yes_No == "Yes"{
+           self.window?.tintColor = UIColor.ThemeColor()
+            UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Grey-Highlight.png")
+            UITabBar.appearance().tintColor = UIColor.whiteColor()
 
+        }
+        else if Yes_No == "No"
+        {
+            self.window?.tintColor = UIColor.purpleColor()
+            UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
+            UITabBar.appearance().tintColor = UIColor.whiteColor()
+
+        }
+    }
+  
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

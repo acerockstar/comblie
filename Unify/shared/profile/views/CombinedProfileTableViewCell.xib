@@ -96,6 +96,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.51764705882352946" green="0.17647058823529413" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
+                <outlet property="BgView" destination="gjC-qE-jEJ" id="K1E-SZ-qXQ"/>
                 <outlet property="bioLabel" destination="zlB-oV-xhk" id="gaz-kH-9Ra"/>
                 <outlet property="nameLabel" destination="mtk-aV-uRB" id="XFy-59-h4U"/>
                 <outlet property="profilePicBorder" destination="qDF-L5-5E7" id="3GN-ox-q1f"/>

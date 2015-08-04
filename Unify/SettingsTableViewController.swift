@@ -64,7 +64,7 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var api: WebService = WebService()
     var sectionLabels = ["PROFILE", "ACCOUNTS", "PREFERENCES", "SUPPORT", "ABOUT", ""]
-    
+    var SwitchOnOff : String = ""
     
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
         if userImage.image != UIImage(named: "Persona"){
@@ -75,15 +75,14 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         
         bioTextView.resignFirstResponder()
         nameTextView.resignFirstResponder()
+        
+         NSUserDefaults.standardUserDefaults().setObject(SwitchOnOff, forKey: "ThemeChange")
     }
     
     @IBAction func changeButtonClicked(sender: UIButton) {
          ActionSheet()
     }
 
-    @IBAction func toggleLightThemeSwitch(sender: UISwitch) {
-        println("toggle light theme")
-    }
     
     @IBAction func toggleRefreshAutomaticallySwitch(sender: UISwitch) {
         println("toggle refresh automatically")
@@ -112,16 +111,36 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         
         closeButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Roman", size: 16)!], forState: .Normal)
         saveButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16)!], forState: .Normal)
-        
-        nameCellImage.tintColor = UIColor.combliePurple()
+        var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+        if ThemeChanges == "Yes"{
+            self.lightThemeSwitch.setOn(true, animated: false)
+        }
+        else if ThemeChanges == "No"
+        {
+            self.lightThemeSwitch.setOn(false, animated: false)
+        }
+        ThemeChangeSave()
+    
+    }
+    @IBAction func toggleLightThemeSwitch(sender: UISwitch) {
+        if sender.on{
+            SwitchOnOff = "Yes"
+        }
+        else{
+            SwitchOnOff = "No"
+        }
+        ThemeChange(SwitchOnOff)
+        tableView.reloadData()
+        let appdelegate = AppDelegate.appDelegate()
+        appdelegate.windowThemeChange(SwitchOnOff)
+        println("toggle light theme")
+    }
+    func CellLableColour(){
         nameCellImageView.backgroundColor = UIColor.whiteColor()
-        nameCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
         nameCellImageView.layer.borderWidth = 1
         nameCellImageView.layer.cornerRadius = 10
         
-        bioCellImage.tintColor = UIColor.combliePurple()
         bioCellImageView.backgroundColor = UIColor.whiteColor()
-        bioCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
         bioCellImageView.layer.borderWidth = 1
         bioCellImageView.layer.cornerRadius = 10
         
@@ -130,7 +149,7 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         nameTextView.textAlignment = .Left
         nameTextView.scrollEnabled = false
         nameTextView.textContainer.maximumNumberOfLines = 1
-
+        
         bioTextView.delegate = self
         bioTextView.contentInset = UIEdgeInsetsMake(1, -5, 0, 0)
         bioTextView.textAlignment = .Left
@@ -141,7 +160,43 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         lightThemeSwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
         refreshAutomaticallySwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
         chatHeadsSwitch.transform = CGAffineTransformMakeScale(0.65, 0.65)
-        
+    }
+    func setcombliePurple()
+    {
+        nameCellImage.tintColor = UIColor.combliePurple()
+        nameCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        bioCellImage.tintColor = UIColor.combliePurple()
+        bioCellImageView.layer.borderColor = UIColor.combliePurple().CGColor
+        self.lightThemeSwitch.tintColor = UIColor.combliePurple()
+        self.chatHeadsSwitch.tintColor = UIColor.combliePurple()
+        self.refreshAutomaticallySwitch.tintColor = UIColor.combliePurple()
+    }
+    func setThemeColor()
+    {
+        nameCellImage.tintColor = UIColor.ThemeColor()
+        nameCellImageView.layer.borderColor = UIColor.ThemeColor().CGColor
+        bioCellImage.tintColor = UIColor.ThemeColor()
+        bioCellImageView.layer.borderColor = UIColor.ThemeColor().CGColor
+        self.lightThemeSwitch.tintColor = UIColor.ThemeColor()
+        self.chatHeadsSwitch.tintColor = UIColor.ThemeColor()
+        self.refreshAutomaticallySwitch.tintColor = UIColor.ThemeColor()
+    }
+    func ThemeChangeSave()
+    {
+        var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+        if ThemeChanges == "Yes"{
+           setThemeColor()
+        }
+        else if ThemeChanges == "No"
+        {
+           setcombliePurple()
+        }
+       
+        CellLableColour()
+        ChangeArrowColor((ThemeChanges as String?)!)
+        GetstureOnTableView()
+    }
+    func ChangeArrowColor(Yes_NoCheck : String){
         let cells = [profileCell, lightThemeCell, refreshAutomaticallyCell, chatHeadsCell]
         
         for cell in cells {
@@ -152,9 +207,31 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
             feedbackCellArrow, blogCellArrow, privacyPolicyCellArrow, inviteFriendsArrow, LogoutCellArrow]
         
         for arrow in cellArrows {
-            arrow.tintColor = UIColor.combliePurple()
+            if Yes_NoCheck == "Yes"{
+                arrow.tintColor = UIColor.ThemeColor()
+            }
+            else if Yes_NoCheck == "No"
+            {
+                arrow.tintColor = UIColor.combliePurple()
+            }
+            
         }
+    }
+    func ThemeChange(Yes_No:String)
+    {
+        if Yes_No == "Yes"{
+           setThemeColor()
+        }
+        else if Yes_No == "No"
+        {
+           setcombliePurple()
+        }
+        CellLableColour()
+        ChangeArrowColor((Yes_No as String?)!)
+        GetstureOnTableView()
         
+    }
+    func GetstureOnTableView(){
         tableView.rowHeight = 32.0
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
@@ -164,7 +241,7 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         tapGesture.numberOfTapsRequired = 1
         tapGesture.cancelsTouchesInView = false
         self.tableView.addGestureRecognizer(tapGesture)
-       
+
     }
     func ActionSheet(){
         let cameraMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)

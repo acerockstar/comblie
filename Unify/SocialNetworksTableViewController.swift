@@ -44,6 +44,13 @@ class SocialNetworksTableViewController: UITableViewController,UIAlertViewDelega
         if CheckVineLoginStatus == "Yes"{
              connectedSocialNetworks["Vine"]="on"
         }
+        var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+        if ThemeChanges == "Yes"{
+            
+        }
+        else if ThemeChanges == "No"{
+            
+        }
         
         tableView.rowHeight = 32
         tableView.backgroundColor = UIColor.sectionHeaderGrey()
@@ -87,6 +94,13 @@ class SocialNetworksTableViewController: UITableViewController,UIAlertViewDelega
             let socialNetworkNames = connectedSocialNetworks.keys.array
             let socialNetwork = socialNetworkNames[indexPath.row]
             
+            var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+            if ThemeChanges == "Yes"{
+                connectedCell.toggleSocialNetworkSwitch.tintColor=UIColor.ThemeColor()
+            }
+            else if ThemeChanges == "No"{
+                connectedCell.toggleSocialNetworkSwitch.tintColor=UIColor.purpleColor()
+            }
             if connectedSocialNetworks[socialNetwork] == "on" {
                 connectedCell.toggleSocialNetworkSwitch.setOn(true, animated: true)
                 connectedCell.connectedLabel.text = "Connected"

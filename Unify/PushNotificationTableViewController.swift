@@ -63,7 +63,13 @@ class PushNotificationTableViewController: UITableViewController {
 
         let socialNetworkNames = socialNetworks.keys.array
         let socialNetwork = socialNetworkNames[indexPath.row]
-        
+        var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+        if ThemeChanges == "Yes"{
+            cell.toggleSocialNetworkSwitch.tintColor=UIColor.ThemeColor()
+        }
+        else if ThemeChanges == "No"{
+            cell.toggleSocialNetworkSwitch.tintColor=UIColor.purpleColor()
+        }
         if socialNetworks[socialNetwork] == "on" {
             cell.toggleSocialNetworkSwitch.setOn(true, animated: true)
         } else {
