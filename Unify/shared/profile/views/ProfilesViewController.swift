@@ -28,11 +28,16 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         let CheckVineLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("VineLogin")
         let CheckInstagramLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("InstagramLogin")
         let CheckTwitterLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TwitterLogin")
-        let CheckTubmlroginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        let CheckTubmlrloginStatus = NSUserDefaults.standardUserDefaults().stringForKey("TubmlrLogin")
+        let CheckFacebookloginStatus = NSUserDefaults.standardUserDefaults().stringForKey("FacebookLogin")
+        let CheckLinkedInLoginStatus = NSUserDefaults.standardUserDefaults().stringForKey("LinkedInLogin")
+        let CheckGooglePlusloginStatus = NSUserDefaults.standardUserDefaults().stringForKey("GooglePlusLogin")
+        let CheckPentrestloginStatus = NSUserDefaults.standardUserDefaults().stringForKey("PentrestLogin")
+        
         if CheckInstagramLoginStatus == "Yes"{
             pageLabels.append("Instagram")
         }
-        if CheckTubmlroginStatus == "Yes"{
+        if CheckTubmlrloginStatus == "Yes"{
             pageLabels.append("Tumblr")
         }
         if CheckTwitterLoginStatus == "Yes"{
@@ -40,6 +45,18 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
         }
         if CheckVineLoginStatus == "Yes"{
             pageLabels.append("Vine")
+        }
+        if CheckFacebookloginStatus == "Yes"{
+            pageLabels.append("Facebook")
+        }
+        if CheckLinkedInLoginStatus == "Yes"{
+            pageLabels.append("LinkedIn")
+        }
+        if CheckGooglePlusloginStatus == "Yes"{
+            pageLabels.append("GooglePlus")
+        }
+        if CheckPentrestloginStatus == "Yes"{
+            pageLabels.append("Pentrest")
         }
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
