@@ -281,7 +281,7 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
             
         }
     }
-    
+    //
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         userImage.image = image.copy() as? UIImage
        
