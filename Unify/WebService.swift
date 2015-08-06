@@ -95,20 +95,19 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
             if error != nil {
-                println("error=\(error)")
                 return
             }
-            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
-                println("Dictionary: \(jsonResult)")
-            } else {
-                println("nil")
-                let resultString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println("Flawed JSON String: \(resultString)")
-            }
+//            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+//                println("Dictionary: \(jsonResult)")
+//            } else {
+//                println("nil")
+//                let resultString = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                println("Flawed JSON String: \(resultString)")
+//            }
             
-//            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
-//                options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-//            self.delegate?.returnSuccess(jsonResult)
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
+                options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            self.delegate?.returnSuccess(jsonResult)
         }
         task.resume()
     }
