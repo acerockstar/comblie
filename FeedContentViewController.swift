@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-class FeedContentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedContentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,WebServiceDelegate {
     
     var refreshControl: UIRefreshControl!
     var customRefresh: CustomRefreshControl!
@@ -18,7 +18,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
     var cellTapped:Bool = true
     var currentRow = -1
-    
+     var api: WebService = WebService()
     @IBOutlet var tableView: UITableView!
     
     // Initializers
@@ -29,15 +29,23 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    
+    func returnSuccess(paraDict: NSDictionary) {
+        println("paraDict===\(paraDict)")
+    }
+    func returnFail() {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       //https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com
+        api.delegate = self
+        api.InstagramAuth("https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com")
         // Custom Refresh
         self.refreshControl = UIRefreshControl()
         customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
         refreshControl?.addTarget(self, action: "refreshFeed", forControlEvents: .ValueChanged)
         refreshFeed()
+        
         
         self.tableView.estimatedRowHeight = 64
         self.tableView.rowHeight = UITableViewAutomaticDimension

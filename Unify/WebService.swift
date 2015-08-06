@@ -84,6 +84,13 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
         urlSession()
         
     }
+   
+    func InstagramAuth(Client_id : NSString){
+        request = NSMutableURLRequest(URL: NSURL(string: Client_id as String)!)
+//        request.HTTPMethod = "GET"
+        urlSession()
+        
+    }
     func urlSession(){
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
@@ -91,9 +98,17 @@ public class WebService: NSObject,NSURLConnectionDataDelegate{
                 println("error=\(error)")
                 return
             }
-            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
-                options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-            self.delegate?.returnSuccess(jsonResult)
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+                println("Dictionary: \(jsonResult)")
+            } else {
+                println("nil")
+                let resultString = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Flawed JSON String: \(resultString)")
+            }
+            
+//            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
+//                options:NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+//            self.delegate?.returnSuccess(jsonResult)
         }
         task.resume()
     }

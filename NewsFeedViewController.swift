@@ -14,7 +14,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     var postStatusViewController : PostStatusViewController!
     var navBarView =  UIView()
     var pageControl: UIPageControl!
-    
+   
     // TODO: Store as dictionary
     //var pageLabels: NSArray = ["Newsfeed", "Instagram", "Tumblr", "Twitter", "Vine"]
     var pageLabels: [String] = []
