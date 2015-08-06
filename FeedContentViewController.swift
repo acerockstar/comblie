@@ -38,8 +38,8 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
        //https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com
-        api.delegate = self
-        api.InstagramAuth("https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com")
+       // api.delegate = self
+       // api.InstagramAuth("https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com")
         // Custom Refresh
         self.refreshControl = UIRefreshControl()
         customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)

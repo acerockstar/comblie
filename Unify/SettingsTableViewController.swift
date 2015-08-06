@@ -103,9 +103,12 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
         
         var UserNameValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserName") as! String?
         var UserBioValue =   NSUserDefaults.standardUserDefaults().objectForKey("UserBio") as! String?
-        
-        nameTextView.text = UserNameValue
+        if UserNameValue != nil {
+        self.nameTextView.text = UserNameValue
+        }
+        if UserBioValue != nil {
         bioTextView.text = UserBioValue
+        }
  
         dividerHeightConstraint.constant = 0.5
         
@@ -184,16 +187,21 @@ class SettingsTableViewController: UITableViewController, UITextViewDelegate,UIA
     func ThemeChangeSave()
     {
         var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
-        if ThemeChanges == "Yes"{
-           setThemeColor()
-        }
-        else if ThemeChanges == "No"
-        {
-           setcombliePurple()
-        }
-       
         CellLableColour()
-        ChangeArrowColor((ThemeChanges as String?)!)
+        if ThemeChanges == nil {
+             ChangeArrowColor(("No" as String?)!)
+        }
+        else
+        {
+            if ThemeChanges == "Yes"{
+                setThemeColor()
+            }
+            else if ThemeChanges == "No"
+            {
+                setcombliePurple()
+            }
+            ChangeArrowColor((ThemeChanges as String?)!)
+        }
         GetstureOnTableView()
     }
     func ChangeArrowColor(Yes_NoCheck : String){

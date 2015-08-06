@@ -50,14 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().tintColor = UIColor.whiteColor()
             
         }
-        else if ThemeChanges == "No"
+        else if ThemeChanges == "No" || ThemeChanges == nil
         {
             self.window?.tintColor = UIColor.purpleColor()
             UITabBar.appearance().selectionIndicatorImage = UIImage(named: "Light-Theme-Purple-Highlight")
             UITabBar.appearance().tintColor = UIColor.whiteColor()
             
         }
-        
         return true
     }
     func windowThemeChange(Yes_No : String)

@@ -103,13 +103,23 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
         if indexPath.row == 0 {
             if self.labelText == "Combined" {
                 let sectionHeader = tableView.dequeueReusableCellWithIdentifier("CombinedProfileTableViewCell") as! CombinedProfileTableViewCell
-                var ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
+                let ThemeChanges =   NSUserDefaults.standardUserDefaults().objectForKey("ThemeChange") as! String?
                 if ThemeChanges == "Yes"{
                     sectionHeader.BgView.backgroundColor = UIColor.ThemeColor()
-                }else{
+                }else if ThemeChanges == "No"  {
                    sectionHeader.BgView.backgroundColor = UIColor.purpleColor()
                 }
-                sectionHeader.profilePicture.image = UIImage(data: Imagedata!)
+                else if ThemeChanges == nil  {
+                    sectionHeader.BgView.backgroundColor = UIColor.purpleColor()
+                }
+                if Imagedata == nil {
+                    
+                    sectionHeader.profilePicture.image = UIImage(named: "Persona")
+                }
+                else {
+                    sectionHeader.profilePicture.image = UIImage(data: Imagedata!)
+                }
+                
                 sectionHeader.nameLabel.text = UserNameValue
                 sectionHeader.bioLabel.text = UserBioValue
                 
