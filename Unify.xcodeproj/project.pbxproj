@@ -152,6 +152,20 @@
 			remoteGlobalIDString = 2F519B57FA1683EE7CEE9865;
 			remoteInfo = "Pods-SwiftyJSON";
 		};
+		F3A7F71D1B73F491009A62C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93E52A70168BB43700E5471A;
+			remoteInfo = TMTumblrSDK;
+		};
+		F3A7F71F1B73F491009A62C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93A015BB1B0696E20047F8C4;
+			remoteInfo = Tests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -255,7 +269,7 @@
 		D21C955EBF8C304714409D74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E02E5D381B5541E70078E6C4 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = UnifyDetails.rtf; path = ../UnifyDetails.rtf; sourceTree = "<group>"; };
+		E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = UnifyDetails.rtf; sourceTree = "<group>"; };
 		E039B44A1B5F6E91002E8EF8 /* Unify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Unify.entitlements; path = ../Unify/Unify.entitlements; sourceTree = "<group>"; };
 		E039B45F1B5FA439002E8EF8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E039B4611B5FA43F002E8EF8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -278,6 +292,7 @@
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
 		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Unify/WebService.swift; sourceTree = "<group>"; };
 		E0A8A4141B4FF6CB005FCD50 /* OAuth2+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OAuth2+iOS.swift"; path = "../OAuth2-master/OAuth2+iOS/OAuth2+iOS.swift"; sourceTree = "<group>"; };
+		F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "TMTumblrSDK-master/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
 		F3C929001B6E7A6C00CF6613 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		F3C929061B6EAF0300CF6613 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +379,8 @@
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
+				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
+				F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */,
 				F3C929101B6ED6D900CF6613 /* Login */,
 				D1DDBF6B1B5FF96F00FE7EA6 /* Fonts */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
@@ -415,7 +432,6 @@
 			isa = PBXGroup;
 			children = (
 				E039B44A1B5F6E91002E8EF8 /* Unify.entitlements */,
-				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
 				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
 				E0A8A3FB1B4FB899005FCD50 /* WebService */,
 				E0A8A3FE1B4FB8E4005FCD50 /* Unify-Bridging-Header */,
@@ -859,6 +875,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		F3A7F7191B73F491009A62C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3A7F71E1B73F491009A62C5 /* libTMTumblrSDK.a */,
+				F3A7F7201B73F491009A62C5 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F3C9290A1B6EAF5F00CF6613 /* BlogViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,6 +1014,10 @@
 					ProductGroup = E0349AFC1B5A360F002A6E3E /* Products */;
 					ProjectRef = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
 				},
+				{
+					ProductGroup = F3A7F7191B73F491009A62C5 /* Products */;
+					ProjectRef = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1025,6 +1054,20 @@
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
 			remoteRef = E0349B081B5A360F002A6E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3A7F71E1B73F491009A62C5 /* libTMTumblrSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTMTumblrSDK.a;
+			remoteRef = F3A7F71D1B73F491009A62C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3A7F7201B73F491009A62C5 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = F3A7F71F1B73F491009A62C5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
