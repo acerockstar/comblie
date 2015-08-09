@@ -9,3 +9,8 @@
 import Foundation
 import UIKit
 import Parse
+
+class login {
+    var api: WebService = WebService()
+    
+}

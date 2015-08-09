@@ -23,7 +23,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-la-Z5P">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UJ-la-Z5P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Im8-IT-JLY">
@@ -65,7 +65,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="12.5"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hey, you down for a pickup game later today? Meet at 7 on the field. Joe and Peyton are coming..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvH-jD-MPl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, you down for a pickup game later today? Meet at 7 on the field. Joe and Peyton are coming..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvH-jD-MPl">
                                 <rect key="frame" x="78" y="32" width="225" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="yDS-85-Plw"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="Im8-IT-JLY" firstAttribute="top" secondItem="2UJ-la-Z5P" secondAttribute="top" constant="10" id="Kuu-mi-1LX"/>
                             <constraint firstAttribute="bottom" secondItem="Im8-IT-JLY" secondAttribute="bottom" constant="5" id="PMl-fz-4RD"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S9e-OM-J3f" secondAttribute="trailing" constant="132" id="PdD-FP-JhR"/>
-                            <constraint firstItem="rvH-jD-MPl" firstAttribute="top" secondItem="S9e-OM-J3f" secondAttribute="bottom" constant="3" id="QLd-PH-Kiv"/>
+                            <constraint firstItem="rvH-jD-MPl" firstAttribute="top" secondItem="S9e-OM-J3f" secondAttribute="bottom" constant="2" id="QLd-PH-Kiv"/>
                             <constraint firstItem="qPd-pS-MrC" firstAttribute="centerY" secondItem="dF9-Vu-wG3" secondAttribute="centerY" id="Skh-6h-xiH"/>
                             <constraint firstAttribute="centerY" secondItem="Im8-IT-JLY" secondAttribute="centerY" id="SyU-K9-goL"/>
                             <constraint firstItem="MAy-3j-EhS" firstAttribute="top" secondItem="2UJ-la-Z5P" secondAttribute="top" constant="20" symbolic="YES" id="VOr-MX-vad"/>
@@ -229,7 +229,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2UJ-la-Z5P" secondAttribute="trailing" id="4gg-zZ-Q05"/>
-                    <constraint firstAttribute="bottom" secondItem="2UJ-la-Z5P" secondAttribute="bottom" id="4xr-cJ-8CA"/>
+                    <constraint firstAttribute="bottom" secondItem="2UJ-la-Z5P" secondAttribute="bottom" constant="-1" id="4xr-cJ-8CA"/>
                     <constraint firstItem="2UJ-la-Z5P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RAB-ZQ-I6D"/>
                     <constraint firstItem="2UJ-la-Z5P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bZd-Et-dk1"/>
                 </constraints>

@@ -18,7 +18,9 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     var items: [Int] = [1,2,3,4,5,6,7,8,9,10] // TODO: Replace dummy data
     var cellTapped:Bool = true
     var currentRow = -1
-     var api: WebService = WebService()
+    var api: WebService = WebService()
+    
+    var timer = NSTimer()
     @IBOutlet var tableView: UITableView!
     
     // Initializers
@@ -36,11 +38,8 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     override func viewDidLoad() {
+    self.timer =  NSTimer.scheduledTimerWithTimeInterval(120.0, target: self, selector:Selector("updateTable"), userInfo: nil, repeats: true )
         super.viewDidLoad()
-       //https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com
-       // api.delegate = self
-       // api.InstagramAuth("https://api.instagram.com/oauth/authorize?client_id=5fc9397900424d6e9087921ecdca8005&client_secret=YOUR_CLIENT_SECRET3&response_type=code&redirect_uri=https://comblie.com")
-        // Custom Refresh
         self.refreshControl = UIRefreshControl()
         customRefresh = CustomRefreshControl(refreshControl: refreshControl!, tableView: self.tableView)
         refreshControl?.addTarget(self, action: "refreshFeed", forControlEvents: .ValueChanged)
@@ -70,7 +69,13 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     // MARK: - Custom Refresh
-    
+    func updateTable(){
+        print("reloadData")
+        self.tableView.reloadData()
+    }
+    func InvalidateTimer(){
+        self.timer.invalidate()
+    }
     func refreshFeed() {
         self.tableView.reloadData()
         var delayInSeconds = 3.0

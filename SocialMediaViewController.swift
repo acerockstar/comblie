@@ -10,6 +10,9 @@ import UIKit
 import CloudKit
 import SwiftyJSON
 import Parse
+import Accounts
+import Social
+import SwifteriOS
 
 class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextFieldDelegate {
     
@@ -27,19 +30,23 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
     @IBOutlet weak var LoginIcon: UIImageView!
     
     var api: WebService = WebService()
+    //var tumblr:
     var Loader: ViewControllerUtils = ViewControllerUtils()
     var CheckValue : String!
     var userId : NSDecimalNumber!
-    var userDefault : NSUserDefaults!
+    var userDefault : NSUserDefaults?
     let container = CKContainer.defaultContainer()
     var publicDatabase: CKDatabase?
     var currentRecord: CKRecord?
-    var DefaulstUser : NSUserDefaults?
     var CheckClickBtn : String!
-
-     var window: UIWindow?
+    var swifter: Swifter
+    let useACAccount = true
+    required init(coder aDecoder: NSCoder) {
+        self.swifter = Swifter(consumerKey: "2tSw1fBv6xtLcaE6IKyQXFeV1", consumerSecret: "yCCChr3SaRUkVk7ZQa4eC0iqI59n1oTi9lTWRVwsu2HKaWUc7A")
+        super.init(coder: aDecoder)
+    }
     override func viewDidLoad() {
-        DefaulstUser = NSUserDefaults.standardUserDefaults()
+        userDefault = NSUserDefaults.standardUserDefaults()
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden=true
         publicDatabase = container.publicCloudDatabase
@@ -86,9 +93,53 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
         CheckClickBtn = "Twitter"
         twitterButton.backgroundColor = UIColor.comblieDarkPurple()
         twitterButton.setTitleColor(UIColor.backgroundLightGrey(), forState: .Normal)
-        LoginIcon.image = UIImage(named: "Twitter-Large-Icon")
-        if loginPopupView.hidden == true {
-            loginPopupView.hidden = false
+        let failureHandler: ((NSError) -> Void) = {
+            error in
+            self.alertTitle("Error", message: error.localizedDescription, btnTitle: "OK")
+        }
+        if useACAccount {
+            let accountStore = ACAccountStore()
+            let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+            accountStore.requestAccessToAccountsWithType(accountType, options: nil) {
+                granted, error in
+                if granted {
+                    let twitterAccounts = accountStore.accountsWithAccountType(accountType)
+                    if twitterAccounts?.count == 0{
+                        self.alertTitle("Error", message: "There are no Twitter accounts configured. You can add or create a Twitter account in Settings", btnTitle: "OK")
+                    }
+                    else {
+                        let twitterAccount = twitterAccounts[0] as! ACAccount
+                        self.swifter = Swifter(account: twitterAccount)
+                        self.fetchTwitterHomeStream()
+                    }
+                }
+                else {
+                   self.alertTitle("Error", message: error.localizedDescription, btnTitle: "OK")
+                }
+            }
+        }
+        else {
+            swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success")!, success: {
+                accessToken, response in
+                self.fetchTwitterHomeStream()
+                },failure: failureHandler
+            )
+        }
+    }
+    func fetchTwitterHomeStream() {
+        let failureHandler: ((NSError) -> Void) = {
+            error in
+            self.alertTitle("Error", message: error.localizedDescription, btnTitle: "OK")
+        }
+        self.swifter.getStatusesHomeTimelineWithCount(1000, sinceID: nil, maxID: nil, trimUser: true, contributorDetails: true, includeEntities: true, success: { (statuses) -> Void in
+         print("statuses====\(statuses)")
+            self.Loader.showActivityIndicator(self.view)
+            self.SessionStore()
+            self.userDefault?.setValue("Yes", forKey: "TwitterLogin")
+            self.userDefault?.synchronize()
+             self.gotofeedpage()
+        }) { (error) -> Void in
+            self.alertTitle("Error", message: error.localizedDescription, btnTitle: "OK")
         }
     }
     
@@ -214,7 +265,11 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
     }
     
     
-    
+    func SessionStore(){
+        self.userDefault = NSUserDefaults.standardUserDefaults()
+        self.userDefault!.setObject("1", forKey: "Session")
+        self.userDefault!.synchronize()
+    }
 //**********************************************Reasult user area ***************************************
     
     func returnSuccess(paraDict: NSDictionary) {
@@ -229,10 +284,8 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
                     
                     // Go to feed
                     var data = NSKeyedArchiver.archivedDataWithRootObject(paraDict)
-                    userDefault = NSUserDefaults.standardUserDefaults()
-                    userDefault.setObject(data, forKey:"UserInfo")
-                    userDefault.setObject("1", forKey: "Session")
-                    userDefault.synchronize()
+                    self.SessionStore()
+                  
                 } else {
                     alertTitle("Alert!", message: "Please check your email id and password", btnTitle: "OK")
                 }
@@ -286,8 +339,8 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
                             }
                             }
                             
-                            self.DefaulstUser?.setValue("Yes", forKey: "VineLogin")
-                            self.DefaulstUser?.synchronize()
+                            self.userDefault?.setValue("Yes", forKey: "VineLogin")
+                            self.userDefault?.synchronize()
                         }
                    })
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -310,12 +363,11 @@ class SocialMediaViewController: UIViewController,WebServiceDelegate,UITextField
 //            }
     }
     func gotofeedpage(){
-        
       let storyboard1 : UIStoryboard = UIStoryboard(name: "Main_iPhone", bundle: nil)
       let DefaultController:UITabBarController = (storyboard1.instantiateViewControllerWithIdentifier("Main") as? UITabBarController)!
         DefaultController.selectedIndex=2
         self.presentViewController(DefaultController, animated: true, completion: nil)
-        
+        self.Loader.hideActivityIndicator(self.view)
     }
   
     func alertTitle(title :String, message:String,btnTitle:String){

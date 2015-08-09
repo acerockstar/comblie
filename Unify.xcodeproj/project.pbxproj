@@ -102,6 +102,7 @@
 		E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3ED1B4FB72D005FCD50 /* SocialMediaViewController.swift */; };
 		E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */; };
 		E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A3F71B4FB74D005FCD50 /* WebService.swift */; };
+		F356E97A1B77790900740BE7 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F356E9751B7778E900740BE7 /* SwifteriOS.framework */; };
 		F3C929011B6E7A6C00CF6613 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C929001B6E7A6C00CF6613 /* Twitter.framework */; };
 		F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929061B6EAF0300CF6613 /* BlogViewController.swift */; };
 		F3C929091B6EAF5400CF6613 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */; };
@@ -152,19 +153,33 @@
 			remoteGlobalIDString = 2F519B57FA1683EE7CEE9865;
 			remoteInfo = "Pods-SwiftyJSON";
 		};
-		F3A7F71D1B73F491009A62C5 /* PBXContainerItemProxy */ = {
+		F356E9721B7778E900740BE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+			containerPortal = F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 93E52A70168BB43700E5471A;
-			remoteInfo = TMTumblrSDK;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
 		};
-		F3A7F71F1B73F491009A62C5 /* PBXContainerItemProxy */ = {
+		F356E9741B7778E900740BE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+			containerPortal = F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 93A015BB1B0696E20047F8C4;
-			remoteInfo = Tests;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		F356E9761B7778E900740BE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		F356E9781B7778E900740BE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -292,7 +307,7 @@
 		E0A8A3EE1B4FB72D005FCD50 /* StartConnectingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartConnectingViewController.swift; sourceTree = "<group>"; };
 		E0A8A3F71B4FB74D005FCD50 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Unify/WebService.swift; sourceTree = "<group>"; };
 		E0A8A4141B4FF6CB005FCD50 /* OAuth2+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OAuth2+iOS.swift"; path = "../OAuth2-master/OAuth2+iOS/OAuth2+iOS.swift"; sourceTree = "<group>"; };
-		F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMTumblrSDK.xcodeproj; path = "TMTumblrSDK-master/TMTumblrSDK.xcodeproj"; sourceTree = "<group>"; };
+		F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "Swifter-master/Swifter.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		F3C929001B6E7A6C00CF6613 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		F3C929061B6EAF0300CF6613 /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		F3C929081B6EAF5400CF6613 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -312,8 +327,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E039B4741B5FA495002E8EF8 /* Accounts.framework in Frameworks */,
+				F356E97A1B77790900740BE7 /* SwifteriOS.framework in Frameworks */,
 				E039B4761B5FA49F002E8EF8 /* Social.framework in Frameworks */,
+				E039B4741B5FA495002E8EF8 /* Accounts.framework in Frameworks */,
 				F3C929011B6E7A6C00CF6613 /* Twitter.framework in Frameworks */,
 				E039B4B11B5FAA56002E8EF8 /* libz.1.1.3.dylib in Frameworks */,
 				E039B4721B5FA48D002E8EF8 /* libsqlite3.dylib in Frameworks */,
@@ -380,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				E0349B0C1B5A4E76002A6E3E /* UnifyDetails.rtf */,
-				F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */,
 				F3C929101B6ED6D900CF6613 /* Login */,
 				D1DDBF6B1B5FF96F00FE7EA6 /* Fonts */,
 				E0A8A3FD1B4FB8DC005FCD50 /* AllViewController */,
@@ -431,6 +446,7 @@
 		77DF40CE1B1CD9B4006084E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */,
 				E039B44A1B5F6E91002E8EF8 /* Unify.entitlements */,
 				E0A8A3FC1B4FB8B8005FCD50 /* StoryboardLayout */,
 				E0A8A3FB1B4FB899005FCD50 /* WebService */,
@@ -875,11 +891,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		F3A7F7191B73F491009A62C5 /* Products */ = {
+		F356E96C1B7778E900740BE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3A7F71E1B73F491009A62C5 /* libTMTumblrSDK.a */,
-				F3A7F7201B73F491009A62C5 /* Tests.xctest */,
+				F356E9731B7778E900740BE7 /* SwifterDemoiOS.app */,
+				F356E9751B7778E900740BE7 /* SwifteriOS.framework */,
+				F356E9771B7778E900740BE7 /* SwifterMac.framework */,
+				F356E9791B7778E900740BE7 /* SwifterDemoMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1015,8 +1033,8 @@
 					ProjectRef = E0349AFB1B5A360F002A6E3E /* Pods.xcodeproj */;
 				},
 				{
-					ProductGroup = F3A7F7191B73F491009A62C5 /* Products */;
-					ProjectRef = F3A7F7181B73F491009A62C5 /* TMTumblrSDK.xcodeproj */;
+					ProductGroup = F356E96C1B7778E900740BE7 /* Products */;
+					ProjectRef = F356E96B1B7778E900740BE7 /* Swifter.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1056,18 +1074,32 @@
 			remoteRef = E0349B081B5A360F002A6E3E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F3A7F71E1B73F491009A62C5 /* libTMTumblrSDK.a */ = {
+		F356E9731B7778E900740BE7 /* SwifterDemoiOS.app */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTMTumblrSDK.a;
-			remoteRef = F3A7F71D1B73F491009A62C5 /* PBXContainerItemProxy */;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = F356E9721B7778E900740BE7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F3A7F7201B73F491009A62C5 /* Tests.xctest */ = {
+		F356E9751B7778E900740BE7 /* SwifteriOS.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Tests.xctest;
-			remoteRef = F3A7F71F1B73F491009A62C5 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = F356E9741B7778E900740BE7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F356E9771B7778E900740BE7 /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = F356E9761B7778E900740BE7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F356E9791B7778E900740BE7 /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = F356E9781B7778E900740BE7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

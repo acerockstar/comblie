@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3077CFE7-FAF8-4CC0-ACA6-ECF41C5E97DB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Unify</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</key>
 		<string>https://github.com/acheng96/comblie-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Unify.xcodeproj</string>
+	<string>Unify.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>85B86EA2BDE34F422D45540BBCA049FCF46C90BC</key>
