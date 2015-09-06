@@ -56,7 +56,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
             pageLabels.append("GooglePlus")
         }
         if CheckPentrestloginStatus == "Yes"{
-            pageLabels.append("Pentrest")
+            pageLabels.append("Pintrest")
         }
         self.navigationController?.navigationBar.addSubview(self.navBarView)
         
@@ -163,7 +163,7 @@ class ProfilesViewController: UIViewController, UIPageViewControllerDelegate, UI
     func changeNavBar() {
         var currentVC = self.pageViewController.viewControllers.last as! ProfileContentViewController
         self.pageControl.currentPage = currentVC.pageIndex
-        self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+        self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as String
         UIApplication.sharedApplication().statusBarStyle = .Default
     }
 

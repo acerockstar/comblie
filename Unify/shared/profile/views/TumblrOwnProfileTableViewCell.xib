@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A226f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,11 +22,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjM-1L-U7n">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjM-1L-U7n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEf-oY-FX0">
                                 <rect key="frame" x="118" y="5" width="84" height="84"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.93333333330000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="1VV-u2-TmB"/>
@@ -41,6 +42,7 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Persona" translatesAutoresizingMaskIntoConstraints="NO" id="dGq-0I-ftv">
                                 <rect key="frame" x="123" y="10" width="74" height="74"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="9Bz-PA-XnM"/>
                                     <constraint firstAttribute="width" secondItem="dGq-0I-ftv" secondAttribute="height" id="bER-Ap-8ec"/>
@@ -48,12 +50,14 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-Th-hxz">
                                 <rect key="frame" x="116" y="95" width="87" height="15"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@officialjaden" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF6-Ey-Y7q">
                                 <rect key="frame" x="128" y="110" width="65" height="11"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="lIc-AG-DMh"/>
                                 </constraints>
@@ -67,6 +71,7 @@
                                 </variation>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jeU-Th-hxz" firstAttribute="top" secondItem="cEf-oY-FX0" secondAttribute="bottom" constant="6" id="EWs-AI-14K"/>
@@ -93,6 +98,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="xjM-1L-U7n" secondAttribute="bottom" id="eTI-z6-rI1"/>
                     <constraint firstItem="xjM-1L-U7n" firstAttribute="leading" secondItem="g5T-zr-CE7" secondAttribute="leading" id="kbN-8W-JQm"/>
@@ -100,6 +106,7 @@
                     <constraint firstItem="xjM-1L-U7n" firstAttribute="top" secondItem="g5T-zr-CE7" secondAttribute="top" id="wLV-ja-ZGe"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" red="0.19607843137254902" green="0.31372549019607843" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="nameLabel" destination="jeU-Th-hxz" id="OK8-MV-riD"/>

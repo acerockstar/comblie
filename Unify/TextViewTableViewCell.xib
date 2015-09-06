@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -20,6 +20,7 @@
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="What problems or bugs should we fix?" translatesAutoresizingMaskIntoConstraints="NO" id="l2f-Rp-hSz">
                         <rect key="frame" x="10" y="10" width="300" height="80"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="yev-ch-3vf"/>
@@ -28,6 +29,7 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="l2f-Rp-hSz" secondAttribute="bottom" constant="10" id="MMr-nk-1El"/>
                     <constraint firstItem="l2f-Rp-hSz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="S4Q-oc-0aZ"/>
@@ -35,6 +37,7 @@
                     <constraint firstItem="l2f-Rp-hSz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XKN-F8-Eib"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="textView" destination="l2f-Rp-hSz" id="uGr-Vm-o9v"/>
             </connections>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -21,11 +21,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEU-0l-GWZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFN-ib-9WI">
                         <rect key="frame" x="15" y="7" width="26" height="26"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="26" id="bKl-Xf-blw"/>
                             <constraint firstAttribute="width" secondItem="iFN-ib-9WI" secondAttribute="height" id="s5H-bG-SB5"/>
@@ -41,7 +43,8 @@
                         </variation>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b1-mC-ayq">
-                        <rect key="frame" x="335" y="9.5" width="30" height="25"/>
+                        <rect key="frame" x="335" y="10" width="30" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="RR4-4x-XLV"/>
                         </constraints>
@@ -51,44 +54,18 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-tE-jlU">
-                        <rect key="frame" x="53" y="14" width="270" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-tE-jlU">
+                        <rect key="frame" x="53" y="14" width="270" height="15"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="Kvo-LT-2AG"/>
                         </constraints>
                         <attributedString key="attributedText">
-                            <fragment content="Jennifer Aniston">
+                            <fragment content="Jennifer Aniston and 345 others like this.">
                                 <attributes>
                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="14.5" name="HelveticaNeueLTStd-Md"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" and ">
-                                <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="14.5" name="HelveticaNeueLTStd-Roman"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="345 others">
-                                <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="14.5" name="HelveticaNeueLTStd-Md"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" ">
-                                <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="13" name="HelveticaNeueLTStd-Roman"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="like this.">
-                                <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <font key="NSFont" size="14.5" name="HelveticaNeueLTStd-Roman"/>
+                                    <font key="NSFont" size="14" name="HelveticaLTStd-Roman"/>
+                                    <font key="NSOriginalFont" size="14" name="HelveticaLTStd-Roman"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
@@ -97,12 +74,14 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qul-RT-i1z">
                         <rect key="frame" x="0.0" y="38" width="375" height="1"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="FwX-4f-KVJ"/>
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="qul-RT-i1z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2GM-FI-dkb"/>
                     <constraint firstItem="jGu-tE-jlU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="6uN-i8-dVx"/>
@@ -179,6 +158,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="backButton" destination="5b1-mC-ayq" id="dZE-ms-aZY"/>
                 <outlet property="dividerHeight" destination="FwX-4f-KVJ" id="7wS-RB-hKo"/>

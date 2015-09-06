@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A226f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -26,12 +26,14 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="rHB-Rz-VJ5">
                                 <rect key="frame" x="0.0" y="180" width="505" height="120"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="2oh-Gc-8a8"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wr5-at-9ed">
                                 <rect key="frame" x="12" y="274" width="477" height="1"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="NIm-zR-nU4"/>
@@ -39,6 +41,7 @@
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbu-f7-cCB">
                                 <rect key="frame" x="63" y="229" width="414" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jhn-I0-epv"/>
@@ -50,6 +53,7 @@
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-w2-ZDh">
                                 <rect key="frame" x="12" y="280" width="240" height="17"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Heidi Klum posted a photo on Twitter">
@@ -64,6 +68,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmz-wM-RYQ">
                                 <rect key="frame" x="470" y="280" width="16" height="12"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="11.5"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,6 +76,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87o-Ib-MYO">
                                 <rect key="frame" x="12" y="223" width="46" height="46"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="4i3-Gr-QZs"/>
                                     <constraint firstAttribute="width" constant="54" id="G3q-Lc-PPV"/>
@@ -92,6 +98,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddc-HB-Q0Y">
                                 <rect key="frame" x="10" y="10" width="19" height="18"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="9Xm-sL-TMF"/>
                                     <constraint firstAttribute="height" constant="12" id="CMf-cM-CEr"/>
@@ -114,6 +121,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-f1-XjJ">
                                 <rect key="frame" x="39" y="10" width="20" height="17"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="58R-9Y-jga"/>
                                     <constraint firstAttribute="width" secondItem="dI1-f1-XjJ" secondAttribute="height" multiplier="41:36" id="Agk-bD-6kE"/>
@@ -135,6 +143,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0VH-w2-ZDh" firstAttribute="top" secondItem="wr5-at-9ed" secondAttribute="bottom" constant="5" id="0T4-Gc-Pli"/>
@@ -185,6 +194,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="dNP-Bo-kZY" secondAttribute="bottom" constant="-9" id="E3u-cG-GXn"/>
                     <constraint firstItem="dNP-Bo-kZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UiU-64-9IV"/>
@@ -198,6 +208,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="activityLabel" destination="0VH-w2-ZDh" id="hJZ-G9-z9Y"/>
                 <outlet property="descriptionTextView" destination="lbu-f7-cCB" id="F8s-G2-e72"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,26 +22,27 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0g-pK-67o">
                         <rect key="frame" x="59" y="15" width="299" height="17"/>
+                        <animations/>
                         <attributedString key="attributedText">
                             <fragment content="Jaden Smith and ">
                                 <attributes>
-                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" metaFont="system"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                             <fragment content="5 others">
                                 <attributes>
-                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" metaFont="system"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
                                     <font key="NSOriginalFont" size="12" name="HelveticaNeue-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                             <fragment content=" like your photo.">
                                 <attributes>
-                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <font key="NSFont" metaFont="system"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
@@ -50,6 +51,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-2g-EXE">
                         <rect key="frame" x="12" y="15" width="37" height="37"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="6Q5-q8-Xcj"/>
                             <constraint firstAttribute="height" constant="45" id="TTB-0P-TKi"/>
@@ -80,6 +82,7 @@
                     </button>
                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-wt-ZVt">
                         <rect key="frame" x="35" y="38" width="15" height="15"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="AMa-wt-ZVt" secondAttribute="height" multiplier="1:1" id="6iF-zF-7lX"/>
@@ -88,6 +91,7 @@
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8f-o4-SZc">
                         <rect key="frame" x="36" y="39" width="13" height="13"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="d8f-o4-SZc" secondAttribute="height" multiplier="1:1" id="Iri-A1-fvs"/>
                             <constraint firstAttribute="height" constant="15" id="YOp-xN-afH"/>
@@ -101,11 +105,13 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today at 9:36 PM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-wb-Wch">
                         <rect key="frame" x="60" y="35" width="299" height="13"/>
+                        <animations/>
                         <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Roman" family="Helvetica Neue LT Std" pointSize="12.5"/>
                         <color key="textColor" red="0.71764705882352942" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="AMa-wt-ZVt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="445-XP-KX1"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hia-2g-EXE" secondAttribute="bottom" constant="8" id="6Nq-Vz-DCr"/>
@@ -131,6 +137,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="descriptionLabel" destination="S0g-pK-67o" id="Of0-6U-c1I"/>
                 <outlet property="socialMediaIcon" destination="d8f-o4-SZc" id="5ST-Mv-5bV"/>

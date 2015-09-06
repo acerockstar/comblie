@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -28,6 +28,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Im8-IT-JLY">
                                 <rect key="frame" x="12" y="7" width="56" height="56"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="1c3-aI-xpE"/>
                                     <constraint firstAttribute="width" secondItem="Im8-IT-JLY" secondAttribute="height" multiplier="1:1" id="5LX-1q-m8i"/>
@@ -59,6 +60,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:26pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAy-3j-EhS">
                                 <rect key="frame" x="258" y="16" width="45" height="13"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="XvJ-zn-WEs"/>
                                 </constraints>
@@ -67,6 +69,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, you down for a pickup game later today? Meet at 7 on the field. Joe and Peyton are coming..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvH-jD-MPl">
                                 <rect key="frame" x="78" y="32" width="225" height="26"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="yDS-85-Plw"/>
                                 </constraints>
@@ -80,12 +83,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="David Beckham" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-OM-J3f">
                                 <rect key="frame" x="78" y="15" width="165" height="15"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="14.5"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF9-Vu-wG3">
                                 <rect key="frame" x="52" y="47" width="17" height="17"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dF9-Vu-wG3" secondAttribute="height" id="5Ng-qn-M6Z"/>
@@ -94,6 +99,7 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-pS-MrC">
                                 <rect key="frame" x="53" y="48" width="15" height="15"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13" id="ANu-pu-vbZ"/>
                                     <constraint firstAttribute="height" constant="18" id="QEA-jd-ZDJ"/>
@@ -110,6 +116,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rvH-jD-MPl" secondAttribute="bottom" constant="7" id="1VP-Nz-4H6"/>
@@ -227,6 +234,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2UJ-la-Z5P" secondAttribute="trailing" id="4gg-zZ-Q05"/>
                     <constraint firstAttribute="bottom" secondItem="2UJ-la-Z5P" secondAttribute="bottom" constant="-1" id="4xr-cJ-8CA"/>
@@ -234,6 +242,7 @@
                     <constraint firstItem="2UJ-la-Z5P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bZd-Et-dk1"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="messageLabel" destination="rvH-jD-MPl" id="m0H-kd-Xil"/>
                 <outlet property="nameLabel" destination="S9e-OM-J3f" id="JTG-qQ-2rH"/>
