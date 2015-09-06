@@ -59,24 +59,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaden Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbQ-n9-iSk">
-                                <rect key="frame" x="116" y="95" width="87" height="15"/>
+                                <rect key="frame" x="113.5" y="95" width="92.5" height="16"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Md" family="Helvetica Neue LT Std" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a short bio about me." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srq-B1-LPP">
-                                <rect key="frame" x="55" y="131" width="210" height="13"/>
+                                <rect key="frame" x="55" y="131" width="210" height="11"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="pC7-BT-WdI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="12.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="9.8m" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHZ-Wq-Sep">
-                                <rect key="frame" x="48" y="157" width="37" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.8m" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHZ-Wq-Sep">
+                                <rect key="frame" x="48" y="156" width="36.5" height="16"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="67r-6s-Jvu"/>
@@ -91,7 +91,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@officialjaden" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-Ru-qfy">
-                                <rect key="frame" x="128" y="110" width="65" height="11"/>
+                                <rect key="frame" x="128" y="111" width="64.5" height="10.5"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="Rpd-RG-PTk"/>
@@ -106,7 +106,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2M-Xb-qzU">
-                                <rect key="frame" x="112" y="155" width="2" height="30"/>
+                                <rect key="frame" x="112" y="154.5" width="2" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhu-2S-a1j">
-                                <rect key="frame" x="205" y="155" width="2" height="30"/>
+                                <rect key="frame" x="205" y="154.5" width="2" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -124,7 +124,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-Iw-BxG">
-                                <rect key="frame" x="155" y="157" width="9" height="16"/>
+                                <rect key="frame" x="155" y="156.5" width="9" height="16"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="E5e-Mw-oAP"/>
@@ -138,8 +138,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1068" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-Xy-qvb">
-                                <rect key="frame" x="234" y="157" width="36" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1068" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-Xy-qvb">
+                                <rect key="frame" x="235" y="156" width="36" height="16"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="AzF-dV-OcC"/>
@@ -154,7 +154,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-aF-su5">
-                                <rect key="frame" x="40" y="174" width="52" height="12"/>
+                                <rect key="frame" x="40" y="173" width="52" height="12"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="ZtD-Uw-VBU"/>
@@ -169,7 +169,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btw-ci-p2h">
-                                <rect key="frame" x="134" y="174" width="52" height="12"/>
+                                <rect key="frame" x="134" y="173.5" width="51.5" height="12"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="OSG-o2-hHf"/>
@@ -183,8 +183,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Posts" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNc-85-GH4">
-                                <rect key="frame" x="226" y="174" width="53" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNc-85-GH4">
+                                <rect key="frame" x="227" y="173" width="52" height="12"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="0bf-4p-zbC"/>
@@ -199,7 +199,7 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65o-8y-qFW">
-                                <rect key="frame" x="92" y="178" width="20" height="5"/>
+                                <rect key="frame" x="92" y="177" width="20" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -207,15 +207,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETn-b9-UNf">
-                                <rect key="frame" x="114" y="178" width="20" height="5"/>
+                                <rect key="frame" x="114" y="177" width="20" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="cge-Bc-8fT"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIr-1g-Zfm">
-                                <rect key="frame" x="185" y="178" width="20" height="5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIr-1g-Zfm">
+                                <rect key="frame" x="186" y="177" width="19.5" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -223,7 +223,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNL-m6-U1z">
-                                <rect key="frame" x="207" y="178" width="20" height="5"/>
+                                <rect key="frame" x="207" y="177" width="20" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -231,7 +231,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-4h-s2C">
-                                <rect key="frame" x="279" y="178" width="41" height="5"/>
+                                <rect key="frame" x="279" y="177" width="40.5" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -239,7 +239,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-XF-47D">
-                                <rect key="frame" x="0.0" y="178" width="41" height="5"/>
+                                <rect key="frame" x="0.0" y="177" width="40.5" height="5"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
