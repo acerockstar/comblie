@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let imagePicker = UIImagePickerController()
     var name = "Name"
@@ -16,6 +16,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     @IBOutlet weak var typeMessageField: UITextField!
     @IBOutlet weak var uploadButton: UIBarButtonItem!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var messagesTableView: UITableView!
     
     
     @IBAction func goBackToMessages(sender: UIBarButtonItem) {
@@ -46,6 +47,10 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardShown:"), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardHidden:"), name:UIKeyboardWillHideNotification, object: nil)
+        messagesTableView.delegate = self
+        messagesTableView.dataSource = self
+        messagesTableView.estimatedRowHeight = 50.0
+        messagesTableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -82,5 +87,35 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
+    }
+    
+    // MARK - Messages Table View
+    
+    var dummyData = ["Hi", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "I'm fine :-) I'm fine :-) I'm fine :-)", "Awesome!"]
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.row % 2 == 0 {
+            // Sender
+            let cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath) as? SenderTableViewCell
+            cell?.textView.text = dummyData[indexPath.row]
+            cell?.textView.sizeToFit()
+            cell?.profileImage.image = UIImage(named: "Persona")
+            return cell!
+        } else {
+            // Recipient
+            let cell = tableView.dequeueReusableCellWithIdentifier("recipientCell", forIndexPath: indexPath) as? RecipientTableViewCell
+            cell?.textView.text = dummyData[indexPath.row]
+            cell?.textView.sizeToFit()
+            cell?.profileImage.image = UIImage(named: "Photo")
+            return cell!
+        }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dummyData.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
 }

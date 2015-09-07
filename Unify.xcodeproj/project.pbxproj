@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		08B9BBFD1B83F9290087719F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; };
+		22CC75A51B9E2755007CEB73 /* RecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */; };
+		22CC75A91B9E281A007CEB73 /* SeenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */; };
+		22CC75AA1B9E281A007CEB73 /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */; };
+		22CC75AB1B9E281A007CEB73 /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A81B9E281A007CEB73 /* SenderTableViewCell.swift */; };
 		22E7A2F31B9B7966008138CA /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; };
 		22E7A2F41B9B7966008138CA /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D19C1493C2570A9EC1D352A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFD9CB582B129FC0FCFBEDD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -208,6 +212,10 @@
 
 /* Begin PBXFileReference section */
 		08B9BBEE1B83F9150087719F /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipientTableViewCell.swift; path = Unify/RecipientTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeenTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeTableViewCell.swift; path = Unify/TimeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		22CC75A81B9E281A007CEB73 /* SenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SenderTableViewCell.swift; path = Unify/SenderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2BFD9CB582B129FC0FCFBEDD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB5FD950EB7368CF568B4A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		77DF40B51B1CD9B4006084E4 /* Unify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -598,6 +606,10 @@
 		77DF40EC1B1CEBFD006084E4 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */,
+				22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */,
+				22CC75A81B9E281A007CEB73 /* SenderTableViewCell.swift */,
+				22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */,
 				D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */,
 				D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */,
 			);
@@ -1223,11 +1235,13 @@
 				D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
 				D1360E3E1B5B2EA70071AA16 /* FontExtension.swift in Sources */,
+				22CC75AB1B9E281A007CEB73 /* SenderTableViewCell.swift in Sources */,
 				D1855BDD1B50666300A5A244 /* SettingsTableViewController.swift in Sources */,
 				D1B9E0271B2CEF1600F59444 /* ActivityContentViewController.swift in Sources */,
 				D183E1D21B6DF9BE009455B5 /* TumblrOwnProfileTableViewCell.swift in Sources */,
 				D183E1BE1B6DD706009455B5 /* InstagramProfileTableViewCell.swift in Sources */,
 				D1DA88761B5108F300B7D344 /* PushNotificationTableViewCell.swift in Sources */,
+				22CC75A51B9E2755007CEB73 /* RecipientTableViewCell.swift in Sources */,
 				D1B9E03B1B30061C00F59444 /* CommentsViewController.swift in Sources */,
 				D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */,
 				D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */,
@@ -1258,6 +1272,7 @@
 				F3C929191B6ED79F00CF6613 /* TwitterLogin.swift in Sources */,
 				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
 				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
+				22CC75AA1B9E281A007CEB73 /* TimeTableViewCell.swift in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,
 				D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */,
 				D1F3FA831B578D68003ED306 /* UIViewController+BetterLayoutGuides.m in Sources */,
@@ -1273,6 +1288,7 @@
 				D17CE4C91B205BEF00ED9E93 /* EnlargedItemViewController.swift in Sources */,
 				D17CE4D61B21C78B00ED9E93 /* User.swift in Sources */,
 				D1B9E02F1B2D0BAC00F59444 /* CustomRefreshControl.swift in Sources */,
+				22CC75A91B9E281A007CEB73 /* SeenTableViewCell.swift in Sources */,
 				D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */,
 				F3C9290D1B6EB13700CF6613 /* InviteFriendsViewController.swift in Sources */,
 				77DF40BB1B1CD9B4006084E4 /* AppDelegate.swift in Sources */,
