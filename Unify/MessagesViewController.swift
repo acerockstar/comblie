@@ -44,6 +44,9 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
         if let path = indexPath {
             tableView.deselectRowAtIndexPath(path, animated: true)
         }
+        
+        self.navigationController?.view.backgroundColor = UIColor.whiteColor()
+        
     }
     
     override func viewDidAppear(animated: Bool) {

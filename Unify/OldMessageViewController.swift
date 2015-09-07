@@ -13,13 +13,10 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     let imagePicker = UIImagePickerController()
     var name = "Name"
     
-    @IBOutlet weak var addContactField: UITextField!
     @IBOutlet weak var typeMessageField: UITextField!
     @IBOutlet weak var uploadButton: UIBarButtonItem!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    @IBAction func addContact(sender: AnyObject) {
-    }
     
     @IBAction func goBackToMessages(sender: UIBarButtonItem) {
         self.navigationController!.popViewControllerAnimated(true)
@@ -43,7 +40,6 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addContactField.delegate = self
         typeMessageField.delegate = self
         imagePicker.delegate = self
         //addContactField.becomeFirstResponder()

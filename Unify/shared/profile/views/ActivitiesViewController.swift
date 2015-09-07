@@ -152,7 +152,7 @@ class ActivitiesViewController: UIViewController, UIPageViewControllerDelegate, 
             UIApplication.sharedApplication().statusBarStyle = .Default
             postStatusButton.tintColor = nil
         } else {
-            self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as? String
+            self.navigationItem.title = self.pageLabels[currentVC.pageIndex] as String
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
             self.pageControl.currentPageIndicatorTintColor = UIColor.lightGrayColor()
             self.pageControl.pageIndicatorTintColor = UIColor.whiteColor()
