@@ -12,6 +12,8 @@
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
             <string>HelveticaNeueLTStd-Lt</string>
+            <string>HelveticaNeueLTStd-Lt</string>
+            <string>HelveticaNeueLTStd-Lt</string>
         </mutableArray>
         <mutableArray key="HelveticaNeueLTStd-Md.otf">
             <string>HelveticaNeueLTStd-Md</string>
@@ -692,6 +694,52 @@
                                             <outlet property="widthConstraint" destination="RGE-dI-wX2" id="Iwd-Jg-rsR"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="secondRecipientCell" rowHeight="26" id="uTK-Wc-cyM" customClass="SecondRecipientTableViewCell" customModule="Unify" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTK-Wc-cyM" id="Ig3-rq-2D6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Hi! " translatesAutoresizingMaskIntoConstraints="NO" id="Ica-yS-ftD">
+                                                    <rect key="frame" x="65" y="1" width="189" height="24"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.2901960784" green="0.43921568630000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="189" id="xO5-97-s9B"/>
+                                                    </constraints>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-6z-NsM">
+                                                    <rect key="frame" x="9" y="6" width="48" height="13"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13" id="EcK-zc-BCr"/>
+                                                        <constraint firstAttribute="width" constant="48" id="uu8-hf-c4h"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="aRa-6z-NsM" secondAttribute="centerY" id="VC0-K0-YT1"/>
+                                                <constraint firstItem="Ica-yS-ftD" firstAttribute="leading" secondItem="aRa-6z-NsM" secondAttribute="trailing" constant="8" id="emj-A4-uE6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ica-yS-ftD" secondAttribute="bottom" constant="1" id="ozk-b6-mSG"/>
+                                                <constraint firstItem="aRa-6z-NsM" firstAttribute="leading" secondItem="Ig3-rq-2D6" secondAttribute="leadingMargin" constant="1" id="rty-fv-o3B"/>
+                                                <constraint firstItem="Ica-yS-ftD" firstAttribute="top" secondItem="Ig3-rq-2D6" secondAttribute="top" constant="1" id="xfP-JI-W41"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="textView" destination="Ica-yS-ftD" id="yU7-Po-8dL"/>
+                                            <outlet property="widthConstraint" destination="xO5-97-s9B" id="eh7-XD-pjb"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="senderCell" rowHeight="48" id="L7n-2F-Y4W" customClass="SenderTableViewCell" customModule="Unify" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L7n-2F-Y4W" id="5dH-9z-RX2">
@@ -741,6 +789,41 @@
                                             <outlet property="profileImage" destination="Iw6-SW-agh" id="i2e-TB-bX4"/>
                                             <outlet property="textView" destination="ZYg-6u-UIz" id="ZCW-uA-DfP"/>
                                             <outlet property="widthConstraint" destination="Qye-wr-jBa" id="3WF-P0-cKh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="secondSenderCell" rowHeight="26" id="aXI-Vy-LKA" customClass="SecondSenderTableViewCell" customModule="Unify" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aXI-Vy-LKA" id="VbM-k7-J5s">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Hi! " translatesAutoresizingMaskIntoConstraints="NO" id="4c6-gm-1eQ">
+                                                    <rect key="frame" x="66" y="1" width="189" height="24"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.8862745098" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="189" id="QLo-s8-YlH"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4c6-gm-1eQ" secondAttribute="trailing" constant="65" id="1Qg-bH-MxZ"/>
+                                                <constraint firstItem="4c6-gm-1eQ" firstAttribute="top" secondItem="VbM-k7-J5s" secondAttribute="top" constant="1" id="CCX-WW-eZC"/>
+                                                <constraint firstAttribute="bottom" secondItem="4c6-gm-1eQ" secondAttribute="bottom" constant="1" id="sAl-mO-YW8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="textView" destination="4c6-gm-1eQ" id="aca-ob-OQo"/>
+                                            <outlet property="widthConstraint" destination="QLo-s8-YlH" id="2A1-BX-rUj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" rowHeight="20" id="RkS-Hk-A9R" customClass="TimeTableViewCell" customModule="Unify" customModuleProvider="target">

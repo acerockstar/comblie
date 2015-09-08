@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08B9BBFD1B83F9290087719F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; };
+		2253E8B01B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E8AE1B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift */; };
+		2253E8B11B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E8AF1B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift */; };
 		22CC75A51B9E2755007CEB73 /* RecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */; };
 		22CC75A91B9E281A007CEB73 /* SeenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */; };
 		22CC75AA1B9E281A007CEB73 /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */; };
@@ -212,6 +214,8 @@
 
 /* Begin PBXFileReference section */
 		08B9BBEE1B83F9150087719F /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		2253E8AE1B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondRecipientTableViewCell.swift; path = Unify/SecondRecipientTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		2253E8AF1B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondSenderTableViewCell.swift; path = Unify/SecondSenderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipientTableViewCell.swift; path = Unify/RecipientTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeenTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeTableViewCell.swift; path = Unify/TimeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -610,6 +614,8 @@
 				22CC75A71B9E281A007CEB73 /* TimeTableViewCell.swift */,
 				22CC75A81B9E281A007CEB73 /* SenderTableViewCell.swift */,
 				22CC75A41B9E2755007CEB73 /* RecipientTableViewCell.swift */,
+				2253E8AE1B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift */,
+				2253E8AF1B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift */,
 				D17CE4561B1E689800ED9E93 /* MessagesTableViewCell.swift */,
 				D17CE4571B1E689800ED9E93 /* MessagesTableViewCell.xib */,
 			);
@@ -1232,6 +1238,7 @@
 				E08989351B562D04000A8C33 /* ViewControllerUtils.swift in Sources */,
 				D1DA88721B50EF6100B7D344 /* ConnectedSocialNetworkTableViewCell.swift in Sources */,
 				D17CE4C31B20535D00ED9E93 /* NewsFeedViewController.swift in Sources */,
+				2253E8B11B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift in Sources */,
 				D1855BE31B50918C00A5A244 /* UIKitExtensions.swift in Sources */,
 				D17CE4551B1E64CA00ED9E93 /* MessagesViewController.swift in Sources */,
 				D1360E3E1B5B2EA70071AA16 /* FontExtension.swift in Sources */,
@@ -1280,6 +1287,7 @@
 				D1855BE61B50925900A5A244 /* TextViewTableViewCell.swift in Sources */,
 				D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */,
 				D17CE4CE1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift in Sources */,
+				2253E8B01B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift in Sources */,
 				D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */,
 				F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */,
 				E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */,

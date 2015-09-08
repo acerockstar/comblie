@@ -10,7 +10,7 @@ import UIKit
 
 class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK - Constants
+    // MARK: - Constants
     let messageFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 13.0)
     let messageBubbleWidth: CGFloat = 189.0
     
@@ -60,7 +60,12 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         // TODO: - Remove Dummy data
         addTimeStamp("4:20 PM")
         addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
+        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
+        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
+        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
         addMessage(true, sender: "Photo", text: "Hi! How are you doing?", type: NetworkType.Twitter)
+        addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
+        addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
         addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
         addMessage(false, sender: "Persona", text: "I'm doing great! Thanks for asking :-)", type: NetworkType.Twitter)
         addMessage(true, sender: "Photo", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", type: NetworkType.Twitter)
@@ -106,8 +111,6 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     // MARK - Messages Table View
     
     var dummyData:[Cell] = []
-    var previousMessageWasUserSender = false
-    var previousWasStamp = false
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -119,11 +122,26 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
             if message.userIsSender == false {
                 let cell = tableView.dequeueReusableCellWithIdentifier("recipientCell", forIndexPath: indexPath) as? RecipientTableViewCell
                 cell?.textView.text = message.text
-                if previousMessageWasUserSender == false && previousWasStamp == false {
-                    cell!.imageView!.hidden = true
-                } else {
-                    cell?.profileImage.image = UIImage(named: message.senderName!)
+                if let i = dummyData[indexPath.row - 1] as? Message {
+                    if i.senderName == message.senderName {
+                        // Two messages of the same person
+                        let newCell = tableView.dequeueReusableCellWithIdentifier("secondRecipientCell", forIndexPath: indexPath) as? SecondRecipientTableViewCell
+                        newCell?.textView.text = message.text
+                        if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
+                            if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                                newCell?.widthConstraint.constant = messageBubbleWidth
+                            } else {
+                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                                newCell?.textView.textAlignment = .Center
+                            }
+                        }
+                        newCell?.layoutIfNeeded()
+                        newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
+                        
+                        return newCell!
+                    }
                 }
+                cell?.profileImage.image = UIImage(named: message.senderName!)
                 if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
                     if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
                         cell?.widthConstraint.constant = messageBubbleWidth
@@ -133,19 +151,32 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                     }
                 }
                 cell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
-                previousMessageWasUserSender = false
-                previousWasStamp = false
                 
                 return cell!
                 
             } else {
                 let cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath) as? SenderTableViewCell
                 cell?.textView.text = message.text
-                if previousMessageWasUserSender == true && previousWasStamp == false {
-                    cell!.imageView!.hidden = true
-                } else {
-                    cell?.profileImage.image = UIImage(named: message.senderName!)
+                if let i = dummyData[indexPath.row - 1] as? Message {
+                    if i.userIsSender == true {
+                        // Two messages of the same person
+                        let newCell = tableView.dequeueReusableCellWithIdentifier("secondSenderCell", forIndexPath: indexPath) as? SecondSenderTableViewCell
+                        newCell?.textView.text = message.text
+                        if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
+                            if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                                newCell?.widthConstraint.constant = messageBubbleWidth
+                            } else {
+                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                                newCell?.textView.textAlignment = .Center
+                            }
+                        }
+                        newCell?.layoutIfNeeded()
+                        newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
+                        
+                        return newCell!
+                    }
                 }
+                cell?.profileImage.image = UIImage(named: message.senderName!)
                 if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
                     if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
                         cell?.widthConstraint.constant = messageBubbleWidth
@@ -155,8 +186,6 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                     }
                 }
                 cell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
-                previousMessageWasUserSender = true
-                previousWasStamp = false
                 
                 return cell!
             }
@@ -164,52 +193,18 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
             
             // SEEN STAMP
         case CellType.seenStamp:
-            previousWasStamp = true
             let cell = tableView.dequeueReusableCellWithIdentifier("seenCell", forIndexPath: indexPath) as? SeenTableViewCell
             
             return cell!
             
             // TIME STAMP
         case CellType.timeStamp:
-            previousWasStamp = true
             let timeStamp = cellType as! TimeStamp
             let cell = tableView.dequeueReusableCellWithIdentifier("timeCell", forIndexPath: indexPath) as? TimeTableViewCell
             cell?.timeLabel.text = timeStamp.date
             
             return cell!
         }
-        
-//        if indexPath.row % 2 == 0 {
-//            // Sender
-//            let cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath) as? SenderTableViewCell
-//            cell?.textView.text = dummyData[indexPath.row]
-//            cell?.profileImage.image = UIImage(named: "Persona")
-//            if widthOfString(dummyData[indexPath.row], withFont: messageFont!) < messageBubbleWidth {
-//                if widthOfString(dummyData[indexPath.row], withFont: messageFont!) + 20 > messageBubbleWidth {
-//                    cell?.widthConstraint.constant = messageBubbleWidth
-//                } else {
-//                    cell?.widthConstraint.constant = widthOfString(dummyData[indexPath.row], withFont: messageFont!) + 20
-//                    cell?.textView.textAlignment = .Center
-//                }
-//            }
-//
-//            return cell!
-//        } else {
-//            // Recipient
-//            let cell = tableView.dequeueReusableCellWithIdentifier("recipientCell", forIndexPath: indexPath) as? RecipientTableViewCell
-//            cell?.textView.text = dummyData[indexPath.row]
-//            cell?.profileImage.image = UIImage(named: "Photo")
-//            if widthOfString(dummyData[indexPath.row], withFont: messageFont!) < messageBubbleWidth {
-//                if widthOfString(dummyData[indexPath.row], withFont: messageFont!) + 20 > messageBubbleWidth {
-//                    cell?.widthConstraint.constant = messageBubbleWidth
-//                } else {
-//                    cell?.widthConstraint.constant = widthOfString(dummyData[indexPath.row], withFont: messageFont!) + 20
-//                    cell?.textView.textAlignment = .Center
-//                }
-//            }
-//
-//            return cell!
-//        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -241,7 +236,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         dummyData += [seenStamp]
     }
     
-    // MARK - Helper Functions
+    // MARK: - Helper Functions
     
     func widthOfString(string: String, withFont font: UIFont) -> CGFloat {
         var attributes: [NSObject : AnyObject] = [font: NSFontAttributeName]
@@ -249,7 +244,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     }
 }
 
-// MARK - Message and Stamp Classes
+// MARK: - Message and Stamp Classes
 
 class Cell: NSObject {
     let cellType: CellType!
