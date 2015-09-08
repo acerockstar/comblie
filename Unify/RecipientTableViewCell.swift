@@ -12,4 +12,5 @@ class RecipientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
 }
