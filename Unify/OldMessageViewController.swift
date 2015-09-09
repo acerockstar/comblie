@@ -54,10 +54,11 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardHidden:"), name:UIKeyboardWillHideNotification, object: nil)
         messagesTableView.delegate = self
         messagesTableView.dataSource = self
-        messagesTableView.estimatedRowHeight = 48.0
+        messagesTableView.estimatedRowHeight = 10.0
         messagesTableView.rowHeight = UITableViewAutomaticDimension
         
         // TODO: - Remove Dummy data
+        addWhiteCell()
         addTimeStamp("4:20 PM")
         addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
         addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
@@ -204,6 +205,11 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
             cell?.timeLabel.text = timeStamp.date
             
             return cell!
+            
+        case CellType.white:
+            let cell = tableView.dequeueReusableCellWithIdentifier("whiteCell", forIndexPath: indexPath) as? UITableViewCell
+            
+            return cell!
         }
     }
     
@@ -217,6 +223,21 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     func addMessage(userIsSender: Bool, sender: String?, text: String, type: NetworkType) {
         let message = Message(userIsSender: userIsSender, text: text, type: type, senderName: sender)
+        
+        // Check if previous message was not from this user
+        if let previousMessage = dummyData.last as? Message {
+            if previousMessage.userIsSender == true {
+                if message.userIsSender == false {
+                    let whiteCell = Cell(cellType: CellType.white)
+                    self.dummyData.append(whiteCell)
+                }
+            } else {
+                if message.userIsSender == true {
+                    let whiteCell = Cell(cellType: CellType.white)
+                    self.dummyData.append(whiteCell)
+                }
+            }
+        }
         
         // TODO: Change!
         dummyData += [message]
@@ -234,6 +255,13 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         
         // TODO: Change!
         dummyData += [seenStamp]
+    }
+    
+    func addWhiteCell() {
+        let whiteCell = Cell(cellType: CellType.white)
+        
+        // TODO: Change!
+        dummyData += [whiteCell]
     }
     
     // MARK: - Helper Functions
@@ -287,6 +315,7 @@ enum CellType {
     case timeStamp
     case seenStamp
     case message
+    case white
 }
 
 enum NetworkType {
