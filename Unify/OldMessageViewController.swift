@@ -11,8 +11,9 @@ import UIKit
 class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Constants
-    let messageFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 13.0)
+    let messageFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 14.0)
     let messageBubbleWidth: CGFloat = 189.0
+    let spaceToAddInTextBubble: CGFloat = 30.0
     
     
     let imagePicker = UIImagePickerController()
@@ -75,12 +76,14 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     override func viewDidAppear(animated: Bool) {
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
+        messagesTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: dummyData.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.title = name
         typeMessageField.frame = CGRectMake(0, 0, self.view.frame.size.width - self.uploadButton.width - 55, self.typeMessageField.frame.size.height)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -129,14 +132,13 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                         let newCell = tableView.dequeueReusableCellWithIdentifier("secondRecipientCell", forIndexPath: indexPath) as? SecondRecipientTableViewCell
                         newCell?.textView.text = message.text
                         if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                            if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                            if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
                                 newCell?.widthConstraint.constant = messageBubbleWidth
                             } else {
-                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
                                 newCell?.textView.textAlignment = .Center
                             }
                         }
-                        newCell?.layoutIfNeeded()
                         newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
                         
                         return newCell!
@@ -144,10 +146,10 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                 }
                 cell?.profileImage.image = UIImage(named: message.senderName!)
                 if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                    if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                    if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
                         cell?.widthConstraint.constant = messageBubbleWidth
                     } else {
-                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
                         cell?.textView.textAlignment = .Center
                     }
                 }
@@ -164,14 +166,13 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                         let newCell = tableView.dequeueReusableCellWithIdentifier("secondSenderCell", forIndexPath: indexPath) as? SecondSenderTableViewCell
                         newCell?.textView.text = message.text
                         if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                            if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                            if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
                                 newCell?.widthConstraint.constant = messageBubbleWidth
                             } else {
-                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
                                 newCell?.textView.textAlignment = .Center
                             }
                         }
-                        newCell?.layoutIfNeeded()
                         newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
                         
                         return newCell!
@@ -179,10 +180,10 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                 }
                 cell?.profileImage.image = UIImage(named: message.senderName!)
                 if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                    if widthOfString(message.text, withFont: messageFont!) + 20 > messageBubbleWidth {
+                    if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
                         cell?.widthConstraint.constant = messageBubbleWidth
                     } else {
-                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + 20
+                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
                         cell?.textView.textAlignment = .Center
                     }
                 }
@@ -206,6 +207,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
             
             return cell!
             
+            // WHITE CELL
         case CellType.white:
             let cell = tableView.dequeueReusableCellWithIdentifier("whiteCell", forIndexPath: indexPath) as? UITableViewCell
             
