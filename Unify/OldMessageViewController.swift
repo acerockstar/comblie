@@ -11,9 +11,8 @@ import UIKit
 class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Constants
-    let messageFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 14.0)
-    let messageBubbleWidth: CGFloat = 189.0
-    let spaceToAddInTextBubble: CGFloat = 30.0
+    let messageFont = UIFont(name: "HelveticaNeueLTStd-Lt", size: 16.0)
+    let messageBubbleWidth: CGFloat = 220.0
     
     
     let imagePicker = UIImagePickerController()
@@ -59,29 +58,29 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         messagesTableView.rowHeight = UITableViewAutomaticDimension
         
         // TODO: - Remove Dummy data
-        addWhiteCell()
         addTimeStamp("4:20 PM")
-        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
-        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
-        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
-        addMessage(false, sender: "Persona", text: "Hello!", type: NetworkType.Twitter)
-        addMessage(true, sender: "Photo", text: "Hi! How are you doing?", type: NetworkType.Twitter)
-        addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
-        addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
-        addMessage(true, sender: "Photo", text: "It's a beautiful day!", type: NetworkType.Twitter)
-        addMessage(false, sender: "Persona", text: "I'm doing great! Thanks for asking :-)", type: NetworkType.Twitter)
-        addMessage(true, sender: "Photo", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", type: NetworkType.Twitter)
-        addSeenStamp()
+        addMessage(true, sender: "Persona", text: "Lorem ipsum dolor sit amet, laoreet placeat, suscipit hymenaeos, ipsum nulla lorem quis massa, et etiam, nisl lacus litora ligula.", type: NetworkType.Twitter)
+        addMessage(false, sender: "Photo", text: "Aliquet nullam luctus, tortor integer necessitatibus, porttitor nunc, sollicitudin urna id ut orci metus, volutpat porttitor. Cursus ipsum felis egestas turpis diam lacus, suspendisse nec suspendisse, voluptatem tortor lobortis, viverra vestibulum, in sapien hendrerit nunc purus per.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Vitae nullam, morbi lectus vitae venenatis viverra, lectus sed wisi cras proin dui, erat rutrum id ad amet vel. Fugiat ultricies enim nec ipsum adipiscing sit, nunc inceptos magna adipiscing, eu erat ac eget phasellus pellentesque.", type: NetworkType.Twitter)
+        addMessage(false, sender: "Photo", text: "Eu et suscipit tellus tellus sagittis justo, pellentesque dictum amet turpis, tellus urna egestas dignissim, nullam sed voluptatem in blandit, lacus vivamus. Quisque egestas nullam adipiscing in ligula, ut luctus. Sapien metus wisi mus mollis aliquam ullamcorper. Felis platea erat sed ut egestas.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Ipsum est nibh hac vestibulum molestie viverra.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Sodales nec in cras, ut elit vitae, faucibus orci.", type: NetworkType.Twitter)
+        addTimeStamp("4:32 PM")
+        addMessage(true, sender: "Persona", text: "Posuere volutpat urna ante. Eget congue tellus nonummy, dolor imperdiet ligula tristique.", type: NetworkType.Twitter)
+        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Pretium posuere, vehicula orci at consequat bibendum nulla dui, quaerat bibendum aliquet lacus vel amet.", type: NetworkType.Twitter)
+        addSeenStamp("Seen 4:35 PM")
     }
     
     override func viewDidAppear(animated: Bool) {
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeueLTStd-Md", size: 16.5)!]
-        messagesTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: dummyData.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+        messagesTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: data.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.title = name
         typeMessageField.frame = CGRectMake(0, 0, self.view.frame.size.width - self.uploadButton.width - 55, self.typeMessageField.frame.size.height)
+        navigationController!.navigationBar.barTintColor = UIColor(red: 227.0/255.0, green: 223.0/255.0, blue: 223.0/255.0, alpha: 1.0)
     }
     
     
@@ -114,88 +113,96 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
     
     // MARK - Messages Table View
     
-    var dummyData:[Cell] = []
+    var data:[Cell] = []
+    var senderCells:[Int : SecondSenderTableViewCell] = [:]
+    var recipientCells:[Int : SecondRecipientTableViewCell] = [:]
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cellType = dummyData[indexPath.row]
+        let cellType = data[indexPath.row]
         switch cellType.cellType as CellType {
             // MESSAGE
         case CellType.message:
             let message = cellType as! Message
-            if message.userIsSender == false {
-                let cell = tableView.dequeueReusableCellWithIdentifier("recipientCell", forIndexPath: indexPath) as? RecipientTableViewCell
+            
+            if message.userIsSender == true {
+                // Current user is the sender of this message
+                let cell = tableView.dequeueReusableCellWithIdentifier("secondSenderCell", forIndexPath: indexPath) as? SecondSenderTableViewCell
+                
+                // Setup cell's properties
                 cell?.textView.text = message.text
-                if let i = dummyData[indexPath.row - 1] as? Message {
-                    if i.senderName == message.senderName {
-                        // Two messages of the same person
-                        let newCell = tableView.dequeueReusableCellWithIdentifier("secondRecipientCell", forIndexPath: indexPath) as? SecondRecipientTableViewCell
-                        newCell?.textView.text = message.text
-                        if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                            if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
-                                newCell?.widthConstraint.constant = messageBubbleWidth
-                            } else {
-                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
-                                newCell?.textView.textAlignment = .Center
-                            }
-                        }
-                        newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
-                        
-                        return newCell!
-                    }
-                }
-                cell?.profileImage.image = UIImage(named: message.senderName!)
-                if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                    if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
-                        cell?.widthConstraint.constant = messageBubbleWidth
+                
+                // Check if message cell is also from this user
+                if let nextMessage = data[indexPath.row + 1] as? Message {
+                    if nextMessage.senderName == message.senderName {
+                        cell?.profileImageView.hidden = true
                     } else {
-                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
-                        cell?.textView.textAlignment = .Center
+                        // Set the profile Image
+                        cell?.profileImageView.image = UIImage(named: message.senderName!)
                     }
+                } else {
+                    // Set the profile Image
+                    cell?.profileImageView.image = UIImage(named: message.senderName!)
                 }
+                
+                // Adapt width of cell
+                if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
+                    // The width is smaller than the messageBubbleWidth
+                    cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!)
+                } else {
+                    cell?.widthConstraint.constant = messageBubbleWidth
+                }
+                
+                // Change Content Inset
                 cell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
+                
+                // Add to allCells
+                senderCells[indexPath.row] = cell!
                 
                 return cell!
                 
             } else {
-                let cell = tableView.dequeueReusableCellWithIdentifier("senderCell", forIndexPath: indexPath) as? SenderTableViewCell
+                // Current user is *not* the sender of this message
+                let cell = tableView.dequeueReusableCellWithIdentifier("secondRecipientCell", forIndexPath: indexPath) as? SecondRecipientTableViewCell
+                
+                // Setup cell's properties
                 cell?.textView.text = message.text
-                if let i = dummyData[indexPath.row - 1] as? Message {
-                    if i.userIsSender == true {
-                        // Two messages of the same person
-                        let newCell = tableView.dequeueReusableCellWithIdentifier("secondSenderCell", forIndexPath: indexPath) as? SecondSenderTableViewCell
-                        newCell?.textView.text = message.text
-                        if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                            if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
-                                newCell?.widthConstraint.constant = messageBubbleWidth
-                            } else {
-                                newCell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
-                                newCell?.textView.textAlignment = .Center
-                            }
-                        }
-                        newCell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
-                        
-                        return newCell!
-                    }
-                }
-                cell?.profileImage.image = UIImage(named: message.senderName!)
-                if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
-                    if widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble > messageBubbleWidth {
-                        cell?.widthConstraint.constant = messageBubbleWidth
+                
+                // Check if message cell is also from this user
+                if let nextMessage = data[indexPath.row + 1] as? Message {
+                    if nextMessage.senderName == message.senderName {
+                        cell?.profileImageView.hidden = true
                     } else {
-                        cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!) + spaceToAddInTextBubble
-                        cell?.textView.textAlignment = .Center
+                        // Set the profile Image
+                        cell?.profileImageView.image = UIImage(named: message.senderName!)
                     }
+                } else {
+                    // Set the profile Image
+                    cell?.profileImageView.image = UIImage(named: message.senderName!)
                 }
+                
+                // Adapt width of cell
+                if widthOfString(message.text, withFont: messageFont!) < messageBubbleWidth {
+                    // The width is smaller than the messageBubbleWidth
+                    cell?.widthConstraint.constant = widthOfString(message.text, withFont: messageFont!)
+                } else {
+                    cell?.widthConstraint.constant = messageBubbleWidth
+                }
+                
+                // Change Content Inset
                 cell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
+                
+                // Add to allCells
+                recipientCells[indexPath.row] = cell!
                 
                 return cell!
             }
             
-            
             // SEEN STAMP
         case CellType.seenStamp:
+            let seenStamp = cellType as! SeenStamp
             let cell = tableView.dequeueReusableCellWithIdentifier("seenCell", forIndexPath: indexPath) as? SeenTableViewCell
+            cell?.seenLabel.text = seenStamp.text
             
             return cell!
             
@@ -215,8 +222,12 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         }
     }
     
+    func hideProfileImageOfCellAtIndexPath(indexPath: NSIndexPath) {
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyData.count
+        return data.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -227,50 +238,51 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         let message = Message(userIsSender: userIsSender, text: text, type: type, senderName: sender)
         
         // Check if previous message was not from this user
-        if let previousMessage = dummyData.last as? Message {
+        if let previousMessage = data.last as? Message {
             if previousMessage.userIsSender == true {
                 if message.userIsSender == false {
                     let whiteCell = Cell(cellType: CellType.white)
-                    self.dummyData.append(whiteCell)
+                    self.data.append(whiteCell)
                 }
             } else {
                 if message.userIsSender == true {
                     let whiteCell = Cell(cellType: CellType.white)
-                    self.dummyData.append(whiteCell)
+                    self.data.append(whiteCell)
                 }
             }
         }
         
         // TODO: Change!
-        dummyData += [message]
+        data += [message]
     }
     
     func addTimeStamp(forDate: String) {
         let timeStamp = TimeStamp(date: forDate)
         
         // TODO: Change!
-        dummyData += [timeStamp]
+        data += [timeStamp]
     }
     
-    func addSeenStamp() {
+    func addSeenStamp(text: String) {
         let seenStamp = SeenStamp()
+        seenStamp.text = text
         
         // TODO: Change!
-        dummyData += [seenStamp]
+        data += [seenStamp]
     }
     
     func addWhiteCell() {
         let whiteCell = Cell(cellType: CellType.white)
         
         // TODO: Change!
-        dummyData += [whiteCell]
+        data += [whiteCell]
     }
     
     // MARK: - Helper Functions
     
     func widthOfString(string: String, withFont font: UIFont) -> CGFloat {
-        var attributes: [NSObject : AnyObject] = [font: NSFontAttributeName]
-        return NSAttributedString(string: string, attributes: attributes).size().width
+        let s = string as NSString
+        return s.sizeWithAttributes([NSFontAttributeName:font]).width + 12.0
     }
 }
 
@@ -308,6 +320,7 @@ class TimeStamp: Cell {
 }
 
 class SeenStamp: Cell {
+    var text = "Seen 4:31 PM"
     init() {
         super.init(cellType: .seenStamp)
     }

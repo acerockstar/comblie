@@ -45,7 +45,7 @@ class MessagesViewController: UIViewController, UITableViewDataSource, UITableVi
             tableView.deselectRowAtIndexPath(path, animated: true)
         }
         
-        self.navigationController?.view.backgroundColor = UIColor.whiteColor()
+        navigationController!.navigationBar.barTintColor = UIColor.whiteColor()
         
     }
     
