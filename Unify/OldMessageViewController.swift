@@ -68,6 +68,7 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         addTimeStamp("4:32 PM")
         addMessage(true, sender: "Persona", text: "Posuere volutpat urna ante. Eget congue tellus nonummy, dolor imperdiet ligula tristique.", type: NetworkType.Twitter)
         addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Twitter)
+        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Twitter)
         addMessage(true, sender: "Persona", text: "Pretium posuere, vehicula orci at consequat bibendum nulla dui, quaerat bibendum aliquet lacus vel amet.", type: NetworkType.Twitter)
         addSeenStamp("Seen 4:35 PM")
     }
@@ -138,10 +139,12 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                         cell?.profileImageView.hidden = true
                     } else {
                         // Set the profile Image
+                        cell?.profileImageView.hidden = false
                         cell?.profileImageView.image = UIImage(named: message.senderName!)
                     }
                 } else {
                     // Set the profile Image
+                    cell?.profileImageView.hidden = false
                     cell?.profileImageView.image = UIImage(named: message.senderName!)
                 }
                 
@@ -174,10 +177,12 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                         cell?.profileImageView.hidden = true
                     } else {
                         // Set the profile Image
+                        cell?.profileImageView.hidden = false
                         cell?.profileImageView.image = UIImage(named: message.senderName!)
                     }
                 } else {
                     // Set the profile Image
+                    cell?.profileImageView.hidden = false
                     cell?.profileImageView.image = UIImage(named: message.senderName!)
                 }
                 
@@ -221,6 +226,35 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
             return cell!
         }
     }
+    
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if let thisMessage = data[indexPath.row] as? Message {
+//            let userIsSender = thisMessage.userIsSender
+//            
+//            if userIsSender == true {
+//                let senderCell = cell as! SecondSenderTableViewCell
+//                if let nextMessage = data[indexPath.row + 1] as? Message {
+//                    
+//                    if nextMessage.senderName == thisMessage.senderName {
+//                        senderCell.profileImageView.hidden = true
+//                    } else {
+//                        senderCell.profileImageView.hidden = false
+//                    }
+//                }
+//            } else {
+//                let recipientCell = cell as! SecondRecipientTableViewCell
+//                if let nextMessage = data[indexPath.row + 1] as? Message {
+//                    
+//                    if nextMessage.senderName == thisMessage.senderName {
+//                        recipientCell.profileImageView.hidden = true
+//                    } else {
+//                        recipientCell.profileImageView.hidden = false
+//                    }
+//                }
+//            }
+//
+//        }
+//    }
     
     func hideProfileImageOfCellAtIndexPath(indexPath: NSIndexPath) {
         

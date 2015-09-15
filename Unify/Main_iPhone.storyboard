@@ -649,7 +649,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zb7-ox-Wom">
-                                                    <rect key="frame" x="8" y="0.0" width="38" height="38"/>
+                                                    <rect key="frame" x="8" y="-10" width="38" height="38"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="38" id="PLB-wx-078"/>
@@ -681,7 +681,7 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="Ica-yS-ftD" firstAttribute="top" secondItem="Ig3-rq-2D6" secondAttribute="top" id="FLE-ls-fJs"/>
-                                                <constraint firstItem="Zb7-ox-Wom" firstAttribute="top" secondItem="Ig3-rq-2D6" secondAttribute="top" id="Qjh-jP-9KB"/>
+                                                <constraint firstItem="Ica-yS-ftD" firstAttribute="bottom" secondItem="Zb7-ox-Wom" secondAttribute="bottom" id="Lqb-ju-7Wg"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ica-yS-ftD" secondAttribute="bottom" constant="2" id="UFe-xD-HS2"/>
                                                 <constraint firstItem="Zb7-ox-Wom" firstAttribute="leading" secondItem="Ig3-rq-2D6" secondAttribute="leading" constant="8" id="nAF-tO-eJC"/>
                                                 <constraint firstItem="Ica-yS-ftD" firstAttribute="leading" secondItem="Zb7-ox-Wom" secondAttribute="trailing" constant="8" id="wA6-l7-C0y"/>
@@ -724,7 +724,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grg-al-Rhr">
-                                                    <rect key="frame" x="274" y="0.0" width="38" height="38"/>
+                                                    <rect key="frame" x="274" y="-8" width="38" height="38"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="Df9-23-hK3"/>
@@ -760,8 +760,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="4c6-gm-1eQ" secondAttribute="bottom" id="00I-6F-Plw"/>
                                                 <constraint firstItem="grg-al-Rhr" firstAttribute="leading" secondItem="4c6-gm-1eQ" secondAttribute="trailing" constant="8" id="7ak-kI-cT3"/>
                                                 <constraint firstAttribute="trailing" secondItem="grg-al-Rhr" secondAttribute="trailing" constant="8" id="K0O-md-6mh"/>
-                                                <constraint firstItem="grg-al-Rhr" firstAttribute="top" secondItem="VbM-k7-J5s" secondAttribute="top" id="hcP-CQ-HaH"/>
                                                 <constraint firstItem="4c6-gm-1eQ" firstAttribute="top" secondItem="VbM-k7-J5s" secondAttribute="top" constant="2" id="kts-27-OqY"/>
+                                                <constraint firstItem="4c6-gm-1eQ" firstAttribute="bottom" secondItem="grg-al-Rhr" secondAttribute="bottom" id="wsL-tV-CuL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
