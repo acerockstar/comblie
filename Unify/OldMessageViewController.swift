@@ -59,17 +59,17 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         
         // TODO: - Remove Dummy data
         addTimeStamp("4:20 PM")
-        addMessage(true, sender: "Persona", text: "Lorem ipsum dolor sit amet, laoreet placeat, suscipit hymenaeos, ipsum nulla lorem quis massa, et etiam, nisl lacus litora ligula.", type: NetworkType.Twitter)
-        addMessage(false, sender: "Photo", text: "Aliquet nullam luctus, tortor integer necessitatibus, porttitor nunc, sollicitudin urna id ut orci metus, volutpat porttitor. Cursus ipsum felis egestas turpis diam lacus, suspendisse nec suspendisse, voluptatem tortor lobortis, viverra vestibulum, in sapien hendrerit nunc purus per.", type: NetworkType.Twitter)
-        addMessage(true, sender: "Persona", text: "Vitae nullam, morbi lectus vitae venenatis viverra, lectus sed wisi cras proin dui, erat rutrum id ad amet vel. Fugiat ultricies enim nec ipsum adipiscing sit, nunc inceptos magna adipiscing, eu erat ac eget phasellus pellentesque.", type: NetworkType.Twitter)
-        addMessage(false, sender: "Photo", text: "Eu et suscipit tellus tellus sagittis justo, pellentesque dictum amet turpis, tellus urna egestas dignissim, nullam sed voluptatem in blandit, lacus vivamus. Quisque egestas nullam adipiscing in ligula, ut luctus. Sapien metus wisi mus mollis aliquam ullamcorper. Felis platea erat sed ut egestas.", type: NetworkType.Twitter)
-        addMessage(true, sender: "Persona", text: "Ipsum est nibh hac vestibulum molestie viverra.", type: NetworkType.Twitter)
-        addMessage(true, sender: "Persona", text: "Sodales nec in cras, ut elit vitae, faucibus orci.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Lorem ipsum dolor sit amet, laoreet placeat, suscipit hymenaeos, ipsum nulla lorem quis massa, et etiam, nisl lacus litora ligula.", type: NetworkType.Tumblr)
+        addMessage(false, sender: "Photo", text: "Aliquet nullam luctus, tortor integer necessitatibus, porttitor nunc, sollicitudin urna id ut orci metus, volutpat porttitor. Cursus ipsum felis egestas turpis diam lacus, suspendisse nec suspendisse, voluptatem tortor lobortis, viverra vestibulum, in sapien hendrerit nunc purus per.", type: NetworkType.Tumblr)
+        addMessage(true, sender: "Persona", text: "Vitae nullam, morbi lectus vitae venenatis viverra, lectus sed wisi cras proin dui, erat rutrum id ad amet vel. Fugiat ultricies enim nec ipsum adipiscing sit, nunc inceptos magna adipiscing, eu erat ac eget phasellus pellentesque.", type: NetworkType.Tumblr)
+        addMessage(false, sender: "Photo", text: "Eu et suscipit tellus tellus sagittis justo, pellentesque dictum amet turpis, tellus urna egestas dignissim, nullam sed voluptatem in blandit, lacus vivamus. Quisque egestas nullam adipiscing in ligula, ut luctus. Sapien metus wisi mus mollis aliquam ullamcorper. Felis platea erat sed ut egestas.", type: NetworkType.Tumblr)
+        addMessage(true, sender: "Persona", text: "Ipsum est nibh hac vestibulum molestie viverra.", type: NetworkType.Tumblr)
+        addMessage(true, sender: "Persona", text: "Sodales nec in cras, ut elit vitae, faucibus orci.", type: NetworkType.Tumblr)
         addTimeStamp("4:32 PM")
-        addMessage(true, sender: "Persona", text: "Posuere volutpat urna ante. Eget congue tellus nonummy, dolor imperdiet ligula tristique.", type: NetworkType.Twitter)
-        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Twitter)
-        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Twitter)
-        addMessage(true, sender: "Persona", text: "Pretium posuere, vehicula orci at consequat bibendum nulla dui, quaerat bibendum aliquet lacus vel amet.", type: NetworkType.Twitter)
+        addMessage(true, sender: "Persona", text: "Posuere volutpat urna ante. Eget congue tellus nonummy, dolor imperdiet ligula tristique.", type: NetworkType.Tumblr)
+        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Tumblr)
+        addMessage(false, sender: "Photo", text: "Arcu sem semper arcu, nulla aliquet per vivamus egestas porttitor ut. Proin vitae vitae, ultricies urna proin dui, porttitor consequat, enim fringilla tincidunt id dapibus ornare sed. Venenatis ut eu, posuere fringilla, est massa sed donec, risus pretium, pulvinar non est interdum porttitor ultricies bibendum. Pellentesque ultricies velit, pulvinar sit consequat tempor in, elit vitae quis.", type: NetworkType.Tumblr)
+        addMessage(true, sender: "Persona", text: "Pretium posuere, vehicula orci at consequat bibendum nulla dui, quaerat bibendum aliquet lacus vel amet.", type: NetworkType.Tumblr)
         addSeenStamp("Seen 4:35 PM")
     }
     
@@ -197,6 +197,9 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
                 // Change Content Inset
                 cell?.textView?.contentInset = UIEdgeInsetsMake(2.0,0.0,0,0.0)
                 
+                // Change cell's color
+                cell?.textView.backgroundColor = colorForCellOfNetworkType(message.type)
+                
                 // Add to allCells
                 recipientCells[indexPath.row] = cell!
                 
@@ -318,6 +321,19 @@ class OldMessageViewController: UIViewController, UITextFieldDelegate, UINavigat
         let s = string as NSString
         return s.sizeWithAttributes([NSFontAttributeName:font]).width + 12.0
     }
+    
+    func colorForCellOfNetworkType(networkType: NetworkType) -> UIColor {
+        switch networkType {
+        case NetworkType.Facebook:
+            return UIColor(rgba: "#4A70B6")
+        case NetworkType.Twitter:
+            return UIColor(rgba: "#40b0ff")
+        case NetworkType.Vine:
+            return UIColor(rgba: "#00cd96")
+        case NetworkType.Tumblr:
+            return UIColor(rgba: "#1a3f6c")
+        }
+    }
 }
 
 // MARK: - Message and Stamp Classes
@@ -370,6 +386,8 @@ enum CellType {
 enum NetworkType {
     case Twitter
     case Facebook
+    case Vine
+    case Tumblr
 }
 
 
