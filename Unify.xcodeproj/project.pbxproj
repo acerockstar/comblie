@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08B9BBFD1B83F9290087719F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; };
+		2225E8AB1BA9F5C1009F9DB4 /* ChatBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2225E8AA1BA9F5C1009F9DB4 /* ChatBubble.xib */; };
+		224847EF1BA9F7AF00A94CF3 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224847EE1BA9F7AF00A94CF3 /* ChatBubble.swift */; };
 		2253E8B01B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E8AE1B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift */; };
 		2253E8B11B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253E8AF1B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift */; };
 		22CC75A91B9E281A007CEB73 /* SeenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */; };
@@ -212,6 +214,8 @@
 
 /* Begin PBXFileReference section */
 		08B9BBEE1B83F9150087719F /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		2225E8AA1BA9F5C1009F9DB4 /* ChatBubble.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatBubble.xib; sourceTree = "<group>"; };
+		224847EE1BA9F7AF00A94CF3 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		2253E8AE1B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondRecipientTableViewCell.swift; path = Unify/SecondRecipientTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2253E8AF1B9F7D3F00B990E8 /* SecondSenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondSenderTableViewCell.swift; path = Unify/SecondSenderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		22CC75A61B9E281A007CEB73 /* SeenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeenTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -426,6 +430,7 @@
 		2225E89F1BA9CF3D009F9DB4 /* Chat Bubbles */ = {
 			isa = PBXGroup;
 			children = (
+				224847E61BA9F79600A94CF3 /* Files */,
 				2225E8A71BA9D023009F9DB4 /* Xibs */,
 			);
 			name = "Chat Bubbles";
@@ -435,8 +440,17 @@
 		2225E8A71BA9D023009F9DB4 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				2225E8AA1BA9F5C1009F9DB4 /* ChatBubble.xib */,
 			);
 			name = Xibs;
+			sourceTree = "<group>";
+		};
+		224847E61BA9F79600A94CF3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				224847EE1BA9F7AF00A94CF3 /* ChatBubble.swift */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 		77DF40AC1B1CD9B4006084E4 = {
@@ -1170,6 +1184,7 @@
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				D183E1D31B6DF9BE009455B5 /* TumblrOwnProfileTableViewCell.xib in Resources */,
 				E0349B0D1B5A4E76002A6E3E /* UnifyDetails.rtf in Resources */,
+				2225E8AB1BA9F5C1009F9DB4 /* ChatBubble.xib in Resources */,
 				D1DDBF711B5FF9DA00FE7EA6 /* HelveticaNeueLTStd-Lt.otf in Resources */,
 				77DF40C21B1CD9B4006084E4 /* Images.xcassets in Resources */,
 				D183E1B71B6DC869009455B5 /* CombinedProfileTableViewCell.xib in Resources */,
@@ -1281,6 +1296,7 @@
 				D1DA88701B50EDF300B7D344 /* SocialNetworksTableViewController.swift in Sources */,
 				E0A8A3F01B4FB72D005FCD50 /* StartConnectingViewController.swift in Sources */,
 				F3C929291B6ED89E00CF6613 /* PinterestLogin.swift in Sources */,
+				224847EF1BA9F7AF00A94CF3 /* ChatBubble.swift in Sources */,
 				D1B9E03E1B30066E00F59444 /* NumLikesTableViewCell.swift in Sources */,
 				E0A8A3EF1B4FB72D005FCD50 /* SocialMediaViewController.swift in Sources */,
 				F3C929211B6ED7CE00CF6613 /* TumblerLogin.swift in Sources */,

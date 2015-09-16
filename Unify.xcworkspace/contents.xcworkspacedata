@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ChatBubble.swift">
+   </FileRef>
+   <FileRef
       location = "group:Unify.xcodeproj">
    </FileRef>
    <FileRef
