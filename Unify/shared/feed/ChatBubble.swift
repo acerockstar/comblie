@@ -11,6 +11,9 @@ import UIKit
 @IBDesignable class ChatBubble: UIView {
     
     var view: UIView!
+    var networkType: NetworkType?
+    var userName: String?
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBInspectable var image: UIImage? {

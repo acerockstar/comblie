@@ -21,7 +21,11 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
     
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
+    
+    // Temporary
     @IBOutlet weak var removeIcon: UIImageView!
+    @IBOutlet weak var chatBubble: ChatBubble!
+    
 
     @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
     
@@ -69,7 +73,10 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     
     override func viewDidAppear(animated: Bool) {
         changeNavBar()
+        
+        // Temporary
         self.view.bringSubviewToFront(removeIcon)
+        self.view.bringSubviewToFront(chatBubble)
     }
     
     @IBAction func postStatus(sender: UIBarButtonItem) {

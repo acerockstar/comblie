@@ -383,11 +383,4 @@ enum CellType {
     case white
 }
 
-enum NetworkType {
-    case Twitter
-    case Facebook
-    case Vine
-    case Tumblr
-}
-
 
