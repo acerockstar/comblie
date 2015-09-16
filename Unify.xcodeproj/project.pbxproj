@@ -423,6 +423,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2225E89F1BA9CF3D009F9DB4 /* Chat Bubbles */ = {
+			isa = PBXGroup;
+			children = (
+				2225E8A71BA9D023009F9DB4 /* Xibs */,
+			);
+			name = "Chat Bubbles";
+			path = Unify/Shared/Feed;
+			sourceTree = "<group>";
+		};
+		2225E8A71BA9D023009F9DB4 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 		77DF40AC1B1CD9B4006084E4 = {
 			isa = PBXGroup;
 			children = (
@@ -909,6 +925,7 @@
 				E0A8A3FA1B4FB888005FCD50 /* StartConnectingViewController */,
 				77DF40E11B1CEB8F006084E4 /* ActivityViewController */,
 				77DF40E21B1CEB8F006084E4 /* FeedViewController */,
+				2225E89F1BA9CF3D009F9DB4 /* Chat Bubbles */,
 				77DF40E31B1CEB8F006084E4 /* MessagesViewController */,
 				77DF40E41B1CEB8F006084E4 /* ProfileViewController */,
 				77DF40E51B1CEB8F006084E4 /* SettingsViewController */,

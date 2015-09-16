@@ -21,6 +21,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     var colors: NSArray = [UIColor.lightTextColor(), UIColor.instagramBlue(), UIColor.tumblrBlue(), UIColor.twitterBlue(), UIColor.vineGreen()]
     
     @IBOutlet weak var postStatusButton: UIBarButtonItem!
+    @IBOutlet weak var removeIcon: UIImageView!
 
     @IBAction func unwindToNewsFeedVC(sender: UIStoryboardSegue) {}
     
@@ -68,6 +69,7 @@ class NewsFeedViewController: UIViewController, UIPageViewControllerDelegate, UI
     
     override func viewDidAppear(animated: Bool) {
         changeNavBar()
+        self.view.bringSubviewToFront(removeIcon)
     }
     
     @IBAction func postStatus(sender: UIBarButtonItem) {
