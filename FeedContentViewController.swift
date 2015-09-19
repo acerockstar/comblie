@@ -53,6 +53,8 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
+        self.tableView.registerNib(UINib(nibName: "FacebookClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "facebookClickedCell")
+        self.tableView.registerNib(UINib(nibName: "TwitterClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterClickedCell")
         self.tableView.addSubview(self.refreshControl)
     }
     

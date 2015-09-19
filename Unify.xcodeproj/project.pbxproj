@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08B9BBFD1B83F9290087719F /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B9BBF81B83F9150087719F /* SwifteriOS.framework */; };
+		221360CC1BADF59A00752947 /* FacebookClickedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221360CB1BADF59A00752947 /* FacebookClickedTableViewCell.xib */; };
+		221360D51BADF86300752947 /* FacebookClickedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221360D41BADF86300752947 /* FacebookClickedTableViewCell.swift */; };
 		2225E8AB1BA9F5C1009F9DB4 /* ChatBubble.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2225E8AA1BA9F5C1009F9DB4 /* ChatBubble.xib */; };
 		224847EF1BA9F7AF00A94CF3 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224847EE1BA9F7AF00A94CF3 /* ChatBubble.swift */; };
 		224847F11BA9FFEF00A94CF3 /* Networks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224847F01BA9FFEF00A94CF3 /* Networks.swift */; };
@@ -215,6 +217,8 @@
 
 /* Begin PBXFileReference section */
 		08B9BBEE1B83F9150087719F /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		221360CB1BADF59A00752947 /* FacebookClickedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookClickedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		221360D41BADF86300752947 /* FacebookClickedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookClickedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2225E8AA1BA9F5C1009F9DB4 /* ChatBubble.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatBubble.xib; sourceTree = "<group>"; };
 		224847EE1BA9F7AF00A94CF3 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		224847F01BA9FFEF00A94CF3 /* Networks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networks.swift; sourceTree = "<group>"; };
@@ -777,6 +781,7 @@
 			children = (
 				D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */,
 				D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */,
+				221360D41BADF86300752947 /* FacebookClickedTableViewCell.swift */,
 				D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */,
 				D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */,
 			);
@@ -790,6 +795,7 @@
 				D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */,
 				D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */,
 				D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */,
+				221360CB1BADF59A00752947 /* FacebookClickedTableViewCell.xib */,
 			);
 			name = Xibs;
 			sourceTree = "<group>";
@@ -1181,6 +1187,7 @@
 				77DF40DB1B1CDA2D006084E4 /* Main_iPhone.storyboard in Resources */,
 				D1DC333F1B258C4300C9AFB6 /* PostStatusView.xib in Resources */,
 				D183E1CB1B6DD733009455B5 /* TwitterProfileTableViewCell.xib in Resources */,
+				221360CC1BADF59A00752947 /* FacebookClickedTableViewCell.xib in Resources */,
 				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
 				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
 				D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */,
@@ -1319,6 +1326,7 @@
 				2253E8B01B9F7D3F00B990E8 /* SecondRecipientTableViewCell.swift in Sources */,
 				D1855BE91B509D2200A5A244 /* FeedbackTableViewController.swift in Sources */,
 				F3C929071B6EAF0300CF6613 /* BlogViewController.swift in Sources */,
+				221360D51BADF86300752947 /* FacebookClickedTableViewCell.swift in Sources */,
 				E02E5D391B5541E70078E6C4 /* Reachability.swift in Sources */,
 				77DF41091B1CF28C006084E4 /* WebserviceManager.swift in Sources */,
 				D1F3FA821B578D68003ED306 /* NSObject+TLYSwizzlingHelpers.m in Sources */,

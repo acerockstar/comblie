@@ -145,36 +145,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ux7-Fp-eaH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Remove-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tdz-Kb-leO">
-                                <rect key="frame" x="140" y="471" width="40" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="AZK-8n-fUP"/>
-                                    <constraint firstAttribute="width" constant="40" id="Tuo-5l-uER"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lO5-6E-KcO" customClass="ChatBubble" customModule="Unify" customModuleProvider="target">
-                                <rect key="frame" x="270" y="72" width="50" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OQW-cI-isf"/>
-                                    <constraint firstAttribute="width" constant="50" id="dfb-tb-UJB"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Photo"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Tdz-Kb-leO" secondAttribute="centerX" id="1wz-Aq-Y1W"/>
-                            <constraint firstAttribute="trailing" secondItem="lO5-6E-KcO" secondAttribute="trailing" id="Y7X-YC-xYL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Tdz-Kb-leO" secondAttribute="bottom" constant="57" id="dni-C1-dmA"/>
-                            <constraint firstItem="lO5-6E-KcO" firstAttribute="top" secondItem="P52-83-7LR" secondAttribute="bottom" constant="8" id="k23-lq-IDt"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Newsfeed" id="fA9-XH-X0d">
                         <barButtonItem key="rightBarButtonItem" image="Write-Status-Icon" id="VBF-v9-URn">
@@ -184,9 +156,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="chatBubble" destination="lO5-6E-KcO" id="2GJ-0L-ASH"/>
                         <outlet property="postStatusButton" destination="VBF-v9-URn" id="M27-Nt-DhB"/>
-                        <outlet property="removeIcon" destination="Tdz-Kb-leO" id="T8U-KF-Qt1"/>
                         <segue destination="sgW-8o-JQc" kind="push" id="4Fd-mr-ii2"/>
                     </connections>
                 </viewController>
@@ -2615,7 +2585,6 @@
         <image name="Persona" width="600" height="600"/>
         <image name="Photo" width="794" height="800"/>
         <image name="Profiles-Icon" width="29" height="26"/>
-        <image name="Remove-Icon" width="62" height="62"/>
         <image name="Settings-Icon" width="26" height="26"/>
         <image name="Settings-Profile-Bio-Icon" width="15" height="11"/>
         <image name="Settings-Profile-Name-Icon" width="15" height="15"/>
