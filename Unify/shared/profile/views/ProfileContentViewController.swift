@@ -139,7 +139,7 @@ class ProfileContentViewController: UIViewController, UITableViewDelegate, UITab
             }
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! PostTableViewCell
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
         

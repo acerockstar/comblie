@@ -36,8 +36,8 @@
 		D17CE4A11B1F01FB00ED9E93 /* ProfileContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */; };
 		D17CE4A31B1F029000ED9E93 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */; };
 		D17CE4AB1B20246C00ED9E93 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */; };
-		D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */; };
-		D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */; };
+		D17CE4B41B20318B00ED9E93 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B21B20318B00ED9E93 /* PostTableViewCell.swift */; };
+		D17CE4B51B20318B00ED9E93 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B31B20318B00ED9E93 /* PostTableViewCell.xib */; };
 		D17CE4B81B203B9000ED9E93 /* TwitterActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */; };
 		D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */; };
 		D17CE4BE1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */; };
@@ -250,8 +250,8 @@
 		D17CE4A01B1F01FB00ED9E93 /* ProfileContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContentViewController.swift; path = Unify/shared/profile/views/ProfileContentViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4A21B1F029000ED9E93 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilesViewController.swift; path = Unify/shared/profile/views/ProfilesViewController.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4AA1B20246C00ED9E93 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivitiesViewController.swift; path = Unify/shared/profile/views/ActivitiesViewController.swift; sourceTree = SOURCE_ROOT; };
-		D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterTweetTableViewCell.swift; path = Unify/shared/profile/views/TwitterTweetTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterTweetTableViewCell.xib; path = Unify/shared/profile/views/TwitterTweetTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		D17CE4B21B20318B00ED9E93 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = Unify/shared/profile/views/PostTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D17CE4B31B20318B00ED9E93 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostTableViewCell.xib; path = Unify/shared/profile/views/PostTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterActivityTableViewCell.swift; path = Unify/shared/profile/views/TwitterActivityTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TwitterActivityTableViewCell.xib; path = Unify/shared/profile/views/TwitterActivityTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		D17CE4BC1B2040BA00ED9E93 /* PhotoVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoVideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -779,7 +779,7 @@
 		D17CE4BA1B203F2700ED9E93 /* Swift files */ = {
 			isa = PBXGroup;
 			children = (
-				D17CE4B21B20318B00ED9E93 /* TwitterTweetTableViewCell.swift */,
+				D17CE4B21B20318B00ED9E93 /* PostTableViewCell.swift */,
 				D17CE4CC1B21B93E00ED9E93 /* TwitterClickedTableViewCell.swift */,
 				221360D41BADF86300752947 /* FacebookClickedTableViewCell.swift */,
 				D17CE4B61B203B9000ED9E93 /* TwitterActivityTableViewCell.swift */,
@@ -791,7 +791,7 @@
 		D17CE4BB1B203F2D00ED9E93 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				D17CE4B31B20318B00ED9E93 /* TwitterTweetTableViewCell.xib */,
+				D17CE4B31B20318B00ED9E93 /* PostTableViewCell.xib */,
 				D17CE4CD1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib */,
 				D17CE4B71B203B9000ED9E93 /* TwitterActivityTableViewCell.xib */,
 				D17CE4BD1B2040BA00ED9E93 /* PhotoVideoTableViewCell.xib */,
@@ -1189,7 +1189,7 @@
 				D183E1CB1B6DD733009455B5 /* TwitterProfileTableViewCell.xib in Resources */,
 				221360CC1BADF59A00752947 /* FacebookClickedTableViewCell.xib in Resources */,
 				D17CE4CF1B21B93E00ED9E93 /* TwitterClickedTableViewCell.xib in Resources */,
-				D17CE4B51B20318B00ED9E93 /* TwitterTweetTableViewCell.xib in Resources */,
+				D17CE4B51B20318B00ED9E93 /* PostTableViewCell.xib in Resources */,
 				D1855BE71B50925900A5A244 /* TextViewTableViewCell.xib in Resources */,
 				D17CE4B91B203B9000ED9E93 /* TwitterActivityTableViewCell.xib in Resources */,
 				D183E1D31B6DF9BE009455B5 /* TumblrOwnProfileTableViewCell.xib in Resources */,
@@ -1313,7 +1313,7 @@
 				F3C929211B6ED7CE00CF6613 /* TumblerLogin.swift in Sources */,
 				D17CE4581B1E689800ED9E93 /* MessagesTableViewCell.swift in Sources */,
 				F3C929191B6ED79F00CF6613 /* TwitterLogin.swift in Sources */,
-				D17CE4B41B20318B00ED9E93 /* TwitterTweetTableViewCell.swift in Sources */,
+				D17CE4B41B20318B00ED9E93 /* PostTableViewCell.swift in Sources */,
 				E0A8A3F81B4FB74D005FCD50 /* WebService.swift in Sources */,
 				22CC75AA1B9E281A007CEB73 /* TimeTableViewCell.swift in Sources */,
 				D1B9E0291B2CF2C200F59444 /* FeedContentViewController.swift in Sources */,

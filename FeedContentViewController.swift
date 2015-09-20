@@ -50,7 +50,7 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView()
         
-        self.tableView.registerNib(UINib(nibName: "TwitterTweetTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterTweetCell")
+        self.tableView.registerNib(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "postCell")
         self.tableView.registerNib(UINib(nibName: "TwitterActivityTableViewCell", bundle: nil), forCellReuseIdentifier: "twitterActivityCell")
         self.tableView.registerNib(UINib(nibName: "PhotoVideoTableViewCell", bundle: nil), forCellReuseIdentifier: "photoVideoCell")
         self.tableView.registerNib(UINib(nibName: "FacebookClickedTableViewCell", bundle: nil), forCellReuseIdentifier: "facebookClickedCell")
@@ -112,10 +112,12 @@ class FeedContentViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row % 3 == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("twitterTweetCell") as! TwitterTweetTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("postCell") as! PostTableViewCell
             
             cell.setNeedsUpdateConstraints()
             cell.updateConstraintsIfNeeded()
+            
+            cell.setUpLabels("Maxime Defauw", username: nil, postText: "Get the Comblie app!", time: "1m", type: .Facebook)
             
             return cell
         } else if indexPath.row % 3 == 1 {
