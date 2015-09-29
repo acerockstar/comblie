@@ -10,12 +10,12 @@ Network | Webhooks | Feed? | Chat? | Notifications?
 
 # Authentication
 
-1. Client authenticates with a social network provider, yielding an **access token**.
-2. Client encypts the access tokens (using the Comblie app secret as the key) and sends the encrypted values to the server.
-3. Server decrypts the access tokens and uses them to fetch data on behalf of the user from the corresponding social network provider.
-4. Access tokens for all social networks are stored on the client (encrypted) with their expiration dates. Each time the client is launched, the client does what is necessary to extend the expiration dates of the access tokens. When unsuccessful, the client obtains prompts the user to reauthenticate, yielding a new access token.
+1. Client authenticates with a social network provider, yielding an **access token** and a user ID.
+2. Client encypts the access tokens and user IDs (using the corresponding Comblie app secret as the key) and sends the encrypted values to the server.
+3. Server decrypts the data and uses them to fetch data on behalf of the user from the corresponding social network provider.
+4. Access tokens and user IDs for all social networks are stored on the client (encrypted). Each time the client is launched, the client does what is necessary to extend the expiration dates of the access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
 
-The `meta` property of the request object contains these encrypted access tokens:
+The `meta` property of the request object contains these encrypted access tokens and user IDs:
 
 ```
 {
@@ -27,6 +27,13 @@ The `meta` property of the request object contains these encrypted access tokens
       "vine": "",
       "tumblr": ""
     },
+    "user_ids": {
+      "facebook": "",
+      "twitter": "",
+      "instagram": "",
+      "vine": "",
+      "tumblr": ""
+    }
     ...
   }
 }
@@ -150,9 +157,9 @@ The response includes data from all social networks.
 
 ### Real-Time Updates
 
-After initial load, the client subscribes to methods on the server using [socket.IO](https://github.com/pkyeck/socket.IO-objc/blob/master/README.md). The server then pushes real-time updates to the client, and the client responds by redrawing the UI as appropriate.
+After initial load, the client subscribes to methods on the server using [socket.IO](https://github.com/pkyeck/socket.IO-objc/blob/master/README.md). The client provides the encrypted access tokens and user IDs when doing so as parameters. This allows the server to map the social network identities of the client to the unique socket ID.
 
-*TODO: Determine how to push notifications to a specific user (instead of broadcasting to all subscribers of an endpoint).*
+The server then pushes real-time updates to the appropriate client based on this map, and the client responds by redrawing the UI as appropriate.
 
 These represent the C, U, and D in CRUD (Create/Update/Delete).
 
