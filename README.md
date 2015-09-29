@@ -3,7 +3,7 @@
 Network | Webhooks | Feed? | Chat? | Notifications?
 ------- | ---------| ----- | ----- | --------------
 [Facebook](https://developers.facebook.com/docs/graph-api)  | [Real-Time Updates](https://developers.facebook.com/docs/graph-api/real-time-updates/v2.4) | Y | Y | Y
-[Twitter](https://dev.twitter.com/overview/documentation)   | [Steaming](https://dev.twitter.com/streaming/overview) | Y | Y | Y
+[Twitter](https://dev.twitter.com/overview/documentation)   | [Streaming](https://dev.twitter.com/streaming/overview) | Y | Y | Y
 [Instagram](https://instagram.com/developer/)               | [Real-Time Updates](https://instagram.com/developer/realtime/) | Y | N | Y
 [Vine](https://github.com/starlock/vino/wiki/API-Reference) | N/A: Polls | Y | N | Y
 [Tumblr](https://www.tumblr.com/docs/en/api/v2)             | N/A: Polls | Y | Y | Y
