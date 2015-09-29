@@ -1,7 +1,7 @@
 # API Reference
 
 Network | Webhooks | Feed? | Chat? | Notifications?
-------- | ---------| ----- | ----- | --------------
+------- | ---------| ----- | ----- | ------fo--------
 [Facebook](https://developers.facebook.com/docs/graph-api)  | [Real-Time Updates](https://developers.facebook.com/docs/graph-api/real-time-updates/v2.4) | Y | Y | Y
 [Twitter](https://dev.twitter.com/overview/documentation)   | [Streaming](https://dev.twitter.com/streaming/overview) | Y | Y | Y
 [Instagram](https://instagram.com/developer/)               | [Real-Time Updates](https://instagram.com/developer/realtime/) | Y | N | Y
@@ -229,7 +229,7 @@ When the post is submitted, the client POSTs to:
 
 `/feed`
 
-Request format:
+Request:
 
 ```
 {
@@ -242,7 +242,7 @@ Request format:
 }
 ```
 
-Response format:
+Response:
 
 ```
 {
@@ -260,7 +260,7 @@ Assisted tagging (e.g. when "@" or "#" is typed) is not included in the first it
 
 ## Messages
 
-The user can only respond to existing messages. They cannot start a conversation or modify the participants of a conversation.
+Users can only respond to existing messages. They cannot start a conversation or modify the participants of a conversation.
 
 When this happens, the client POSTs to:
 
