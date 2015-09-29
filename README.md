@@ -1,7 +1,7 @@
 # API Reference
 
 Network | Webhooks | Feed? | Chat? | Notifications?
-------- | ---------| ----- | ----- | ------fo--------
+------- | ---------| ----- | ----- | ----------------
 [Facebook](https://developers.facebook.com/docs/graph-api)  | [Real-Time Updates](https://developers.facebook.com/docs/graph-api/real-time-updates/v2.4) | Y | Y | Y
 [Twitter](https://dev.twitter.com/overview/documentation)   | [Streaming](https://dev.twitter.com/streaming/overview) | Y | Y | Y
 [Instagram](https://instagram.com/developer/)               | [Real-Time Updates](https://instagram.com/developer/realtime/) | Y | N | Y
@@ -150,7 +150,7 @@ The response includes data from all social networks.
 
 ### Real-Time Updates
 
-After initial load, the client subscribes to methods on the server using [EventSource](https://github.com/neilco/EventSource). The server then pushes real-time updates to the client, and the client responds by redrawing the UI as appropriate.
+After initial load, the client subscribes to methods on the server using [socket.IO](https://github.com/pkyeck/socket.IO-objc/blob/master/README.md). The server then pushes real-time updates to the client, and the client responds by redrawing the UI as appropriate.
 
 *TODO: Determine how to push notifications to a specific user (instead of broadcasting to all subscribers of an endpoint).*
 
