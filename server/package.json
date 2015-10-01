@@ -1,0 +1,21 @@
+{
+  "name": "Comblie",
+  "version": "1.0.0",
+  "description": "One app for all your social networks!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "author": "Mehmet Bajin",
+  "dependencies": {
+    "https": "*",
+    "express": "*",
+    "body-parser": "*",
+    "crypto": "*",
+    "request": "*",
+    "firebase": "*"
+  },
+  "license": "MIT",
+  "private": true
+}
