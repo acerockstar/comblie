@@ -20,20 +20,26 @@ The `meta` property of the request object contains these encrypted access tokens
 ```
 {
   "meta": {
-    "access_tokens": {
-      "facebook": "",
-      "twitter": "",
-      "instagram": "",
-      "vine": "",
-      "tumblr": ""
+    "facebook": {
+      "access_token": "",
+      "id": ""
     },
-    "user_ids": {
-      "facebook": "",
-      "twitter": "",
-      "instagram": "",
-      "vine": "",
-      "tumblr": ""
-    }
+    "twitter": {
+      "access_token": "",
+      "id": ""
+    },
+    "instagram": {
+      "access_token": "",
+      "id": ""
+    },
+    "vine": {
+      "access_token": "",
+      "id": ""
+    },
+    "tumblr": {
+      "access_token": "",
+      "id": ""
+    },
     ...
   }
 }
