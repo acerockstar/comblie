@@ -20,23 +20,23 @@ The `meta` property of the request object contains these encrypted access tokens
 ```
 {
   "meta": {
-    "facebook": {
+    "Facebook": {
       "access_token": "",
       "id": ""
     },
-    "twitter": {
+    "Twitter": {
       "access_token": "",
       "id": ""
     },
-    "instagram": {
+    "Instagram": {
       "access_token": "",
       "id": ""
     },
-    "vine": {
+    "Vine": {
       "access_token": "",
       "id": ""
     },
-    "tumblr": {
+    "Tumblr": {
       "access_token": "",
       "id": ""
     },
