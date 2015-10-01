@@ -10,10 +10,10 @@ Network | Webhooks | Feed? | Chat? | Notifications?
 
 # Authentication
 
-1. Client authenticates with a social network provider, yielding an **access token** and a user ID.
-2. Client encypts the access tokens and user IDs (using the corresponding Comblie app secret as the key) and sends the encrypted values to the server.
-3. Server decrypts the data and uses them to fetch data on behalf of the user from the corresponding social network provider.
-4. Access tokens and user IDs for all social networks are stored on the client (encrypted). Each time the client is launched, the client does what is necessary to extend the expiration dates of the access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
+1. Client authenticates with a social network provider, yielding an **access token** and optionall a **user ID**. This information is saved to the device keychain.
+2. Client sends the access tokens and user IDs to the server.
+3. Server uses them to fetch data on behalf of the user to fetch data from the corresponding social network provider.
+4. Each time the client is launched, the client does what is necessary to extend the expiration dates of access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
 
 The `meta` property of the request object contains these encrypted access tokens and user IDs:
 
