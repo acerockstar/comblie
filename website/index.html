@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Comblie app for iOS - Comblie combines major social networks in one combined feed. No more wasting time switching between apps!" />
+    <meta name="keywords" content="social media app, comblie, networks, time saving app, top social networks, early access app" />
+    <meta name="author" content="Leo Tang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Comblie</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
+  <body>
+    <div id="document" class="document">
+
+      <!--
+      =================================
+      OVERLAY 
+      =================================
+      -->
+      <div id="overlay" class="overlay"></div>
+
+      <div id="network-modal" class="modal network-modal">
+        <h2 class="modal-title">Recommend a Network</h2>
+        <div class="modal-form">
+          <input type="email" class="email" id="modal-network" name="email" placeholder="Recommend a Network" autocomplete="off" />
+          <button id="submit" type="submit" class="btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Recommend</button>
+        </div>
+      </div>
+
+      <div id="access-modal" class="modal access-modal">
+        <h2 class="modal-title">Get Early Access</h2>
+        <div class="modal-form">
+          <input type="email" class="email" id="modal-email" name="email" placeholder="Enter Email Address" autocomplete="off">
+          <button id="submit" type="submit" class="comblie-modal btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Get Early Access</button>
+        </div>
+      </div>
+
+      <div id="press-modal" class="modal press-modal">
+        <h2 class="modal-title">Coming Soon.<br/>Contact <a href="mailto:press@comblie.com" target="_top">press@comblie.com</a> for details.</h2>
+      </div>
+
+      <!--
+      =================================
+      HEADER
+      =================================
+      -->
+      <header class="header-section navbar navbar-fixed-top navbar-default header-floating floating">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-logo"><img src="img/Comblie-Cropped-App-Icon.png" alt="" /></a>
+          </div>
+          <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#press" class="disabled">Press</a></li>
+              <li><a href="#contact" class="disabled">Contact</a></li>
+              <li><a id="get-access" style="background-color: #840468; color: white; border-radius: 10px;">Get Early Access</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!--
+      =================================
+      HOME SECTION
+      =================================
+      -->
+      <section id="home" class="home-section">
+        <div class ="container">
+          <div class="home-content">
+            <div class="home-text">
+              <img src="img/Comblie-Font.png" alt="" class="home-logo" />
+              <h1 class="home-title top">One app for all your</h1>
+              <h1 class="home-title bottom">social networks</h1>
+              <h2 class="home-switch">Stop switching between apps.</h2>
+              <h2 class="home-signup">Want early access? Sign up now.</h2>
+              <div class="form-contact">
+                <div class="form-horizontal email-contact">
+                  <input type="email" class="email" id="email1" name="todo" placeholder="Enter Email Address" autocomplete="off">
+                  <button id="submit" type="submit" class="comblie-main btn btn-primary btn-purple sm-button" data-loading-text="Loading...">Get Early Access</button>
+                </div>
+              </div>
+            </div>
+            <div class="home-images scroll">
+              <img src="img/phoneheaderplacer-top.jpg" alt="" class="home-image" />
+            </div>
+            <div class="home-images">
+              <img src="img/phoneheaderplacer.jpg" alt="" class="home-image" />
+              <div class="slideshow">
+                <div class="scroll-images">
+                  <img src="img/scroll-image.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+      =================================
+      FEATURES SECTION
+      =================================
+      -->
+      <section id="features" class="features-section slanted">
+        <div class="container">
+          <div class="section-heading text-center row">
+            <div class="col-md-10 col-md-offset-1 col-sm-12">
+              <h2 class="title">Say goodbye to switching between apps</h2>
+              <h2 class="title"> and hello to <span>combined feeds</span></h2>
+            </div>
+          </div>
+          <div class="features-list-wrapper row">
+            <div class="col-md-6 col-sm-6">
+              <ul class="features-list features-list-left">
+                <img src="img/combinedfeedsphone.jpg" class="features-image", alt="" />
+              </ul>  
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <ul class="features-list features-list-right right-text">
+                <li class="features-list-item">
+                  <p>Comblie aims to limit the use of multiple social media apps by combing the major social networks in one combined feed.</p>
+                </li>
+                <li class="features-list-item">
+                  <p>View <span style="color: #3b5998;">Facebook</span>, <span style="color: #00aced;">Twitter</span>, <span style="color: #00a478;">Vine</span>, <span style="color: #517fa4;">Instagram</span> and <span style="#383875;">Tumblr</span> in an individual or combined feed.</p>
+                </li>
+                <li class="features-list-item" style="margin-bottom: 10px;">
+                  <p style="margin-bottom: 0px;">More networks to come.</p>
+                </li>
+                <li class="features-list-item" style="margin-top: 10px;">
+                  <a href="" id="recommend" class="btn btn-press-recommend"><h4><div style="color:#840468"><span>Recommend a network<span></div></h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section slanted">
+        <div class="container">
+          <div class="section-heading text-center row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+              <h2 class="title">One inbox.</h2>
+              <h2 class="title"><span>All your accounts.</span></h2>
+            </div>
+          </div>
+          <div class="features-list-wrapper row">
+            <div class="col-md-5 col-sm-6 pad-zero">
+              <ul class="features-list features-list-left inverse left-text pad-top">
+                <li class="features-list-item">
+                  <p>Reply, send and receive messages from your main social media networks.</p>
+                </li>
+                <li class="features-list-item">
+                  <p style="margin-bottom: 0px;">Never miss another</p>
+                  <p>message again!</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7 col-sm-6">
+              <ul class="features-list features-list-right">
+                <img src="img/messeges-landingpage.jpg" class="features-image", alt=""/>      
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" class="features-section">
+        <div class="container">
+          <div class="section-heading text-center row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+              <h2 class="title">Chat bubbles.</h2>
+              <h2 class="title"><span>Messages anywhere.</span></h2>
+            </div>
+          </div>
+          <div class="features-list-wrapper row">
+            <div class="col-md-5 col-sm-6 pad-zero">
+              <ul class="features-list features-list-left inverse left-text pad-top">
+                <li class="features-list-item">
+                  <p class="cutoff-top">Chat bubbles are an exclusive Comblie feature which enable you to reply to messages without leaving where you are.</p>
+                </li>
+                <li class="features-list-item">
+                  <p class="cutoff-bottom">You also have the option to turn it off. It’s completely up to you!</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7 col-sm-6">
+              <ul class="features-list features-list-right">
+                <img src="img/messagesonfeed-landingpage.jpg" class="features-image", alt=""/>      
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" class="features-section slanted">
+        <div class="container">
+          <div class="section-heading text-center row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+              <h2 class="title">Unified notifications.</h2>
+              <h2 class="title"><span>Stay updated.</span></h2>
+            </div>
+          </div>
+          <div class="features-list-wrapper row">
+            <div class="col-md-6 col-sm-6">
+              <ul class="features-list features-list-left">
+                <img src="img/messagefeedstayupdated.jpg" class="features-image", alt="" />
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <ul class="features-list features-list-right right-text pad-top">
+                <li class="features-list-item">
+                  <p>All your notifications are conveniently unified into a single activity feed.</p>
+                </li>
+                <li class="features-list-item">
+                  <p class="cutoff-bottom2">Your activity is updated every time you sign into the app.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" class="features-section slanted">
+        <div class="container">
+          <div class="section-heading text-center row">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+              <h2 class="title">Post to all networks.</h2>
+              <h2 class="title"><span>Update simultaneously.</span></h2>
+            </div>
+          </div>
+          <div class="features-list-wrapper row">
+            <div class="col-md-5 col-sm-6 pad-zero">
+              <ul class="features-list features-list-left inverse left-text pad-top">
+                <li class="features-list-item">
+                  <p class="cutoff-bottom">Post to any of your social networks without leaving the app.</p>
+                </li>
+                <li class="features-list-item">
+                  <p>Easily post to multiple networks with one touch.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7 col-sm-6">
+              <ul class="features-list features-list-right">
+                <img src="img/posttoinstagram-landingpage.jpg" class="features-image", alt="" />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+      =================================
+      PRESS SECTION
+      =================================
+      -->
+      <section id="press" class="press-section">
+        <div class="container">
+          <h2 class="section-heading press-title text-center">Press</h2>
+          <ul class="press-table row">
+            <li class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 text-center">
+              <div class="press-package">
+                <div class="press-package-strip"></div>
+                <div class="press-package-header">
+                  <h4>Press and Media Kit</h4>
+                </div>
+                <a href="" id="download" class="btn btn-press-download">
+                  <h4><div style="color:white"><span>Download<span></div></h4>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="press-contact row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <a href="mailto:press@comblie.com" target="_top"><h5>For press enquiries contact: <span>press@comblie.com</span></h5></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+      =================================
+      CONTACT SECTION
+      =================================
+      -->
+      <section id="contact" class="contact-section section">
+        <div id="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+                <img src="img/Comblie-Grey-Icon.png" alt="" class="contact-logo" align="middle" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="notification-contact">
+                  <h5>Want early access? Register below.</h5>
+                </div>
+              </div>
+            </div>
+            <div class="form-contact">
+              <div class="input-group email-contact">
+                <input type="email" class="form-control email" id="email2" name="email" placeholder="Enter Email Address" autocomplete="off">
+                <span class="input-group-btn">
+                  <button id="submit" type="submit" class="comblie-main btn btn-primary btn-purple btn-no-radius-top-left btn-no-radius-bottom-left" data-loading-text="Loading...">Get Early Access</button>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="follow-contact">
+                  <p><strong>Follow us!</strong></p>
+                </div>
+              </div>
+            </div>
+            <ul class="social-media-links wow fadeIn" data-wow-duration="1s">
+              <li><a href="https://www.facebook.com/pages/Comblie/688073167994507?fref=ts" target="_blank"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a>
+              <li><a href="https://twitter.com/comblieapp" target="_blank"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a>
+              <li><a href="http://instagram.com/comblie/" target="_blank"><i class="fa fa-instagram"></i><span class="sr-only">Instagram</span></a>
+            </ul>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="hello-contact">
+                  <a href="mailto:hello@comblie.com" target="_top"><h5>Get in touch! hello@comblie.com</h5></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="patch">
+        <div class="container clearfix">
+        </div>
+      </div>
+
+      <!--
+      =================================
+      FOOTER SECTION
+      =================================
+      -->
+      <footer class="copyright-section section">
+        <div class="container">
+          <div class="copyright text-center">
+            <h4>© Comblie PTY.LTD</h4>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+    <script src="js/comblie.js?v=1.00"></script>
+    <script src="js/index.js?v=1.00"></script>
+    <script>
+      $(function () {
+        var pageObj = new comblie.index();
+      });
+    </script>
+
+  </body>
+</html>
