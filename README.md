@@ -10,9 +10,10 @@ Network | Webhooks | Feed? | Chat? | Notifications?
 
 # Authentication
 
-1. Client authenticates with a social network provider, yielding an **access token** and optionall a **user ID**. This information is saved to the device keychain.
-2. Client sends the access tokens and user IDs to the server.
-3. Server uses them to fetch data on behalf of the user to fetch data from the corresponding social network provider.
+0. Client creates a Comblie account (simple email + password based). Upon account creation, client adds the user with her email to `root.users` in Firebase.
+1. Client authenticates/re-authenticates with a social network, yielding an **access token** and optionally a **user ID**. This information is saved to the device keychain and to Firebase.
+2. Whenever the client makes an HTTP request to the server, it sends the access tokens and user IDs in the request body. If the user authenticates with Comblie on another device, the access tokens and IDs are already available via Firebase, meaning the user must authenticate in at most one device.
+3. Server uses the access tokens to fetch data on behalf of the user from social networks.
 4. Each time the client is launched, the client does what is necessary to extend the expiration dates of access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
 
 The `meta` property of the request object contains these encrypted access tokens and user IDs:
@@ -163,61 +164,16 @@ The response includes data from all social networks.
 
 ### Real-Time Updates
 
-After initial load, the client subscribes to methods on the server using [socket.IO](https://github.com/pkyeck/socket.IO-objc/blob/master/README.md). The client provides the encrypted access tokens and user IDs when doing so as parameters. This allows the server to map the social network identities of the client to the unique socket ID.
-
-The server then pushes real-time updates to the appropriate client based on this map, and the client responds by redrawing the UI as appropriate.
+* When the app launches, it requests to receive remote notifications from the Apple Push Notification Service (APNS).
+* Apple servers respond to the client device with its device token (an alpha-numeric string wrapped in <>).
+* The client then POSTs this device token to the server along with the user's Comblie ID. This way, the server knows the device tokens for a given Comblie user.
+* Since Firebase stores the access tokens and user IDs of Comblie users, the server references that information to subscribe to real-time updates on behalf of the user.
+* When a real-time update occurs, the server pushes the data to APNS for each device token associated with the user, causing APNS to notify the client device(s) with the payload.
+* The client then responds as appropriate (local notification, UI updates, etc.).
 
 These represent the C, U, and D in CRUD (Create/Update/Delete).
 
 Currently, only Facebook, Twitter, and Instagram provide real-time updates. Vine and Tumblr require the server to poll every 15 seconds for new data.
-
-#### Payloads
-
-`/updates/feed`
-
-```
-{
-  "meta": {
-    "code": 200,
-    "type": "C/U/D"
-  },
-  "data": {
-    ...
-  }
-}
-```
-
-----
-
-`/updates/messages`
-
-```
-{
-  "meta": {
-    "code": 200,
-    "type": "C/U/D"
-  },
-  "data": {
-    ...
-  }
-}
-```
-
-----
-
-`/updates/notifications`
-
-```
-{
-  "meta": {
-    "code": 200,
-    "type": "C/U/D"
-  },
-  "data": {
-    ...
-  }
-}
-```
 
 # POSTing Data
 
