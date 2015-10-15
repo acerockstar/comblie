@@ -9,12 +9,12 @@
   },
   "author": "Mehmet Bajin",
   "dependencies": {
-    "https": "*",
     "express": "*",
     "body-parser": "*",
-    "crypto": "*",
-    "request": "*",
-    "firebase": "*"
+    "firebase": "*",
+    "rsvp": "*",
+    "instagram-node-lib": "*",
+    "fbgraph": "*"
   },
   "license": "MIT",
   "private": true

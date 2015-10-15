@@ -5,35 +5,65 @@ var exports = module.exports = {};
 
 // MARK: External Dependencies
 
-var crypto = require('crypto');
-var request = require('request');
+var rsvp = require('rsvp');
 
 // MARK: Internal Dependencies
 
 var enums = require('../enums');
 
-// MARK: Social Network Info
+// MARK: API
 
-var client = {
-  id: '',
-  secret: ''
+
+
+// MARK: Feed
+
+exports.feedInitial = function (signature) {
+  var promise = new rsvp.Promise(function (resolve, reject) {
+    // TODO
+    resolve({});
+  });
+
+  return promise;
 };
 
-var root = 'https://...';
+exports.feedScroll = function (signature, url) {
+  var promise = new rsvp.Promise(function (resolve, reject) {
+    // TODO
+    resolve({});
+  });
 
-// MARK: Initial Load
+  return promise;
+};
 
-exports.initialLoad = function (type, signature, callback) {
-  // type is from enums.DataType
-  // signature is an object with `access_token` and `id`
+// MARK: Messages
 
-  // TODO: Fetch feed data and invoke `callback`.
+exports.notifications = function (signature) {
+  var promise = new rsvp.Promise(function (resolve, reject) {
+    // TODO
+    resolve({});
+  });
 
-  // Callback signature:
-  // function (error, network, data) { }
-  //   error: pass null if successful, { message: 'description' } otherwise
-  //   network: from enums.Network
-  //   data: the feed data (in Comblie format)
+  return promise;
+};
 
-  return callback(null, {}, enums.Network.Vine);
+// MARK: Notifications
+
+exports.notifications = function (signature) {
+  var promise = new rsvp.Promise(function (resolve, reject) {
+    // TODO
+    resolve({});
+  });
+
+  return promise;
+};
+
+// MARK: Profile
+
+exports.profile = function (signature, userId) {
+  var promise = new rsvp.Promise(function (resolve, reject) {
+    // TODO
+    resolve({});
+  });
+
+  return promise;
 };

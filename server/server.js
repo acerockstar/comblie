@@ -5,10 +5,8 @@ var comblie = require('./lib/comblie');
 
 // MARK: External Dependencies
 
-var https = require('https');
 var express = require('express');
 var bodyParser = require('body-parser');
-var crypto = require('crypto');
 var firebase = require('firebase');
 
 // MARK: Express
@@ -25,18 +23,10 @@ var firebaseRef = new firebase('https://comblie.firebaseio.com/');
 // MARK: Initial Load
 
 var getInitial = function (req, res, type) {
-  comblie.initialLoad(
-    type,
-    comblie.parseSignaturesFromRequest(req),
-    function (error, data) {
-      if (error) {
-        res.status(400).send(error);
-      }
-      else {
-        res.status(200).send(data);
-      }
-    }
-  );
+  var sigs = comblie.parseSignaturesFromRequest(req);
+  comblie.initialLoad(type, sigs, function (result) {
+    res.status(result.meta.code).send(result);
+  });
 };
 
 app.post('/feed', function (req, res) {
@@ -52,6 +42,10 @@ app.post('/notifications', function (req, res) {
 });
 
 // MARK: Scroll
+
+// TODO
+
+// MARK: Profile
 
 // TODO
 
