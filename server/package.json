@@ -14,7 +14,8 @@
     "firebase": "*",
     "rsvp": "*",
     "instagram-node-lib": "*",
-    "fbgraph": "*"
+    "fbgraph": "*",
+    "vineapple": "*"
   },
   "license": "MIT",
   "private": true
