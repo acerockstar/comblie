@@ -16,7 +16,7 @@ Network | Webhooks | Feed? | Chat? | Notifications?
 3. Server uses the access tokens to fetch data on behalf of the user from social networks.
 4. Each time the client is launched, the client does what is necessary to extend the expiration dates of access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
 
-The `meta` property of the request object contains these encrypted access tokens and user IDs:
+The `meta` property of the request object contains these access tokens and user IDs:
 
 ```
 {
@@ -45,6 +45,8 @@ The `meta` property of the request object contains these encrypted access tokens
   }
 }
 ```
+
+_Note that ID is optional for Instagram._
 
 # Loading Data
 
@@ -104,9 +106,11 @@ The response includes data aggragated from all social networks.
 
 After initial load, the user may scroll to see more data in feed/messages/notifications.
 
-Note that the feed and notifications have the same sort order (most recent to the top), while messages have the opposite sort order (most recent to the bottom).
+The feed and notifications have the same sort order (most recent to the top), while messages have the opposite sort order (most recent to the bottom).
 
 When the scroll to load more data happens, the client issues a GET request to the server requesting the next page(s) of data.
+
+In addition to the access tokens and user IDs, the request body must also contain the URL of the next page's worth of data for each network.
 
 #### Methods
 
