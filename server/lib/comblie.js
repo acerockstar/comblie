@@ -40,10 +40,11 @@ exports.initialLoad = function (type, signatures, callback) {
   
   for (var network in networks) {
     if (networks.hasOwnProperty(network)) {
+      var api = networks[network];
       if (signatures[network]) {
         switch (type) {
           case enums.DataType.Feed:
-            promises[network] = networks[network].feedInitial(signatures[network]);
+            promises[network.toLowerCase()] = api.feedInitial(signatures[network]);
             break;
           default:
             break;
