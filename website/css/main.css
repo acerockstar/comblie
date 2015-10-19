@@ -985,14 +985,19 @@ h4 {
   margin-bottom: 10px;
 }
 .people {
-   /*no display for now*/
   font-family: HelveticaNeueLTStd-Th;
-  padding: 50px 40px;
+  padding: 30px;
+  margin: 10px auto 5px auto;
   border: 1px solid #cdd6da;
   font-size: 35px;
   max-width: 600px;
-  margin-right: auto;
-  margin-left: auto;
+}
+div.people > h1 {
+  margin: 0;
+}
+div.people > h4 {
+  margin: 10px 0 0 0;
+  color: #777;
 }
 .posted {
   font-family: HelveticaNeueLTStd-Th;
@@ -1019,16 +1024,16 @@ h4 {
   font-family: HelveticaNeueLTStd-Lt;
   font-weight: 100;
   font-size: 16px;
-  margin: 0px 3px;
+  margin: 0 3px;
 }
 .share-link:hover, .share-link:focus{
   color: white;
 }
-.share {
-  margin: 20px 0px;
+div.share {
+  margin: 20px 0;
 }
 .share .fa {
-  padding-right: 5px;
+  margin-right: 5px;
 }
 @media ( max-width: 767px ) {
   .spot-title {
