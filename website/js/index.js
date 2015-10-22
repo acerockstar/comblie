@@ -15,8 +15,10 @@ comblie.index = function () {
   $('a#get-access').on('click', $.proxy(this._getEarlyAccessLaunchClick, this));
   $('.access-modal #submit').on('click', $.proxy(this._getEarlyAccessSubmitClick, this));
   $('.form-contact #submit').on('click',$.proxy(this._getEarlyAccessSubmitClick, this));
+
   $('a#recommend').on('click', $.proxy(this._recommendNetworkLaunchClick, this));
   $('.network-modal #submit').on('click', $.proxy(this._recommendNetworkSubmitClick, this));
+
   $('.press-section #download').on('click', $.proxy(this._downloadClick, this));
 
   this._emailModal = $('#modal-email').val('');
@@ -28,8 +30,7 @@ comblie.index = function () {
   $('a[href^="#"]').on('click', function (event) {
     event.preventDefault();
     var headerHeight = $('.header-section').height(),
-        a = $(this),
-        target = $(a.attr('href'));
+        target = $( $(this).attr('href') );
     if (target.size() > 0) {
       $('html, body').animate({
         scrollTop: target.offset().top - headerHeight
@@ -45,49 +46,61 @@ comblie.index.prototype = {
   _overlay: $(),
 
   _commitEmail: function (email) {
-    var referrer = comblie.getParameterByName('referrer'),
-        query = comblie.firebase.child('early_access').orderByPriority().limitToLast(1)
-        newUser = comblie.firebase.child('early_access').push({ email: email }, function (error) {
-          if (error) {
-            alert('We ran into a problem. Please try again.');
-          }
-          else {
-            // set the enqueued user's priority (represents position in queue)
-            query.on('child_added', function (snapshot) {
-              query.off('child_added');
-              newUser.setPriority(snapshot.getPriority() + 1, function (error) {
-                if (error) {
-                  alert('We ran into a problem. Please try again.');
-                }
-                else {
-                  window.location.href = 'pages/early-access.html?user=' + newUser.key();
-                }
-              });
-            });
+    var emailInternal = comblie.formatKeyIn(email);
+    
+    comblie.firebase.child('early_access_index').child(emailInternal).once('value', function (snapshot) {
+      if (snapshot.exists()) {
+        window.location.href = 'pages/early-access.html?user=' + snapshot.val();
+      }
+      else {
+        var referrer = comblie.getParameterByName('referrer'),
+            query    = comblie.firebase.child('early_access').orderByPriority().limitToLast(1),
+            newUser  = comblie.firebase.child('early_access').push({ email: email }, function (error) {
+              if (error) {
+                alert('We ran into a problem. Please try again.');
+              }
+              else {
+                // index the new user's id
+                comblie.firebase.child('early_access_index').child(emailInternal).set(newUser.key());
 
-            // update referrer's priority
-            if (referrer) {
-              comblie.firebase.child('early_access').child(referrer).once('value', function (snapshot) {
-                if (snapshot.exists()) {
-                  var priority = snapshot.getPriority(), newPriority;
-                  if (priority < 50) {
-                    newPriority = priority - 10;
-                  }
-                  else if (priority < 1000) {
-                    newPriority = priority - 100;
-                  }
-                  else {
-                    newPriority = priority - 200;
-                  }
-                  if (newPriority < 1) {
-                    newPriority = 1;
-                  }
-                  comblie.firebase.child('early_access').child(referrer).setPriority(newPriority);
+                // if referred, update referrer's priority
+                if (referrer) {
+                  comblie.firebase.child('early_access').child(referrer).once('value', function (snapshot) {
+                    if (snapshot.exists()) {
+                      var priority = snapshot.getPriority(), newPriority;
+                      if (priority < 50) {
+                        newPriority = priority - 10;
+                      }
+                      else if (priority < 1000) {
+                        newPriority = priority - 100;
+                      }
+                      else {
+                        newPriority = priority - 200;
+                      }
+                      if (newPriority < 1) {
+                        newPriority = 1;
+                      }
+                      comblie.firebase.child('early_access').child(referrer).setPriority(newPriority);
+                    }
+                  });
                 }
-              });
-            }
-          }
-        });
+                
+                // set the enqueued user's priority (represents position in queue)
+                query.on('child_added', function (snapshot) {
+                  query.off('child_added');
+                  newUser.setPriority(snapshot.getPriority() + 1, function (error) {
+                    if (error) {
+                      alert('We ran into a problem. Please try again.');
+                    }
+                    else {
+                      window.location.href = 'pages/early-access.html?user=' + newUser.key();
+                    }
+                  });
+                });
+              }
+            });
+      }
+    });
   },
 
   _commitNetwork: function (network) {
@@ -121,7 +134,7 @@ comblie.index.prototype = {
 
     var email, button = $(event.target).closest('button');
 
-    if (button.hasClass('comblie-modal')) {
+    if (this._overlay.is(':visible') || button.hasClass('comblie-modal')) {
       email = this._emailModal.val();
     }
     else if (button.hasClass('comblie-main')) {
