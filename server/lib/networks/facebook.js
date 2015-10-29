@@ -15,7 +15,7 @@ var enums = require('../enums');
 
 var fb = require('fbgraph');
 fb.setVersion('2.4');
-fb.setAppSecret('113ca7605853c8bd8ee602ce83f5a476');
+fb.setAppSecret('17dd50cad942a13c475f4892086dd7cb');
 // app-id = 1631910157061175
 
 // MARK: Feed
@@ -23,7 +23,7 @@ fb.setAppSecret('113ca7605853c8bd8ee602ce83f5a476');
 exports.feedInitial = function (signature) {
   var promise = new rsvp.Promise(function (resolve, reject) {
     fb.get(
-      '/me/feed/',
+      '/me/',
       { access_token: signature.access_token },
       function (error, response) {
         if (error) {
