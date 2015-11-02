@@ -1,75 +1,56 @@
 
 var exports = module.exports = {};
-
-// MARK: External Dependencies
-
+var _ = require('lodash');
 var rsvp = require('rsvp');
-
-// MARK: Enums
-
 var enums = exports.enums = require('./enums');
+var apis = _.mapValues(enums.network, function (network) {
+  return require('./apis/' + network);
+});
 
-// MARK: Networks
-
-var networks = {};
-for (var network in enums.Network) {
-  if (enums.Network.hasOwnProperty(network)) {
-    networks[network] = require('./networks/' + network.toLowerCase());
-  }
-}
-
-// MARK: Helpers
-
-exports.parseSignaturesFromRequest = function (request) {
+exports.parseSignatures = function (request) {
   var meta = request.body.meta || {};
   var signatures = {};
 
-  signatures[enums.Network.Facebook]  = meta.facebook   || null;
-  signatures[enums.Network.Twitter]   = meta.twitter    || null;
-  signatures[enums.Network.Instagram] = meta.instagram  || null;
-  signatures[enums.Network.Vine]      = meta.vine       || null;
-  signatures[enums.Network.Tumblr]    = meta.tumblr     || null;
+  signatures[enums.network.facebook]  = meta.facebook   || null;
+  signatures[enums.network.twitter]   = meta.twitter    || null;
+  signatures[enums.network.instagram] = meta.instagram  || null;
+  signatures[enums.network.vine]      = meta.vine       || null;
+  signatures[enums.network.tumblr]    = meta.tumblr     || null;
 
   return signatures;
 };
 
-// MARK: Initial
-
 exports.initialLoad = function (type, signatures, callback) {
   var promises = {};
-  
-  for (var network in networks) {
-    if (networks.hasOwnProperty(network)) {
-      var api = networks[network];
-      if (signatures[network]) {
-        switch (type) {
-          case enums.DataType.Feed:
-            promises[network.toLowerCase()] = api.feedInitial(signatures[network]);
-            break;
-          default:
-            break;
-        }
+
+  _.each(apis, function (api, network) {
+    var signature = signatures[network];
+    if (signature) {
+      switch (type) {
+        case enums.data.feed:
+          promises[network] = api.feed(signature);
+          break;
+        default:
+          break;
       }
     }
-  }
-
-  rsvp.hash(promises).then(function (results) {
-    callback({
-      meta: {
-        code: 200
-      },
-      response: results
-    });
-  }).catch(function (error) {
-    callback({
-      meta: {
-        code: 400
-      },
-      response: error
-    });
   });
+
+  rsvp.hash(promises)
+    .then(function (results) {
+      callback({
+        meta: {
+          code: 200
+        },
+        response: results
+      });
+    })
+    .catch(function (error) {
+      callback({
+        meta: {
+          code: 400
+        },
+        response: error
+      });
+    });
 };
-
-// MARK: Scroll
-
-// TODO

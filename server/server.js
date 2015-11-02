@@ -1,44 +1,36 @@
 
-// MARK: Comblie
-
 var comblie = require('./lib/comblie');
-
-// MARK: External Dependencies
 
 var express = require('express');
 var bodyParser = require('body-parser');
 var firebase = require('firebase');
-
-// MARK: Express
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5000));
 
-// MARK: Firebase
-
 var firebaseRef = new firebase('https://comblie.firebaseio.com/');
 
 // MARK: Initial Load
 
 var getInitial = function (req, res, type) {
-  var sigs = comblie.parseSignaturesFromRequest(req);
+  var sigs = comblie.parseSignatures(req);
   comblie.initialLoad(type, sigs, function (result) {
     res.status(result.meta.code).send(result);
   });
 };
 
 app.post('/feed', function (req, res) {
-  getInitial(req, res, comblie.enums.DataType.Feed);
+  getInitial(req, res, comblie.enums.data.feed);
 });
 
 app.post('/messages', function (req, res) {
-  getInitial(req, res, comblie.enums.DataType.Message);
+  getInitial(req, res, comblie.enums.data.message);
 });
 
 app.post('/notifications', function (req, res) {
-  getInitial(req, res, comblie.enums.DataType.Notification);
+  getInitial(req, res, comblie.enums.data.notification);
 });
 
 // MARK: Scroll

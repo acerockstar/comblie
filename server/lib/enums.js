@@ -1,17 +1,17 @@
 
 var exports = module.exports = {};
 
-exports.Network = {
-  Facebook: 'Facebook',
-  Twitter: 'Twitter',
-  Instagram: 'Instagram',
-  Vine: 'Vine',
-  Tumblr: 'Tumblr'
+exports.network = {
+  facebook: 'facebook',
+  twitter: 'twitter',
+  instagram: 'instagram',
+  vine: 'vine',
+  tumblr: 'tumblr'
 };
 
-exports.DataType = {
-  Feed: 'Feed',
-  Message: 'Message',
-  Notification: 'Notification',
-  Profile: 'Profile'
+exports.data = {
+  feed: 'feed',
+  message: 'message',
+  notification: 'notification',
+  profile: 'profile'
 };

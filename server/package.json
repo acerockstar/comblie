@@ -4,18 +4,20 @@
   "description": "One app for all your social networks!",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "node test.js"
+    "start": "node server.js"
   },
   "author": "Mehmet Bajin",
   "dependencies": {
+    "lodash": "*",
     "express": "*",
     "body-parser": "*",
     "firebase": "*",
     "rsvp": "*",
     "instagram-node-lib": "*",
     "fbgraph": "*",
-    "vineapple": "*"
+    "vineapple": "*",
+    "twitter": "*",
+    "tumblr": "*"
   },
   "license": "MIT",
   "private": true

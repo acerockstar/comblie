@@ -11,12 +11,12 @@ Network | Webhooks | Feed? | Chat? | Notifications?
 # Authentication
 
 0. Client creates a Comblie account (simple email + password based). Upon account creation, client adds the user with her email to `root.users` in Firebase.
-1. Client authenticates/re-authenticates with a social network, yielding an **access token** and optionally a **user ID**. This information is saved to the device keychain and to Firebase.
-2. Whenever the client makes an HTTP request to the server, it sends the access tokens and user IDs in the request body. If the user authenticates with Comblie on another device, the access tokens and IDs are already available via Firebase, meaning the user must authenticate in at most one device.
+1. Client authenticates/re-authenticates with a social network, yielding an **access token** and optionally an **access token key** and a **user ID**. This information is saved to the device keychain and to Firebase. Note: The client is responsible for extending the expiration dates of the OAUTH information.
+2. Whenever the client makes an HTTP request to the server, it sends the OAUTH information in the request body. If the user authenticates with Comblie on another device, the access tokens and IDs are already available via Firebase, meaning the user must authenticate in at most one device.
 3. Server uses the access tokens to fetch data on behalf of the user from social networks.
 4. Each time the client is launched, the client does what is necessary to extend the expiration dates of access tokens. When unsuccessful, the client prompts the user to reauthenticate, yielding a new access token.
 
-The `meta` property of the request object contains these access tokens and user IDs:
+The `meta` property of the request object contains the OAUTH information:
 
 ```
 {
@@ -27,11 +27,10 @@ The `meta` property of the request object contains these access tokens and user 
     },
     "twitter": {
       "access_token": "",
-      "id": ""
+      "access_token_secret": ""
     },
     "instagram": {
       "access_token": "",
-      "id": ""
     },
     "vine": {
       "access_token": "",
@@ -39,7 +38,7 @@ The `meta` property of the request object contains these access tokens and user 
     },
     "tumblr": {
       "access_token": "",
-      "id": ""
+      "access_token_secret": ""
     },
     ...
   }
