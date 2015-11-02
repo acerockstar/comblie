@@ -4,15 +4,15 @@
     <meta charset="UTF-8"/>
     <meta name="description" content="Comblie app for iOS - Comblie combines major social networks in one combined feed. No more wasting time switching between apps!" />
     <meta name="keywords" content="social media app, comblie, networks, time saving app, top social networks, early access app" />
-    <meta name="author" content="Leo Tang" />
+    <meta name="author" content="Mehmet Bajin" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Comblie</title>
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/simple-line-icons.css" />
-    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css?v=1.00" />
+    <link rel="stylesheet" href="css/default.css?v=1.00" />
+    <link rel="stylesheet" href="css/main.css?v=1.01" />
   </head>
   <body>
     <div id="document" class="document">
@@ -27,16 +27,20 @@
       <div id="network-modal" class="modal network-modal">
         <h2 class="modal-title">Recommend a Network</h2>
         <div class="modal-form">
-          <input type="email" class="email" id="modal-network" name="email" placeholder="Recommend a Network" autocomplete="off" />
-          <button id="submit" type="submit" class="btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Recommend</button>
+          <form>
+            <input type="email" class="email" id="modal-network" name="email" placeholder="Recommend a Network" autocomplete="off" />
+            <button id="submit" type="submit" class="btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Recommend</button>
+          </form>
         </div>
       </div>
 
       <div id="access-modal" class="modal access-modal">
         <h2 class="modal-title">Get Early Access</h2>
         <div class="modal-form">
-          <input type="email" class="email" id="modal-email" name="email" placeholder="Enter Email Address" autocomplete="off">
-          <button id="submit" type="submit" class="comblie-modal btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Get Early Access</button>
+          <form>
+            <input type="email" class="email" id="modal-email" name="email" placeholder="Enter Email Address" autocomplete="off">
+            <button id="submit" type="submit" class="comblie-modal btn btn-primary btn-purple modal-button" data-loading-text="Loading...">Get Early Access</button>
+          </form>
         </div>
       </div>
 
@@ -86,8 +90,10 @@
               <h2 class="home-signup">Want early access? Sign up now.</h2>
               <div class="form-contact">
                 <div class="form-horizontal email-contact">
-                  <input type="email" class="email" id="email1" name="todo" placeholder="Enter Email Address" autocomplete="off">
-                  <button id="submit" type="submit" class="comblie-main btn btn-primary btn-purple sm-button" data-loading-text="Loading...">Get Early Access</button>
+                  <form>
+                    <input type="email" class="email" id="email1" name="todo" placeholder="Enter Email Address" autocomplete="off">
+                    <button id="submit" type="submit" class="comblie-main btn btn-primary btn-purple sm-button" data-loading-text="Loading...">Get Early Access</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -228,7 +234,7 @@
           </div>
         </div>
       </section>
-      <section id="features" class="features-section slanted">
+      <section id="features" class="features-section">
         <div class="container">
           <div class="section-heading text-center row">
             <div class="col-md-6 col-md-offset-3 col-sm-12">
@@ -307,10 +313,12 @@
             </div>
             <div class="form-contact">
               <div class="input-group email-contact">
-                <input type="email" class="form-control email" id="email2" name="email" placeholder="Enter Email Address" autocomplete="off">
-                <span class="input-group-btn">
-                  <button id="submit" type="submit" class="comblie-main btn btn-primary btn-purple btn-no-radius-top-left btn-no-radius-bottom-left" data-loading-text="Loading...">Get Early Access</button>
-                </span>
+                <form>
+                  <input type="email" class="form-control email" id="email2" name="email" placeholder="Enter Email Address" autocomplete="off">
+                  <span class="input-group-btn">
+                    <button id="submit" type="submit" class="btn btn-primary btn-purple btn-no-radius-top-left btn-no-radius-bottom-left" data-loading-text="Loading...">Get Early Access</button>
+                  </span>
+                </form>
               </div>
             </div>
             <div class="row">
@@ -358,8 +366,8 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
-    <script src="js/comblie.js?v=1.00"></script>
-    <script src="js/index.js?v=1.00"></script>
+    <script src="js/comblie.js?v=1.01"></script>
+    <script src="js/index.js?v=1.01"></script>
     <script>
       $(function () {
         var pageObj = new comblie.index();

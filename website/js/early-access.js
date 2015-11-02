@@ -14,23 +14,38 @@ comblie.earlyAccess = function () {
         newHref = anchor.attr('href') + '?referrer=' + userId;
     anchor.attr('href', newHref);
   });
+  $('p.comblie-referral-link').text('http://www.comblie.com?referrer=' + userId);
 
-  // queue position
+  // ...'s
   comblie.firebase.child('early_access').child(userId).once('value', function (snapshot) {
     if (snapshot.exists()) {
-      var position = snapshot.getPriority(), message;
-      if (position > 2) {
-        message = (position - 1) + ' people ahead of you';
+      // email
+      $('strong#saved-email').text(snapshot.child('email').val());
+    
+      // num people in front
+      var userPosition = snapshot.getPriority(), aheadMessage;
+      if (userPosition > 2) {
+        aheadMessage = (userPosition - 1) + ' people ahead of you';
       }
-      else if (position == 2) {
-        message = '1 person ahead of you';
+      else if (userPosition == 2) {
+        aheadMessage = '1 person ahead of you';
       }
       else {
-        message = '0 people ahead of you';
+        aheadMessage = '0 people ahead of you';
       }
-      $('h2.people').text(message);
+      $('div.people > h1').text(aheadMessage);
       
-      $('strong#saved-email').text(snapshot.child('email').val());
+      // num people behind
+      comblie.firebase.child('early_access').orderByPriority().limitToLast(1).on('child_added', function (snapshot) {
+        var numPeopleBehind = snapshot.getPriority() - userPosition, behindMessage;
+        if (numPeopleBehind !== 1) {
+          behindMessage = (numPeopleBehind) + ' people behind you';
+        }
+        else {
+          behindMessage = '1 person behind you';
+        }
+        $('div.people > h4').text(behindMessage);
+      });
     }
     else {
       window.location.href = '../index.html';
