@@ -12,16 +12,14 @@ exports.feed = function (signature) {
     api.users.self({
       access_token: signature.access_token,
       complete: function (data, pagination) {
+        // TODO - restructure to Comblie model
         resolve({
           data: data,
           pagination: pagination
         });
       },
       error: function (errorMessage, errorObject, caller) {
-        console.log('error-feed-instagram-message', errorMessage);
-        console.log('error-feed-instagram-object', errorObject);
-        console.log('error-feed-instagram-caller', caller);
-        resolve({});
+        reject(errorMessage);
       }
     });
   });

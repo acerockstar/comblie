@@ -8,17 +8,20 @@
   },
   "author": "Mehmet Bajin",
   "dependencies": {
-    "lodash": "*",
-    "express": "*",
-    "body-parser": "*",
-    "firebase": "*",
-    "rsvp": "*",
-    "instagram-node-lib": "*",
-    "fbgraph": "*",
-    "vineapple": "*",
-    "twitter": "*",
-    "tumblr": "*"
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "fbgraph": "^1.1.0",
+    "firebase": "^2.3.2",
+    "instagram-node-lib": "^0.1.1",
+    "lodash": "^3.10.1",
+    "rsvp": "^3.1.0",
+    "tumblr": "^0.4.1",
+    "twitter": "^1.2.5",
+    "vineapple": "^0.1.5"
   },
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
 }

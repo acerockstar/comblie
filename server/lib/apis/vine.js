@@ -11,18 +11,16 @@ exports.feed = function (signature) {
       id: signature.id
     });
 
-    var promises = {
+    rsvp.hash({
       posts: api.user(signature.id),
       likes: api.likes(signature.id)
-    };
-
-    rsvp.hash(promises)
+    })
       .then(function (results) {
+        // TODO - restructure to Comblie model
         resolve(results);
       })
       .catch(function (error) {
-        console.log('error-feed-vine', error);
-        resolve({});
+        reject(error);
       });
   });
 

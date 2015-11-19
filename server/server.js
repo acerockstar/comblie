@@ -17,7 +17,7 @@ var firebaseRef = new firebase('https://comblie.firebaseio.com/');
 var getInitial = function (req, res, type) {
   var sigs = comblie.parseSignatures(req);
   comblie.initialLoad(type, sigs, function (result) {
-    res.status(result.meta.code).send(result);
+    res.status(result.meta.code).json(result);
   });
 };
 

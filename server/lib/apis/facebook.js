@@ -9,12 +9,15 @@ api.setAppSecret('17dd50cad942a13c475f4892086dd7cb');
 
 exports.feed = function (signature) {
   return new rsvp.Promise(function (resolve, reject) {
-    api.get('/me/feed', { access_token: signature.access_token }, function (error, response) {
+    api.get('/me/feed', {
+      access_token: signature.access_token
+    },
+    function (error, response) {
       if (error) {
-        console.log('error-feed-facebook', error);
-        resolve({});
+        reject(error);
       }
       else {
+        // TODO - restructure to Comblie model
         resolve(response);
       }
     });
